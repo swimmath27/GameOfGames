@@ -79,11 +79,11 @@ class Card
         case .Joker:
             return "nothing"
         case .Spades:
-            return "Quarter can of beer"
+            return "quarter can of beer"
         case .Clubs:
             return "nothing"
         case .Diamonds:
-            return "Quarter glass of wine"
+            return "quarter glass of wine"
         case .Hearts:
             return "Shot of Liquor"
         }
