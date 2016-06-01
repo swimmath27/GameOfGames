@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		55D3FB061CFE0E30006C0A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */; };
-		55D3FB081CFE0E30006C0A8E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB071CFE0E30006C0A8E /* FirstViewController.swift */; };
-		55D3FB0A1CFE0E30006C0A8E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB091CFE0E30006C0A8E /* SecondViewController.swift */; };
+		55D3FB081CFE0E30006C0A8E /* NumberOfPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB071CFE0E30006C0A8E /* NumberOfPlayersViewController.swift */; };
+		55D3FB0A1CFE0E30006C0A8E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB091CFE0E30006C0A8E /* InfoViewController.swift */; };
 		55D3FB0D1CFE0E30006C0A8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D3FB0B1CFE0E30006C0A8E /* Main.storyboard */; };
 		55D3FB0F1CFE0E30006C0A8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D3FB0E1CFE0E30006C0A8E /* Assets.xcassets */; };
 		55D3FB121CFE0E30006C0A8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D3FB101CFE0E30006C0A8E /* LaunchScreen.storyboard */; };
 		55D3FB1D1CFE0E30006C0A8E /* GameOfGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB1C1CFE0E30006C0A8E /* GameOfGamesTests.swift */; };
 		55D3FB281CFE0E30006C0A8E /* GameOfGamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB271CFE0E30006C0A8E /* GameOfGamesUITests.swift */; };
+		55D3FB361CFE3D62006C0A8E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB351CFE3D62006C0A8E /* Game.swift */; };
+		55D3FB381CFE4262006C0A8E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB371CFE4262006C0A8E /* Card.swift */; };
+		55D3FB3A1CFE4284006C0A8E /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB391CFE4284006C0A8E /* Deck.swift */; };
+		55D3FB3C1CFE4B57006C0A8E /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB3B1CFE4B57006C0A8E /* extensions.swift */; };
+		55D3FB3E1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB3D1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift */; };
+		55D3FB401CFE54F5006C0A8E /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB3F1CFE54F5006C0A8E /* PlayGameViewController.swift */; };
+		55D3FB421CFE57E2006C0A8E /* DrawCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB411CFE57E2006C0A8E /* DrawCardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +44,8 @@
 /* Begin PBXFileReference section */
 		55D3FB021CFE0E30006C0A8E /* GameOfGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55D3FB071CFE0E30006C0A8E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		55D3FB091CFE0E30006C0A8E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		55D3FB071CFE0E30006C0A8E /* NumberOfPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfPlayersViewController.swift; sourceTree = "<group>"; };
+		55D3FB091CFE0E30006C0A8E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		55D3FB0C1CFE0E30006C0A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55D3FB0E1CFE0E30006C0A8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55D3FB111CFE0E30006C0A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		55D3FB231CFE0E30006C0A8E /* GameOfGamesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfGamesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D3FB271CFE0E30006C0A8E /* GameOfGamesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfGamesUITests.swift; sourceTree = "<group>"; };
 		55D3FB291CFE0E30006C0A8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D3FB351CFE3D62006C0A8E /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		55D3FB371CFE4262006C0A8E /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		55D3FB391CFE4284006C0A8E /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		55D3FB3B1CFE4B57006C0A8E /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		55D3FB3D1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomizeTeamsViewController.swift; sourceTree = "<group>"; };
+		55D3FB3F1CFE54F5006C0A8E /* PlayGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
+		55D3FB411CFE57E2006C0A8E /* DrawCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawCardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +114,19 @@
 			isa = PBXGroup;
 			children = (
 				55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */,
-				55D3FB071CFE0E30006C0A8E /* FirstViewController.swift */,
-				55D3FB091CFE0E30006C0A8E /* SecondViewController.swift */,
+				55D3FB071CFE0E30006C0A8E /* NumberOfPlayersViewController.swift */,
+				55D3FB091CFE0E30006C0A8E /* InfoViewController.swift */,
 				55D3FB0B1CFE0E30006C0A8E /* Main.storyboard */,
 				55D3FB0E1CFE0E30006C0A8E /* Assets.xcassets */,
 				55D3FB101CFE0E30006C0A8E /* LaunchScreen.storyboard */,
 				55D3FB131CFE0E30006C0A8E /* Info.plist */,
+				55D3FB351CFE3D62006C0A8E /* Game.swift */,
+				55D3FB371CFE4262006C0A8E /* Card.swift */,
+				55D3FB391CFE4284006C0A8E /* Deck.swift */,
+				55D3FB3B1CFE4B57006C0A8E /* extensions.swift */,
+				55D3FB3D1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift */,
+				55D3FB3F1CFE54F5006C0A8E /* PlayGameViewController.swift */,
+				55D3FB411CFE57E2006C0A8E /* DrawCardViewController.swift */,
 			);
 			path = GameOfGames;
 			sourceTree = "<group>";
@@ -262,9 +283,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55D3FB0A1CFE0E30006C0A8E /* SecondViewController.swift in Sources */,
+				55D3FB3A1CFE4284006C0A8E /* Deck.swift in Sources */,
+				55D3FB0A1CFE0E30006C0A8E /* InfoViewController.swift in Sources */,
+				55D3FB421CFE57E2006C0A8E /* DrawCardViewController.swift in Sources */,
+				55D3FB401CFE54F5006C0A8E /* PlayGameViewController.swift in Sources */,
 				55D3FB061CFE0E30006C0A8E /* AppDelegate.swift in Sources */,
-				55D3FB081CFE0E30006C0A8E /* FirstViewController.swift in Sources */,
+				55D3FB3E1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift in Sources */,
+				55D3FB381CFE4262006C0A8E /* Card.swift in Sources */,
+				55D3FB081CFE0E30006C0A8E /* NumberOfPlayersViewController.swift in Sources */,
+				55D3FB361CFE3D62006C0A8E /* Game.swift in Sources */,
+				55D3FB3C1CFE4B57006C0A8E /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +436,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GameOfGames/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = michael.GameOfGames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -419,7 +449,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GameOfGames/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = michael.GameOfGames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
