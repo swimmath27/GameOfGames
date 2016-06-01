@@ -18,7 +18,7 @@ class DrawCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playerIntroductionLabel.text = "Player \(game.getCurrentPlayer()), Your Card is..."
+        playerIntroductionLabel.text = game.getCurrentPlayerName() + ", Your Card is..."
  
         whichCardLabel.text = game.drawCard();
         
@@ -33,22 +33,33 @@ class DrawCardViewController: UIViewController {
     @IBAction func WonButtonPressed(sender: AnyObject)
     {
         game.cardWasWon();
+        let drink:String = game.getCurrentCard()!.getDrink();
+        // add one unit of the corresponding drink into the Bitch Cup and sends one unit of the drink to any player on the other team
+        alertAndGoBack("Congratz", s:"Please add one \(drink) into the cup and send one \(drink) to any player on the other team")
         
-        performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
+        //performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
     }
 
     @IBAction func LostButtonPressed(sender: AnyObject)
     {
+        // If a team fails to collect the card, the drawer of the card, as well as a team member of his or her choosing, has to drink a unit of the corresponding drink.
         game.cardWasLost();
+        let drink:String = game.getCurrentCard()!.getDrink();
         
-        performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
+        alertAndGoBack("Too bad", s:"Please drink one \(drink) and give one \(drink) to a team member")
+        
+        //performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
     }
     
     @IBAction func StolenButtonPressed(sender: AnyObject)
     {
         game.cardWasStolen();
         
-        performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
+        let drink:String = game.getCurrentCard()!.getDrink();
+        
+        alertAndGoBack("...", s:"Please add one \(drink) into the cup and the other team sends one \(drink) to any player on your team")
+
+        //performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
     }
     
     @IBAction func rulebookButtonPressed(sender: AnyObject) {
@@ -65,15 +76,15 @@ class DrawCardViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
      */
-    func alert(s : String)
+    
+    func alertAndGoBack(t:String, s : String)
     {
-        let popup = UIAlertController(title: "Error",
+        let popup = UIAlertController(title: t,
                                       message: s,
                                       preferredStyle: UIAlertControllerStyle.Alert)
         
-        let cancelAction = UIAlertAction(title: "OK",
-                                         style: .Cancel, handler: nil)
-        
+        let cancelAction = UIAlertAction(title:"OK", style: .Default, handler:  { action in self.performSegueWithIdentifier("DrawCardToPlayGame", sender: self) })
+
         popup.addAction(cancelAction)
         self.presentViewController(popup, animated: true,
                                    completion: nil)

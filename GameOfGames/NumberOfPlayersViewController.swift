@@ -37,11 +37,11 @@ class NumberOfPlayersViewController: UIViewController
     {
         if let x:String = playerCountField.text
         {
-            if let num : Int = Int(x)!
+            if let num : Int = Int(x)
             {
                 if (num%2 == 1)
                 {
-                    alert("Teams must be even");
+                    alert("Teams must be even (if you have an odd number, two people play as one and switch off (see rulebook)");
                 }
                 else if (num < Game.MIN_PLAYER_COUNT)
                 {
@@ -54,7 +54,7 @@ class NumberOfPlayersViewController: UIViewController
                 else
                 {
                     game.setNumPlayers(num);
-                    performSegueWithIdentifier("NumPlayersToRandomizeTeams", sender: nil)
+                    performSegueWithIdentifier("NumPlayersToNamePlayers", sender: nil)
                 }
                 return;
             }

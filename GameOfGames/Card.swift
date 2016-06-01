@@ -74,6 +74,22 @@ class Card
         self.rank = rank;
     }
     
+    func getDrink() -> String {
+        switch suit {
+        case .Joker:
+            return "nothing"
+        case .Spades:
+            return "Quarter can of beer"
+        case .Clubs:
+            return "nothing"
+        case .Diamonds:
+            return "Quarter glass of wine"
+        case .Hearts:
+            return "Shot of Liquor"
+        }
+    }
+
+    
     func toString() ->String
     {
         if (self.suit == Suit.Joker)

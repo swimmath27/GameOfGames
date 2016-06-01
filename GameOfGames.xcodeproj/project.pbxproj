@@ -22,6 +22,10 @@
 		55D3FB3E1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB3D1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift */; };
 		55D3FB401CFE54F5006C0A8E /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB3F1CFE54F5006C0A8E /* PlayGameViewController.swift */; };
 		55D3FB421CFE57E2006C0A8E /* DrawCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB411CFE57E2006C0A8E /* DrawCardViewController.swift */; };
+		55D3FB441CFF384A006C0A8E /* NamePlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB431CFF384A006C0A8E /* NamePlayersViewController.swift */; };
+		55D3FB461CFF3DDB006C0A8E /* NameTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB451CFF3DDB006C0A8E /* NameTeamsViewController.swift */; };
+		55D3FB481CFF4525006C0A8E /* PlayOlympicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB471CFF4525006C0A8E /* PlayOlympicsViewController.swift */; };
+		55D3FB4A1CFF4C64006C0A8E /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		55D3FB3D1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomizeTeamsViewController.swift; sourceTree = "<group>"; };
 		55D3FB3F1CFE54F5006C0A8E /* PlayGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
 		55D3FB411CFE57E2006C0A8E /* DrawCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawCardViewController.swift; sourceTree = "<group>"; };
+		55D3FB431CFF384A006C0A8E /* NamePlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamePlayersViewController.swift; sourceTree = "<group>"; };
+		55D3FB451CFF3DDB006C0A8E /* NameTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTeamsViewController.swift; sourceTree = "<group>"; };
+		55D3FB471CFF4525006C0A8E /* PlayOlympicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayOlympicsViewController.swift; sourceTree = "<group>"; };
+		55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +135,10 @@
 				55D3FB3D1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift */,
 				55D3FB3F1CFE54F5006C0A8E /* PlayGameViewController.swift */,
 				55D3FB411CFE57E2006C0A8E /* DrawCardViewController.swift */,
+				55D3FB431CFF384A006C0A8E /* NamePlayersViewController.swift */,
+				55D3FB451CFF3DDB006C0A8E /* NameTeamsViewController.swift */,
+				55D3FB471CFF4525006C0A8E /* PlayOlympicsViewController.swift */,
+				55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */,
 			);
 			path = GameOfGames;
 			sourceTree = "<group>";
@@ -284,11 +296,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				55D3FB3A1CFE4284006C0A8E /* Deck.swift in Sources */,
+				55D3FB441CFF384A006C0A8E /* NamePlayersViewController.swift in Sources */,
 				55D3FB0A1CFE0E30006C0A8E /* InfoViewController.swift in Sources */,
 				55D3FB421CFE57E2006C0A8E /* DrawCardViewController.swift in Sources */,
 				55D3FB401CFE54F5006C0A8E /* PlayGameViewController.swift in Sources */,
 				55D3FB061CFE0E30006C0A8E /* AppDelegate.swift in Sources */,
+				55D3FB461CFF3DDB006C0A8E /* NameTeamsViewController.swift in Sources */,
+				55D3FB4A1CFF4C64006C0A8E /* StartScreenViewController.swift in Sources */,
 				55D3FB3E1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift in Sources */,
+				55D3FB481CFF4525006C0A8E /* PlayOlympicsViewController.swift in Sources */,
 				55D3FB381CFE4262006C0A8E /* Card.swift in Sources */,
 				55D3FB081CFE0E30006C0A8E /* NumberOfPlayersViewController.swift in Sources */,
 				55D3FB361CFE3D62006C0A8E /* Game.swift in Sources */,

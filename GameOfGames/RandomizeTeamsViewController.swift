@@ -8,82 +8,104 @@
 
 import UIKit
 
-class RandomizeTeamsViewController: UIViewController
+class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
-
-    @IBOutlet weak var team1ListLabel: UILabel!
-    @IBOutlet weak var team2ListLabel: UILabel!
-    
-    var playerOrder:[Int] = [Int]();
     
     var game:Game = Game.getInstance();
+    
+    @IBOutlet weak var team1Table: UITableView!
+    @IBOutlet weak var team2Table: UITableView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        self.playerOrder = [Int]()
+        team1Table.delegate = self
+        team1Table.dataSource = self
         
-        var i = 3; // 3 is the first variable player; 1 and 2 are captains
-        while i <= game.getNumPlayers()
-        {
-            self.playerOrder.append(i);
-            i += 1;
-        }
+        
+        team2Table.delegate = self
+        team2Table.dataSource = self
         
         updateTeamViews();
     }
 
     func updateTeamViews()
     {
-        
-        var team1List = "1"
-        var team2List = "2"
-        for i in playerOrder
-        {
-            print(i);
-        }
-        
-        for i in 0...(playerOrder.count-1)
-        {
-            
-            if i%2 == 0// evens -> team 1 (cuz 0 indexing)
-            {
-                team1List = team1List + ", \(playerOrder[i])"
-            }
-            else // odds, team 2
-            {
-                team2List = team2List + ", \(playerOrder[i])"
-            }
-        }
-        
-        team1ListLabel.text = team1List
-        team2ListLabel.text = team2List
+        team1Table.reloadData();
+        team2Table.reloadData();
     }
     
     @IBAction func RandomizeButtonPressed(sender: AnyObject)
     {
-        playerOrder.shuffleInPlace();
+        game.shuffleTeams();
         updateTeamViews();
     }
     
     @IBAction func FinishButtonPressed(sender: AnyObject)
     {
-        var team1List = [1]
-        var team2List = [2]
-        for i in 0...(playerOrder.count-1)
-        {
-            if i%2 == 0 // evens -> team 1 (cuz 0 indexing)
-            {
-                team1List.append(playerOrder[i])
-            }
-            else // odds -> team 2
-            {
-                team2List.append(playerOrder[i])
-            }
-        }
-        game.setTeams(team1List, team2: team2List);
-        
-        performSegueWithIdentifier("RandomizeTeamsToPlayGame", sender: nil)
+        //don't need anything here anymore
+        performSegueWithIdentifier("RandomizeTeamsToNameTeams", sender: nil)
     }
+    
+    /// table view stuff ////////////////////////////////////
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        return 1;
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        if tableView == team1Table
+        {
+            return game.getTeam(1).count;
+        }
+        else if tableView == team2Table
+        {
+            return game.getTeam(2).count;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let row = indexPath.row
+        
+        if tableView == team1Table
+        {
+            let cell = tableView.dequeueReusableCellWithIdentifier("TempCellView1", forIndexPath: indexPath) as UITableViewCell
+
+            let playerNumber : Int = game.getTeam(1)[row];
+
+            cell.textLabel?.text = game.getPlayerName(playerNumber)
+            
+            return cell;
+        }
+        else if tableView == team2Table
+        {
+            let cell = tableView.dequeueReusableCellWithIdentifier("TempCellView2", forIndexPath: indexPath) as UITableViewCell
+            
+            let playerNumber : Int = game.getTeam(2)[row];
+            
+            cell.textLabel?.text = game.getPlayerName(playerNumber)
+            
+            return cell;
+        }
+        
+        return UITableViewCell()
+    }
+    
+    func tableView(tableView: UITableView,
+                   didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        //nothing when they select names
+    }
+    
+    
+    /////////////////////////////////////////////////////////////////////////////////
+
 }

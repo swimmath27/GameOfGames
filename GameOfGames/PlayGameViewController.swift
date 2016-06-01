@@ -9,7 +9,10 @@
 import UIKit
 
 class PlayGameViewController: UIViewController {
-
+    
+    @IBOutlet weak var team1NameLabel: UILabel!
+    @IBOutlet weak var team2NameLabel: UILabel!
+    
     @IBOutlet weak var Team1ScoreLabel: UILabel!
     @IBOutlet weak var Team2ScoreLabel: UILabel!
     
@@ -18,26 +21,37 @@ class PlayGameViewController: UIViewController {
     @IBOutlet weak var drawCardButton: UIButton!
     @IBOutlet weak var upNextLabel: UILabel!
     
+    @IBOutlet weak var nextPlayerTeamLabel: UILabel!
+    
+    @IBOutlet weak var roundLabel: UILabel!
+    
     private var game:Game = Game.getInstance();
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        team1NameLabel.text = game.getTeamName(1);
+        team2NameLabel.text = game.getTeamName(2);
+        
         Team1ScoreLabel.text = "\(game.getTeam1Score())";
         Team2ScoreLabel.text = "\(game.getTeam2Score())";
         
-        nextPlayerLabel.text = "Player \(game.getCurrentPlayer())"
-
+        roundLabel.text = "Round \(game.getCurrentRound())"
+        
+        nextPlayerLabel.text = game.getCurrentPlayerName();
+        nextPlayerTeamLabel.text = game.getCurrentTeamName();
         if (game.getTeam1Score() >= Game.NUM_CARDS_TO_WIN)
         {
             drawCardButton.hidden = true;
             nextPlayerLabel.text = "";
-            upNextLabel.text = "Team 1 Wins!"
+            nextPlayerTeamLabel.text = "";
+            upNextLabel.text = "Team 1 (\(game.getTeamName(1))) Wins!"
         }
         else if (game.getTeam2Score() >= Game.NUM_CARDS_TO_WIN)
         {
             drawCardButton.hidden = true;
             nextPlayerLabel.text = "";
-            upNextLabel.text = "Team 2 Wins!"
+            nextPlayerTeamLabel.text = "";
+            upNextLabel.text = "Team 2 (\(game.getTeamName(1))) Wins!"
         }
         
         // Do any additional setup after loading the view.
