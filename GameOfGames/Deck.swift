@@ -39,8 +39,6 @@ class Deck
             deck.append(Card(suit:Card.Suit.Joker, rank:Card.Rank.Ace))
             deck.append(Card(suit:Card.Suit.Joker, rank:Card.Rank.Two))
         }
-        
-        
     }
     
     func shuffle()
@@ -74,6 +72,16 @@ class Deck
         {
             return nil;
         }
+    }
+    
+    func undrawCard()
+    {
+        //taken from the extension where we shuffle. Shuffle one card back into the deck
+        let j = Int(arc4random_uniform(UInt32(order.count - index))) + index
+        guard index != j else { return }
+        swap(&order[index], &order[j])
+        
+        index -= 1 // go back one index
     }
     
     

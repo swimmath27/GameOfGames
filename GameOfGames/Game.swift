@@ -13,8 +13,10 @@ import Foundation
 
 class Game
 {
+    //IF CHANGED HERE, CHANGE IN STORYBOARD AS WELL AT NUMBER OF PLAYERS VIEW CONTROLLER
     internal static let MIN_PLAYER_COUNT = 6;
-    internal static let MAX_PLAYER_COUNT = 12;
+    internal static let MAX_PLAYER_COUNT = 14;
+    
     internal static let NUM_CARDS_TO_WIN = 20;
     
     private static var singleton: Game = Game();
@@ -40,6 +42,8 @@ class Game
     
     private var team1CardsWon:[Card] = [Card]()
     private var team2CardsWon:[Card] = [Card]()
+    
+    private var skipped:Bool = false;
     
     private init()
     {
@@ -168,15 +172,21 @@ class Game
         return team1CardsWon.count;
     }
     
+    func getTeam1Cards() -> [Card]
+    {
+        return team1CardsWon;
+    }
+    
     func getTeam2Score() -> Int
     {
         return team2CardsWon.count;
     }
     
-    func advanceTurn()
+    func getTeam2Cards() -> [Card]
     {
-        currentTurn += 1;
+        return team2CardsWon;
     }
+    
     func getCurrentRound() ->Int
     {
         return (currentTurn / numPlayers) + 1;
@@ -225,6 +235,7 @@ class Game
     
     func drawCard() -> String?
     {
+        self.skipped = false; // the last card was not skipped (yet)
         if deck.hasNextCard()
         {
             self.currentCard = deck.nextCard();
@@ -236,9 +247,25 @@ class Game
         }
     }
     
+    func undoLastTurn()
+    {
+        self.undrawCard() // shuffles it back into the deck
+        currentTurn -= 1
+    }
+    
+    func undrawCard()
+    {
+        deck.undrawCard() // shuffles it back into the deck
+    }
+    
     func getCurrentCard() -> Card?
     {
         return self.currentCard;
+    }
+    
+    func advanceTurn()
+    {
+        currentTurn += 1;
     }
     
     func cardWasWon()
@@ -277,5 +304,14 @@ class Game
         self.advanceTurn();
     }
     
+    func skipCard()
+    {
+        self.skipped = true;
+    }
+    
+    func cardWasSkipped() -> Bool
+    {
+        return self.skipped;
+    }
     
 }

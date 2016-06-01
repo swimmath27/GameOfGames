@@ -19,6 +19,7 @@ class NumberOfPlayersViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        playerCountField.placeholder = "\(Game.MIN_PLAYER_COUNT)-\(Game.MAX_PLAYER_COUNT)"
     }
 
     override func didReceiveMemoryWarning()
@@ -41,7 +42,7 @@ class NumberOfPlayersViewController: UIViewController
             {
                 if (num%2 == 1)
                 {
-                    alert("Teams must be even (if you have an odd number, two people play as one and switch off (see rulebook)");
+                    alert("Teams must be even (if you have an odd number, two people play as one and switch off in odd/even rounds (see rulebook)");
                 }
                 else if (num < Game.MIN_PLAYER_COUNT)
                 {

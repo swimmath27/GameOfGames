@@ -13,8 +13,6 @@ class PlayOlympicsViewController: UIViewController {
     @IBOutlet weak var game1Segment: UISegmentedControl!
     @IBOutlet weak var game2Segment: UISegmentedControl!
     @IBOutlet weak var game3Segment: UISegmentedControl!
-    @IBOutlet weak var game4Segment: UISegmentedControl!
-    @IBOutlet weak var game5Segment: UISegmentedControl!
     
     private let game : Game = Game.getInstance();
     
@@ -26,8 +24,6 @@ class PlayOlympicsViewController: UIViewController {
         game1Segment.selectedSegmentIndex = 1;
         game2Segment.selectedSegmentIndex = 1;
         game3Segment.selectedSegmentIndex = 1;
-        game4Segment.selectedSegmentIndex = 1;
-        game5Segment.selectedSegmentIndex = 1;
         
     }
 
@@ -56,15 +52,11 @@ class PlayOlympicsViewController: UIViewController {
         team1Wins += game1Segment.selectedSegmentIndex == 0 ? 1 : 0;
         team1Wins += game2Segment.selectedSegmentIndex == 0 ? 1 : 0;
         team1Wins += game3Segment.selectedSegmentIndex == 0 ? 1 : 0;
-        team1Wins += game4Segment.selectedSegmentIndex == 0 ? 1 : 0;
-        team1Wins += game5Segment.selectedSegmentIndex == 0 ? 1 : 0;
         
         //team 2 is index 2
         team2Wins += game1Segment.selectedSegmentIndex == 2 ? 1 : 0;
         team2Wins += game2Segment.selectedSegmentIndex == 2 ? 1 : 0;
         team2Wins += game3Segment.selectedSegmentIndex == 2 ? 1 : 0;
-        team2Wins += game4Segment.selectedSegmentIndex == 2 ? 1 : 0;
-        team2Wins += game5Segment.selectedSegmentIndex == 2 ? 1 : 0;
         
         //ties are index 1 but we don't care about them
         if team1Wins == team2Wins

@@ -62,6 +62,14 @@ class DrawCardViewController: UIViewController {
         //performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
     }
     
+    @IBAction func skipCardButtonPressed(sender: AnyObject)
+    {
+        game.cardWasSkipped();
+        alertAndGoBack("Alert", s:"Card will be skipped and your turn will continue (This cannot be undone)")
+        
+        //performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
+    }
+    
     @IBAction func rulebookButtonPressed(sender: AnyObject) {
         if let url = NSURL(string: "http://nathanand.co/wp-content/uploads/2016/05/The-Game-of-Games-Rulebook.pdf"){
             UIApplication.sharedApplication().openURL(url)
@@ -83,9 +91,17 @@ class DrawCardViewController: UIViewController {
                                       message: s,
                                       preferredStyle: UIAlertControllerStyle.Alert)
         
-        let cancelAction = UIAlertAction(title:"OK", style: .Default, handler:  { action in self.performSegueWithIdentifier("DrawCardToPlayGame", sender: self) })
-
-        popup.addAction(cancelAction)
+        let okAction = UIAlertAction(title:"OK", style: .Default, handler:
+                                    {
+                                        action in self.performSegueWithIdentifier(
+                                               "DrawCardToPlayGame", sender: self)
+                                    })
+        popup.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .Cancel, handler: nil)
+        popup.addAction(cancelAction);
+        
         self.presentViewController(popup, animated: true,
                                    completion: nil)
         

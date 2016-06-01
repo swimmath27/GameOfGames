@@ -10,20 +10,21 @@ import UIKit
 
 class PlayGameViewController: UIViewController {
     
+    @IBOutlet weak var roundLabel: UILabel!
+    
     @IBOutlet weak var team1NameLabel: UILabel!
     @IBOutlet weak var team2NameLabel: UILabel!
     
     @IBOutlet weak var Team1ScoreLabel: UILabel!
     @IBOutlet weak var Team2ScoreLabel: UILabel!
     
-    @IBOutlet weak var nextPlayerLabel: UILabel!
-    
-    @IBOutlet weak var drawCardButton: UIButton!
     @IBOutlet weak var upNextLabel: UILabel!
     
+    @IBOutlet weak var nextPlayerLabel: UILabel!
     @IBOutlet weak var nextPlayerTeamLabel: UILabel!
     
-    @IBOutlet weak var roundLabel: UILabel!
+    @IBOutlet weak var drawCardButton: UIButton!
+    @IBOutlet weak var undoButton: UIButton!
     
     private var game:Game = Game.getInstance();
     override func viewDidLoad() {
@@ -39,6 +40,18 @@ class PlayGameViewController: UIViewController {
         
         nextPlayerLabel.text = game.getCurrentPlayerName();
         nextPlayerTeamLabel.text = game.getCurrentTeamName();
+        
+        //can't undo skipping a card
+        if (game.cardWasSkipped())
+        {
+            undoButton.hidden=true;
+        }
+        else
+        {
+            undoButton.hidden=false;
+        }
+
+        //check if game is over
         if (game.getTeam1Score() >= Game.NUM_CARDS_TO_WIN)
         {
             drawCardButton.hidden = true;
@@ -53,7 +66,30 @@ class PlayGameViewController: UIViewController {
             nextPlayerTeamLabel.text = "";
             upNextLabel.text = "Team 2 (\(game.getTeamName(2))) Wins!"
         }
-        
+        else if !game.hasNextCard()
+        {
+            drawCardButton.hidden = true;
+            nextPlayerTeamLabel.text = "";
+            upNextLabel.text = "Deck is Out of Cards!"
+            
+            //reusing these labels...
+            if (game.getTeam1Score() > game.getTeam2Score())
+            {
+                nextPlayerLabel.text = "Team 1 (\(game.getTeamName(1))) Wins!";
+                
+            }
+            else if (game.getTeam1Score() < game.getTeam2Score())
+            {
+                
+                nextPlayerLabel.text = "Team 2 (\(game.getTeamName(2))) Wins!";
+            }
+            else
+            {
+                nextPlayerLabel.text = "Tie Game!";
+            }
+
+        }
+        ///
         // Do any additional setup after loading the view.
     }
 
@@ -68,6 +104,37 @@ class PlayGameViewController: UIViewController {
             alert("Deck is out of cards");
         }
     }
+    
+    private func undo()
+    {
+        game.undoLastTurn();
+        undoButton.hidden = true;
+    }
+    
+    @IBAction func undoButtonPressed(sender: AnyObject)
+    {
+        let message:String = "Card will be shuffled back into the deck and it will be the previous player's turn";
+        
+        let popup = UIAlertController(title: "Error",
+                                      message: message,
+                                      preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let okAction = UIAlertAction(title:"OK", style: .Default, handler:
+            {
+                action in self.undo();
+        })
+        popup.addAction(okAction)
+
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .Cancel, handler: nil)
+        
+        popup.addAction(cancelAction)
+        self.presentViewController(popup, animated: true,
+                                   completion: nil)
+
+        game.undoLastTurn();
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -82,6 +149,7 @@ class PlayGameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
      */
+    
     func alert(s : String)
     {
         let popup = UIAlertController(title: "Error",
