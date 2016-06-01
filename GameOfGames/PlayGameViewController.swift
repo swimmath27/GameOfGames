@@ -51,7 +51,7 @@ class PlayGameViewController: UIViewController {
             drawCardButton.hidden = true;
             nextPlayerLabel.text = "";
             nextPlayerTeamLabel.text = "";
-            upNextLabel.text = "Team 2 (\(game.getTeamName(1))) Wins!"
+            upNextLabel.text = "Team 2 (\(game.getTeamName(2))) Wins!"
         }
         
         // Do any additional setup after loading the view.
