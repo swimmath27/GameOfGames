@@ -353,7 +353,7 @@ class Game
     func quickStart(players:Int)
     {
         self.setNumPlayers(players);
-        team1Name = "The Lobsters"
+        team1Name = "The Crustaceans"
         team2Name = "The Fish"
         playerNames = ["Lobster", "Great White", "Crab", "Tuna","Shrimp", "Manta Ray", "Barnacle", "Swordfish", "Krill", "Eel", "Crayfish", "BlowFish", "Prawn", "Flounder"]
     }

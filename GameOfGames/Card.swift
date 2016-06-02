@@ -85,7 +85,7 @@ class Card
         case .Diamonds:
             return "quarter glass of wine"
         case .Hearts:
-            return "Shot of Liquor"
+            return "shot of Liquor"
         }
     }
 
