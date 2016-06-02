@@ -63,6 +63,36 @@ class NumberOfPlayersViewController: UIViewController
         alert("You must enter a number of players")
     }
     
+    @IBAction func quickStartPressed(sender: AnyObject)
+    {
+        if let x:String = playerCountField.text
+        {
+            if let num : Int = Int(x)
+            {
+                if (num%2 == 1)
+                {
+                    alert("Teams must be even (if you have an odd number, two people play as one and switch off in odd/even rounds (see rulebook)");
+                }
+                else if (num < Game.MIN_PLAYER_COUNT)
+                {
+                    alert("You need at least \(Game.MIN_PLAYER_COUNT) players");
+                }
+                else if num > Game.MAX_PLAYER_COUNT
+                {
+                    alert("You can't have more than \(Game.MAX_PLAYER_COUNT) players");
+                }
+                else
+                {
+                    game.quickStart(num);
+                    performSegueWithIdentifier("NumPlayersToPlayOlympics", sender: nil)
+                }
+                return;
+            }
+        }
+        alert("You must enter a number of players")
+    }
+    
+    
     func alert(s : String)
     {
         let popup = UIAlertController(title: "Error",

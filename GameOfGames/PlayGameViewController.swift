@@ -8,7 +8,8 @@
 
 import UIKit
 
-class PlayGameViewController: UIViewController {
+class PlayGameViewController: UIViewController
+{
     
     @IBOutlet weak var roundLabel: UILabel!
     
@@ -27,6 +28,7 @@ class PlayGameViewController: UIViewController {
     @IBOutlet weak var undoButton: UIButton!
     
     private var game:Game = Game.getInstance();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,7 +44,7 @@ class PlayGameViewController: UIViewController {
         nextPlayerTeamLabel.text = game.getCurrentTeamName();
         
         //can't undo skipping a card
-        if (game.cardWasSkipped())
+        if (game.cardWasSkipped() || (game.getCurrentTurn() == 1))
         {
             undoButton.hidden=true;
         }
@@ -107,6 +109,7 @@ class PlayGameViewController: UIViewController {
     
     private func undo()
     {
+        //shuffles the last card back into the deck
         game.undoLastTurn();
         undoButton.hidden = true;
     }
@@ -133,6 +136,23 @@ class PlayGameViewController: UIViewController {
                                    completion: nil)
 
         game.undoLastTurn();
+    }
+    
+    @IBAction func viewTeam1CardsButtonPressed(sender: AnyObject)
+    {
+        viewTeamCards(1);
+    }
+    
+    @IBAction func viewTeam2CardsButtonPressed(sender: AnyObject)
+    {
+        viewTeamCards(2);
+    }
+    
+    
+    func viewTeamCards(which:Int)
+    {
+        CheckCardsViewController.whichTeam = which;
+        performSegueWithIdentifier("PlayGameToCheckCards", sender: nil)
     }
     
     override func didReceiveMemoryWarning() {

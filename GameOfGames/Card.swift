@@ -90,7 +90,7 @@ class Card
     }
 
     
-    func toString() ->String
+    func toString() -> String
     {
         if (self.suit == Suit.Joker)
         {

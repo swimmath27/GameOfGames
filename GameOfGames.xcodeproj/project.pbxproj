@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55D2E5FA1CFFBA2E004768FE /* RoundRouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */; };
 		55D3FB061CFE0E30006C0A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */; };
 		55D3FB081CFE0E30006C0A8E /* NumberOfPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB071CFE0E30006C0A8E /* NumberOfPlayersViewController.swift */; };
 		55D3FB0A1CFE0E30006C0A8E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB091CFE0E30006C0A8E /* InfoViewController.swift */; };
@@ -26,6 +27,7 @@
 		55D3FB461CFF3DDB006C0A8E /* NameTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB451CFF3DDB006C0A8E /* NameTeamsViewController.swift */; };
 		55D3FB481CFF4525006C0A8E /* PlayOlympicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB471CFF4525006C0A8E /* PlayOlympicsViewController.swift */; };
 		55D3FB4A1CFF4C64006C0A8E /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */; };
+		55D3FB501CFFA3CD006C0A8E /* CheckCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB4F1CFFA3CD006C0A8E /* CheckCardsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRouletteViewController.swift; sourceTree = "<group>"; };
 		55D3FB021CFE0E30006C0A8E /* GameOfGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55D3FB071CFE0E30006C0A8E /* NumberOfPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfPlayersViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		55D3FB451CFF3DDB006C0A8E /* NameTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTeamsViewController.swift; sourceTree = "<group>"; };
 		55D3FB471CFF4525006C0A8E /* PlayOlympicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayOlympicsViewController.swift; sourceTree = "<group>"; };
 		55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		55D3FB4F1CFFA3CD006C0A8E /* CheckCardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 				55D3FB451CFF3DDB006C0A8E /* NameTeamsViewController.swift */,
 				55D3FB471CFF4525006C0A8E /* PlayOlympicsViewController.swift */,
 				55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */,
+				55D3FB4F1CFFA3CD006C0A8E /* CheckCardsViewController.swift */,
+				55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */,
 			);
 			path = GameOfGames;
 			sourceTree = "<group>";
@@ -299,6 +305,8 @@
 				55D3FB441CFF384A006C0A8E /* NamePlayersViewController.swift in Sources */,
 				55D3FB0A1CFE0E30006C0A8E /* InfoViewController.swift in Sources */,
 				55D3FB421CFE57E2006C0A8E /* DrawCardViewController.swift in Sources */,
+				55D3FB501CFFA3CD006C0A8E /* CheckCardsViewController.swift in Sources */,
+				55D2E5FA1CFFBA2E004768FE /* RoundRouletteViewController.swift in Sources */,
 				55D3FB401CFE54F5006C0A8E /* PlayGameViewController.swift in Sources */,
 				55D3FB061CFE0E30006C0A8E /* AppDelegate.swift in Sources */,
 				55D3FB461CFF3DDB006C0A8E /* NameTeamsViewController.swift in Sources */,
@@ -539,6 +547,7 @@
 				55D3FB2E1CFE0E30006C0A8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55D3FB2F1CFE0E30006C0A8E /* Build configuration list for PBXNativeTarget "GameOfGamesTests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +556,7 @@
 				55D3FB311CFE0E30006C0A8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55D3FB321CFE0E30006C0A8E /* Build configuration list for PBXNativeTarget "GameOfGamesUITests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +565,7 @@
 				55D3FB341CFE0E30006C0A8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -36,7 +36,7 @@ class Game
     
     private var playerOrder:[Int] = [Int]()
     
-    private var numToNameMapping:[String] = [String]()
+    private var playerNames:[String] = [String]()
     
     private var whichTeamGoesFirst:Int = 1;
     
@@ -58,7 +58,7 @@ class Game
     func setNumPlayers(num: Int)
     {
         self.numPlayers = num;
-        numToNameMapping = [String](count:num, repeatedValue: "");
+        playerNames = [String](count:num, repeatedValue: "");
         
         self.playerOrder = [Int]()
         
@@ -97,13 +97,13 @@ class Game
     {
         if (num <= self.numPlayers)
         {
-            numToNameMapping[num-1] = name;
+            playerNames[num-1] = name;
         }
     }
     
     func getPlayerName(num:Int) -> String
     {
-        return numToNameMapping[num-1];
+        return playerNames[num-1];
     }
     
     func shuffleTeams()
@@ -166,7 +166,6 @@ class Game
         }
     }
     
-    
     func getTeam1Score() -> Int
     {
         return team1CardsWon.count;
@@ -187,9 +186,41 @@ class Game
         return team2CardsWon;
     }
     
+    func getTeamScore(which : Int) -> Int
+    {
+        if which == 1
+        {
+            return team1CardsWon.count
+        }
+        if which == 2
+        {
+            return team2CardsWon.count
+        }
+        return 0;
+    }
+
+    func getTeamCards(which : Int) -> [Card]
+    {
+        if which == 1
+        {
+            return team1CardsWon
+        }
+        if which == 2
+        {
+            return team2CardsWon
+        }
+        return [];
+    }
+
+    
     func getCurrentRound() ->Int
     {
         return (currentTurn / numPlayers) + 1;
+    }
+    
+    func getCurrentTurn() ->Int
+    {
+        return currentTurn + 1;
     }
     
     func getCurrentPlayer() -> Int
@@ -211,7 +242,7 @@ class Game
         return self.getPlayerName(self.getCurrentPlayer());
     }
     
-    func getCurrentTeam() ->Int
+    func getCurrentTeam() -> Int
     {
         let numInRound = currentTurn % numPlayers;
         
@@ -219,7 +250,10 @@ class Game
         {
             return 1
         }
-        return 2
+        else
+        {
+            return 2
+        }
 
     }
     
@@ -247,9 +281,11 @@ class Game
         }
     }
     
+    // shuffles the last card drawn back into the deck
     func undoLastTurn()
     {
         self.undrawCard() // shuffles it back into the deck
+        //TODO: NEED TO REMOVE IT FROM WHOEVER WON IT'S CARDS
         currentTurn -= 1
     }
     
@@ -312,6 +348,14 @@ class Game
     func cardWasSkipped() -> Bool
     {
         return self.skipped;
+    }
+    
+    func quickStart(players:Int)
+    {
+        self.setNumPlayers(players);
+        team1Name = "The Lobsters"
+        team2Name = "The Fish"
+        playerNames = ["Lobster", "Great White", "Crab", "Tuna","Shrimp", "Manta Ray", "Barnacle", "Swordfish", "Krill", "Eel", "Crayfish", "BlowFish", "Prawn", "Flounder"]
     }
     
 }
