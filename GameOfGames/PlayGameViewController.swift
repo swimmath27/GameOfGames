@@ -25,7 +25,6 @@ class PlayGameViewController: UIViewController
     @IBOutlet weak var nextPlayerTeamLabel: UILabel!
     
     @IBOutlet weak var drawCardButton: UIButton!
-    @IBOutlet weak var undoButton: UIButton!
     
     private var game:Game = Game.getInstance();
     
@@ -42,16 +41,6 @@ class PlayGameViewController: UIViewController
         
         nextPlayerLabel.text = game.getCurrentPlayerName();
         nextPlayerTeamLabel.text = game.getCurrentTeamName();
-        
-        //can't undo skipping a card
-        if (game.cardWasSkipped() || (game.getCurrentTurn() == 1))
-        {
-            undoButton.hidden=true;
-        }
-        else
-        {
-            undoButton.hidden=false;
-        }
 
         //check if game is over
         if (game.getTeam1Score() >= Game.NUM_CARDS_TO_WIN)
@@ -105,37 +94,6 @@ class PlayGameViewController: UIViewController
         {
             alert("Deck is out of cards");
         }
-    }
-    
-    private func undo()
-    {
-        //shuffles the last card back into the deck
-        game.undoLastTurn();
-        undoButton.hidden = true;
-    }
-    
-    @IBAction func undoButtonPressed(sender: AnyObject)
-    {
-        let message:String = "Card will be shuffled back into the deck and it will be the previous player's turn";
-        
-        let popup = UIAlertController(title: "Error",
-                                      message: message,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
-        
-        let okAction = UIAlertAction(title:"OK", style: .Default, handler:
-            {
-                action in self.undo();
-        })
-        popup.addAction(okAction)
-
-        let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .Cancel, handler: nil)
-        
-        popup.addAction(cancelAction)
-        self.presentViewController(popup, animated: true,
-                                   completion: nil)
-
-        game.undoLastTurn();
     }
     
     @IBAction func viewTeam1CardsButtonPressed(sender: AnyObject)
