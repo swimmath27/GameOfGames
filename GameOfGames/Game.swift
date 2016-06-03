@@ -43,6 +43,9 @@ class Game
     private var team1CardsWon:[Card] = [Card]()
     private var team2CardsWon:[Card] = [Card]()
     
+    private var team1CardsPerRound:[Int] = [Int]()
+    private var team2CardsPerRound:[Int] = [Int]()
+    
     private var skipped:Bool = false;
     
     private init()
@@ -311,10 +314,12 @@ class Game
         if numInRound%2 == (whichTeamGoesFirst==1 ? 0 : 1)
         {
             team1CardsWon.append(currentCard!)
+            addOneToTeamInCurrentRound(1)
         }
         else // team 2
         {
             team2CardsWon.append(currentCard!)
+            addOneToTeamInCurrentRound(2)
         }
         
         self.advanceTurn();
@@ -332,12 +337,39 @@ class Game
         if numInRound%2 == (whichTeamGoesFirst==1 ? 0 : 1) // even, first team (because 0 index) -> second team steals
         {
             team2CardsWon.append(currentCard!)
+            addOneToTeamInCurrentRound(2);
         }
         else // team 2 -> 1 steals
         {
             team1CardsWon.append(currentCard!)
+            addOneToTeamInCurrentRound(1)
         }
+        
         self.advanceTurn();
+    }
+    
+    func addOneToTeamInCurrentRound(which:Int)
+    {
+        let roundNum = self.getCurrentRound()-1; // zero indexing
+        if which == 1
+        {
+            while (team1CardsPerRound.count < roundNum)
+            {
+                //it's a while just in case they didn't get any cards in previous rounds
+                team1CardsPerRound.append(0);
+            }
+            team1CardsPerRound[roundNum] += 1;
+
+        }
+        else if which == 2
+        {
+            while (team2CardsPerRound.count < roundNum)
+            {
+                //it's a while just in case they didn't get any cards in previous rounds
+                team2CardsPerRound.append(0);
+            }
+            team2CardsPerRound[roundNum] += 1;
+        }
     }
     
     func skipCard()
@@ -357,5 +389,60 @@ class Game
         team2Name = "The Fish"
         playerNames = ["Lobster", "Great White", "Crab", "Tuna","Shrimp", "Manta Ray", "Barnacle", "Swordfish", "Krill", "Eel", "Crayfish", "BlowFish", "Prawn", "Flounder"]
     }
+    
+    func isNewRound() -> Bool
+    {
+        return (currentTurn % numPlayers) == 0;
+    }
+    
+    func getTeamCardsInLastRound(team:Int) -> Int
+    {
+        if self.getCurrentRound() < 2
+        {
+            //there was no last round
+            return 0;
+        }
+        return self.getTeamCardsInRound(team, round: self.getCurrentRound()-1);
+    }
+    
+    func getTeamCardsInCurrentRound(team:Int) -> Int
+    {
+        return self.getTeamCardsInRound(team, round: self.getCurrentRound());
+    }
+
+    
+    func getTeamCardsInRound(team:Int, round:Int) -> Int
+    {
+        if team == 1
+        {
+            return team1CardsPerRound[round-1]
+        }
+        else if team == 2
+        {
+            return team2CardsPerRound[round-1]
+        }
+        return 0;
+    }
+    
+    func getCardsWonInLastRound() -> Int
+    {
+        if self.getCurrentRound() < 2
+        {
+            //there was no last round
+            return 0;
+        }
+        return self.getCardsWonInRound(self.getCurrentRound()-1);
+    }
+    
+    func getCardsWonInCurrentRound() -> Int
+    {
+        return self.getCardsWonInRound(self.getCurrentRound());
+    }
+
+    func getCardsWonInRound(round:Int) -> Int
+    {
+        return team1CardsPerRound[round-1] + team2CardsPerRound[round-1]
+    }
+
     
 }

@@ -43,29 +43,28 @@ class DrawCardViewController: UIViewController {
     @IBAction func LostButtonPressed(sender: AnyObject)
     {
         // If a team fails to collect the card, the drawer of the card, as well as a team member of his or her choosing, has to drink a unit of the corresponding drink.
-        game.cardWasLost();
         let drink:String = game.getCurrentCard()!.getDrink();
         
-        alertAndGoBack("Too bad", s:"Please drink one \(drink) and give one \(drink) to a team member")
+        alertAndGoBack("Too bad", s:"Please drink one \(drink) and give one \(drink) to a team member",whichAction: 1)
         
         //performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
     }
     
     @IBAction func StolenButtonPressed(sender: AnyObject)
     {
-        game.cardWasStolen();
+        
         
         let drink:String = game.getCurrentCard()!.getDrink();
         
-        alertAndGoBack("...", s:"Please add one \(drink) into the cup and the other team sends one \(drink) to any player on your team")
+        alertAndGoBack("...", s:"Please add one \(drink) into the cup and the other team sends one \(drink) to any player on your team", whichAction: 2)
 
         //performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
     }
     
     @IBAction func skipCardButtonPressed(sender: AnyObject)
     {
-        game.cardWasSkipped();
-        alertAndGoBack("Alert", s:"Card will be skipped and your turn will continue (This cannot be undone)")
+        
+        alertAndGoBack("Alert", s:"Card will be skipped and your turn will continue (This cannot be undone)",whichAction: 3)
         
         //performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
     }
@@ -85,7 +84,31 @@ class DrawCardViewController: UIViewController {
     }
      */
     
-    func alertAndGoBack(t:String, s : String)
+    func goToNext(whichAction:Int)
+    {
+        switch whichAction
+        {
+        case 1:
+            game.cardWasLost();
+        case 2:
+            game.cardWasStolen();
+        case 3:
+            game.cardWasSkipped();
+            
+        }
+        if game.isNewRound()
+        {
+            self.performSegueWithIdentifier(
+                "DrawCardToRoundRoulette", sender: self)
+        }
+        else
+        {
+            self.performSegueWithIdentifier(
+                "DrawCardToPlayGame", sender: self)
+        }
+    }
+    
+    func alertAndGoBack(t:String, s : String, whichAction:Int)
     {
         let popup = UIAlertController(title: t,
                                       message: s,
@@ -93,8 +116,7 @@ class DrawCardViewController: UIViewController {
         
         let okAction = UIAlertAction(title:"OK", style: .Default, handler:
                                     {
-                                        action in self.performSegueWithIdentifier(
-                                               "DrawCardToPlayGame", sender: self)
+                                        action in self.goToNext(which)
                                     })
         popup.addAction(okAction)
         

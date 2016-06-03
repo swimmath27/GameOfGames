@@ -10,9 +10,25 @@ import UIKit
 
 class RoundRouletteViewController: UIViewController {
 
+    @IBOutlet weak var team1Name: UILabel!
+    @IBOutlet weak var team2Name: UILabel!
+    
+    @IBOutlet weak var team1Chance: UILabel!
+    @IBOutlet weak var team2Chance: UILabel!
+    
+    let game : Game = Game.getInstance()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        team1Name.text = "\(game.getTeamName(1))'s Chance"
+        team2Name.text = "\(game.getTeamName(2))'s Chance"
+        
+        //chance that team 1 drinks is proportional to the number of cards team 2 got
+        //need the last round version because current it is the next round
+        team1Chance.text = "\(game.getTeamCardsInLastRound(2))/\(game.getCardsWonInLastRound())"
+        team2Chance.text = "\(game.getTeamCardsInLastRound(1))/\(game.getCardsWonInLastRound())"
+        
         // Do any additional setup after loading the view.
     }
 

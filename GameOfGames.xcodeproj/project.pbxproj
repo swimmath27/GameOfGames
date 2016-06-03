@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55B43CB61D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */; };
 		55D2E5FA1CFFBA2E004768FE /* RoundRouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */; };
 		55D3FB061CFE0E30006C0A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */; };
 		55D3FB081CFE0E30006C0A8E /* NumberOfPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB071CFE0E30006C0A8E /* NumberOfPlayersViewController.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickStartRandomTeamsViewController.swift; sourceTree = "<group>"; };
 		55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRouletteViewController.swift; sourceTree = "<group>"; };
 		55D3FB021CFE0E30006C0A8E /* GameOfGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */,
 				55D3FB4F1CFFA3CD006C0A8E /* CheckCardsViewController.swift */,
 				55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */,
+				55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */,
 			);
 			path = GameOfGames;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55D3FB3A1CFE4284006C0A8E /* Deck.swift in Sources */,
+				55B43CB61D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift in Sources */,
 				55D3FB441CFF384A006C0A8E /* NamePlayersViewController.swift in Sources */,
 				55D3FB0A1CFE0E30006C0A8E /* InfoViewController.swift in Sources */,
 				55D3FB421CFE57E2006C0A8E /* DrawCardViewController.swift in Sources */,
