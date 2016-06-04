@@ -50,7 +50,7 @@ class Game
     private var team1CardsPerRound:[Int] = [Int]()
     private var team2CardsPerRound:[Int] = [Int]()
     
-    private var skipped:Bool = false;
+    private var quickStarted = false;
     
     private init()
     {
@@ -275,7 +275,6 @@ class Game
     
     func drawCard() -> Card
     {
-        self.skipped = false; // the last card was not skipped (yet)
         if deck.hasNextCard()
         {
             self.currentCard = deck.nextCard();
@@ -372,14 +371,9 @@ class Game
         }
     }
     
-    func skipCard()
+    func cardWasSkipped()
     {
-        self.skipped = true;
-    }
-    
-    func cardWasSkipped() -> Bool
-    {
-        return self.skipped;
+        //do nothing
     }
     
     func isNewRound() -> Bool
@@ -450,10 +444,44 @@ class Game
     func quickStart(players:Int)
     {
         print("quick starting");
+        quickStarted = true;
+        
         self.setNumPlayers(players);
         team1Name = "The Crustaceans"
         team2Name = "The Fish"
         playerNames = ["Lobster", "Great White", "Crab", "Tuna","Shrimp", "Manta Ray", "Barnacle", "Swordfish", "Krill", "Eel", "Crayfish", "BlowFish", "Prawn", "Flounder"]
+    }
+    
+    func wasQuickStarted() -> Bool
+    {
+        return self.quickStarted;
+    }
+    
+    func sendPlayerToEndOfTeam(playerIndex:Int, team:Int)
+    {
+        var index = playerIndex
+        if (team != 1 && team != 2)
+        {
+            return
+        }
+        
+        //shift that player to the back
+        if (team == 1)
+        {
+            while index < team1.count-1
+            {
+                swap(&team1[index], &team1[index+1])
+                index += 1
+            }
+        }
+        else if team == 2
+        {
+            while index < self.getTeam(team).count-1
+            {
+                swap(&team2[index], &team2[index+1])
+                index += 1
+            }
+        }
     }
 
     

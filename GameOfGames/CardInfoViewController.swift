@@ -30,8 +30,10 @@ class CardInfoViewController: UIViewController
         // Do any additional setup after loading the view.
         
         //http://stackoverflow.com/questions/990221/multiple-lines-of-text-in-uilabel
-        fullDescriptionLabel.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
+        fullDescriptionLabel.lineBreakMode = .ByWordWrapping
         fullDescriptionLabel.numberOfLines = 0
+        
+        shortDescriptionLabel.lineBreakMode = .ByWordWrapping
         
         cardImage.image = UIImage(named: CardInfoViewController.currentCard.getFileName());
         cardNameLabel.text = CardInfoViewController.currentCard.toString();

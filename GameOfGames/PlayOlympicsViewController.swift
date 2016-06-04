@@ -68,9 +68,9 @@ class PlayOlympicsViewController: UIViewController {
         {
             game.setTeamGoingFirst(2);
         }
-        //team 1 is automatically set to go first
+        //team 1 is automatically set to go first so we don't have to update it
         
-        performSegueWithIdentifier("PlayOlympicsToPlayGame", sender: nil)
+        performSegueWithIdentifier("PlayOlympicsToChooseTeamOrder", sender: nil)
     }
     
     func alert(s : String)

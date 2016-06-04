@@ -95,13 +95,6 @@ class DrawCardViewController: UIViewController {
         alertAndGoBack("Alert", s:"Card will be skipped and your turn will continue (This cannot be undone)",whichAction: "skipped")
     }
     
-    @IBAction func rulebookButtonPressed(sender: AnyObject)
-    {
-        if let url = NSURL(string: Game.RULEBOOK_URL)
-        {
-            UIApplication.sharedApplication().openURL(url)
-        }
-    }
     /*
     // MARK: - Navigation
 

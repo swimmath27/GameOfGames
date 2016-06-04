@@ -64,6 +64,7 @@
 		55B43D8F1D022440002CCE78 /* Mind_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D5B1D022440002CCE78 /* Mind_3.png */; };
 		55B43D901D022440002CCE78 /* Mind_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D5C1D022440002CCE78 /* Mind_2.png */; };
 		55B43D911D022440002CCE78 /* Mind_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D5D1D022440002CCE78 /* Mind_1.png */; };
+		55B8310D1D03669D00F19A63 /* ChooseTeamOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8310C1D03669D00F19A63 /* ChooseTeamOrderViewController.swift */; };
 		55D2E5FA1CFFBA2E004768FE /* RoundRouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */; };
 		55D3FB061CFE0E30006C0A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */; };
 		55D3FB081CFE0E30006C0A8E /* NumberOfPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB071CFE0E30006C0A8E /* NumberOfPlayersViewController.swift */; };
@@ -162,6 +163,7 @@
 		55B43D5B1D022440002CCE78 /* Mind_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_3.png; path = CardImages/Mind_3.png; sourceTree = "<group>"; };
 		55B43D5C1D022440002CCE78 /* Mind_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_2.png; path = CardImages/Mind_2.png; sourceTree = "<group>"; };
 		55B43D5D1D022440002CCE78 /* Mind_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_1.png; path = CardImages/Mind_1.png; sourceTree = "<group>"; };
+		55B8310C1D03669D00F19A63 /* ChooseTeamOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseTeamOrderViewController.swift; sourceTree = "<group>"; };
 		55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRouletteViewController.swift; sourceTree = "<group>"; };
 		55D3FB021CFE0E30006C0A8E /* GameOfGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */,
 				55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */,
 				55B43CBB1D0210FE002CCE78 /* CardInfoViewController.swift */,
+				55B8310C1D03669D00F19A63 /* ChooseTeamOrderViewController.swift */,
 			);
 			path = GameOfGames;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				55D3FB381CFE4262006C0A8E /* Card.swift in Sources */,
 				55B43CBC1D0210FE002CCE78 /* CardInfoViewController.swift in Sources */,
 				55D3FB081CFE0E30006C0A8E /* NumberOfPlayersViewController.swift in Sources */,
+				55B8310D1D03669D00F19A63 /* ChooseTeamOrderViewController.swift in Sources */,
 				55D3FB361CFE3D62006C0A8E /* Game.swift in Sources */,
 				55D3FB3C1CFE4B57006C0A8E /* extensions.swift in Sources */,
 			);
