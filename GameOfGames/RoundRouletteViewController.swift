@@ -29,6 +29,10 @@ class RoundRouletteViewController: UIViewController {
     var team2Cards:Int = 0;
     var totalCards:Int = 0;
     
+    var timer:NSTimer?
+    
+    var delay:Double = 0.01;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,11 +52,27 @@ class RoundRouletteViewController: UIViewController {
         
         if (totalCards > 0)
         {
-            var flstring = String(format:"%.2f", 100*Double(team2Cards)/Double(totalCards))
-            team1Chance.text = "1-\(team2Cards) (\(flstring)%)"
+            if (team2Cards > 0)
+            {
+                let flstring = String(format:"%.2f", 100*Double(team2Cards)/Double(totalCards))
+                team1Chance.text = "1-\(team2Cards) (\(flstring)%)"
+            }
+            else
+            {
+                //team 2 got no cards, team 1 chance is 0
+                team1Chance.text = "0 (0%)"
+            }
             
-            flstring = String(format:"%.2f", 100*Double(team2Cards)/Double(totalCards))
-            team2Chance.text = "\(team2Cards+1)-\(totalCards) (\(flstring)%)"
+            if (team1Cards > 0)
+            {
+                let flstring = String(format:"%.2f", 100*Double(team1Cards)/Double(totalCards))
+                team2Chance.text = "\(team2Cards+1)-\(totalCards) (\(flstring)%)"
+            }
+            else
+            {
+                //team 1 got no cards, team 2 chance is 0
+                team2Chance.text = "0 (0%)"
+            }
             
             rolledNumber.text = ""
             chosenTeam.text = ""
@@ -62,6 +82,12 @@ class RoundRouletteViewController: UIViewController {
         else
         {
             //nobody has won any cards... just go back
+            
+            team1Chance.text = "0"
+            team2Chance.text = "0"
+            
+            rolledNumber.text = ""
+            
             chosenTeam.text = "Nobody has won any cards this round"
             rollButton.setTitle("Continue", forState: .Normal)
             self.rolled = true;
@@ -74,6 +100,45 @@ class RoundRouletteViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func timerFire(thisTimer:NSTimer)
+    {
+        print("delay: \(delay)")
+        
+        print("timer interval: \(timer!.timeInterval)")
+        if (delay > 0.5)
+        {
+            //done with the rolling
+            let rand = Int(arc4random_uniform(UInt32(totalCards)))+1
+            rolledNumber.text = "\(rand)";
+            rollButton.hidden = false;
+            rollButton.setTitle("Continue", forState: .Normal)
+            if (rand <= team2Cards)
+            {
+                chosenTeam.text = game.getTeamName(1)
+            }
+            else
+            {
+                chosenTeam.text = game.getTeamName(2);
+            }
+
+        }
+        else
+        {
+            
+            let rand = Int(arc4random_uniform(UInt32(totalCards)))+1
+            rolledNumber.text = "\(rand)";
+            
+            //update delay rule
+            delay *= (1.0+delay)
+            //delay *= 1.1
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(delay,
+                                                           target: self,
+                                                           selector: #selector(RoundRouletteViewController.timerFire(_:)),
+                                                           userInfo: nil,
+                                                           repeats: false)
+        }
+    }
 
     @IBAction func rollButtonPressed(sender: AnyObject)
     {
@@ -86,18 +151,12 @@ class RoundRouletteViewController: UIViewController {
         {
             self.rolled = true
             
-            let rand = Int(arc4random_uniform(UInt32(totalCards)))+1
-            rolledNumber.text = "\(rand)";
-            rollButton.setTitle("Continue", forState: .Normal)
-            if (rand <= team2Cards)
-            {
-                chosenTeam.text = game.getTeamName(1)
-            }
-            else
-            {
-                chosenTeam.text = game.getTeamName(2);
-            }
-            
+            timer = NSTimer.scheduledTimerWithTimeInterval(delay,
+                                                           target: self,
+                                                           selector: #selector(RoundRouletteViewController.timerFire(_:)),
+                                                           userInfo: nil,
+                                                           repeats: false)
+            rollButton.hidden = true;
         }
     }
     
