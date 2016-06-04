@@ -13,6 +13,8 @@ class DrawCardViewController: UIViewController {
     @IBOutlet weak var playerIntroductionLabel: UILabel!
     @IBOutlet weak var whichCardLabel: UILabel!
     
+    @IBOutlet weak var stolenButton: UIButton!
+    
     @IBOutlet weak var cardImageButton: UIButton!
     
     static var currentCard : Card = Card(suit: Card.Suit.Joke, rank: 0)
@@ -27,10 +29,29 @@ class DrawCardViewController: UIViewController {
         
 //        upVoteButton.setBackgroundImage(UIImage(named: "back-up_32x.png") as UIImage?, forState: .Normal)
 //        upVoteButton.setTitle("", forState: .Normal)
+
+        let cardPic: UIImage? = UIImage(named: DrawCardViewController.currentCard.getFileName())
+        if cardPic != nil
+        {
+            cardImageButton.setImage(cardPic, forState: .Normal)
+            
+            cardImageButton.imageEdgeInsets = UIEdgeInsetsMake(0,0,0,0)
+            
+        }
+        else
+        {
+            cardImageButton.setTitle(DrawCardViewController.currentCard.toString(), forState: .Normal)
+        }
         
         
-        cardImageButton.setBackgroundImage(UIImage(named: DrawCardViewController.currentCard.getFileName()) as UIImage?, forState: .Normal)
-        cardImageButton.setTitle("", forState: .Normal)
+        if DrawCardViewController.currentCard.isStealable()
+        {
+            stolenButton.hidden = false
+        }
+        else
+        {
+            stolenButton.hidden = true
+        }
 
 //        cardImageButton.image = UIImage(named: currentCard.getFileName())
     }

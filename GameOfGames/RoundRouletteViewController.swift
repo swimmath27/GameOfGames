@@ -16,19 +16,42 @@ class RoundRouletteViewController: UIViewController {
     @IBOutlet weak var team1Chance: UILabel!
     @IBOutlet weak var team2Chance: UILabel!
     
+    @IBOutlet weak var rolledNumber: UILabel!
+    @IBOutlet weak var chosenTeam: UILabel!
+    
+    @IBOutlet weak var rollButton: UIButton!
+    
     let game : Game = Game.getInstance()
+    
+    var rolled:Bool = false;
+    
+    var team1Cards:Int = 0;
+    var team2Cards:Int = 0;
+    var totalCards:Int = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        team1Name.text = "\(game.getTeamName(1))'s Chance"
-        team2Name.text = "\(game.getTeamName(2))'s Chance"
+        alert("It is the end of round \(game.getCurrentRound()-1). It is time to roll to see who drinks the center cup");
+        
+        self.rolled = false;
+        
+        team1Name.text = "\(game.getTeamName(1))"
+        team2Name.text = "\(game.getTeamName(2))"
         
         //chance that team 1 drinks is proportional to the number of cards team 2 got
         //need the last round version because current it is the next round
-        team1Chance.text = "\(game.getTeamCardsInLastRound(2))/\(game.getCardsWonInLastRound())"
-        team2Chance.text = "\(game.getTeamCardsInLastRound(1))/\(game.getCardsWonInLastRound())"
+        team1Cards = game.getTeamCardsInLastRound(1)
+        team2Cards = game.getTeamCardsInLastRound(2)
+        totalCards = team1Cards+team2Cards;
         
+        team1Chance.text = "1-\(team2Cards) (\(100*Double(team2Cards)/Double(totalCards))%)"
+        team2Chance.text = "\(team2Cards+1)-\(totalCards) (\(100*Double(team1Cards)/Double(totalCards))%)"
+        
+        rolledNumber.text = ""
+        chosenTeam.text = ""
+        
+        rollButton.setTitle("Roll", forState: .Normal)
         // Do any additional setup after loading the view.
     }
 
@@ -38,6 +61,32 @@ class RoundRouletteViewController: UIViewController {
     }
     
 
+    @IBAction func rollButtonPressed(sender: AnyObject)
+    {
+        
+        if (self.rolled)
+        {
+            performSegueWithIdentifier("RoundRouletteToPlayGame", sender: nil);
+        }
+        else
+        {
+            self.rolled = true
+            
+            let rand = Int(arc4random_uniform(UInt32(totalCards)))+1
+            rolledNumber.text = "\(rand)";
+            rollButton.setTitle("Continue", forState: .Normal)
+            if (rand <= team2Cards)
+            {
+                chosenTeam.text = game.getTeamName(1)
+            }
+            else
+            {
+                chosenTeam.text = game.getTeamName(2);
+            }
+            
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -47,5 +96,20 @@ class RoundRouletteViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func alert(s : String)
+    {
+        let popup = UIAlertController(title: "Alert",
+                                      message: s,
+                                      preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .Cancel, handler: nil)
+        
+        popup.addAction(cancelAction)
+        self.presentViewController(popup, animated: true,
+                                   completion: nil)
+        
+    }
 
 }

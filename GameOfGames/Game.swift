@@ -353,7 +353,7 @@ class Game
         let roundNum = self.getCurrentRound()-1; // zero indexing
         if which == 1
         {
-            while (team1CardsPerRound.count < roundNum)
+            while (team1CardsPerRound.count <= roundNum)
             {
                 //it's a while just in case they didn't get any cards in previous rounds
                 team1CardsPerRound.append(0);
@@ -363,7 +363,7 @@ class Game
         }
         else if which == 2
         {
-            while (team2CardsPerRound.count < roundNum)
+            while (team2CardsPerRound.count <= roundNum)
             {
                 //it's a while just in case they didn't get any cards in previous rounds
                 team2CardsPerRound.append(0);

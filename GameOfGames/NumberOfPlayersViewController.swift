@@ -57,10 +57,7 @@ class NumberOfPlayersViewController: UIViewController
                 }
             }
         }
-        else
-        {
-            alert("You must enter a number of players")
-        }
+        alert("You must enter a number of players")
         return -1;
         
     }
