@@ -63,6 +63,8 @@ class Deck
         deck = parseCSV(path, encoding: NSUTF8StringEncoding, error: nil)
     }
     
+    //adapted from
+    //http://stackoverflow.com/questions/32313938/parsing-csv-file-in-swift
     private func parseCSV (contentsOfFile: String, encoding: NSStringEncoding, error: NSErrorPointer) -> [Card] {
         // Load the CSV file and parse it
         let delimiter = ","
