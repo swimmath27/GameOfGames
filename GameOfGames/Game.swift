@@ -13,12 +13,16 @@ import Foundation
 
 class Game
 {
-    //IF CHANGED HERE, CHANGE IN STORYBOARD AS WELL AT NUMBER OF PLAYERS VIEW CONTROLLER
+    
+    ///////////////////// game constants //////////////////////
     internal static let MIN_PLAYER_COUNT = 6;
     internal static let MAX_PLAYER_COUNT = 14;
     
     internal static let NUM_CARDS_TO_WIN = 20;
     
+    internal static let RULEBOOK_URL = "http://nathanand.co/wp-content/uploads/2016/05/The-Game-of-Games-Rulebook.pdf";
+    
+    ///////////////////////////////////////////////////////////
     private static var singleton: Game = Game();
     
     private var deck: Deck = Deck();
@@ -26,7 +30,7 @@ class Game
     private var numPlayers = 0;
     private var currentTurn = 0;
     
-    private var currentCard: Card? = nil;
+    private var currentCard: Card = Card(suit: Card.Suit.Joke,rank: 0);
     
     private var team1:[Int] = [Int]()
     private var team2:[Int] = [Int]()
@@ -38,7 +42,7 @@ class Game
     
     private var playerNames:[String] = [String]()
     
-    private var whichTeamGoesFirst:Int = 1;
+    private var whichTeamGoesFirst:Int = 1; // team 1 goes first by default but this is changed later
     
     private var team1CardsWon:[Card] = [Card]()
     private var team2CardsWon:[Card] = [Card]()
@@ -50,10 +54,9 @@ class Game
     
     private init()
     {
-        deck.shuffle();
     }
     
-    static func getInstance() -> Game
+    class func getInstance() -> Game
     {
         return singleton;
     }
@@ -270,18 +273,15 @@ class Game
         return deck.hasNextCard();
     }
     
-    func drawCard() -> String?
+    func drawCard() -> Card
     {
         self.skipped = false; // the last card was not skipped (yet)
         if deck.hasNextCard()
         {
             self.currentCard = deck.nextCard();
-            return currentCard!.toString();
         }
-        else
-        {
-            return nil;
-        }
+        return currentCard;
+        
     }
     
     // shuffles the last card drawn back into the deck
@@ -313,12 +313,12 @@ class Game
         
         if numInRound%2 == (whichTeamGoesFirst==1 ? 0 : 1)
         {
-            team1CardsWon.append(currentCard!)
+            team1CardsWon.append(currentCard)
             addOneToTeamInCurrentRound(1)
         }
         else // team 2
         {
-            team2CardsWon.append(currentCard!)
+            team2CardsWon.append(currentCard)
             addOneToTeamInCurrentRound(2)
         }
         
@@ -336,12 +336,12 @@ class Game
         
         if numInRound%2 == (whichTeamGoesFirst==1 ? 0 : 1) // even, first team (because 0 index) -> second team steals
         {
-            team2CardsWon.append(currentCard!)
+            team2CardsWon.append(currentCard)
             addOneToTeamInCurrentRound(2);
         }
         else // team 2 -> 1 steals
         {
-            team1CardsWon.append(currentCard!)
+            team1CardsWon.append(currentCard)
             addOneToTeamInCurrentRound(1)
         }
         
@@ -380,14 +380,6 @@ class Game
     func cardWasSkipped() -> Bool
     {
         return self.skipped;
-    }
-    
-    func quickStart(players:Int)
-    {
-        self.setNumPlayers(players);
-        team1Name = "The Crustaceans"
-        team2Name = "The Fish"
-        playerNames = ["Lobster", "Great White", "Crab", "Tuna","Shrimp", "Manta Ray", "Barnacle", "Swordfish", "Krill", "Eel", "Crayfish", "BlowFish", "Prawn", "Flounder"]
     }
     
     func isNewRound() -> Bool
@@ -442,6 +434,15 @@ class Game
     func getCardsWonInRound(round:Int) -> Int
     {
         return team1CardsPerRound[round-1] + team2CardsPerRound[round-1]
+    }
+    
+    func quickStart(players:Int)
+    {
+        print("quick starting");
+        self.setNumPlayers(players);
+        team1Name = "The Crustaceans"
+        team2Name = "The Fish"
+        playerNames = ["Lobster", "Great White", "Crab", "Tuna","Shrimp", "Manta Ray", "Barnacle", "Swordfish", "Krill", "Eel", "Crayfish", "BlowFish", "Prawn", "Flounder"]
     }
 
     

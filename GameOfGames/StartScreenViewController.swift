@@ -8,8 +8,12 @@
 
 import UIKit
 
-class StartScreenViewController: UIViewController {
+class StartScreenViewController: UIViewController
+{
 
+    //this is so it loads the deck stuff as soon as the app loads
+    let game:Game = Game.getInstance();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +38,8 @@ class StartScreenViewController: UIViewController {
 
     @IBAction func rulebookButtonPressed(sender: AnyObject)
     {
-        if let url = NSURL(string: "http://nathanand.co/wp-content/uploads/2016/05/The-Game-of-Games-Rulebook.pdf"){
+        if let url = NSURL(string: Game.RULEBOOK_URL)
+        {
             UIApplication.sharedApplication().openURL(url)
         }
     }

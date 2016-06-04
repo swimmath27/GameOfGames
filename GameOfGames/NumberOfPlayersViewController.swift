@@ -33,14 +33,13 @@ class NumberOfPlayersViewController: UIViewController
         playerCountField.resignFirstResponder()
     }
     
-    
-    @IBAction func submitPlayerCount(sender: AnyObject)
+    func checkAndSetPlayerCount() -> Int
     {
         if let x:String = playerCountField.text
         {
             if let num : Int = Int(x)
             {
-                if (num%2 == 1)
+                if (num%2 == 1 && num > 0)
                 {
                     alert("Teams must be even (if you have an odd number, two people play as one and switch off in odd/even rounds (see rulebook)");
                 }
@@ -54,42 +53,36 @@ class NumberOfPlayersViewController: UIViewController
                 }
                 else
                 {
-                    game.setNumPlayers(num);
-                    performSegueWithIdentifier("NumPlayersToNamePlayers", sender: nil)
+                    return num;
                 }
-                return;
             }
         }
-        alert("You must enter a number of players")
+        else
+        {
+            alert("You must enter a number of players")
+        }
+        return -1;
+        
+    }
+    
+    @IBAction func submitPlayerCount(sender: AnyObject)
+    {
+        let num = checkAndSetPlayerCount()
+        if num != -1
+        {
+            game.setNumPlayers(num);
+            performSegueWithIdentifier("NumPlayersToNamePlayers", sender: nil)
+        }
     }
     
     @IBAction func quickStartPressed(sender: AnyObject)
     {
-        if let x:String = playerCountField.text
+        let num = checkAndSetPlayerCount()
+        if num != -1
         {
-            if let num : Int = Int(x)
-            {
-                if (num%2 == 1)
-                {
-                    alert("Teams must be even (if you have an odd number, two people play as one and switch off in odd/even rounds (see rulebook)");
-                }
-                else if (num < Game.MIN_PLAYER_COUNT)
-                {
-                    alert("You need at least \(Game.MIN_PLAYER_COUNT) players");
-                }
-                else if num > Game.MAX_PLAYER_COUNT
-                {
-                    alert("You can't have more than \(Game.MAX_PLAYER_COUNT) players");
-                }
-                else
-                {
-                    game.quickStart(num);
-                    performSegueWithIdentifier("NumPlayersToPlayOlympics", sender: nil)
-                }
-                return;
-            }
+            game.quickStart(num)
+            performSegueWithIdentifier("NumPlayersToQuickStartRandomizeTeams", sender: nil)
         }
-        alert("You must enter a number of players")
     }
     
     

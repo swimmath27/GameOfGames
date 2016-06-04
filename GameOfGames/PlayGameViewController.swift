@@ -88,6 +88,7 @@ class PlayGameViewController: UIViewController
     {
         if game.hasNextCard()
         {
+            DrawCardViewController.currentCard = game.drawCard()
             performSegueWithIdentifier("PlayGameToDrawCard", sender: nil)
         }
         else

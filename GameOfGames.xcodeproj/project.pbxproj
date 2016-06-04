@@ -8,6 +8,62 @@
 
 /* Begin PBXBuildFile section */
 		55B43CB61D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */; };
+		55B43CBA1D020C6B002CCE78 /* HttpDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */; };
+		55B43CBC1D0210FE002CCE78 /* CardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B43CBB1D0210FE002CCE78 /* CardInfoViewController.swift */; };
+		55B43CBE1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55B43CBD1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv */; };
+		55B43CC01D02221C002CCE78 /* sampleCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43CBF1D02221C002CCE78 /* sampleCard.png */; };
+		55B43D5E1D022440002CCE78 /* Body_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D2A1D022440002CCE78 /* Body_4.png */; };
+		55B43D5F1D022440002CCE78 /* Soul_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D2B1D022440002CCE78 /* Soul_10.png */; };
+		55B43D601D022440002CCE78 /* Chance_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D2C1D022440002CCE78 /* Chance_13.png */; };
+		55B43D611D022440002CCE78 /* Chance_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D2D1D022440002CCE78 /* Chance_12.png */; };
+		55B43D621D022440002CCE78 /* Chance_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D2E1D022440002CCE78 /* Chance_11.png */; };
+		55B43D631D022440002CCE78 /* Chance_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D2F1D022440002CCE78 /* Chance_10.png */; };
+		55B43D641D022440002CCE78 /* Chance_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D301D022440002CCE78 /* Chance_9.png */; };
+		55B43D651D022440002CCE78 /* Chance_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D311D022440002CCE78 /* Chance_8.png */; };
+		55B43D661D022440002CCE78 /* Chance_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D321D022440002CCE78 /* Chance_7.png */; };
+		55B43D671D022440002CCE78 /* Chance_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D331D022440002CCE78 /* Chance_6.png */; };
+		55B43D681D022440002CCE78 /* Chance_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D341D022440002CCE78 /* Chance_5.png */; };
+		55B43D691D022440002CCE78 /* Chance_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D351D022440002CCE78 /* Chance_4.png */; };
+		55B43D6A1D022440002CCE78 /* Chance_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D361D022440002CCE78 /* Chance_3.png */; };
+		55B43D6B1D022440002CCE78 /* Chance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D371D022440002CCE78 /* Chance_2.png */; };
+		55B43D6C1D022440002CCE78 /* Chance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D381D022440002CCE78 /* Chance_1.png */; };
+		55B43D6D1D022440002CCE78 /* Soul_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D391D022440002CCE78 /* Soul_1.png */; };
+		55B43D6E1D022440002CCE78 /* Soul_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D3A1D022440002CCE78 /* Soul_13.png */; };
+		55B43D6F1D022440002CCE78 /* Soul_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D3B1D022440002CCE78 /* Soul_12.png */; };
+		55B43D701D022440002CCE78 /* Soul_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D3C1D022440002CCE78 /* Soul_11.png */; };
+		55B43D711D022440002CCE78 /* Soul_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D3D1D022440002CCE78 /* Soul_9.png */; };
+		55B43D721D022440002CCE78 /* Soul_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D3E1D022440002CCE78 /* Soul_8.png */; };
+		55B43D731D022440002CCE78 /* Soul_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D3F1D022440002CCE78 /* Soul_7.png */; };
+		55B43D741D022440002CCE78 /* Soul_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D401D022440002CCE78 /* Soul_6.png */; };
+		55B43D751D022440002CCE78 /* Soul_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D411D022440002CCE78 /* Soul_5.png */; };
+		55B43D761D022440002CCE78 /* Soul_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D421D022440002CCE78 /* Soul_4.png */; };
+		55B43D771D022440002CCE78 /* Soul_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D431D022440002CCE78 /* Soul_3.png */; };
+		55B43D781D022440002CCE78 /* Soul_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D441D022440002CCE78 /* Soul_2.png */; };
+		55B43D791D022440002CCE78 /* Body_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D451D022440002CCE78 /* Body_13.png */; };
+		55B43D7A1D022440002CCE78 /* Body_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D461D022440002CCE78 /* Body_12.png */; };
+		55B43D7B1D022440002CCE78 /* Body_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D471D022440002CCE78 /* Body_11.png */; };
+		55B43D7C1D022440002CCE78 /* Body_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D481D022440002CCE78 /* Body_10.png */; };
+		55B43D7D1D022440002CCE78 /* Body_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D491D022440002CCE78 /* Body_9.png */; };
+		55B43D7E1D022440002CCE78 /* Body_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D4A1D022440002CCE78 /* Body_8.png */; };
+		55B43D7F1D022440002CCE78 /* Body_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D4B1D022440002CCE78 /* Body_7.png */; };
+		55B43D801D022440002CCE78 /* Body_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D4C1D022440002CCE78 /* Body_6.png */; };
+		55B43D811D022440002CCE78 /* Body_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D4D1D022440002CCE78 /* Body_5.png */; };
+		55B43D821D022440002CCE78 /* Body_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D4E1D022440002CCE78 /* Body_3.png */; };
+		55B43D831D022440002CCE78 /* Body_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D4F1D022440002CCE78 /* Body_2.png */; };
+		55B43D841D022440002CCE78 /* Body_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D501D022440002CCE78 /* Body_1.png */; };
+		55B43D851D022440002CCE78 /* Mind_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D511D022440002CCE78 /* Mind_13.png */; };
+		55B43D861D022440002CCE78 /* Mind_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D521D022440002CCE78 /* Mind_12.png */; };
+		55B43D871D022440002CCE78 /* Mind_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D531D022440002CCE78 /* Mind_11.png */; };
+		55B43D881D022440002CCE78 /* Mind_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D541D022440002CCE78 /* Mind_10.png */; };
+		55B43D891D022440002CCE78 /* Mind_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D551D022440002CCE78 /* Mind_9.png */; };
+		55B43D8A1D022440002CCE78 /* Mind_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D561D022440002CCE78 /* Mind_8.png */; };
+		55B43D8B1D022440002CCE78 /* Mind_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D571D022440002CCE78 /* Mind_7.png */; };
+		55B43D8C1D022440002CCE78 /* Mind_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D581D022440002CCE78 /* Mind_6.png */; };
+		55B43D8D1D022440002CCE78 /* Mind_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D591D022440002CCE78 /* Mind_5.png */; };
+		55B43D8E1D022440002CCE78 /* Mind_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D5A1D022440002CCE78 /* Mind_4.png */; };
+		55B43D8F1D022440002CCE78 /* Mind_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D5B1D022440002CCE78 /* Mind_3.png */; };
+		55B43D901D022440002CCE78 /* Mind_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D5C1D022440002CCE78 /* Mind_2.png */; };
+		55B43D911D022440002CCE78 /* Mind_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D5D1D022440002CCE78 /* Mind_1.png */; };
 		55D2E5FA1CFFBA2E004768FE /* RoundRouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */; };
 		55D3FB061CFE0E30006C0A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */; };
 		55D3FB081CFE0E30006C0A8E /* NumberOfPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB071CFE0E30006C0A8E /* NumberOfPlayersViewController.swift */; };
@@ -50,6 +106,62 @@
 
 /* Begin PBXFileReference section */
 		55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickStartRandomTeamsViewController.swift; sourceTree = "<group>"; };
+		55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpDownloader.swift; sourceTree = "<group>"; };
+		55B43CBB1D0210FE002CCE78 /* CardInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInfoViewController.swift; sourceTree = "<group>"; };
+		55B43CBD1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Game-of-Games-Cards-Default.csv"; sourceTree = "<group>"; };
+		55B43CBF1D02221C002CCE78 /* sampleCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleCard.png; sourceTree = "<group>"; };
+		55B43D2A1D022440002CCE78 /* Body_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_4.png; path = CardImages/Body_4.png; sourceTree = "<group>"; };
+		55B43D2B1D022440002CCE78 /* Soul_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_10.png; path = CardImages/Soul_10.png; sourceTree = "<group>"; };
+		55B43D2C1D022440002CCE78 /* Chance_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_13.png; path = CardImages/Chance_13.png; sourceTree = "<group>"; };
+		55B43D2D1D022440002CCE78 /* Chance_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_12.png; path = CardImages/Chance_12.png; sourceTree = "<group>"; };
+		55B43D2E1D022440002CCE78 /* Chance_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_11.png; path = CardImages/Chance_11.png; sourceTree = "<group>"; };
+		55B43D2F1D022440002CCE78 /* Chance_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_10.png; path = CardImages/Chance_10.png; sourceTree = "<group>"; };
+		55B43D301D022440002CCE78 /* Chance_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_9.png; path = CardImages/Chance_9.png; sourceTree = "<group>"; };
+		55B43D311D022440002CCE78 /* Chance_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_8.png; path = CardImages/Chance_8.png; sourceTree = "<group>"; };
+		55B43D321D022440002CCE78 /* Chance_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_7.png; path = CardImages/Chance_7.png; sourceTree = "<group>"; };
+		55B43D331D022440002CCE78 /* Chance_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_6.png; path = CardImages/Chance_6.png; sourceTree = "<group>"; };
+		55B43D341D022440002CCE78 /* Chance_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_5.png; path = CardImages/Chance_5.png; sourceTree = "<group>"; };
+		55B43D351D022440002CCE78 /* Chance_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_4.png; path = CardImages/Chance_4.png; sourceTree = "<group>"; };
+		55B43D361D022440002CCE78 /* Chance_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_3.png; path = CardImages/Chance_3.png; sourceTree = "<group>"; };
+		55B43D371D022440002CCE78 /* Chance_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_2.png; path = CardImages/Chance_2.png; sourceTree = "<group>"; };
+		55B43D381D022440002CCE78 /* Chance_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_1.png; path = CardImages/Chance_1.png; sourceTree = "<group>"; };
+		55B43D391D022440002CCE78 /* Soul_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_1.png; path = CardImages/Soul_1.png; sourceTree = "<group>"; };
+		55B43D3A1D022440002CCE78 /* Soul_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_13.png; path = CardImages/Soul_13.png; sourceTree = "<group>"; };
+		55B43D3B1D022440002CCE78 /* Soul_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_12.png; path = CardImages/Soul_12.png; sourceTree = "<group>"; };
+		55B43D3C1D022440002CCE78 /* Soul_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_11.png; path = CardImages/Soul_11.png; sourceTree = "<group>"; };
+		55B43D3D1D022440002CCE78 /* Soul_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_9.png; path = CardImages/Soul_9.png; sourceTree = "<group>"; };
+		55B43D3E1D022440002CCE78 /* Soul_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_8.png; path = CardImages/Soul_8.png; sourceTree = "<group>"; };
+		55B43D3F1D022440002CCE78 /* Soul_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_7.png; path = CardImages/Soul_7.png; sourceTree = "<group>"; };
+		55B43D401D022440002CCE78 /* Soul_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_6.png; path = CardImages/Soul_6.png; sourceTree = "<group>"; };
+		55B43D411D022440002CCE78 /* Soul_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_5.png; path = CardImages/Soul_5.png; sourceTree = "<group>"; };
+		55B43D421D022440002CCE78 /* Soul_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_4.png; path = CardImages/Soul_4.png; sourceTree = "<group>"; };
+		55B43D431D022440002CCE78 /* Soul_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_3.png; path = CardImages/Soul_3.png; sourceTree = "<group>"; };
+		55B43D441D022440002CCE78 /* Soul_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_2.png; path = CardImages/Soul_2.png; sourceTree = "<group>"; };
+		55B43D451D022440002CCE78 /* Body_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_13.png; path = CardImages/Body_13.png; sourceTree = "<group>"; };
+		55B43D461D022440002CCE78 /* Body_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_12.png; path = CardImages/Body_12.png; sourceTree = "<group>"; };
+		55B43D471D022440002CCE78 /* Body_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_11.png; path = CardImages/Body_11.png; sourceTree = "<group>"; };
+		55B43D481D022440002CCE78 /* Body_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_10.png; path = CardImages/Body_10.png; sourceTree = "<group>"; };
+		55B43D491D022440002CCE78 /* Body_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_9.png; path = CardImages/Body_9.png; sourceTree = "<group>"; };
+		55B43D4A1D022440002CCE78 /* Body_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_8.png; path = CardImages/Body_8.png; sourceTree = "<group>"; };
+		55B43D4B1D022440002CCE78 /* Body_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_7.png; path = CardImages/Body_7.png; sourceTree = "<group>"; };
+		55B43D4C1D022440002CCE78 /* Body_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_6.png; path = CardImages/Body_6.png; sourceTree = "<group>"; };
+		55B43D4D1D022440002CCE78 /* Body_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_5.png; path = CardImages/Body_5.png; sourceTree = "<group>"; };
+		55B43D4E1D022440002CCE78 /* Body_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_3.png; path = CardImages/Body_3.png; sourceTree = "<group>"; };
+		55B43D4F1D022440002CCE78 /* Body_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_2.png; path = CardImages/Body_2.png; sourceTree = "<group>"; };
+		55B43D501D022440002CCE78 /* Body_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_1.png; path = CardImages/Body_1.png; sourceTree = "<group>"; };
+		55B43D511D022440002CCE78 /* Mind_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_13.png; path = CardImages/Mind_13.png; sourceTree = "<group>"; };
+		55B43D521D022440002CCE78 /* Mind_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_12.png; path = CardImages/Mind_12.png; sourceTree = "<group>"; };
+		55B43D531D022440002CCE78 /* Mind_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_11.png; path = CardImages/Mind_11.png; sourceTree = "<group>"; };
+		55B43D541D022440002CCE78 /* Mind_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_10.png; path = CardImages/Mind_10.png; sourceTree = "<group>"; };
+		55B43D551D022440002CCE78 /* Mind_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_9.png; path = CardImages/Mind_9.png; sourceTree = "<group>"; };
+		55B43D561D022440002CCE78 /* Mind_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_8.png; path = CardImages/Mind_8.png; sourceTree = "<group>"; };
+		55B43D571D022440002CCE78 /* Mind_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_7.png; path = CardImages/Mind_7.png; sourceTree = "<group>"; };
+		55B43D581D022440002CCE78 /* Mind_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_6.png; path = CardImages/Mind_6.png; sourceTree = "<group>"; };
+		55B43D591D022440002CCE78 /* Mind_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_5.png; path = CardImages/Mind_5.png; sourceTree = "<group>"; };
+		55B43D5A1D022440002CCE78 /* Mind_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_4.png; path = CardImages/Mind_4.png; sourceTree = "<group>"; };
+		55B43D5B1D022440002CCE78 /* Mind_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_3.png; path = CardImages/Mind_3.png; sourceTree = "<group>"; };
+		55B43D5C1D022440002CCE78 /* Mind_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_2.png; path = CardImages/Mind_2.png; sourceTree = "<group>"; };
+		55B43D5D1D022440002CCE78 /* Mind_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_1.png; path = CardImages/Mind_1.png; sourceTree = "<group>"; };
 		55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRouletteViewController.swift; sourceTree = "<group>"; };
 		55D3FB021CFE0E30006C0A8E /* GameOfGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,9 +216,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55B43CC11D022294002CCE78 /* CardImages */ = {
+			isa = PBXGroup;
+			children = (
+				55B43D2A1D022440002CCE78 /* Body_4.png */,
+				55B43D2B1D022440002CCE78 /* Soul_10.png */,
+				55B43D2C1D022440002CCE78 /* Chance_13.png */,
+				55B43D2D1D022440002CCE78 /* Chance_12.png */,
+				55B43D2E1D022440002CCE78 /* Chance_11.png */,
+				55B43D2F1D022440002CCE78 /* Chance_10.png */,
+				55B43D301D022440002CCE78 /* Chance_9.png */,
+				55B43D311D022440002CCE78 /* Chance_8.png */,
+				55B43D321D022440002CCE78 /* Chance_7.png */,
+				55B43D331D022440002CCE78 /* Chance_6.png */,
+				55B43D341D022440002CCE78 /* Chance_5.png */,
+				55B43D351D022440002CCE78 /* Chance_4.png */,
+				55B43D361D022440002CCE78 /* Chance_3.png */,
+				55B43D371D022440002CCE78 /* Chance_2.png */,
+				55B43D381D022440002CCE78 /* Chance_1.png */,
+				55B43D391D022440002CCE78 /* Soul_1.png */,
+				55B43D3A1D022440002CCE78 /* Soul_13.png */,
+				55B43D3B1D022440002CCE78 /* Soul_12.png */,
+				55B43D3C1D022440002CCE78 /* Soul_11.png */,
+				55B43D3D1D022440002CCE78 /* Soul_9.png */,
+				55B43D3E1D022440002CCE78 /* Soul_8.png */,
+				55B43D3F1D022440002CCE78 /* Soul_7.png */,
+				55B43D401D022440002CCE78 /* Soul_6.png */,
+				55B43D411D022440002CCE78 /* Soul_5.png */,
+				55B43D421D022440002CCE78 /* Soul_4.png */,
+				55B43D431D022440002CCE78 /* Soul_3.png */,
+				55B43D441D022440002CCE78 /* Soul_2.png */,
+				55B43D451D022440002CCE78 /* Body_13.png */,
+				55B43D461D022440002CCE78 /* Body_12.png */,
+				55B43D471D022440002CCE78 /* Body_11.png */,
+				55B43D481D022440002CCE78 /* Body_10.png */,
+				55B43D491D022440002CCE78 /* Body_9.png */,
+				55B43D4A1D022440002CCE78 /* Body_8.png */,
+				55B43D4B1D022440002CCE78 /* Body_7.png */,
+				55B43D4C1D022440002CCE78 /* Body_6.png */,
+				55B43D4D1D022440002CCE78 /* Body_5.png */,
+				55B43D4E1D022440002CCE78 /* Body_3.png */,
+				55B43D4F1D022440002CCE78 /* Body_2.png */,
+				55B43D501D022440002CCE78 /* Body_1.png */,
+				55B43D511D022440002CCE78 /* Mind_13.png */,
+				55B43D521D022440002CCE78 /* Mind_12.png */,
+				55B43D531D022440002CCE78 /* Mind_11.png */,
+				55B43D541D022440002CCE78 /* Mind_10.png */,
+				55B43D551D022440002CCE78 /* Mind_9.png */,
+				55B43D561D022440002CCE78 /* Mind_8.png */,
+				55B43D571D022440002CCE78 /* Mind_7.png */,
+				55B43D581D022440002CCE78 /* Mind_6.png */,
+				55B43D591D022440002CCE78 /* Mind_5.png */,
+				55B43D5A1D022440002CCE78 /* Mind_4.png */,
+				55B43D5B1D022440002CCE78 /* Mind_3.png */,
+				55B43D5C1D022440002CCE78 /* Mind_2.png */,
+				55B43D5D1D022440002CCE78 /* Mind_1.png */,
+			);
+			name = CardImages;
+			sourceTree = "<group>";
+		};
 		55D3FAF91CFE0E30006C0A8E = {
 			isa = PBXGroup;
 			children = (
+				55B43CC11D022294002CCE78 /* CardImages */,
+				55B43CBF1D02221C002CCE78 /* sampleCard.png */,
+				55B43CBD1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv */,
 				55D3FB041CFE0E30006C0A8E /* GameOfGames */,
 				55D3FB1B1CFE0E30006C0A8E /* GameOfGamesTests */,
 				55D3FB261CFE0E30006C0A8E /* GameOfGamesUITests */,
@@ -148,6 +322,8 @@
 				55D3FB4F1CFFA3CD006C0A8E /* CheckCardsViewController.swift */,
 				55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */,
 				55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */,
+				55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */,
+				55B43CBB1D0210FE002CCE78 /* CardInfoViewController.swift */,
 			);
 			path = GameOfGames;
 			sourceTree = "<group>";
@@ -277,9 +453,63 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B43D851D022440002CCE78 /* Mind_13.png in Resources */,
+				55B43D8D1D022440002CCE78 /* Mind_5.png in Resources */,
+				55B43D6E1D022440002CCE78 /* Soul_13.png in Resources */,
+				55B43D741D022440002CCE78 /* Soul_6.png in Resources */,
+				55B43D7E1D022440002CCE78 /* Body_8.png in Resources */,
+				55B43D841D022440002CCE78 /* Body_1.png in Resources */,
+				55B43D611D022440002CCE78 /* Chance_12.png in Resources */,
+				55B43D881D022440002CCE78 /* Mind_10.png in Resources */,
+				55B43D701D022440002CCE78 /* Soul_11.png in Resources */,
+				55B43D8A1D022440002CCE78 /* Mind_8.png in Resources */,
+				55B43D711D022440002CCE78 /* Soul_9.png in Resources */,
+				55B43D6C1D022440002CCE78 /* Chance_1.png in Resources */,
+				55B43D7A1D022440002CCE78 /* Body_12.png in Resources */,
+				55B43D771D022440002CCE78 /* Soul_3.png in Resources */,
+				55B43D901D022440002CCE78 /* Mind_2.png in Resources */,
+				55B43D751D022440002CCE78 /* Soul_5.png in Resources */,
+				55B43D8C1D022440002CCE78 /* Mind_6.png in Resources */,
+				55B43D671D022440002CCE78 /* Chance_6.png in Resources */,
+				55B43D7F1D022440002CCE78 /* Body_7.png in Resources */,
+				55B43D641D022440002CCE78 /* Chance_9.png in Resources */,
+				55B43D721D022440002CCE78 /* Soul_8.png in Resources */,
+				55B43D5F1D022440002CCE78 /* Soul_10.png in Resources */,
+				55B43D821D022440002CCE78 /* Body_3.png in Resources */,
+				55B43D651D022440002CCE78 /* Chance_8.png in Resources */,
+				55B43D8F1D022440002CCE78 /* Mind_3.png in Resources */,
+				55B43D7D1D022440002CCE78 /* Body_9.png in Resources */,
+				55B43D911D022440002CCE78 /* Mind_1.png in Resources */,
+				55B43D681D022440002CCE78 /* Chance_5.png in Resources */,
+				55B43D791D022440002CCE78 /* Body_13.png in Resources */,
+				55B43D8E1D022440002CCE78 /* Mind_4.png in Resources */,
+				55B43D761D022440002CCE78 /* Soul_4.png in Resources */,
+				55B43CC01D02221C002CCE78 /* sampleCard.png in Resources */,
+				55B43D661D022440002CCE78 /* Chance_7.png in Resources */,
+				55B43D781D022440002CCE78 /* Soul_2.png in Resources */,
+				55B43D7C1D022440002CCE78 /* Body_10.png in Resources */,
+				55B43D871D022440002CCE78 /* Mind_11.png in Resources */,
+				55B43D801D022440002CCE78 /* Body_6.png in Resources */,
+				55B43D621D022440002CCE78 /* Chance_11.png in Resources */,
 				55D3FB121CFE0E30006C0A8E /* LaunchScreen.storyboard in Resources */,
+				55B43D861D022440002CCE78 /* Mind_12.png in Resources */,
+				55B43D691D022440002CCE78 /* Chance_4.png in Resources */,
+				55B43D811D022440002CCE78 /* Body_5.png in Resources */,
+				55B43D891D022440002CCE78 /* Mind_9.png in Resources */,
+				55B43D5E1D022440002CCE78 /* Body_4.png in Resources */,
+				55B43D6D1D022440002CCE78 /* Soul_1.png in Resources */,
+				55B43D831D022440002CCE78 /* Body_2.png in Resources */,
+				55B43CBE1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv in Resources */,
+				55B43D8B1D022440002CCE78 /* Mind_7.png in Resources */,
+				55B43D7B1D022440002CCE78 /* Body_11.png in Resources */,
+				55B43D6A1D022440002CCE78 /* Chance_3.png in Resources */,
+				55B43D601D022440002CCE78 /* Chance_13.png in Resources */,
 				55D3FB0F1CFE0E30006C0A8E /* Assets.xcassets in Resources */,
+				55B43D731D022440002CCE78 /* Soul_7.png in Resources */,
+				55B43D631D022440002CCE78 /* Chance_10.png in Resources */,
+				55B43D6F1D022440002CCE78 /* Soul_12.png in Resources */,
 				55D3FB0D1CFE0E30006C0A8E /* Main.storyboard in Resources */,
+				55B43D6B1D022440002CCE78 /* Chance_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +541,7 @@
 				55D3FB421CFE57E2006C0A8E /* DrawCardViewController.swift in Sources */,
 				55D3FB501CFFA3CD006C0A8E /* CheckCardsViewController.swift in Sources */,
 				55D2E5FA1CFFBA2E004768FE /* RoundRouletteViewController.swift in Sources */,
+				55B43CBA1D020C6B002CCE78 /* HttpDownloader.swift in Sources */,
 				55D3FB401CFE54F5006C0A8E /* PlayGameViewController.swift in Sources */,
 				55D3FB061CFE0E30006C0A8E /* AppDelegate.swift in Sources */,
 				55D3FB461CFF3DDB006C0A8E /* NameTeamsViewController.swift in Sources */,
@@ -318,6 +549,7 @@
 				55D3FB3E1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift in Sources */,
 				55D3FB481CFF4525006C0A8E /* PlayOlympicsViewController.swift in Sources */,
 				55D3FB381CFE4262006C0A8E /* Card.swift in Sources */,
+				55B43CBC1D0210FE002CCE78 /* CardInfoViewController.swift in Sources */,
 				55D3FB081CFE0E30006C0A8E /* NumberOfPlayersViewController.swift in Sources */,
 				55D3FB361CFE3D62006C0A8E /* Game.swift in Sources */,
 				55D3FB3C1CFE4B57006C0A8E /* extensions.swift in Sources */,

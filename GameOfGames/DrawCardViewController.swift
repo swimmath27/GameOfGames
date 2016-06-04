@@ -13,16 +13,26 @@ class DrawCardViewController: UIViewController {
     @IBOutlet weak var playerIntroductionLabel: UILabel!
     @IBOutlet weak var whichCardLabel: UILabel!
     
+    @IBOutlet weak var cardImageButton: UIButton!
+    
+    static var currentCard : Card = Card(suit: Card.Suit.Joke, rank: 0)
     private var game:Game = Game.getInstance();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playerIntroductionLabel.text = game.getCurrentPlayerName() + ", Your Card is..."
+        playerIntroductionLabel.text = "\(game.getCurrentPlayerName()), Your Card is..."
  
-        whichCardLabel.text = game.drawCard();
+        whichCardLabel.text = DrawCardViewController.currentCard.getShortDescription();
         
-        // Do any additional setup after loading the view.
+//        upVoteButton.setBackgroundImage(UIImage(named: "back-up_32x.png") as UIImage?, forState: .Normal)
+//        upVoteButton.setTitle("", forState: .Normal)
+        
+        
+        cardImageButton.setBackgroundImage(UIImage(named: DrawCardViewController.currentCard.getFileName()) as UIImage?, forState: .Normal)
+        cardImageButton.setTitle("", forState: .Normal)
+
+//        cardImageButton.image = UIImage(named: currentCard.getFileName())
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,47 +40,44 @@ class DrawCardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func cardInfoButtonPressed(sender: AnyObject)
+    {
+        CardInfoViewController.currentCard = DrawCardViewController.currentCard;
+        CardInfoViewController.fromDraw = true;
+        performSegueWithIdentifier("DrawCardToCardInfo", sender: nil)
+    }
+    
     @IBAction func WonButtonPressed(sender: AnyObject)
     {
-        game.cardWasWon();
         let drink:String = game.getCurrentCard()!.getDrink();
-        // add one unit of the corresponding drink into the Bitch Cup and sends one unit of the drink to any player on the other team
-        alertAndGoBack("Congratz", s:"Please add one \(drink) into the cup and send one \(drink) to any player on the other team")
         
-        //performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
+        alertAndGoBack("Congratz", s:"Please add \(drink) into the cup and send \(drink) to any player on the other team", whichAction: "won")
     }
 
     @IBAction func LostButtonPressed(sender: AnyObject)
     {
-        // If a team fails to collect the card, the drawer of the card, as well as a team member of his or her choosing, has to drink a unit of the corresponding drink.
         let drink:String = game.getCurrentCard()!.getDrink();
         
-        alertAndGoBack("Too bad", s:"Please drink one \(drink) and give one \(drink) to a team member",whichAction: 1)
-        
-        //performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
+        alertAndGoBack("Too bad", s:"Please drink \(drink) and give \(drink) to a team member",whichAction: "lost")
     }
     
     @IBAction func StolenButtonPressed(sender: AnyObject)
     {
-        
-        
         let drink:String = game.getCurrentCard()!.getDrink();
         
-        alertAndGoBack("...", s:"Please add one \(drink) into the cup and the other team sends one \(drink) to any player on your team", whichAction: 2)
-
-        //performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
+        alertAndGoBack("...", s:"Please add \(drink) into the cup and the other team sends \(drink) to any player on your team", whichAction: "stolen")
     }
     
     @IBAction func skipCardButtonPressed(sender: AnyObject)
     {
         
-        alertAndGoBack("Alert", s:"Card will be skipped and your turn will continue (This cannot be undone)",whichAction: 3)
-        
-        //performSegueWithIdentifier("DrawCardToPlayGame", sender: nil)
+        alertAndGoBack("Alert", s:"Card will be skipped and your turn will continue (This cannot be undone)",whichAction: "skipped")
     }
     
-    @IBAction func rulebookButtonPressed(sender: AnyObject) {
-        if let url = NSURL(string: "http://nathanand.co/wp-content/uploads/2016/05/The-Game-of-Games-Rulebook.pdf"){
+    @IBAction func rulebookButtonPressed(sender: AnyObject)
+    {
+        if let url = NSURL(string: Game.RULEBOOK_URL)
+        {
             UIApplication.sharedApplication().openURL(url)
         }
     }
@@ -84,18 +91,22 @@ class DrawCardViewController: UIViewController {
     }
      */
     
-    func goToNext(whichAction:Int)
+    func goToNext(whichAction:String)
     {
         switch whichAction
         {
-        case 1:
+        case "won":
+            game.cardWasWon();
+        case "lost":
             game.cardWasLost();
-        case 2:
+        case "stolen":
             game.cardWasStolen();
-        case 3:
+        case "skipped":
             game.cardWasSkipped();
+        default: break
             
         }
+        
         if game.isNewRound()
         {
             self.performSegueWithIdentifier(
@@ -108,7 +119,7 @@ class DrawCardViewController: UIViewController {
         }
     }
     
-    func alertAndGoBack(t:String, s : String, whichAction:Int)
+    func alertAndGoBack(t:String, s : String, whichAction:String)
     {
         let popup = UIAlertController(title: t,
                                       message: s,
@@ -116,9 +127,10 @@ class DrawCardViewController: UIViewController {
         
         let okAction = UIAlertAction(title:"OK", style: .Default, handler:
                                     {
-                                        action in self.goToNext(which)
+                                        action in self.goToNext(whichAction)
                                     })
         popup.addAction(okAction)
+        
         
         let cancelAction = UIAlertAction(title: "Cancel",
                                          style: .Cancel, handler: nil)

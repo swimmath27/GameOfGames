@@ -16,7 +16,8 @@ class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var cardsTable: UITableView!
     
     let game : Game = Game.getInstance();
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         cardsTable.delegate = self
@@ -71,7 +72,14 @@ class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableVi
                    didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         //nothing when they select cards
-        //maybe later click on each card and go to a screen that says what card it is and what the challenge was
+        
+        let row = indexPath.row
+        
+        CardInfoViewController.currentCard = game.getTeamCards(CheckCardsViewController.whichTeam)[row]
+        CardInfoViewController.fromDraw = false;
+        
+        performSegueWithIdentifier("CheckCardsToCardInfo", sender: nil)
+        
     }
     
     

@@ -1,0 +1,52 @@
+M,Sports Trivia,N,The drawer of this card must work with his or her team to answer the sports trivia question. 
+M,Geography Trivia,N,The drawer of this card must work with his or her team to answer the geography trivia question.
+M,Science Trivia,N,The drawer of this card must work with his or her team to answer the science trivia question. 
+M,History Trivia,N,The drawer of this card must work with his or her team to answer the history trivia question.
+M,Art Trivia,N,The drawer of this card must work with his or her team to answer the art trivia question. 
+M,Pop Culture,N,The drawer of this card must work with his or her team to answer the pop culture question.
+M,The Prime is Right,Y,"The drawer of this card and his or her counterpart must write, in secret, their guess of the price of a product of their team captain's choosing and get closer. This card may be stolen."
+M,Pontificate,N,"The drawer of this card must talk about a subject of his or her counterpart's choosing without saying any filler words, such as ""uh"" or ""um,""for 30 seconds."
+M,Partners,N,"The drawer of this card and the team captain must, at the same time, answer the question: ""How many people has the drawer of this card been in a relationship with?"""
+M,Last Sex,N,"The drawer of this card and the team captain must, at the same time, answer the question: ""When is the last time the drawer of this card had sex"" choosing from the possibilities: ""last week,"" ""last month,"" ""last year,"" or ""never."""
+M,Music Game,Y,"A best of five round of the Music Game is played. The drawer of this card thinks of five songs, which he or she shares with his or her counterpart, to describe, hum, sing or otherwise convey. The teams (with the exclusion of the drawer and his or her counterpart) must compete to correctly guess three of the five songs. This card may be stolen. "
+M,Film Game,Y,"A best of five round of the Film Game is played. The drawer of this card thinks of five movies, which he or she shares with his or her counterpart, to describe, quote or otherwise convey. The teams (with the exclusion of the drawer and his or her counterpart) must compete to correctly guess three of the five films. This card may be stolen. "
+M,Show Game,Y,"A best of five round of the Show Game is played. The drawer of this card thinks of five television shows, which he or she shares with his or her counterpart, to describe, quote or otherwise convey. The teams (with the exclusion of the drawer and his or her counterpart) must compete to correctly guess three of the five shows. This card may be stolen."
+B,Shotgun,N,The drawer of this card must shotgun a beer.
+B,Backtionary,Y,"The drawer of this card and his or her counterpart must agree on a non-proper, one-word noun to draw on the back of a teammate of their choosing. The teammate must correctly guess the word. Note that writing of any kind is not permitted. This card may be stolen."
+B,Dragon's Breath,N,The drawer of this card must take a spoonful of hot sauce.
+B,Body Shot,N,The drawer of this card must take a body shot or must get a body shot taken off of him or her by any teammate of his or her choosing.
+B,Duck Duck Grey Goose,N,The drawer of this card must pour one shot of grey goose and four shots of water into five shot glasses. The opposing team must then guess which glass has grey goose based on the reactions of his or her team as the shots are taken.
+B,Grape Gobble,Y,"The drawer of this card must compete against his or her counterpart to get as many grapes into his or her mouth in thirty seconds as possible. The grapes, unstemmed, will be poured onto the table and the drawer and his or her counterpart may not use their hands to get the grapes. The drawer must have more grapes in his or her mouth than his or her counterpart. This card may be stolen."
+B,Piggy Back Race,Y,The drawer of this card and his or her counterpart must either carry a teammate or be carried by a teammate in a footrace. This card may be stolen.
+B,Arm Wrestle,Y,The drawer of this card and his or her counterpart must compete in an arm wrestle. This card may be stolen.
+B,Charades,Y,"The drawer of this card must act out a non-proper, one-word noun assigned to him or her by his or her counterpart. Both teams can guess (with the exclusion of the drawer and his or her counterpart). This card may be stolen."
+B,Salt Spoon,N,The drawer of this card must take one spoonful of salt.
+B,Mouth,Y,A round of Mouth is played. House rules prevail. This card may be stolen.
+B,Pong Shot,N,The drawer of this card gets one try to sink the first shot of a beer pong game.
+B,One Flip,N,The drawer of this card gets one chance to flip a cup.
+S,Strip Two,N,The drawer of this card must strip two articles.
+S,Strip Three,N,The drawer of this card must strip three articles.
+S,Thrift Shop,N,The drawer of this card must take an article of clothing from every member of his or her team and wear it.
+S,Profile Picture,N,The drawer of this card must change his or her profile picture to one taken at this very moment.
+S,Messages,N,The drawer of this card must allow the opposing team to write out any message to any person on his or her Facebook or text messages.
+S,Strip Off,Y,"The drawer of this card and his or her counterpart must take turns taking off one article of clothing, starting with the counterpart. The drawer must be the last one to take off an article of clothing. The card may be stolen."
+S,Lick Your Lips,N,The drawer of this card must get his or her lips licked by a teammate of his or her choosing. 
+S,Unbreakable,N,"The drawer of this card must remain straight-faced for 30 seconds while the other team attempts to make him or her laugh, cry, wince, etc."
+S,Likes,N,"The drawer of this card must allow his or her counterpart to like any picture, status, etc. on any other person's social media account."
+S,Karma Sutra,N,The drawer of this card and a teammate of the opposite gender must reenact three sexual positions for teammates to guess. Imaginary penetration must occur before the teammates can guess. 
+S,Switch Clothes,N,"The drawer of this card must switch what he or she is wearing below the waist with what he or she is wearing above the waist, underwear excluded."
+S,Lady and the Tramp,N,"The drawer of this card must eat a Twizzler with a teammate of the same gender, ultimately kissing them, within two attempts. "
+S,Lipstick,N,The drawer of this card must choose someone on his or her team as a partner. One of the two will get lipstick placed on his or her lips. The two will then leave the room and come back only once the lipstick has transferred to the other person.
+C,Drink One,N,The drawer of this card must drink one drink of his or her choice.
+C,Strip One,N,The drawer of this card must strip one article of clothing.
+C,Partner Up,N,The drawer of this card must drink one drink of his or her choice and choose a partner on his or her team to do the same.
+C,Partner Down,N,The drawer of this card must strip one article of his or her choice and choose a partner on his or her team to do the same.
+C,The Hand of God,N,The drawer of this card must choose one player on either side to drink on drink of his or her choosing.
+C,The Hand of Priest,N,The drawer of this card must choose one player on either side to strip one article of his or her choosing.
+C,Team Takes Three,N,The drawer of this card can designate up to three teammates to drink three drinks total of their choice.
+C,Team Strips Four,N,The drawer of this card can designate up to four teammates to strip four articles total of their choice.
+C,Wine and Dine,N,The drawer of this card must choose any player of the opposite gender to drink one glass of wine with. 
+C,Beer the Queer,N,The drawer of this card must choose any player of the same gender to drink one can of beer with. 
+C,Liquor and Lick Her,N,The drawer of this card must choose any female player to take a shot with. 
+C,Fill Her Up,N,"The drawer of this card must pour one serving of wine, beer, and liquor into the Bitch Cup. "
+C,Down the Cup,N,The drawer of the card must drink the Bitch Cup with his or her team at the end of the round. 

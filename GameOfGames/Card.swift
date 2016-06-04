@@ -13,90 +13,92 @@ class Card
     //taken from http://stackoverflow.com/questions/24007461/how-to-enumerate-an-enum-with-string-type
     
     enum Suit: Int {
-        case Joker = 0 // 1 starts the actual types
-        case Spades, Hearts, Diamonds, Clubs
+        case Joke = 0 // 1 starts the actual types
+        case Body, Soul, Mind, Chance
+        
+        //mind - diamond
+        //body - spade
+        //soul - heart
+        //chance - club
+        
         func simpleDescription() -> String {
             switch self {
-            case .Joker:
-                return "joker"
-            case .Spades:
-                return "spades"
-            case .Hearts:
-                return "hearts"
-            case .Diamonds:
-                return "diamonds"
-            case .Clubs:
-                return "clubs"
-            }
-        }
-        func color() -> String {
-            switch self {
-            case .Joker:
-                return "none"
-            case .Spades:
-                return "black"
-            case .Clubs:
-                return "black"
-            case .Diamonds:
-                return "red"
-            case .Hearts:
-                return "red"
+            case .Joke:
+                return "Joke"
+            case .Body:
+                return "Body"
+            case .Soul:
+                return "Soul"
+            case .Mind:
+                return "Mind"
+            case .Chance:
+                return "Chance"
             }
         }
     }
     
-    enum Rank: Int {
-        case Ace = 1
-        case Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
-        case Jack, Queen, King
-        func simpleDescription() -> String {
-            switch self {
-            case .Ace:
-                return "ace"
-            case .Jack:
-                return "jack"
-            case .Queen:
-                return "queen"
-            case .King:
-                return "king"
-            default:
-                return String(self.rawValue)
-            }
-        }
-    }
-    
-    private var rank:Rank = Rank.Ace;
-    private var suit:Suit = Suit.Spades;
+    private var rank:Int = 0;
+    private var suit:Suit = Suit.Joke;
+    private var stealable:Bool = false;
+    private var shortDesc:String = "";
+    private var longDesc:String = "";
 
-    init (suit:Suit, rank:Rank)
+    convenience init (suit:Suit, rank:Int)
+    {
+        self.init(suit: suit, rank: rank, stealable: false, shortDescription: "", longDescription: "");
+    }
+    
+    init (suit:Suit, rank:Int, stealable:Bool, shortDescription:String, longDescription:String)
     {
         self.suit = suit;
         self.rank = rank;
+        self.stealable = stealable;
+        self.shortDesc = shortDescription;
+        self.longDesc = longDescription;
     }
     
-    func getDrink() -> String {
-        switch suit {
-        case .Joker:
+    func getDrink() -> String
+    {
+        switch suit
+        {
+        case .Joke:
             return "nothing"
-        case .Spades:
-            return "quarter can of beer"
-        case .Clubs:
+        case .Body:
+            return "a quarter can of beer"
+        case .Chance:
             return "nothing"
-        case .Diamonds:
-            return "quarter glass of wine"
-        case .Hearts:
-            return "shot of Liquor"
+        case .Mind:
+            return "a quarter glass of wine"
+        case .Soul:
+            return "a shot of liquor"
         }
+    }
+    
+    func getShortDescription() -> String
+    {
+        return self.shortDesc;
+    }
+    
+    func getLongDescription() -> String
+    {
+        return self.longDesc;
+    }
+    
+    func getFileName() ->String
+    {
+//        return "sampleCard.png"
+        return "\(self.suit.simpleDescription())_\(self.rank).png"
+    }
+    
+    func isStealable() -> Bool
+    {
+        return stealable;
     }
 
     
     func toString() -> String
     {
-        if (self.suit == Suit.Joker)
-        {
-            return "Joker number \(self.rank.rawValue)";
-        }
-        return "The \(self.rank.simpleDescription()) of \(self.suit.simpleDescription())"
+        return "\(self.suit.simpleDescription()) card number \(self.rank)"
     }
 
 }

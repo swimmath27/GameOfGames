@@ -81,7 +81,7 @@ class QuickStartRandomTeamsViewController: UIViewController, UITableViewDataSour
     @IBAction func FinishButtonPressed(sender: AnyObject)
     {
         //don't need anything here anymore
-        performSegueWithIdentifier("RandomizeTeamsToNameTeams", sender: nil)
+        performSegueWithIdentifier("QuickStartRandomizeTeamsToPlayOlympics", sender: nil)
     }
     
     /// table view stuff ////////////////////////////////////
