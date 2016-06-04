@@ -407,10 +407,21 @@ class Game
     {
         if team == 1
         {
+            while (team1CardsPerRound.count < round)
+            {
+                //it's a while just in case they didn't get any cards in previous rounds
+                team1CardsPerRound.append(0);
+            }
             return team1CardsPerRound[round-1]
         }
         else if team == 2
         {
+            //padd the array wiht 0's
+            while (team2CardsPerRound.count < round)
+            {
+                //it's a while just in case they didn't get any cards in previous rounds
+                team2CardsPerRound.append(0);
+            }
             return team2CardsPerRound[round-1]
         }
         return 0;

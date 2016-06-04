@@ -43,15 +43,29 @@ class RoundRouletteViewController: UIViewController {
         //need the last round version because current it is the next round
         team1Cards = game.getTeamCardsInLastRound(1)
         team2Cards = game.getTeamCardsInLastRound(2)
+        
         totalCards = team1Cards+team2Cards;
         
-        team1Chance.text = "1-\(team2Cards) (\(100*Double(team2Cards)/Double(totalCards))%)"
-        team2Chance.text = "\(team2Cards+1)-\(totalCards) (\(100*Double(team1Cards)/Double(totalCards))%)"
-        
-        rolledNumber.text = ""
-        chosenTeam.text = ""
-        
-        rollButton.setTitle("Roll", forState: .Normal)
+        if (totalCards > 0)
+        {
+            var flstring = String(format:"%.2f", 100*Double(team2Cards)/Double(totalCards))
+            team1Chance.text = "1-\(team2Cards) (\(flstring)%)"
+            
+            flstring = String(format:"%.2f", 100*Double(team2Cards)/Double(totalCards))
+            team2Chance.text = "\(team2Cards+1)-\(totalCards) (\(flstring)%)"
+            
+            rolledNumber.text = ""
+            chosenTeam.text = ""
+            
+            rollButton.setTitle("Roll", forState: .Normal)
+        }
+        else
+        {
+            //nobody has won any cards... just go back
+            chosenTeam.text = "Nobody has won any cards this round"
+            rollButton.setTitle("Continue", forState: .Normal)
+            self.rolled = true;
+        }
         // Do any additional setup after loading the view.
     }
 
