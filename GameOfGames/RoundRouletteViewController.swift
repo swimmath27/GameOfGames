@@ -102,16 +102,16 @@ class RoundRouletteViewController: UIViewController {
     
     func timerFire(thisTimer:NSTimer)
     {
-        print("delay: \(delay)")
+        //print("\(delay)")
         
-        print("timer interval: \(timer!.timeInterval)")
-        if (delay > 0.5)
+        //print("timer interval: \(timer!.timeInterval)")
+        if (delay > 0.75)
         {
             //done with the rolling
             let rand = Int(arc4random_uniform(UInt32(totalCards)))+1
             rolledNumber.text = "\(rand)";
-            rollButton.hidden = false;
             rollButton.setTitle("Continue", forState: .Normal)
+            rollButton.hidden = false;
             if (rand <= team2Cards)
             {
                 chosenTeam.text = game.getTeamName(1)
