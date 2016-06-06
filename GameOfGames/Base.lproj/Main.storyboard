@@ -163,6 +163,7 @@
                         <viewControllerLayoutGuide type="bottom" id="EJ5-SA-6NA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FTE-MB-hyb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVb-XU-W1c">
@@ -172,7 +173,7 @@
                                     <segue destination="nQ3-8M-cjk" kind="show" id="NqE-2U-94c"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jaq-Qj-deB">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jaq-Qj-deB">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sLW-68-cGr">
                                     <size key="itemSize" width="100" height="160"/>
@@ -244,12 +245,12 @@
                                 <exclude reference="jaq-Qj-deB"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="dO3-ge-ifn"/>
+                                <exclude reference="6R9-bM-hbL"/>
                                 <exclude reference="0Zh-j7-6ih"/>
                                 <exclude reference="4ay-ik-vjY"/>
                                 <exclude reference="Wqb-O0-bsI"/>
                                 <exclude reference="uzS-dE-9hr"/>
-                                <exclude reference="6R9-bM-hbL"/>
-                                <exclude reference="dO3-ge-ifn"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -258,12 +259,12 @@
                                 <include reference="jaq-Qj-deB"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="dO3-ge-ifn"/>
+                                <include reference="6R9-bM-hbL"/>
                                 <include reference="0Zh-j7-6ih"/>
                                 <include reference="4ay-ik-vjY"/>
                                 <include reference="Wqb-O0-bsI"/>
                                 <include reference="uzS-dE-9hr"/>
-                                <include reference="6R9-bM-hbL"/>
-                                <include reference="dO3-ge-ifn"/>
                             </mask>
                         </variation>
                     </view>
@@ -281,6 +282,7 @@
             <objects>
                 <collectionViewController id="Dms-QC-79W" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="7gS-Jw-ELv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zaU-jD-aiv">
                             <size key="itemSize" width="50" height="50"/>
@@ -2464,15 +2466,15 @@ the cup in the center</string>
                                 <exclude reference="nVU-ht-Iyi"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Gan-Rb-EbA"/>
+                                <exclude reference="gt1-dX-fTx"/>
+                                <exclude reference="KZm-8b-cn4"/>
+                                <exclude reference="lAL-a1-IaI"/>
+                                <exclude reference="OC6-2a-hIS"/>
+                                <exclude reference="vdi-sW-Nda"/>
                                 <exclude reference="0Qu-ae-VAn"/>
                                 <exclude reference="Xct-EK-9hH"/>
                                 <exclude reference="kVz-wE-5ZE"/>
-                                <exclude reference="OC6-2a-hIS"/>
-                                <exclude reference="vdi-sW-Nda"/>
-                                <exclude reference="KZm-8b-cn4"/>
-                                <exclude reference="lAL-a1-IaI"/>
-                                <exclude reference="gt1-dX-fTx"/>
-                                <exclude reference="Gan-Rb-EbA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -2483,15 +2485,15 @@ the cup in the center</string>
                                 <include reference="nVU-ht-Iyi"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Gan-Rb-EbA"/>
+                                <include reference="gt1-dX-fTx"/>
+                                <include reference="KZm-8b-cn4"/>
+                                <include reference="lAL-a1-IaI"/>
+                                <include reference="OC6-2a-hIS"/>
+                                <include reference="vdi-sW-Nda"/>
                                 <include reference="0Qu-ae-VAn"/>
                                 <include reference="Xct-EK-9hH"/>
                                 <include reference="kVz-wE-5ZE"/>
-                                <include reference="OC6-2a-hIS"/>
-                                <include reference="vdi-sW-Nda"/>
-                                <include reference="KZm-8b-cn4"/>
-                                <include reference="lAL-a1-IaI"/>
-                                <include reference="gt1-dX-fTx"/>
-                                <include reference="Gan-Rb-EbA"/>
                             </mask>
                         </variation>
                     </view>

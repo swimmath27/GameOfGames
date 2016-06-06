@@ -25,7 +25,28 @@ class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UIC
         
         imageCollectionView.backgroundColor = UIColor.clearColor();
         
-        // Do any additional setup after loading the view.
+        imageCollectionView.reloadData();
+        
+        
+        
+        // http://stackoverflow.com/questions/13360975/uicollectionviews-cell-disappearing Yao's answer
+        // dont even ask
+        // nevermind DONT EVEN LOOK HERE
+        // THIS CODE DOESNT EXIST
+        imageCollectionView.reloadSections(NSIndexSet(index: 0))
+        imageCollectionView.reloadSections(NSIndexSet(index: 0))
+        imageCollectionView.reloadSections(NSIndexSet(index: 0))
+        imageCollectionView.reloadSections(NSIndexSet(index: 0))
+        imageCollectionView.reloadSections(NSIndexSet(index: 0))
+        imageCollectionView.reloadSections(NSIndexSet(index: 0))
+        // FORGET YOU SAW ANYTHING
+        // ...
+        // i mean it
+        
+        // each call to that function fixes 2 of them at a time and there are 
+        // 12 of them messed up
+        // ...
+        // no there is no reason why this happens
     }
     
     override func didReceiveMemoryWarning()
@@ -66,6 +87,8 @@ class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UIC
 
         // Use the outlet in our custom class to get a reference to the UIImageView in the cell
         cell.imageView.image = UIImage(named: card.getFileName())
+        cell.imageView.contentMode = .ScaleAspectFill;
+        cell.imageView.clipsToBounds = true;
         
         return cell
     }
