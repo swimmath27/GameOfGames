@@ -69,6 +69,7 @@ class Deck
     
     //adapted from
     //http://stackoverflow.com/questions/32313938/parsing-csv-file-in-swift
+    //edit: that one sucked (like a lot) so i'm using CSwiftV now
     private func parseCSV (contentsOfFile: String, encoding: NSStringEncoding, error: NSErrorPointer) -> [Card] {
         
         var mindCount:Int = 0;
@@ -86,6 +87,7 @@ class Deck
             {
             
                 //its being mean when i leave out separator, but the default is "," so i put that in
+                // the header is left out of the file because it was causing problems before with the stupid parser
                 let csv = CSwiftV(string: content.description, separator: ",", headers: ["Type","Name","Stealable","Description"]);
                 
                 print(csv.headers);
