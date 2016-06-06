@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSwiftV
 
 class Deck
 {
@@ -69,8 +70,6 @@ class Deck
     //adapted from
     //http://stackoverflow.com/questions/32313938/parsing-csv-file-in-swift
     private func parseCSV (contentsOfFile: String, encoding: NSStringEncoding, error: NSErrorPointer) -> [Card] {
-        // Load the CSV file and parse it
-        let delimiter = ","
         
         var mindCount:Int = 0;
         var bodyCount:Int = 0;
@@ -85,89 +84,44 @@ class Deck
         {
             if let content = NSString(data: data, encoding: NSUTF8StringEncoding)
             {
-                let lines : [String] = content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet()) as [String]
+            
+                //its being mean when i leave out separator, but the default is "," so i put that in
+                let csv = CSwiftV(string: content.description, separator: ",", headers: ["Type","Name","Stealable","Description"]);
                 
-                for line in lines
+                print(csv.headers);
+                for row in csv.rows
                 {
-                    var values:[String] = []
-                    if line != ""
+                    var suit:Card.Suit = Card.Suit.Joke;
+                    var rank:Int = 0;
+                    switch row[0]
                     {
-                        // For a line with double quotes
-                        // we use NSScanner to perform the parsing
-                        if line.rangeOfString("\"") != nil
-                        {
-                            var textToScan:String = line
-                            var value:NSString?
-                            var textScanner:NSScanner = NSScanner(string: textToScan)
-                            while textScanner.string != ""
-                            {
-                                
-                                if (textScanner.string as NSString).substringToIndex(1) == "\""
-                                {
-                                    textScanner.scanLocation += 1
-                                    textScanner.scanUpToString("\"", intoString: &value)
-                                    textScanner.scanLocation += 1
-                                }
-                                else
-                                {
-                                    textScanner.scanUpToString(delimiter, intoString: &value)
-                                }
-                                
-                                // Store the value into the values array
-                                values.append(value as! String)
-                                
-                                // Retrieve the unscanned remainder of the string
-                                if textScanner.scanLocation < textScanner.string.characters.count
-                                {
-                                    textToScan = (textScanner.string as NSString).substringFromIndex(textScanner.scanLocation + 1)
-                                }
-                                else
-                                {
-                                    textToScan = ""
-                                }
-                                textScanner = NSScanner(string: textToScan)
-                            }
-                            
-                            // For a line without double quotes, we can simply separate the string
-                            // by using the delimiter (e.g. comma)
-                        }
-                        else
-                        {
-                            values = line.componentsSeparatedByString(delimiter)
-                        }
-                        
-                        
-                        var suit:Card.Suit = Card.Suit.Joke;
-                        var rank:Int = 0;
-                        switch values[0]
-                        {
-                        case "M":
-                            mindCount+=1
-                            rank = mindCount;
-                            suit = Card.Suit.Mind;
-                        case "S":
-                            soulCount+=1
-                            rank = soulCount;
-                            suit = Card.Suit.Soul;
-                        case "C":
-                            chanceCount+=1
-                            rank = chanceCount
-                            suit = Card.Suit.Chance;
-                        case "B":
-                            bodyCount+=1
-                            rank = bodyCount
-                            suit = Card.Suit.Body;
-                        default:break
-                        }
-                        
-                        let stealable:Bool = values[2] == "Y";
-                        ret.append(Card(suit: suit, rank: rank, stealable: stealable, shortDescription: values[1], longDescription: values[3]))
-//                        print(values[1]);
-                        //type - values[0]
-                        //name - values[1]
-                        //stealable - values[2]
-                        //description - values[3]
+                    case "M":
+                        mindCount+=1
+                        rank = mindCount;
+                        suit = Card.Suit.Mind;
+                    case "S":
+                        soulCount+=1
+                        rank = soulCount;
+                        suit = Card.Suit.Soul;
+                    case "C":
+                        chanceCount+=1
+                        rank = chanceCount
+                        suit = Card.Suit.Chance;
+                    case "B":
+                        bodyCount+=1
+                        rank = bodyCount
+                        suit = Card.Suit.Body;
+                    default:break
                     }
+                    
+                    let stealable:Bool = row[2] == "Y";
+                    ret.append(Card(suit: suit, rank: rank, stealable: stealable, shortDescription: row[1], longDescription: row[3]))
+                    print(row[1]);
+                    //type - values[0]
+                    //name - values[1]
+                    //stealable - values[2]
+                    //description - values[3]
+                    
                 }
             }
         }
