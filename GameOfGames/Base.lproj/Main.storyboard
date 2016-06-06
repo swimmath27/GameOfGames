@@ -154,6 +154,161 @@
             </objects>
             <point key="canvasLocation" x="-1093.5" y="-324"/>
         </scene>
+        <!--Whole Deck View Controller-->
+        <scene sceneID="5Fq-iA-hiV">
+            <objects>
+                <viewController id="bbP-wJ-Eqh" customClass="WholeDeckViewController" customModule="GameOfGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gh8-qX-LBc"/>
+                        <viewControllerLayoutGuide type="bottom" id="EJ5-SA-6NA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FTE-MB-hyb">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVb-XU-W1c">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="nQ3-8M-cjk" kind="show" id="NqE-2U-94c"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jaq-Qj-deB">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sLW-68-cGr">
+                                    <size key="itemSize" width="100" height="160"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="4FL-v0-TPa" customClass="ImageCollectionViewCell" customModule="GameOfGames" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R5d-k6-Rhm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="R5d-k6-Rhm" firstAttribute="leading" secondItem="4FL-v0-TPa" secondAttribute="leading" id="8rt-2E-dZV"/>
+                                            <constraint firstItem="R5d-k6-Rhm" firstAttribute="top" secondItem="4FL-v0-TPa" secondAttribute="top" id="RY2-VZ-dLw"/>
+                                            <constraint firstAttribute="trailing" secondItem="R5d-k6-Rhm" secondAttribute="trailing" id="aTT-TO-Ps7"/>
+                                            <constraint firstAttribute="bottom" secondItem="R5d-k6-Rhm" secondAttribute="bottom" id="eHg-qU-h1Y"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="R5d-k6-Rhm"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="8rt-2E-dZV"/>
+                                                <exclude reference="RY2-VZ-dLw"/>
+                                                <exclude reference="aTT-TO-Ps7"/>
+                                                <exclude reference="eHg-qU-h1Y"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="R5d-k6-Rhm"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="8rt-2E-dZV"/>
+                                                <include reference="RY2-VZ-dLw"/>
+                                                <include reference="aTT-TO-Ps7"/>
+                                                <include reference="eHg-qU-h1Y"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="imageView" destination="R5d-k6-Rhm" id="Mzp-TX-PhF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jaq-Qj-deB" firstAttribute="leading" secondItem="FTE-MB-hyb" secondAttribute="leadingMargin" id="0Zh-j7-6ih"/>
+                            <constraint firstItem="jaq-Qj-deB" firstAttribute="trailing" secondItem="FTE-MB-hyb" secondAttribute="trailingMargin" id="4ay-ik-vjY"/>
+                            <constraint firstItem="VVb-XU-W1c" firstAttribute="top" secondItem="jaq-Qj-deB" secondAttribute="bottom" constant="21" id="6R9-bM-hbL"/>
+                            <constraint firstItem="jaq-Qj-deB" firstAttribute="centerX" secondItem="VVb-XU-W1c" secondAttribute="centerX" id="Wqb-O0-bsI"/>
+                            <constraint firstItem="EJ5-SA-6NA" firstAttribute="top" secondItem="VVb-XU-W1c" secondAttribute="bottom" constant="92" id="dO3-ge-ifn"/>
+                            <constraint firstItem="jaq-Qj-deB" firstAttribute="top" secondItem="Gh8-qX-LBc" secondAttribute="bottom" id="uzS-dE-9hr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="VVb-XU-W1c"/>
+                                <exclude reference="jaq-Qj-deB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0Zh-j7-6ih"/>
+                                <exclude reference="4ay-ik-vjY"/>
+                                <exclude reference="Wqb-O0-bsI"/>
+                                <exclude reference="uzS-dE-9hr"/>
+                                <exclude reference="6R9-bM-hbL"/>
+                                <exclude reference="dO3-ge-ifn"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="VVb-XU-W1c"/>
+                                <include reference="jaq-Qj-deB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0Zh-j7-6ih"/>
+                                <include reference="4ay-ik-vjY"/>
+                                <include reference="Wqb-O0-bsI"/>
+                                <include reference="uzS-dE-9hr"/>
+                                <include reference="6R9-bM-hbL"/>
+                                <include reference="dO3-ge-ifn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageCollectionView" destination="jaq-Qj-deB" id="H8x-9m-4sZ"/>
+                        <segue destination="VRP-4p-ofq" kind="show" identifier="WholeDeckToCardInfo" id="S8H-xV-DjT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tlt-jK-Qtu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2002.5" y="-1071"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="nOX-VT-87O">
+            <objects>
+                <collectionViewController id="Dms-QC-79W" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="7gS-Jw-ELv">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zaU-jD-aiv">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ggN-Wg-3gH">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Dms-QC-79W" id="GK7-tS-9Xm"/>
+                            <outlet property="delegate" destination="Dms-QC-79W" id="nbV-CV-Qwg"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPX-Az-xuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1135.5" y="440"/>
+        </scene>
         <!--Quick Start Random Teams View Controller-->
         <scene sceneID="sDQ-FZ-PfY">
             <objects>
@@ -347,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQt-LJ-wXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373.5" y="-1259"/>
+            <point key="canvasLocation" x="481.5" y="559"/>
         </scene>
         <!--Name Players-->
         <scene sceneID="wa5-tz-RJs">
@@ -1000,7 +1155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kbh-HO-III" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3991.5" y="-1071"/>
+            <point key="canvasLocation" x="3990" y="-1071"/>
         </scene>
         <!--Card Info View Controller-->
         <scene sceneID="QsV-XZ-X0a">
@@ -1192,6 +1347,7 @@
                         <outlet property="shortDescriptionLabel" destination="bl3-3V-TcF" id="OUY-49-7Bn"/>
                         <segue destination="7XB-54-5GX" kind="show" identifier="CardInfoToCheckCards" id="pfp-VP-7PV"/>
                         <segue destination="cNH-vc-q9s" kind="show" identifier="CardInfoToDrawCard" id="UDe-Fb-QEH"/>
+                        <segue destination="bbP-wJ-Eqh" kind="show" identifier="CardInfoToWholeDeck" id="noI-aA-zmc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRQ-gB-0kT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2224,17 +2380,17 @@ the cup in the center</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMU-VS-Yej">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="jO9-4I-Jr3"/>
+                                    <constraint firstAttribute="height" constant="30" id="ZVn-DO-zWo"/>
                                 </constraints>
                                 <state key="normal" title="Click to Play"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="jO9-4I-Jr3"/>
+                                        <exclude reference="ZVn-DO-zWo"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="jO9-4I-Jr3"/>
+                                        <include reference="ZVn-DO-zWo"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -2250,48 +2406,73 @@ the cup in the center</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOv-vo-A7b">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="d2S-K0-X6F"/>
+                                    <constraint firstAttribute="height" constant="30" id="SQA-Q1-0nZ"/>
                                 </constraints>
                                 <state key="normal" title="Rulebook"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="d2S-K0-X6F"/>
+                                        <exclude reference="SQA-Q1-0nZ"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="d2S-K0-X6F"/>
+                                        <include reference="SQA-Q1-0nZ"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <action selector="rulebookButtonPressed:" destination="nQ3-8M-cjk" eventType="touchUpInside" id="nfa-MF-sKG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVU-ht-Iyi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Uqm-dE-fDE"/>
+                                </constraints>
+                                <state key="normal" title="View All Cards"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Uqm-dE-fDE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Uqm-dE-fDE"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="bbP-wJ-Eqh" kind="show" id="dN5-zG-pF1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TMU-VS-Yej" firstAttribute="top" secondItem="yOv-vo-A7b" secondAttribute="bottom" constant="65" id="2Ri-cR-cld"/>
-                            <constraint firstItem="yOv-vo-A7b" firstAttribute="centerX" secondItem="TMU-VS-Yej" secondAttribute="centerX" id="5F9-eN-VFq"/>
-                            <constraint firstItem="u4s-G4-js9" firstAttribute="centerX" secondItem="5RN-pI-gmC" secondAttribute="centerX" id="LgS-KV-4Ax"/>
-                            <constraint firstItem="C69-WZ-jjY" firstAttribute="top" secondItem="TMU-VS-Yej" secondAttribute="bottom" constant="255" id="cmS-vr-Q55"/>
-                            <constraint firstItem="u4s-G4-js9" firstAttribute="centerX" secondItem="yOv-vo-A7b" secondAttribute="centerX" id="kth-Zm-C2g"/>
-                            <constraint firstItem="yOv-vo-A7b" firstAttribute="top" secondItem="u4s-G4-js9" secondAttribute="bottom" constant="28" id="lvT-Yw-nf6"/>
-                            <constraint firstItem="u4s-G4-js9" firstAttribute="top" secondItem="s4i-m8-KhD" secondAttribute="bottom" constant="121" id="nyd-1f-Hq3"/>
+                            <constraint firstItem="u4s-G4-js9" firstAttribute="centerX" secondItem="yOv-vo-A7b" secondAttribute="centerX" id="0Qu-ae-VAn"/>
+                            <constraint firstItem="C69-WZ-jjY" firstAttribute="top" secondItem="TMU-VS-Yej" secondAttribute="bottom" constant="255" id="Gan-Rb-EbA"/>
+                            <constraint firstItem="nVU-ht-Iyi" firstAttribute="centerX" secondItem="TMU-VS-Yej" secondAttribute="centerX" id="KZm-8b-cn4"/>
+                            <constraint firstItem="yOv-vo-A7b" firstAttribute="centerX" secondItem="nVU-ht-Iyi" secondAttribute="centerX" id="OC6-2a-hIS"/>
+                            <constraint firstItem="u4s-G4-js9" firstAttribute="centerX" secondItem="5RN-pI-gmC" secondAttribute="centerX" id="Xct-EK-9hH"/>
+                            <constraint firstItem="TMU-VS-Yej" firstAttribute="top" secondItem="nVU-ht-Iyi" secondAttribute="bottom" constant="84" id="gt1-dX-fTx"/>
+                            <constraint firstItem="u4s-G4-js9" firstAttribute="top" secondItem="s4i-m8-KhD" secondAttribute="bottom" constant="57" id="kVz-wE-5ZE"/>
+                            <constraint firstItem="nVU-ht-Iyi" firstAttribute="top" secondItem="yOv-vo-A7b" secondAttribute="bottom" constant="35" id="lAL-a1-IaI"/>
+                            <constraint firstItem="yOv-vo-A7b" firstAttribute="top" secondItem="u4s-G4-js9" secondAttribute="bottom" constant="8" symbolic="YES" id="vdi-sW-Nda"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="TMU-VS-Yej"/>
                                 <exclude reference="u4s-G4-js9"/>
                                 <exclude reference="yOv-vo-A7b"/>
+                                <exclude reference="nVU-ht-Iyi"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="cmS-vr-Q55"/>
-                                <exclude reference="2Ri-cR-cld"/>
-                                <exclude reference="5F9-eN-VFq"/>
-                                <exclude reference="lvT-Yw-nf6"/>
-                                <exclude reference="LgS-KV-4Ax"/>
-                                <exclude reference="kth-Zm-C2g"/>
-                                <exclude reference="nyd-1f-Hq3"/>
+                                <exclude reference="0Qu-ae-VAn"/>
+                                <exclude reference="Xct-EK-9hH"/>
+                                <exclude reference="kVz-wE-5ZE"/>
+                                <exclude reference="OC6-2a-hIS"/>
+                                <exclude reference="vdi-sW-Nda"/>
+                                <exclude reference="KZm-8b-cn4"/>
+                                <exclude reference="lAL-a1-IaI"/>
+                                <exclude reference="gt1-dX-fTx"/>
+                                <exclude reference="Gan-Rb-EbA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -2299,15 +2480,18 @@ the cup in the center</string>
                                 <include reference="TMU-VS-Yej"/>
                                 <include reference="u4s-G4-js9"/>
                                 <include reference="yOv-vo-A7b"/>
+                                <include reference="nVU-ht-Iyi"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="cmS-vr-Q55"/>
-                                <include reference="2Ri-cR-cld"/>
-                                <include reference="5F9-eN-VFq"/>
-                                <include reference="lvT-Yw-nf6"/>
-                                <include reference="LgS-KV-4Ax"/>
-                                <include reference="kth-Zm-C2g"/>
-                                <include reference="nyd-1f-Hq3"/>
+                                <include reference="0Qu-ae-VAn"/>
+                                <include reference="Xct-EK-9hH"/>
+                                <include reference="kVz-wE-5ZE"/>
+                                <include reference="OC6-2a-hIS"/>
+                                <include reference="vdi-sW-Nda"/>
+                                <include reference="KZm-8b-cn4"/>
+                                <include reference="lAL-a1-IaI"/>
+                                <include reference="gt1-dX-fTx"/>
+                                <include reference="Gan-Rb-EbA"/>
                             </mask>
                         </variation>
                     </view>
@@ -2321,10 +2505,11 @@ the cup in the center</string>
         <image name="first" width="4000" height="3000"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="UDe-Fb-QEH"/>
+        <segue reference="S8H-xV-DjT"/>
+        <segue reference="dN5-zG-pF1"/>
         <segue reference="axr-oX-wMb"/>
-        <segue reference="thj-IJ-Nqk"/>
-        <segue reference="bD1-Yc-TD5"/>
-        <segue reference="p5Q-78-JrR"/>
-        <segue reference="V2y-wS-Nwm"/>
+        <segue reference="pfp-VP-7PV"/>
+        <segue reference="coE-f9-miu"/>
     </inferredMetricsTieBreakers>
 </document>

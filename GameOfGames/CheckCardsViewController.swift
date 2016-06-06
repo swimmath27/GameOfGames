@@ -80,7 +80,7 @@ class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableVi
         let row = indexPath.row
         
         CardInfoViewController.currentCard = game.getTeamCards(CheckCardsViewController.whichTeam)[row]
-        CardInfoViewController.fromDraw = false;
+        CardInfoViewController.from = "CheckCards";
         
        
         

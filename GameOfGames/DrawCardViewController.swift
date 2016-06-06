@@ -64,7 +64,7 @@ class DrawCardViewController: UIViewController {
     @IBAction func cardInfoButtonPressed(sender: AnyObject)
     {
         CardInfoViewController.currentCard = DrawCardViewController.currentCard;
-        CardInfoViewController.fromDraw = true;
+        CardInfoViewController.from = "DrawCard";
         performSegueWithIdentifier("DrawCardToCardInfo", sender: nil)
     }
     

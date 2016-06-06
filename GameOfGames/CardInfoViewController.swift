@@ -15,7 +15,7 @@ class CardInfoViewController: UIViewController
     //whether or not this was initialized from draw card view controller
     //if true -> go back to draw card view controller
     //if false -> go back to check cards view controller
-    static var fromDraw:Bool = false;
+    static var from:String = "";
     
     @IBOutlet weak var cardImage: UIImageView!
     
@@ -42,7 +42,8 @@ class CardInfoViewController: UIViewController
         fullDescriptionLabel.text = CardInfoViewController.currentCard.getLongDescription();
     }
     
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -59,14 +60,11 @@ class CardInfoViewController: UIViewController
     
     @IBAction func backButtonPressed(sender: AnyObject)
     {
-        if CardInfoViewController.fromDraw
-        {
-            performSegueWithIdentifier("CardInfoToDrawCard", sender: nil)
-        }
-        else
-        {
-            performSegueWithIdentifier("CardInfoToCheckCards", sender: nil)
-        }
+        
+        let segueID:String = "CardInfoTo"+CardInfoViewController.from; // back to where we came from
+        
+        performSegueWithIdentifier(segueID, sender: nil)
+       
     }
     
 }

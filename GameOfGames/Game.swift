@@ -61,6 +61,11 @@ class Game
         return singleton;
     }
     
+    func getOrderedCards() -> [Card]
+    {
+        return self.deck.deck;
+    }
+    
     func setNumPlayers(num: Int)
     {
         self.numPlayers = num;

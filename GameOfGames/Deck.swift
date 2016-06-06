@@ -14,7 +14,7 @@ class Deck
     private static let CARDS_DEFAULT_NAME:String = "Game-of-Games-Cards-Default.csv"
     private static let CARDS_DOWNLOAD_NAME:String = "Game-of-Games-Cards.csv"
     
-    private var deck = [Card]()
+    private(set) var deck = [Card]()
     private var order:[Int] = [Int]()
     private var index:Int = 0
     
@@ -60,7 +60,10 @@ class Deck
     
     private func loadCards(path:String)
     {
+        // because this is happening from another thread, might as well lock it
+        objc_sync_enter(deck)
         deck = parseCSV(path, encoding: NSUTF8StringEncoding, error: nil)
+        objc_sync_exit(deck)
     }
     
     //adapted from

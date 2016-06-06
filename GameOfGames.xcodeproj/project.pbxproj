@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		559ED9991D0607480040D36A /* WholeDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ED9981D0607480040D36A /* WholeDeckViewController.swift */; };
+		559ED99D1D0609E80040D36A /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */; };
 		55B43CB61D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */; };
 		55B43CBA1D020C6B002CCE78 /* HttpDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */; };
 		55B43CBC1D0210FE002CCE78 /* CardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B43CBB1D0210FE002CCE78 /* CardInfoViewController.swift */; };
@@ -105,6 +107,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		559ED9981D0607480040D36A /* WholeDeckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WholeDeckViewController.swift; sourceTree = "<group>"; };
+		559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickStartRandomTeamsViewController.swift; sourceTree = "<group>"; };
 		55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpDownloader.swift; sourceTree = "<group>"; };
 		55B43CBB1D0210FE002CCE78 /* CardInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInfoViewController.swift; sourceTree = "<group>"; };
@@ -302,8 +306,8 @@
 			isa = PBXGroup;
 			children = (
 				55D3FB351CFE3D62006C0A8E /* Game.swift */,
-				55D3FB371CFE4262006C0A8E /* Card.swift */,
 				55D3FB391CFE4284006C0A8E /* Deck.swift */,
+				55D3FB371CFE4262006C0A8E /* Card.swift */,
 				55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */,
 				55D3FB0B1CFE0E30006C0A8E /* Main.storyboard */,
 				55D3FB0E1CFE0E30006C0A8E /* Assets.xcassets */,
@@ -312,6 +316,8 @@
 				55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */,
 				55D3FB131CFE0E30006C0A8E /* Info.plist */,
 				55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */,
+				559ED9981D0607480040D36A /* WholeDeckViewController.swift */,
+				559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */,
 				55D3FB071CFE0E30006C0A8E /* NumberOfPlayersViewController.swift */,
 				55D3FB431CFF384A006C0A8E /* NamePlayersViewController.swift */,
 				55D3FB3D1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift */,
@@ -537,8 +543,10 @@
 				55D3FB3A1CFE4284006C0A8E /* Deck.swift in Sources */,
 				55B43CB61D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift in Sources */,
 				55D3FB441CFF384A006C0A8E /* NamePlayersViewController.swift in Sources */,
+				559ED99D1D0609E80040D36A /* ImageCollectionViewCell.swift in Sources */,
 				55D3FB421CFE57E2006C0A8E /* DrawCardViewController.swift in Sources */,
 				55D3FB501CFFA3CD006C0A8E /* CheckCardsViewController.swift in Sources */,
+				559ED9991D0607480040D36A /* WholeDeckViewController.swift in Sources */,
 				55D2E5FA1CFFBA2E004768FE /* RoundRouletteViewController.swift in Sources */,
 				55B43CBA1D020C6B002CCE78 /* HttpDownloader.swift in Sources */,
 				55D3FB401CFE54F5006C0A8E /* PlayGameViewController.swift in Sources */,
