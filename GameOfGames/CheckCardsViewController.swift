@@ -71,12 +71,18 @@ class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(tableView: UITableView,
                    didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        //nothing when they select cards
+        //unselect this cell
+        if tableView.cellForRowAtIndexPath(indexPath) != nil
+        {
+            tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        }
         
         let row = indexPath.row
         
         CardInfoViewController.currentCard = game.getTeamCards(CheckCardsViewController.whichTeam)[row]
         CardInfoViewController.fromDraw = false;
+        
+       
         
         performSegueWithIdentifier("CheckCardsToCardInfo", sender: nil)
         

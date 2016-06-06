@@ -483,6 +483,34 @@ class Game
             }
         }
     }
+    
+    func swapPlayersInTeam(player1:Int, player2:Int, team:Int)
+    {
+        
+        if (team != 1 && team != 2)
+        {
+            return
+        }
+        
+        //shift that player to the back
+        if (team == 1)
+        {
+            if (player1 < 0 || player1 >= team1.count || player2 < 0 || player2 >= team1.count)
+            {
+                return
+            }
+            swap(&team1[player1], &team1[player2])
+        }
+        else if team == 2
+        {
+            if (player1 < 0 || player1 >= team2.count || player2 < 0 || player2 >= team2.count)
+            {
+                return
+            }
+            swap(&team2[player1], &team2[player2])
+        }
+    }
+
 
     
 }

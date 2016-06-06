@@ -139,6 +139,12 @@ class QuickStartRandomTeamsViewController: UIViewController, UITableViewDataSour
                    didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         //nothing when they select names
+        
+        //unselect this cell
+        if tableView.cellForRowAtIndexPath(indexPath) != nil
+        {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
     }
     
     

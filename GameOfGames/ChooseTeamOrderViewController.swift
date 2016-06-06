@@ -20,6 +20,8 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
     var currentTeam = 0;
     var numTeamsDone = 0;
     
+    var swapPos:Int = -1;
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -55,6 +57,9 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
             
             currentTeamLabel.text = "Team \(currentTeam) (\(game.getTeamName(currentTeam)))"
             tableView.reloadData();
+            
+            //when we go to the other team, we gotta reset the swaps
+            swapPos = -1;
         }
     }
     
@@ -89,23 +94,43 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
     func tableView(tableView: UITableView,
                    didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        //nothing when they select cards
+        //unselect this cell
+        if tableView.cellForRowAtIndexPath(indexPath) != nil
+        {
+            tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        }
         
         let row = indexPath.row
         if row == 0
         {
             alert("Team Captain must always be first");
         }
-        else
+        else if (swapPos == -1) // this is the first selection
         {
-            game.sendPlayerToEndOfTeam(row,team:currentTeam)
-            tableView.reloadData()
+            swapPos = row;
+            if let cell = tableView.cellForRowAtIndexPath(indexPath)
+            {
+                cell.backgroundColor = UIColor.redColor()
+            }
         }
-        
+        else // this is the second selection
+        {
+            if (swapPos != row)
+            {
+                game.swapPlayersInTeam(swapPos, player2: row, team: currentTeam);
+            }
+            if let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: swapPos, inSection: 0))
+            {
+                cell.backgroundColor = UIColor.clearColor();
+            }
+            
+            //game.sendPlayerToEndOfTeam(row,team:currentTeam)
+            tableView.reloadData()
+            swapPos = -1
+        }
     }
     
-    
-    
+
     
     func alert(s : String)
     {
