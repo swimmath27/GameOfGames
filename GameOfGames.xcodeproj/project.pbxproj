@@ -14,7 +14,6 @@
 		55B43CBA1D020C6B002CCE78 /* HttpDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */; };
 		55B43CBC1D0210FE002CCE78 /* CardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B43CBB1D0210FE002CCE78 /* CardInfoViewController.swift */; };
 		55B43CBE1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55B43CBD1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv */; };
-		55B43CC01D02221C002CCE78 /* sampleCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43CBF1D02221C002CCE78 /* sampleCard.png */; };
 		55B43D5E1D022440002CCE78 /* Body_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D2A1D022440002CCE78 /* Body_4.png */; };
 		55B43D5F1D022440002CCE78 /* Soul_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D2B1D022440002CCE78 /* Soul_10.png */; };
 		55B43D601D022440002CCE78 /* Chance_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B43D2C1D022440002CCE78 /* Chance_13.png */; };
@@ -121,7 +120,6 @@
 		55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpDownloader.swift; sourceTree = "<group>"; };
 		55B43CBB1D0210FE002CCE78 /* CardInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInfoViewController.swift; sourceTree = "<group>"; };
 		55B43CBD1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Game-of-Games-Cards-Default.csv"; sourceTree = "<group>"; };
-		55B43CBF1D02221C002CCE78 /* sampleCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleCard.png; sourceTree = "<group>"; };
 		55B43D2A1D022440002CCE78 /* Body_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_4.png; path = CardImages/Body_4.png; sourceTree = "<group>"; };
 		55B43D2B1D022440002CCE78 /* Soul_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_10.png; path = CardImages/Soul_10.png; sourceTree = "<group>"; };
 		55B43D2C1D022440002CCE78 /* Chance_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_13.png; path = CardImages/Chance_13.png; sourceTree = "<group>"; };
@@ -310,7 +308,6 @@
 			isa = PBXGroup;
 			children = (
 				55B43CC11D022294002CCE78 /* CardImages */,
-				55B43CBF1D02221C002CCE78 /* sampleCard.png */,
 				55D7E0341D062581000D0B14 /* README.md */,
 				55B43CBD1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv */,
 				55D3FB041CFE0E30006C0A8E /* GameOfGames */,
@@ -541,7 +538,6 @@
 				55B43D791D022440002CCE78 /* Body_13.png in Resources */,
 				55B43D8E1D022440002CCE78 /* Mind_4.png in Resources */,
 				55B43D761D022440002CCE78 /* Soul_4.png in Resources */,
-				55B43CC01D02221C002CCE78 /* sampleCard.png in Resources */,
 				55B43D661D022440002CCE78 /* Chance_7.png in Resources */,
 				55B43D781D022440002CCE78 /* Soul_2.png in Resources */,
 				55B43D7C1D022440002CCE78 /* Body_10.png in Resources */,
