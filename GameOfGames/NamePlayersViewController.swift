@@ -21,7 +21,7 @@ class NamePlayersViewController: UIViewController
     {
         super.viewDidLoad()
         
-        askPlayerNameLabel.text = "What is Team Captain 1's Name?"
+        askPlayerNameLabel.text = "What is Team Captain 1's name?"
         playerNameField.text = "";
         
         // Do any additional setup after loading the view.
@@ -51,11 +51,11 @@ class NamePlayersViewController: UIViewController
                 {
                     if (currentPlayer == 2)
                     {
-                        askPlayerNameLabel.text = "What is Team Captain 2's Name?"
+                        askPlayerNameLabel.text = "What is Team Captain 2's name?"
                     }
                     else
                     {
-                        askPlayerNameLabel.text = "What is Player \(currentPlayer)'s Name?";
+                        askPlayerNameLabel.text = "What is Player \(currentPlayer)'s name?";
                     }
                     playerNameField.text = "";
                 }

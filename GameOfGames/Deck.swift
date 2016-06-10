@@ -90,7 +90,7 @@ class Deck
                 // the header is left out of the file because it was causing problems before with the stupid parser
                 let csv = CSwiftV(string: content.description, separator: ",", headers: ["Type","Name","Stealable","Description"]);
                 
-                print(csv.headers);
+                //print(csv.headers);
                 for row in csv.rows
                 {
                     var suit:Card.Suit = Card.Suit.Joke;
@@ -118,7 +118,8 @@ class Deck
                     
                     let stealable:Bool = row[2] == "Y";
                     ret.append(Card(suit: suit, rank: rank, stealable: stealable, shortDescription: row[1], longDescription: row[3]))
-                    print(row[1]);
+                    //print(row[1]);
+                    
                     //type - values[0]
                     //name - values[1]
                     //stealable - values[2]

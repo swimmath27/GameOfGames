@@ -11,6 +11,7 @@ import UIKit
 class NumberOfPlayersViewController: UIViewController
 {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var playerCountField: UITextField!
     
     private var game:Game = Game.getInstance();
@@ -18,6 +19,7 @@ class NumberOfPlayersViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        titleLabel.font = UIFont(name: "Lobster1.3", size: titleLabel.font.pointSize);
         // Do any additional setup after loading the view, typically from a nib.
         playerCountField.placeholder = "\(Game.MIN_PLAYER_COUNT)-\(Game.MAX_PLAYER_COUNT)"
     }

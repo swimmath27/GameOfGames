@@ -47,6 +47,8 @@ class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UIC
         // 12 of them messed up
         // ...
         // no there is no reason why this happens
+        
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
     
     override func didReceiveMemoryWarning()

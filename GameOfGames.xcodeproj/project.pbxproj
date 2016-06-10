@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1F946D18C05FC66A679036A6 /* Pods_GameOfGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B80F4386EC94669A39ACCAB /* Pods_GameOfGames.framework */; };
+		5508007F1D08A9A30022E984 /* cardsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508007B1D08A9A30022E984 /* cardsButton.png */; };
+		550800801D08A9A30022E984 /* rulesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508007C1D08A9A30022E984 /* rulesButton.png */; };
+		550800811D08A9A30022E984 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508007D1D08A9A30022E984 /* playButton.png */; };
+		550800831D08C1400022E984 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800821D08C1400022E984 /* logo.png */; };
+		550800851D08C68E0022E984 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550800841D08C68E0022E984 /* UIHelper.swift */; };
+		5508008A1D08CFF30022E984 /* Lobster_1.3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 550800881D08CFF30022E984 /* Lobster_1.3.otf */; };
+		5508008B1D08CFF30022E984 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 550800891D08CFF30022E984 /* SIL Open Font License.txt */; };
+		550800921D0B81A40022E984 /* failButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508008E1D0B81A40022E984 /* failButton.png */; };
+		550800931D0B81A40022E984 /* skipButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508008F1D0B81A40022E984 /* skipButton.png */; };
+		550800941D0B81A40022E984 /* stealButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800901D0B81A40022E984 /* stealButton.png */; };
+		550800951D0B81A40022E984 /* wonButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800911D0B81A40022E984 /* wonButton.png */; };
 		559ED9991D0607480040D36A /* WholeDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ED9981D0607480040D36A /* WholeDeckViewController.swift */; };
 		559ED99D1D0609E80040D36A /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */; };
 		55B43CB61D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */; };
@@ -114,6 +125,17 @@
 		22CFCD7B1E0B9FDF190231CA /* Pods-GameOfGamesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfGamesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfGamesUITests/Pods-GameOfGamesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		359A5726D33F5D1696397CBA /* Pods-GameOfGamesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfGamesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfGamesUITests/Pods-GameOfGamesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B80F4386EC94669A39ACCAB /* Pods_GameOfGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5508007B1D08A9A30022E984 /* cardsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardsButton.png; path = UIImages/cardsButton.png; sourceTree = "<group>"; };
+		5508007C1D08A9A30022E984 /* rulesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rulesButton.png; path = UIImages/rulesButton.png; sourceTree = "<group>"; };
+		5508007D1D08A9A30022E984 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playButton.png; path = UIImages/playButton.png; sourceTree = "<group>"; };
+		550800821D08C1400022E984 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = UIImages/logo.png; sourceTree = "<group>"; };
+		550800841D08C68E0022E984 /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		550800881D08CFF30022E984 /* Lobster_1.3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Lobster_1.3.otf; path = Fonts/Lobster/Lobster_1.3.otf; sourceTree = "<group>"; };
+		550800891D08CFF30022E984 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SIL Open Font License.txt"; path = "Fonts/Lobster/SIL Open Font License.txt"; sourceTree = "<group>"; };
+		5508008E1D0B81A40022E984 /* failButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = failButton.png; path = UIImages/failButton.png; sourceTree = "<group>"; };
+		5508008F1D0B81A40022E984 /* skipButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skipButton.png; path = UIImages/skipButton.png; sourceTree = "<group>"; };
+		550800901D0B81A40022E984 /* stealButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stealButton.png; path = UIImages/stealButton.png; sourceTree = "<group>"; };
+		550800911D0B81A40022E984 /* wonButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wonButton.png; path = UIImages/wonButton.png; sourceTree = "<group>"; };
 		559ED9981D0607480040D36A /* WholeDeckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WholeDeckViewController.swift; sourceTree = "<group>"; };
 		559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickStartRandomTeamsViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +267,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		550800791D08A8FA0022E984 /* UIImages */ = {
+			isa = PBXGroup;
+			children = (
+				5508008E1D0B81A40022E984 /* failButton.png */,
+				5508008F1D0B81A40022E984 /* skipButton.png */,
+				550800901D0B81A40022E984 /* stealButton.png */,
+				550800911D0B81A40022E984 /* wonButton.png */,
+				550800821D08C1400022E984 /* logo.png */,
+				5508007B1D08A9A30022E984 /* cardsButton.png */,
+				5508007C1D08A9A30022E984 /* rulesButton.png */,
+				5508007D1D08A9A30022E984 /* playButton.png */,
+			);
+			name = UIImages;
+			sourceTree = "<group>";
+		};
+		550800861D08CF7E0022E984 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				550800871D08CFE30022E984 /* Lobster */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		550800871D08CFE30022E984 /* Lobster */ = {
+			isa = PBXGroup;
+			children = (
+				550800881D08CFF30022E984 /* Lobster_1.3.otf */,
+				550800891D08CFF30022E984 /* SIL Open Font License.txt */,
+			);
+			name = Lobster;
+			sourceTree = "<group>";
+		};
 		55B43CC11D022294002CCE78 /* CardImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +361,8 @@
 		55D3FAF91CFE0E30006C0A8E = {
 			isa = PBXGroup;
 			children = (
+				550800861D08CF7E0022E984 /* Fonts */,
+				550800791D08A8FA0022E984 /* UIImages */,
 				55B43CC11D022294002CCE78 /* CardImages */,
 				55D7E0341D062581000D0B14 /* README.md */,
 				55B43CBD1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv */,
@@ -336,6 +392,7 @@
 				55D3FB391CFE4284006C0A8E /* Deck.swift */,
 				55D3FB371CFE4262006C0A8E /* Card.swift */,
 				55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */,
+				550800841D08C68E0022E984 /* UIHelper.swift */,
 				55D3FB0B1CFE0E30006C0A8E /* Main.storyboard */,
 				55D3FB0E1CFE0E30006C0A8E /* Assets.xcassets */,
 				55D3FB101CFE0E30006C0A8E /* LaunchScreen.storyboard */,
@@ -507,7 +564,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550800951D0B81A40022E984 /* wonButton.png in Resources */,
 				55B43D851D022440002CCE78 /* Mind_13.png in Resources */,
+				5508008B1D08CFF30022E984 /* SIL Open Font License.txt in Resources */,
 				55B43D8D1D022440002CCE78 /* Mind_5.png in Resources */,
 				55B43D6E1D022440002CCE78 /* Soul_13.png in Resources */,
 				55B43D741D022440002CCE78 /* Soul_6.png in Resources */,
@@ -515,24 +574,29 @@
 				55B43D841D022440002CCE78 /* Body_1.png in Resources */,
 				55B43D611D022440002CCE78 /* Chance_12.png in Resources */,
 				55B43D881D022440002CCE78 /* Mind_10.png in Resources */,
+				550800801D08A9A30022E984 /* rulesButton.png in Resources */,
 				55B43D701D022440002CCE78 /* Soul_11.png in Resources */,
 				55B43D8A1D022440002CCE78 /* Mind_8.png in Resources */,
 				55B43D711D022440002CCE78 /* Soul_9.png in Resources */,
 				55B43D6C1D022440002CCE78 /* Chance_1.png in Resources */,
 				55B43D7A1D022440002CCE78 /* Body_12.png in Resources */,
 				55B43D771D022440002CCE78 /* Soul_3.png in Resources */,
+				550800941D0B81A40022E984 /* stealButton.png in Resources */,
 				55B43D901D022440002CCE78 /* Mind_2.png in Resources */,
 				55B43D751D022440002CCE78 /* Soul_5.png in Resources */,
 				55B43D8C1D022440002CCE78 /* Mind_6.png in Resources */,
 				55B43D671D022440002CCE78 /* Chance_6.png in Resources */,
 				55B43D7F1D022440002CCE78 /* Body_7.png in Resources */,
+				550800811D08A9A30022E984 /* playButton.png in Resources */,
 				55B43D641D022440002CCE78 /* Chance_9.png in Resources */,
 				55B43D721D022440002CCE78 /* Soul_8.png in Resources */,
 				55B43D5F1D022440002CCE78 /* Soul_10.png in Resources */,
+				5508008A1D08CFF30022E984 /* Lobster_1.3.otf in Resources */,
 				55B43D821D022440002CCE78 /* Body_3.png in Resources */,
 				55B43D651D022440002CCE78 /* Chance_8.png in Resources */,
 				55B43D8F1D022440002CCE78 /* Mind_3.png in Resources */,
 				55B43D7D1D022440002CCE78 /* Body_9.png in Resources */,
+				550800831D08C1400022E984 /* logo.png in Resources */,
 				55B43D911D022440002CCE78 /* Mind_1.png in Resources */,
 				55B43D681D022440002CCE78 /* Chance_5.png in Resources */,
 				55B43D791D022440002CCE78 /* Body_13.png in Resources */,
@@ -551,8 +615,10 @@
 				55B43D891D022440002CCE78 /* Mind_9.png in Resources */,
 				55B43D5E1D022440002CCE78 /* Body_4.png in Resources */,
 				55B43D6D1D022440002CCE78 /* Soul_1.png in Resources */,
+				5508007F1D08A9A30022E984 /* cardsButton.png in Resources */,
 				55B43D831D022440002CCE78 /* Body_2.png in Resources */,
 				55B43CBE1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv in Resources */,
+				550800931D0B81A40022E984 /* skipButton.png in Resources */,
 				55B43D8B1D022440002CCE78 /* Mind_7.png in Resources */,
 				55B43D7B1D022440002CCE78 /* Body_11.png in Resources */,
 				55B43D6A1D022440002CCE78 /* Chance_3.png in Resources */,
@@ -563,6 +629,7 @@
 				55B43D6F1D022440002CCE78 /* Soul_12.png in Resources */,
 				55D3FB0D1CFE0E30006C0A8E /* Main.storyboard in Resources */,
 				55B43D6B1D022440002CCE78 /* Chance_2.png in Resources */,
+				550800921D0B81A40022E984 /* failButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +782,7 @@
 				55D3FB441CFF384A006C0A8E /* NamePlayersViewController.swift in Sources */,
 				559ED99D1D0609E80040D36A /* ImageCollectionViewCell.swift in Sources */,
 				55D3FB421CFE57E2006C0A8E /* DrawCardViewController.swift in Sources */,
+				550800851D08C68E0022E984 /* UIHelper.swift in Sources */,
 				55D3FB501CFFA3CD006C0A8E /* CheckCardsViewController.swift in Sources */,
 				559ED9991D0607480040D36A /* WholeDeckViewController.swift in Sources */,
 				55D2E5FA1CFFBA2E004768FE /* RoundRouletteViewController.swift in Sources */,

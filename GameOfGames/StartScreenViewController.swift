@@ -14,13 +14,21 @@ class StartScreenViewController: UIViewController
     //this is so it loads the deck stuff as soon as the app loads
     let game:Game = Game.getInstance();
     
-    override func viewDidLoad() {
+    @IBOutlet weak var rulebookButton: UIButton!
+    @IBOutlet weak var cardsButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
+        
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

@@ -21,7 +21,7 @@ class NameTeamsViewController: UIViewController
     {
         super.viewDidLoad()
         
-        askTeamNameLabel.text = "What is Team \(currentTeam)'s Name?";
+        askTeamNameLabel.text = "What is Team \(currentTeam)'s name?";
         teamNameField.text = "";
     }
 
@@ -57,7 +57,7 @@ class NameTeamsViewController: UIViewController
                 }
                 else
                 {
-                    askTeamNameLabel.text = "What is Team \(currentTeam)'s Name?";
+                    askTeamNameLabel.text = "What is Team \(currentTeam)'s name?";
                     teamNameField.text = "";
                 }
                 return;
