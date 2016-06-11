@@ -19,6 +19,23 @@
 		550800931D0B81A40022E984 /* skipButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508008F1D0B81A40022E984 /* skipButton.png */; };
 		550800941D0B81A40022E984 /* stealButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800901D0B81A40022E984 /* stealButton.png */; };
 		550800951D0B81A40022E984 /* wonButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800911D0B81A40022E984 /* wonButton.png */; };
+		550800A71D0BA24E0022E984 /* Body_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800961D0BA24E0022E984 /* Body_14.png */; };
+		550800A81D0BA24E0022E984 /* Body_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800971D0BA24E0022E984 /* Body_15.png */; };
+		550800A91D0BA24E0022E984 /* Chance_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800981D0BA24E0022E984 /* Chance_14.png */; };
+		550800AA1D0BA24E0022E984 /* Chance_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800991D0BA24E0022E984 /* Chance_15.png */; };
+		550800AB1D0BA24E0022E984 /* Chance_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508009A1D0BA24E0022E984 /* Chance_16.png */; };
+		550800AC1D0BA24E0022E984 /* Chance_17.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508009B1D0BA24E0022E984 /* Chance_17.png */; };
+		550800AD1D0BA24E0022E984 /* Chance_18.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508009C1D0BA24E0022E984 /* Chance_18.png */; };
+		550800AE1D0BA24E0022E984 /* Chance_19.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508009D1D0BA24E0022E984 /* Chance_19.png */; };
+		550800AF1D0BA24E0022E984 /* Chance_20.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508009E1D0BA24E0022E984 /* Chance_20.png */; };
+		550800B01D0BA24E0022E984 /* Mind_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508009F1D0BA24E0022E984 /* Mind_14.png */; };
+		550800B11D0BA24E0022E984 /* Mind_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A01D0BA24E0022E984 /* Mind_15.png */; };
+		550800B21D0BA24E0022E984 /* Mind_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A11D0BA24E0022E984 /* Mind_16.png */; };
+		550800B31D0BA24E0022E984 /* Mind_17.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A21D0BA24E0022E984 /* Mind_17.png */; };
+		550800B41D0BA24E0022E984 /* Mind_18.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A31D0BA24E0022E984 /* Mind_18.png */; };
+		550800B51D0BA24E0022E984 /* Soul_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A41D0BA24E0022E984 /* Soul_14.png */; };
+		550800B61D0BA24E0022E984 /* Soul_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A51D0BA24E0022E984 /* Soul_15.png */; };
+		550800B71D0BA24E0022E984 /* Soul_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A61D0BA24E0022E984 /* Soul_16.png */; };
 		559ED9991D0607480040D36A /* WholeDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ED9981D0607480040D36A /* WholeDeckViewController.swift */; };
 		559ED99D1D0609E80040D36A /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */; };
 		55B43CB61D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */; };
@@ -136,6 +153,23 @@
 		5508008F1D0B81A40022E984 /* skipButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skipButton.png; path = UIImages/skipButton.png; sourceTree = "<group>"; };
 		550800901D0B81A40022E984 /* stealButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stealButton.png; path = UIImages/stealButton.png; sourceTree = "<group>"; };
 		550800911D0B81A40022E984 /* wonButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wonButton.png; path = UIImages/wonButton.png; sourceTree = "<group>"; };
+		550800961D0BA24E0022E984 /* Body_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_14.png; path = CardImages/Body_14.png; sourceTree = "<group>"; };
+		550800971D0BA24E0022E984 /* Body_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Body_15.png; path = CardImages/Body_15.png; sourceTree = "<group>"; };
+		550800981D0BA24E0022E984 /* Chance_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_14.png; path = CardImages/Chance_14.png; sourceTree = "<group>"; };
+		550800991D0BA24E0022E984 /* Chance_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_15.png; path = CardImages/Chance_15.png; sourceTree = "<group>"; };
+		5508009A1D0BA24E0022E984 /* Chance_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_16.png; path = CardImages/Chance_16.png; sourceTree = "<group>"; };
+		5508009B1D0BA24E0022E984 /* Chance_17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_17.png; path = CardImages/Chance_17.png; sourceTree = "<group>"; };
+		5508009C1D0BA24E0022E984 /* Chance_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_18.png; path = CardImages/Chance_18.png; sourceTree = "<group>"; };
+		5508009D1D0BA24E0022E984 /* Chance_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_19.png; path = CardImages/Chance_19.png; sourceTree = "<group>"; };
+		5508009E1D0BA24E0022E984 /* Chance_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chance_20.png; path = CardImages/Chance_20.png; sourceTree = "<group>"; };
+		5508009F1D0BA24E0022E984 /* Mind_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_14.png; path = CardImages/Mind_14.png; sourceTree = "<group>"; };
+		550800A01D0BA24E0022E984 /* Mind_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_15.png; path = CardImages/Mind_15.png; sourceTree = "<group>"; };
+		550800A11D0BA24E0022E984 /* Mind_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_16.png; path = CardImages/Mind_16.png; sourceTree = "<group>"; };
+		550800A21D0BA24E0022E984 /* Mind_17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_17.png; path = CardImages/Mind_17.png; sourceTree = "<group>"; };
+		550800A31D0BA24E0022E984 /* Mind_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mind_18.png; path = CardImages/Mind_18.png; sourceTree = "<group>"; };
+		550800A41D0BA24E0022E984 /* Soul_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_14.png; path = CardImages/Soul_14.png; sourceTree = "<group>"; };
+		550800A51D0BA24E0022E984 /* Soul_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_15.png; path = CardImages/Soul_15.png; sourceTree = "<group>"; };
+		550800A61D0BA24E0022E984 /* Soul_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_16.png; path = CardImages/Soul_16.png; sourceTree = "<group>"; };
 		559ED9981D0607480040D36A /* WholeDeckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WholeDeckViewController.swift; sourceTree = "<group>"; };
 		559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickStartRandomTeamsViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +336,23 @@
 		55B43CC11D022294002CCE78 /* CardImages */ = {
 			isa = PBXGroup;
 			children = (
+				550800961D0BA24E0022E984 /* Body_14.png */,
+				550800971D0BA24E0022E984 /* Body_15.png */,
+				550800981D0BA24E0022E984 /* Chance_14.png */,
+				550800991D0BA24E0022E984 /* Chance_15.png */,
+				5508009A1D0BA24E0022E984 /* Chance_16.png */,
+				5508009B1D0BA24E0022E984 /* Chance_17.png */,
+				5508009C1D0BA24E0022E984 /* Chance_18.png */,
+				5508009D1D0BA24E0022E984 /* Chance_19.png */,
+				5508009E1D0BA24E0022E984 /* Chance_20.png */,
+				5508009F1D0BA24E0022E984 /* Mind_14.png */,
+				550800A01D0BA24E0022E984 /* Mind_15.png */,
+				550800A11D0BA24E0022E984 /* Mind_16.png */,
+				550800A21D0BA24E0022E984 /* Mind_17.png */,
+				550800A31D0BA24E0022E984 /* Mind_18.png */,
+				550800A41D0BA24E0022E984 /* Soul_14.png */,
+				550800A51D0BA24E0022E984 /* Soul_15.png */,
+				550800A61D0BA24E0022E984 /* Soul_16.png */,
 				55B43D2A1D022440002CCE78 /* Body_4.png */,
 				55B43D2B1D022440002CCE78 /* Soul_10.png */,
 				55B43D2C1D022440002CCE78 /* Chance_13.png */,
@@ -564,8 +615,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550800A91D0BA24E0022E984 /* Chance_14.png in Resources */,
 				550800951D0B81A40022E984 /* wonButton.png in Resources */,
+				550800B61D0BA24E0022E984 /* Soul_15.png in Resources */,
 				55B43D851D022440002CCE78 /* Mind_13.png in Resources */,
+				550800B11D0BA24E0022E984 /* Mind_15.png in Resources */,
 				5508008B1D08CFF30022E984 /* SIL Open Font License.txt in Resources */,
 				55B43D8D1D022440002CCE78 /* Mind_5.png in Resources */,
 				55B43D6E1D022440002CCE78 /* Soul_13.png in Resources */,
@@ -577,24 +631,32 @@
 				550800801D08A9A30022E984 /* rulesButton.png in Resources */,
 				55B43D701D022440002CCE78 /* Soul_11.png in Resources */,
 				55B43D8A1D022440002CCE78 /* Mind_8.png in Resources */,
+				550800A81D0BA24E0022E984 /* Body_15.png in Resources */,
 				55B43D711D022440002CCE78 /* Soul_9.png in Resources */,
 				55B43D6C1D022440002CCE78 /* Chance_1.png in Resources */,
+				550800AE1D0BA24E0022E984 /* Chance_19.png in Resources */,
+				550800B01D0BA24E0022E984 /* Mind_14.png in Resources */,
 				55B43D7A1D022440002CCE78 /* Body_12.png in Resources */,
 				55B43D771D022440002CCE78 /* Soul_3.png in Resources */,
 				550800941D0B81A40022E984 /* stealButton.png in Resources */,
 				55B43D901D022440002CCE78 /* Mind_2.png in Resources */,
 				55B43D751D022440002CCE78 /* Soul_5.png in Resources */,
 				55B43D8C1D022440002CCE78 /* Mind_6.png in Resources */,
+				550800B71D0BA24E0022E984 /* Soul_16.png in Resources */,
+				550800B31D0BA24E0022E984 /* Mind_17.png in Resources */,
 				55B43D671D022440002CCE78 /* Chance_6.png in Resources */,
 				55B43D7F1D022440002CCE78 /* Body_7.png in Resources */,
 				550800811D08A9A30022E984 /* playButton.png in Resources */,
+				550800B41D0BA24E0022E984 /* Mind_18.png in Resources */,
 				55B43D641D022440002CCE78 /* Chance_9.png in Resources */,
 				55B43D721D022440002CCE78 /* Soul_8.png in Resources */,
 				55B43D5F1D022440002CCE78 /* Soul_10.png in Resources */,
+				550800AF1D0BA24E0022E984 /* Chance_20.png in Resources */,
 				5508008A1D08CFF30022E984 /* Lobster_1.3.otf in Resources */,
 				55B43D821D022440002CCE78 /* Body_3.png in Resources */,
 				55B43D651D022440002CCE78 /* Chance_8.png in Resources */,
 				55B43D8F1D022440002CCE78 /* Mind_3.png in Resources */,
+				550800AC1D0BA24E0022E984 /* Chance_17.png in Resources */,
 				55B43D7D1D022440002CCE78 /* Body_9.png in Resources */,
 				550800831D08C1400022E984 /* logo.png in Resources */,
 				55B43D911D022440002CCE78 /* Mind_1.png in Resources */,
@@ -607,18 +669,23 @@
 				55B43D7C1D022440002CCE78 /* Body_10.png in Resources */,
 				55B43D871D022440002CCE78 /* Mind_11.png in Resources */,
 				55B43D801D022440002CCE78 /* Body_6.png in Resources */,
+				550800AA1D0BA24E0022E984 /* Chance_15.png in Resources */,
+				550800AD1D0BA24E0022E984 /* Chance_18.png in Resources */,
 				55B43D621D022440002CCE78 /* Chance_11.png in Resources */,
 				55D3FB121CFE0E30006C0A8E /* LaunchScreen.storyboard in Resources */,
+				550800A71D0BA24E0022E984 /* Body_14.png in Resources */,
 				55B43D861D022440002CCE78 /* Mind_12.png in Resources */,
 				55B43D691D022440002CCE78 /* Chance_4.png in Resources */,
 				55B43D811D022440002CCE78 /* Body_5.png in Resources */,
 				55B43D891D022440002CCE78 /* Mind_9.png in Resources */,
 				55B43D5E1D022440002CCE78 /* Body_4.png in Resources */,
+				550800B21D0BA24E0022E984 /* Mind_16.png in Resources */,
 				55B43D6D1D022440002CCE78 /* Soul_1.png in Resources */,
 				5508007F1D08A9A30022E984 /* cardsButton.png in Resources */,
 				55B43D831D022440002CCE78 /* Body_2.png in Resources */,
 				55B43CBE1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv in Resources */,
 				550800931D0B81A40022E984 /* skipButton.png in Resources */,
+				550800B51D0BA24E0022E984 /* Soul_14.png in Resources */,
 				55B43D8B1D022440002CCE78 /* Mind_7.png in Resources */,
 				55B43D7B1D022440002CCE78 /* Body_11.png in Resources */,
 				55B43D6A1D022440002CCE78 /* Chance_3.png in Resources */,
@@ -627,6 +694,7 @@
 				55B43D731D022440002CCE78 /* Soul_7.png in Resources */,
 				55B43D631D022440002CCE78 /* Chance_10.png in Resources */,
 				55B43D6F1D022440002CCE78 /* Soul_12.png in Resources */,
+				550800AB1D0BA24E0022E984 /* Chance_16.png in Resources */,
 				55D3FB0D1CFE0E30006C0A8E /* Main.storyboard in Resources */,
 				55B43D6B1D022440002CCE78 /* Chance_2.png in Resources */,
 				550800921D0B81A40022E984 /* failButton.png in Resources */,

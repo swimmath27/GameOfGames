@@ -13,6 +13,8 @@ class DrawCardViewController: UIViewController {
     @IBOutlet weak var playerIntroductionLabel: UILabel!
     @IBOutlet weak var whichCardLabel: UILabel!
     
+    @IBOutlet weak var youDrewLabel: UILabel!
+    
     @IBOutlet weak var stolenButton: UIButton!
     
     @IBOutlet weak var cardImageButton: UIButton!
@@ -23,9 +25,9 @@ class DrawCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playerIntroductionLabel.text = "\(game.getCurrentPlayerName()), Your Card is..."
+        playerIntroductionLabel.text = "\(game.getCurrentPlayerName()),"
  
-        whichCardLabel.text = DrawCardViewController.currentCard.getShortDescription();
+        whichCardLabel.text = "\(DrawCardViewController.currentCard.getShortDescription())!";
         
 //        upVoteButton.setBackgroundImage(UIImage(named: "back-up_32x.png") as UIImage?, forState: .Normal)
 //        upVoteButton.setTitle("", forState: .Normal)
@@ -52,7 +54,8 @@ class DrawCardViewController: UIViewController {
         {
             stolenButton.hidden = true
         }
-
+        
+        
 //        cardImageButton.image = UIImage(named: currentCard.getFileName())
     }
 

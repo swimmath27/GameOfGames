@@ -22,22 +22,6 @@ class Deck
     init()
     {
         //print(Deck.CARDS_URL);
-        let bundleURL = NSBundle.mainBundle().bundleURL
-        let fileURL = bundleURL.URLByAppendingPathComponent(Deck.CARDS_DOWNLOAD_NAME)
-        let filemgr = NSFileManager();
-        if filemgr.fileExistsAtPath(fileURL.path!)
-        {
-            //remove it so we can download one
-            do
-            {
-                try filemgr.removeItemAtURL(fileURL)
-                print("Remove successful")
-            }
-            catch
-            {
-                print("Failed to remove existing file")
-            }
-        }
         
         HttpDownloader.loadFileAsync(NSURL(string: Deck.CARDS_URL)!,
             completion:
