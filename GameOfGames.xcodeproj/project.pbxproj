@@ -36,6 +36,8 @@
 		550800B51D0BA24E0022E984 /* Soul_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A41D0BA24E0022E984 /* Soul_14.png */; };
 		550800B61D0BA24E0022E984 /* Soul_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A51D0BA24E0022E984 /* Soul_15.png */; };
 		550800B71D0BA24E0022E984 /* Soul_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A61D0BA24E0022E984 /* Soul_16.png */; };
+		556F2A341D0BDD4400797FA5 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 556F2A321D0BDD4400797FA5 /* backButton.png */; };
+		556F2A351D0BDD4400797FA5 /* nextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 556F2A331D0BDD4400797FA5 /* nextButton.png */; };
 		559ED9991D0607480040D36A /* WholeDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ED9981D0607480040D36A /* WholeDeckViewController.swift */; };
 		559ED99D1D0609E80040D36A /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */; };
 		55B43CB61D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */; };
@@ -170,6 +172,8 @@
 		550800A41D0BA24E0022E984 /* Soul_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_14.png; path = CardImages/Soul_14.png; sourceTree = "<group>"; };
 		550800A51D0BA24E0022E984 /* Soul_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_15.png; path = CardImages/Soul_15.png; sourceTree = "<group>"; };
 		550800A61D0BA24E0022E984 /* Soul_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_16.png; path = CardImages/Soul_16.png; sourceTree = "<group>"; };
+		556F2A321D0BDD4400797FA5 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButton.png; path = UIImages/backButton.png; sourceTree = "<group>"; };
+		556F2A331D0BDD4400797FA5 /* nextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nextButton.png; path = UIImages/nextButton.png; sourceTree = "<group>"; };
 		559ED9981D0607480040D36A /* WholeDeckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WholeDeckViewController.swift; sourceTree = "<group>"; };
 		559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickStartRandomTeamsViewController.swift; sourceTree = "<group>"; };
@@ -304,6 +308,8 @@
 		550800791D08A8FA0022E984 /* UIImages */ = {
 			isa = PBXGroup;
 			children = (
+				556F2A321D0BDD4400797FA5 /* backButton.png */,
+				556F2A331D0BDD4400797FA5 /* nextButton.png */,
 				5508008E1D0B81A40022E984 /* failButton.png */,
 				5508008F1D0B81A40022E984 /* skipButton.png */,
 				550800901D0B81A40022E984 /* stealButton.png */,
@@ -637,6 +643,7 @@
 				550800AE1D0BA24E0022E984 /* Chance_19.png in Resources */,
 				550800B01D0BA24E0022E984 /* Mind_14.png in Resources */,
 				55B43D7A1D022440002CCE78 /* Body_12.png in Resources */,
+				556F2A341D0BDD4400797FA5 /* backButton.png in Resources */,
 				55B43D771D022440002CCE78 /* Soul_3.png in Resources */,
 				550800941D0B81A40022E984 /* stealButton.png in Resources */,
 				55B43D901D022440002CCE78 /* Mind_2.png in Resources */,
@@ -695,6 +702,7 @@
 				55B43D631D022440002CCE78 /* Chance_10.png in Resources */,
 				55B43D6F1D022440002CCE78 /* Soul_12.png in Resources */,
 				550800AB1D0BA24E0022E984 /* Chance_16.png in Resources */,
+				556F2A351D0BDD4400797FA5 /* nextButton.png in Resources */,
 				55D3FB0D1CFE0E30006C0A8E /* Main.storyboard in Resources */,
 				55B43D6B1D022440002CCE78 /* Chance_2.png in Resources */,
 				550800921D0B81A40022E984 /* failButton.png in Resources */,

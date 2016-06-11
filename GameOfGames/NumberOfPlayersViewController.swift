@@ -12,16 +12,31 @@ class NumberOfPlayersViewController: UIViewController
 {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var playerCountField: UITextField!
+    
+    @IBOutlet weak var setNamesButton: UIButton!
+    @IBOutlet weak var quickStartButton: UIButton!
     
     private var game:Game = Game.getInstance();
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        titleLabel.font = UIFont(name: "Lobster1.3", size: titleLabel.font.pointSize);
+        titleLabel.textColor = UIColor.whiteColor();
+        questionLabel.textColor = UIColor.whiteColor();
+        
+        setNamesButton.tintColor = UIColor.yellowColor();
+        quickStartButton.tintColor = UIColor.yellowColor();
+        
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         playerCountField.placeholder = "\(Game.MIN_PLAYER_COUNT)-\(Game.MAX_PLAYER_COUNT)"
+        
+        //background gradient
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
 
     override func didReceiveMemoryWarning()
