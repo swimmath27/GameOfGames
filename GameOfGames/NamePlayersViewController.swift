@@ -11,8 +11,11 @@ import UIKit
 class NamePlayersViewController: UIViewController
 {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var askPlayerNameLabel: UILabel!
     @IBOutlet weak var playerNameField: UITextField!
+    
+    @IBOutlet weak var submitButton: UIButton!
     
     private var game : Game = Game.getInstance();
     private var currentPlayer : Int = 1;
@@ -24,7 +27,13 @@ class NamePlayersViewController: UIViewController
         askPlayerNameLabel.text = "What is Team Captain 1's name?"
         playerNameField.text = "";
         
-        // Do any additional setup after loading the view.
+        titleLabel.textColor = UIColor.whiteColor();
+        askPlayerNameLabel.textColor = UIColor.whiteColor();
+        
+        submitButton.tintColor = UIColor.yellowColor();
+        
+        //background gradient
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
 
     override func didReceiveMemoryWarning()

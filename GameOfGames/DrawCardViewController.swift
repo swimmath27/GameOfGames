@@ -11,13 +11,16 @@ import UIKit
 class DrawCardViewController: UIViewController {
 
     @IBOutlet weak var playerIntroductionLabel: UILabel!
-    @IBOutlet weak var whichCardLabel: UILabel!
-    
     @IBOutlet weak var youDrewLabel: UILabel!
     
-    @IBOutlet weak var stolenButton: UIButton!
-    
     @IBOutlet weak var cardImageButton: UIButton!
+
+    @IBOutlet weak var whichCardLabel: UILabel!
+    
+    @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var wonButton: UIButton!
+    @IBOutlet weak var lostButton: UIButton!
+    @IBOutlet weak var stolenButton: UIButton!
     
     static var currentCard : Card = Card(suit: Card.Suit.Joke, rank: 0)
     private var game:Game = Game.getInstance();
@@ -29,16 +32,12 @@ class DrawCardViewController: UIViewController {
  
         whichCardLabel.text = "\(DrawCardViewController.currentCard.getShortDescription())!";
         
-//        upVoteButton.setBackgroundImage(UIImage(named: "back-up_32x.png") as UIImage?, forState: .Normal)
-//        upVoteButton.setTitle("", forState: .Normal)
-
         let cardPic: UIImage? = UIImage(named: DrawCardViewController.currentCard.getFileName())
         if cardPic != nil
         {
             cardImageButton.setImage(cardPic, forState: .Normal)
             
             cardImageButton.imageEdgeInsets = UIEdgeInsetsMake(0,0,0,0)
-            
         }
         else
         {
@@ -55,8 +54,14 @@ class DrawCardViewController: UIViewController {
             stolenButton.hidden = true
         }
         
+        //TODO: check if losable and hide the lose button as well
         
-//        cardImageButton.image = UIImage(named: currentCard.getFileName())
+        playerIntroductionLabel.textColor = UIColor.whiteColor();
+        youDrewLabel.textColor = UIColor.whiteColor();
+        whichCardLabel.textColor = UIColor.whiteColor();
+        
+        //background gradient
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
 
     override func didReceiveMemoryWarning() {
