@@ -10,13 +10,12 @@ import UIKit
 
 class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
+    @IBOutlet weak var team1Table: UITableView!
+    @IBOutlet weak var team2Table: UITableView!
     
     var game:Game = Game.getInstance();
     
     var shuffled:Bool = false;
-    
-    @IBOutlet weak var team1Table: UITableView!
-    @IBOutlet weak var team2Table: UITableView!
     
     override func viewDidLoad()
     {
@@ -24,7 +23,6 @@ class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UIT
         
         team1Table.delegate = self
         team1Table.dataSource = self
-        
         
         team2Table.delegate = self
         team2Table.dataSource = self
@@ -49,7 +47,6 @@ class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UIT
     
     @IBAction func FinishButtonPressed(sender: AnyObject)
     {
-        //don't need anything here anymore
         if shuffled
         {
             performSegueWithIdentifier("RandomizeTeamsToNameTeams", sender: nil)

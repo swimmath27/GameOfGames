@@ -1096,81 +1096,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stack cup/Slap cup" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV1-Z0-jsx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olympic Games" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovt-fV-AQZ">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="iIE-fL-cF3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="iIE-fL-cF3"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="iIE-fL-cF3"/>
-                                    </mask>
-                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 Cup" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZU-DR-rPc">
-                                <rect key="frame" x="-42" y="-21" width="54" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="n3a-ID-cJ1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="n3a-ID-cJ1"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="n3a-ID-cJ1"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mouth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBa-fm-XO4">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="haF-y6-q6P"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="haF-y6-q6P"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="haF-y6-q6P"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="te0-kj-qYo">
-                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
-                                <segments>
-                                    <segment title="1"/>
-                                    <segment title="tie"/>
-                                    <segment title="2"/>
-                                </segments>
-                                <color key="tintColor" red="1" green="0.92433181819999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vde-KC-IlP">
-                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
-                                <segments>
-                                    <segment title="1"/>
-                                    <segment title="tie"/>
-                                    <segment title="2"/>
-                                </segments>
-                                <color key="tintColor" red="1" green="0.92433181819999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoB-CV-oHS">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -1212,13 +1143,82 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olympic Games" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovt-fV-AQZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stack cup/Slap cup" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV1-Z0-jsx">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="iIE-fL-cF3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="iIE-fL-cF3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="iIE-fL-cF3"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ibL-ap-8gs">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="tie"/>
+                                    <segment title="2"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.92433181819999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 Cup" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZU-DR-rPc">
+                                <rect key="frame" x="-42" y="-21" width="54" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="n3a-ID-cJ1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="n3a-ID-cJ1"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="n3a-ID-cJ1"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="te0-kj-qYo">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="tie"/>
+                                    <segment title="2"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.92433181819999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mouth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBa-fm-XO4">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="haF-y6-q6P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="haF-y6-q6P"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="haF-y6-q6P"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vde-KC-IlP">
                                 <rect key="frame" x="-60" y="-14" width="121" height="29"/>
                                 <segments>
                                     <segment title="1"/>
@@ -1286,15 +1286,15 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="GV1-Z0-jsx"/>
-                                <exclude reference="YZU-DR-rPc"/>
-                                <exclude reference="PBa-fm-XO4"/>
-                                <exclude reference="te0-kj-qYo"/>
-                                <exclude reference="Vde-KC-IlP"/>
+                                <exclude reference="Ovt-fV-AQZ"/>
                                 <exclude reference="eoB-CV-oHS"/>
                                 <exclude reference="CjG-pl-Bxj"/>
-                                <exclude reference="Ovt-fV-AQZ"/>
+                                <exclude reference="GV1-Z0-jsx"/>
                                 <exclude reference="ibL-ap-8gs"/>
+                                <exclude reference="YZU-DR-rPc"/>
+                                <exclude reference="te0-kj-qYo"/>
+                                <exclude reference="PBa-fm-XO4"/>
+                                <exclude reference="Vde-KC-IlP"/>
                                 <exclude reference="e2D-XX-LNF"/>
                             </mask>
                             <mask key="constraints">
@@ -1332,15 +1332,15 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="GV1-Z0-jsx"/>
-                                <include reference="YZU-DR-rPc"/>
-                                <include reference="PBa-fm-XO4"/>
-                                <include reference="te0-kj-qYo"/>
-                                <include reference="Vde-KC-IlP"/>
+                                <include reference="Ovt-fV-AQZ"/>
                                 <include reference="eoB-CV-oHS"/>
                                 <include reference="CjG-pl-Bxj"/>
-                                <include reference="Ovt-fV-AQZ"/>
+                                <include reference="GV1-Z0-jsx"/>
                                 <include reference="ibL-ap-8gs"/>
+                                <include reference="YZU-DR-rPc"/>
+                                <include reference="te0-kj-qYo"/>
+                                <include reference="PBa-fm-XO4"/>
+                                <include reference="Vde-KC-IlP"/>
                                 <include reference="e2D-XX-LNF"/>
                             </mask>
                             <mask key="constraints">
@@ -3221,11 +3221,11 @@ the Bitch Cup</string>
         <image name="wonButton.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dN5-zG-pF1"/>
-        <segue reference="ZuG-98-wPf"/>
-        <segue reference="bD1-Yc-TD5"/>
-        <segue reference="ow4-ud-gmh"/>
-        <segue reference="p5Q-78-JrR"/>
+        <segue reference="noI-aA-zmc"/>
         <segue reference="V2y-wS-Nwm"/>
+        <segue reference="UDe-Fb-QEH"/>
+        <segue reference="pfp-VP-7PV"/>
+        <segue reference="ZuG-98-wPf"/>
+        <segue reference="IFC-y8-JmA"/>
     </inferredMetricsTieBreakers>
 </document>

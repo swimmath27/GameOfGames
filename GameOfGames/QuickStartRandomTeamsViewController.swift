@@ -19,6 +19,8 @@ class QuickStartRandomTeamsViewController: UIViewController, UITableViewDataSour
     
     let game : Game = Game.getInstance()
     
+    var shuffled : Bool = false;
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -36,7 +38,6 @@ class QuickStartRandomTeamsViewController: UIViewController, UITableViewDataSour
         
         team1Table.delegate = self
         team1Table.dataSource = self
-        
         
         team2Table.delegate = self
         team2Table.dataSource = self
@@ -62,7 +63,6 @@ class QuickStartRandomTeamsViewController: UIViewController, UITableViewDataSour
                 self.team2List.append(playerOrder[i])
             }
         }
-
     }
     
     func updateTeamViews()
@@ -74,18 +74,43 @@ class QuickStartRandomTeamsViewController: UIViewController, UITableViewDataSour
     @IBAction func RandomizeButtonPressed(sender: AnyObject)
     {
         playerOrder.shuffleInPlace();
-        
         updateTeamsFromOrder();
         
         updateTeamViews();
+        shuffled = true;
     }
     
     @IBAction func FinishButtonPressed(sender: AnyObject)
     {
-        //don't need anything here anymore
-        performSegueWithIdentifier("QuickStartRandomizeTeamsToPlayOlympics", sender: nil)
+        if shuffled
+        {
+            performSegueWithIdentifier("QuickStartRandomizeTeamsToPlayOlympics", sender: nil)
+        }
+        else
+        {
+            alertToConfirm("Are you sure you want to continue without shuffling teams?",
+                           action:
+                {
+                    action in self.performSegueWithIdentifier("QuickStartRandomizeTeamsToPlayOlympics", sender: nil)
+            })
+        }
     }
     
+    func alertToConfirm(msg : String, action : (UIAlertAction) -> Void)
+    {
+        let popup = UIAlertController(title: "Alert",
+                                      message: msg,
+                                      preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let okAction = UIAlertAction(title:"OK", style: .Default, handler: action);
+        popup.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        popup.addAction(cancelAction);
+        
+        self.presentViewController(popup, animated: true,
+                                   completion: nil)
+    }
     /// table view stuff ////////////////////////////////////
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
