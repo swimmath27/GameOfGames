@@ -78,7 +78,11 @@ class NumberOfPlayersViewController: UIViewController
         if num != -1
         {
             game.setNumPlayers(num);
-            performSegueWithIdentifier("NumPlayersToNamePlayers", sender: nil)
+            alertToConfirm("Start", msg: "Start Game by setting all players and team names", action:
+                {
+                    action in self.performSegueWithIdentifier("NumPlayersToNamePlayers", sender: nil)
+                })
+            
         }
     }
     
@@ -88,7 +92,10 @@ class NumberOfPlayersViewController: UIViewController
         if num != -1
         {
             game.quickStart(num)
-            performSegueWithIdentifier("NumPlayersToQuickStartRandomizeTeams", sender: nil)
+            alertToConfirm("Quick Start", msg: "Start the game without entering the names of players and teams", action:
+                {
+                    action in self.performSegueWithIdentifier("NumPlayersToQuickStartRandomizeTeams", sender: nil)
+            })
         }
     }
     
@@ -106,6 +113,22 @@ class NumberOfPlayersViewController: UIViewController
         self.presentViewController(popup, animated: true,
                                    completion: nil)
 
+    }
+    
+    func alertToConfirm(title: String, msg : String, action : (UIAlertAction) -> Void)
+    {
+        let popup = UIAlertController(title: title,
+                                      message: msg,
+                                      preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let okAction = UIAlertAction(title:"OK", style: .Default, handler: action);
+        popup.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        popup.addAction(cancelAction);
+        
+        self.presentViewController(popup, animated: true,
+                                   completion: nil)
     }
     
 }
