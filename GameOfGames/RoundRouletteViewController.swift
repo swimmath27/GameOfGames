@@ -119,7 +119,7 @@ class RoundRouletteViewController: UIViewController {
             let team = game.getTeamName(rand <= team2Cards ? 1 : 2)
             chosenTeam.text = team
             
-            game.messageTitle = "Too bad \(team)"
+            game.messageTitle = "Too bad, \(team)"
             game.message = "You must finish the Bitch Cup before the game may continue"
         }
         else

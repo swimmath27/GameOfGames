@@ -54,8 +54,11 @@ class PlayGameViewController: UIViewController
         {
             if !PlayGameViewController.wasNewRound
             {
+                
+                nextPlayerLabel.textAlignment = .Center;
                 nextPlayerLabel.text = "End of Round, Click to"
                 upNextLabel.text = "go to Round Roulette"
+                
                 drawCardButton.setImage(UIImage(named:"rollButton.png"), forState: .Normal);
             }
         }
