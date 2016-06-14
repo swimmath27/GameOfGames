@@ -1945,9 +1945,6 @@
                                 <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="200" y="72" width="380" height="27"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4j-WN-dbn">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -1962,8 +1959,7 @@
                                         <exclude reference="eUR-dc-Yb3"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="107" width="100" height="24"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="eUR-dc-Yb3"/>
                                     </mask>
@@ -1984,8 +1980,7 @@
                                         <exclude reference="MlF-SZ-dBY"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="480" y="111" width="100" height="21"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="EPB-8m-0AS"/>
                                         <include reference="MlF-SZ-dBY"/>
@@ -2007,8 +2002,7 @@
                                         <exclude reference="oVD-qO-Jy6"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="242" y="28" width="116" height="36"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="fYD-uG-Ch4"/>
                                         <include reference="oVD-qO-Jy6"/>
@@ -2028,8 +2022,7 @@
                                         <exclude reference="WPm-9T-7jy"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="236" y="452" width="128" height="128"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="4Zu-Je-QcU"/>
                                         <include reference="WPm-9T-7jy"/>
@@ -2043,9 +2036,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="tintColor" red="1" green="0.92433181819999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="View"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="139" width="34" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="viewTeam1CardsButtonPressed:" destination="VOI-er-Jyk" eventType="touchUpInside" id="Vrb-WB-1pj"/>
                                 </connections>
@@ -2054,9 +2044,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="tintColor" red="1" green="0.92549019607843142" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="View"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="546" y="140" width="34" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="viewTeam2CardsButtonPressed:" destination="VOI-er-Jyk" eventType="touchUpInside" id="CcJ-2g-LDh"/>
                                 </connections>
@@ -2074,8 +2061,7 @@
                                         <exclude reference="TTP-J1-zbl"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="353" width="560" height="32"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="TTP-J1-zbl"/>
                                     </mask>
@@ -2096,8 +2082,7 @@
                                         <exclude reference="SiG-hb-CL3"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="70" y="163" width="460" height="64"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="SiG-hb-CL3"/>
                                     </mask>
@@ -2116,8 +2101,7 @@
                                         <exclude reference="GXc-3j-hpa"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="70" y="235" width="460" height="110"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="GXc-3j-hpa"/>
                                     </mask>
@@ -2136,8 +2120,7 @@
                                         <exclude reference="X0q-Ma-dg1"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="70" y="393" width="460" height="32"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="X0q-Ma-dg1"/>
                                     </mask>
@@ -2328,8 +2311,7 @@
                                         <exclude reference="UaF-je-qcX"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="28" width="560" height="40"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="UaF-je-qcX"/>
                                     </mask>
@@ -2340,18 +2322,12 @@
                                 <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="27"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="200" y="76" width="380" height="31.5"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7/12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEE-7O-ny5">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="115.5" width="180" height="26"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7if-Pd-RTX">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -2368,8 +2344,7 @@ the Bitch Cup</string>
                                         <exclude reference="OpH-SZ-BdT"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="157.5" width="560" height="60"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="OpH-SZ-BdT"/>
                                     </mask>
@@ -2388,8 +2363,7 @@ the Bitch Cup</string>
                                         <exclude reference="kEH-kB-WJx"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="250" y="225.5" width="100" height="116.5"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="kEH-kB-WJx"/>
                                     </mask>
@@ -2400,9 +2374,6 @@ the Bitch Cup</string>
                                 <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="27"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="350" width="560" height="31.5"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nj2-hH-4Eg">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -2417,8 +2388,7 @@ the Bitch Cup</string>
                                         <exclude reference="klq-5I-b26"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="76" width="180" height="31.5"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="klq-5I-b26"/>
                                     </mask>
@@ -2429,16 +2399,10 @@ the Bitch Cup</string>
                                 <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="200" y="115.5" width="380" height="26"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFO-Ua-AhE">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Roll"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="285" y="408.5" width="30" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="rollButtonPressed:" destination="YXJ-wP-vS4" eventType="touchUpInside" id="GEt-I6-dSQ"/>
                                 </connections>
@@ -3260,7 +3224,7 @@ the Bitch Cup</string>
         <segue reference="dN5-zG-pF1"/>
         <segue reference="ZuG-98-wPf"/>
         <segue reference="bD1-Yc-TD5"/>
-        <segue reference="6nR-CD-D08"/>
+        <segue reference="ow4-ud-gmh"/>
         <segue reference="p5Q-78-JrR"/>
         <segue reference="V2y-wS-Nwm"/>
     </inferredMetricsTieBreakers>

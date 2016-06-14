@@ -80,7 +80,7 @@ class DrawCardViewController: UIViewController {
     
     @IBAction func WonButtonPressed(sender: AnyObject)
     {
-        let drink:String = game.getCurrentCard()!.getDrink();
+//        let drink:String = game.getCurrentCard()!.getDrink();
         
         //alertAndGoBack("Congratz", s:"Please add \(drink) into the cup and send \(drink) to any player on the other team", whichAction: "won")
         self.goToNext("won");
@@ -89,7 +89,7 @@ class DrawCardViewController: UIViewController {
 
     @IBAction func LostButtonPressed(sender: AnyObject)
     {
-        let drink:String = game.getCurrentCard()!.getDrink();
+//        let drink:String = game.getCurrentCard()!.getDrink();
         
         //alertAndGoBack("Too bad", s:"Please drink \(drink) and give \(drink) to a team member",whichAction: "lost")
         self.goToNext("lost");
@@ -97,7 +97,7 @@ class DrawCardViewController: UIViewController {
     
     @IBAction func StolenButtonPressed(sender: AnyObject)
     {
-        let drink:String = game.getCurrentCard()!.getDrink();
+//        let drink:String = game.getCurrentCard()!.getDrink();
         
         //alertAndGoBack("...", s:"Please add \(drink) into the cup and the other team sends \(drink) to any player on your team", whichAction: "stolen")
         self.goToNext("stolen");
@@ -133,7 +133,6 @@ class DrawCardViewController: UIViewController {
             self.loadCurrentCard();
             return; // stay here if skipped
         default: break
-            
         }
         
         if game.isNewRound()

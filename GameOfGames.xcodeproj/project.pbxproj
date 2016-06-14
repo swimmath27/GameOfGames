@@ -136,7 +136,6 @@
 		55D3FB481CFF4525006C0A8E /* PlayOlympicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB471CFF4525006C0A8E /* PlayOlympicsViewController.swift */; };
 		55D3FB4A1CFF4C64006C0A8E /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */; };
 		55D3FB501CFFA3CD006C0A8E /* CheckCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB4F1CFFA3CD006C0A8E /* CheckCardsViewController.swift */; };
-		55D7E0351D062581000D0B14 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 55D7E0341D062581000D0B14 /* README.md */; };
 		D00A5D9E40F578A1DE7B7E0E /* Pods_GameOfGamesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B3666DF8B25173CC842181 /* Pods_GameOfGamesTests.framework */; };
 		DAB706C55530418EE798427B /* Pods_GameOfGamesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1748481E1481FB447209988A /* Pods_GameOfGamesUITests.framework */; };
 /* End PBXBuildFile section */
@@ -958,7 +957,6 @@
 				55D3FB081CFE0E30006C0A8E /* NumberOfPlayersViewController.swift in Sources */,
 				55B8310D1D03669D00F19A63 /* ChooseTeamOrderViewController.swift in Sources */,
 				55D3FB361CFE3D62006C0A8E /* Game.swift in Sources */,
-				55D7E0351D062581000D0B14 /* README.md in Sources */,
 				55D3FB3C1CFE4B57006C0A8E /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
