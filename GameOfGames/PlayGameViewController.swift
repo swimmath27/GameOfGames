@@ -11,6 +11,8 @@ import UIKit
 class PlayGameViewController: UIViewController
 {
     
+    static private var wasNewRound:Bool = true;
+    
     @IBOutlet weak var roundLabel: UILabel!
     
     @IBOutlet weak var team1NameLabel: UILabel!
@@ -22,11 +24,12 @@ class PlayGameViewController: UIViewController
     @IBOutlet weak var messageTitleLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     
-    @IBOutlet weak var upNextLabel: UILabel!
-    
     @IBOutlet weak var nextPlayerLabel: UILabel!
     
+    @IBOutlet weak var upNextLabel: UILabel!
+    
     @IBOutlet weak var drawCardButton: UIButton!
+    
     
     private var game:Game = Game.getInstance();
     
@@ -47,51 +50,65 @@ class PlayGameViewController: UIViewController
         messageTitleLabel.text = game.messageTitle;
         messageLabel.text = game.message;
         
-        if game.getCurrentTeam() == 1 // team 2 is up
+        if (game.isNewRound())
         {
-            team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 27)
-            team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 22)
+            if !PlayGameViewController.wasNewRound
+            {
+                nextPlayerLabel.text = "End of Round, Click to"
+                upNextLabel.text = "go to Round Roulette"
+                drawCardButton.setImage(UIImage(named:"rollButton.png"), forState: .Normal);
+            }
         }
-        else // team 2 is up
+        else
         {
-            team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 22)
-            team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 27)
-        }
-
-        //check if game is over
-        if (game.getTeam1Score() >= Game.NUM_CARDS_TO_WIN)
-        {
-            drawCardButton.hidden = true;
-            nextPlayerLabel.text = "";
-            upNextLabel.text = "Team 1 (\(game.getTeamName(1))) Wins!"
-        }
-        else if (game.getTeam2Score() >= Game.NUM_CARDS_TO_WIN)
-        {
-            drawCardButton.hidden = true;
-            nextPlayerLabel.text = "";
-            upNextLabel.text = "Team 2 (\(game.getTeamName(2))) Wins!"
-        }
-        else if !game.hasNextCard()
-        {
-            drawCardButton.hidden = true;
-            upNextLabel.text = "Deck is Out of Cards!"
+            PlayGameViewController.wasNewRound = false
             
-            //reusing these labels...
-            if (game.getTeam1Score() > game.getTeam2Score())
+            if game.getCurrentTeam() == 1 // team 2 is up
             {
-                nextPlayerLabel.text = "Team 1 (\(game.getTeamName(1))) Wins!";
+                team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 27)
+                team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 22)
+            }
+            else // team 2 is up
+            {
+                team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 22)
+                team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 27)
+            }
+            
+            //check if game is over
+            if (game.getTeam1Score() >= Game.NUM_CARDS_TO_WIN)
+            {
+                drawCardButton.hidden = true;
+                nextPlayerLabel.text = "";
+                upNextLabel.text = "\(game.getTeamName(1)) Win!"
+            }
+            else if (game.getTeam2Score() >= Game.NUM_CARDS_TO_WIN)
+            {
+                drawCardButton.hidden = true;
+                nextPlayerLabel.text = "";
+                upNextLabel.text = "\(game.getTeamName(2)) Win!"
+            }
+            else if !game.hasNextCard()
+            {
+                drawCardButton.hidden = true;
+                upNextLabel.text = "Deck is Out of Cards!"
+                
+                //reusing these labels...
+                if (game.getTeam1Score() > game.getTeam2Score())
+                {
+                    nextPlayerLabel.text = "Team 1 (\(game.getTeamName(1))) Wins!";
+                    
+                }
+                else if (game.getTeam1Score() < game.getTeam2Score())
+                {
+                    
+                    nextPlayerLabel.text = "Team 2 (\(game.getTeamName(2))) Wins!";
+                }
+                else
+                {
+                    nextPlayerLabel.text = "Tie Game!";
+                }
                 
             }
-            else if (game.getTeam1Score() < game.getTeam2Score())
-            {
-                
-                nextPlayerLabel.text = "Team 2 (\(game.getTeamName(2))) Wins!";
-            }
-            else
-            {
-                nextPlayerLabel.text = "Tie Game!";
-            }
-
         }
         
         
@@ -100,7 +117,12 @@ class PlayGameViewController: UIViewController
 
     @IBAction func drawCardButtonPressed(sender: AnyObject)
     {
-        if game.hasNextCard()
+        if (game.isNewRound() && !PlayGameViewController.wasNewRound)
+        {
+            PlayGameViewController.wasNewRound = true;
+            performSegueWithIdentifier("PlayGameToRoundRoulette", sender: nil)
+        }
+        else if game.hasNextCard()
         {
             game.drawCard()
             performSegueWithIdentifier("PlayGameToDrawCard", sender: nil)

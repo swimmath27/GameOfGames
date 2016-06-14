@@ -27,6 +27,8 @@
 		5504980F1D1054010019F490 /* GoG_Icon_ipad_spotlight_1x_40px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550498011D1054010019F490 /* GoG_Icon_ipad_spotlight_1x_40px.png */; };
 		550498101D1054010019F490 /* GoG_Icon_ipad_settings_1x_29px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550498021D1054010019F490 /* GoG_Icon_ipad_settings_1x_29px.png */; };
 		550498121D1068160019F490 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 550498111D1068160019F490 /* background.png */; };
+		550498511D10ADED0019F490 /* viewCardsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5504984F1D10ADED0019F490 /* viewCardsButton.png */; };
+		550498521D10ADED0019F490 /* rollButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550498501D10ADED0019F490 /* rollButton.png */; };
 		5508007F1D08A9A30022E984 /* cardsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508007B1D08A9A30022E984 /* cardsButton.png */; };
 		550800801D08A9A30022E984 /* rulesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508007C1D08A9A30022E984 /* rulesButton.png */; };
 		550800811D08A9A30022E984 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508007D1D08A9A30022E984 /* playButton.png */; };
@@ -181,6 +183,8 @@
 		550498011D1054010019F490 /* GoG_Icon_ipad_spotlight_1x_40px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_ipad_spotlight_1x_40px.png; path = AppIcons/GoG_Icon_ipad_spotlight_1x_40px.png; sourceTree = "<group>"; };
 		550498021D1054010019F490 /* GoG_Icon_ipad_settings_1x_29px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_ipad_settings_1x_29px.png; path = AppIcons/GoG_Icon_ipad_settings_1x_29px.png; sourceTree = "<group>"; };
 		550498111D1068160019F490 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = UIImages/background.png; sourceTree = "<group>"; };
+		5504984F1D10ADED0019F490 /* viewCardsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = viewCardsButton.png; path = UIImages/viewCardsButton.png; sourceTree = "<group>"; };
+		550498501D10ADED0019F490 /* rollButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rollButton.png; path = UIImages/rollButton.png; sourceTree = "<group>"; };
 		5508007B1D08A9A30022E984 /* cardsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardsButton.png; path = UIImages/cardsButton.png; sourceTree = "<group>"; };
 		5508007C1D08A9A30022E984 /* rulesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rulesButton.png; path = UIImages/rulesButton.png; sourceTree = "<group>"; };
 		5508007D1D08A9A30022E984 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playButton.png; path = UIImages/playButton.png; sourceTree = "<group>"; };
@@ -366,6 +370,8 @@
 		550800791D08A8FA0022E984 /* UIImages */ = {
 			isa = PBXGroup;
 			children = (
+				5504984F1D10ADED0019F490 /* viewCardsButton.png */,
+				550498501D10ADED0019F490 /* rollButton.png */,
 				550498111D1068160019F490 /* background.png */,
 				550497F21D0F548A0019F490 /* shuffleButton.png */,
 				550497EC1D0F22060019F490 /* addButton.png */,
@@ -713,6 +719,7 @@
 				55B43D771D022440002CCE78 /* Soul_3.png in Resources */,
 				550800941D0B81A40022E984 /* stealButton.png in Resources */,
 				55B43D901D022440002CCE78 /* Mind_2.png in Resources */,
+				550498521D10ADED0019F490 /* rollButton.png in Resources */,
 				55B43D751D022440002CCE78 /* Soul_5.png in Resources */,
 				55B43D8C1D022440002CCE78 /* Mind_6.png in Resources */,
 				550800B71D0BA24E0022E984 /* Soul_16.png in Resources */,
@@ -734,6 +741,7 @@
 				55B43D651D022440002CCE78 /* Chance_8.png in Resources */,
 				55B43D8F1D022440002CCE78 /* Mind_3.png in Resources */,
 				550800AC1D0BA24E0022E984 /* Chance_17.png in Resources */,
+				550498511D10ADED0019F490 /* viewCardsButton.png in Resources */,
 				550498061D1054010019F490 /* GoG_Icon_ipad_2x_152px.png in Resources */,
 				550498091D1054010019F490 /* GoG_Icon_iphone_settings_3x_87px.png in Resources */,
 				550498071D1054010019F490 /* GoG_Icon_iphone6_2x_120px.png in Resources */,

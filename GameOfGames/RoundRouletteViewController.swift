@@ -111,17 +111,16 @@ class RoundRouletteViewController: UIViewController {
             //done with the rolling
             let rand = Int(arc4random_uniform(UInt32(totalCards)))+1
             rolledNumber.text = "\(rand)";
-            rollButton.setTitle("Continue", forState: .Normal)
+//            rollButton.setTitle("Continue", forState: .Normal)
+            rollButton.setImage(UIImage(named:"nextButton.png"), forState: .Normal)
+//            rollButton.frame = CGRectMake(0, 0, 64, 64) // doesn't do anything
             rollButton.hidden = false;
-            if (rand <= team2Cards)
-            {
-                chosenTeam.text = game.getTeamName(1)
-            }
-            else
-            {
-                chosenTeam.text = game.getTeamName(2);
-            }
-
+            
+            let team = game.getTeamName(rand <= team2Cards ? 1 : 2)
+            chosenTeam.text = team
+            
+            game.messageTitle = "Too bad \(team)"
+            game.message = "You must finish the Bitch Cup before the game may continue"
         }
         else
         {

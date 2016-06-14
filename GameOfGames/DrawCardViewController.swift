@@ -135,16 +135,8 @@ class DrawCardViewController: UIViewController {
         default: break
         }
         
-        if game.isNewRound()
-        {
-            self.performSegueWithIdentifier(
-                "DrawCardToRoundRoulette", sender: self)
-        }
-        else
-        {
-            self.performSegueWithIdentifier(
+        self.performSegueWithIdentifier(
                 "DrawCardToPlayGame", sender: self)
-        }
     }
     
     func alertAndGoBack(t:String, s : String, whichAction:String)
