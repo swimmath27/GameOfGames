@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Card
+class Card : Equatable
 {
     //taken from http://stackoverflow.com/questions/24007461/how-to-enumerate-an-enum-with-string-type
     
@@ -232,5 +232,9 @@ class Card
     {
         return "\(self.suit.simpleDescription()) card number \(self.rank)"
     }
+}
 
+func ==(lhs:Card, rhs:Card) -> Bool
+{
+    return lhs.rank == rhs.rank && lhs.suit == rhs.suit
 }

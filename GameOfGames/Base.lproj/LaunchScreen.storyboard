@@ -17,9 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="JQj-5l-1iE">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehc-eM-bFv">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
@@ -42,6 +39,9 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="JQj-5l-1iE">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -56,10 +56,11 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="JQj-5l-1iE"/>
                                 <exclude reference="ehc-eM-bFv"/>
+                                <exclude reference="JQj-5l-1iE"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="I5d-op-aZF"/>
                                 <exclude reference="3gZ-fo-bZX"/>
                                 <exclude reference="4ea-Xb-c8u"/>
                                 <exclude reference="7ux-zv-rYW"/>
@@ -67,15 +68,15 @@
                                 <exclude reference="nuP-WE-3s9"/>
                                 <exclude reference="Zg3-cH-FzI"/>
                                 <exclude reference="c2t-yc-Z2s"/>
-                                <exclude reference="I5d-op-aZF"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="JQj-5l-1iE"/>
                                 <include reference="ehc-eM-bFv"/>
+                                <include reference="JQj-5l-1iE"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="I5d-op-aZF"/>
                                 <include reference="3gZ-fo-bZX"/>
                                 <include reference="4ea-Xb-c8u"/>
                                 <include reference="7ux-zv-rYW"/>
@@ -83,7 +84,6 @@
                                 <include reference="nuP-WE-3s9"/>
                                 <include reference="Zg3-cH-FzI"/>
                                 <include reference="c2t-yc-Z2s"/>
-                                <include reference="I5d-op-aZF"/>
                             </mask>
                         </variation>
                     </view>

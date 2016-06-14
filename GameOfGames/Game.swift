@@ -292,8 +292,27 @@ class Game
         
     }
     
-    // shuffles the last card drawn back into the deck
+    //todo: make sure this undoes everything we needed
     func undoLastTurn()
+    {
+        //we don't need to undraw a card because we won't draw a card, we'll simply use currentCard
+        
+        currentTurn -= 1
+        if self.getCurrentTeam() == 1 && team1CardsWon.contains(currentCard)
+        {
+            team1CardsWon.removeAtIndex( team1CardsWon.indexOf(currentCard)!)
+            team1CardsPerRound[self.getCurrentRound()] -= 1;
+            
+        }
+        else if self.getCurrentTeam() == 2 && team2CardsWon.contains(currentCard)
+        {
+            team2CardsWon.removeAtIndex( team2CardsWon.indexOf(currentCard)!)
+            team2CardsPerRound[self.getCurrentRound()] -= 1;
+        }
+    }
+    
+    // shuffles the last card drawn back into the deck
+    func undoLastTurnAndReshuffle()
     {
         self.undrawCard() // shuffles it back into the deck
         //TODO: NEED TO REMOVE IT FROM WHOEVER WON IT'S CARDS
