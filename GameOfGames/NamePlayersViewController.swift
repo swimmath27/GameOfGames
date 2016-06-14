@@ -27,11 +27,7 @@ class NamePlayersViewController: UIViewController
         askPlayerNameLabel.text = "What is Team Captain 1's name?"
         playerNameField.text = "";
         
-        titleLabel.textColor = UIColor.whiteColor();
-        askPlayerNameLabel.textColor = UIColor.whiteColor();
-        
-        submitButton.tintColor = UIColor.yellowColor();
-        
+        playerNameField.becomeFirstResponder();
         //background gradient
         self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }

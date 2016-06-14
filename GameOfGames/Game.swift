@@ -52,6 +52,10 @@ class Game
     
     private var quickStarted = false;
     
+    
+    internal var messageTitle = "";
+    internal var message = "";
+    
     private init()
     {
     }
@@ -325,12 +329,17 @@ class Game
             team2CardsWon.append(currentCard)
             addOneToTeamInCurrentRound(2)
         }
+        self.message = self.currentCard.getWonMessage()
+        self.messageTitle = self.currentCard.getWonMessageTitle();
         
         self.advanceTurn();
     }
     
     func cardWasLost()
     {
+        self.message = self.currentCard.getLostMessage()
+        self.messageTitle = self.currentCard.getLostMessageTitle();
+        
         self.advanceTurn();
     }
     
@@ -348,6 +357,8 @@ class Game
             team1CardsWon.append(currentCard)
             addOneToTeamInCurrentRound(1)
         }
+        self.message = self.currentCard.getStolenMessage()
+        self.messageTitle = self.currentCard.getStolenMessageTitle();
         
         self.advanceTurn();
     }
@@ -374,11 +385,6 @@ class Game
             }
             team2CardsPerRound[roundNum] += 1;
         }
-    }
-    
-    func cardWasSkipped()
-    {
-        //do nothing
     }
     
     func isNewRound() -> Bool

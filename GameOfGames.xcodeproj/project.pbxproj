@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1F946D18C05FC66A679036A6 /* Pods_GameOfGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B80F4386EC94669A39ACCAB /* Pods_GameOfGames.framework */; };
+		550497EF1D0F22060019F490 /* addButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497EC1D0F22060019F490 /* addButton.png */; };
+		550497F01D0F22060019F490 /* quickstartButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497ED1D0F22060019F490 /* quickstartButton.png */; };
+		550497F11D0F22060019F490 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497EE1D0F22060019F490 /* startButton.png */; };
+		550497F31D0F548A0019F490 /* shuffleButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497F21D0F548A0019F490 /* shuffleButton.png */; };
 		5508007F1D08A9A30022E984 /* cardsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508007B1D08A9A30022E984 /* cardsButton.png */; };
 		550800801D08A9A30022E984 /* rulesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508007C1D08A9A30022E984 /* rulesButton.png */; };
 		550800811D08A9A30022E984 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508007D1D08A9A30022E984 /* playButton.png */; };
@@ -144,6 +148,10 @@
 		22CFCD7B1E0B9FDF190231CA /* Pods-GameOfGamesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfGamesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfGamesUITests/Pods-GameOfGamesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		359A5726D33F5D1696397CBA /* Pods-GameOfGamesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfGamesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfGamesUITests/Pods-GameOfGamesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B80F4386EC94669A39ACCAB /* Pods_GameOfGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550497EC1D0F22060019F490 /* addButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addButton.png; path = UIImages/addButton.png; sourceTree = "<group>"; };
+		550497ED1D0F22060019F490 /* quickstartButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quickstartButton.png; path = UIImages/quickstartButton.png; sourceTree = "<group>"; };
+		550497EE1D0F22060019F490 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startButton.png; path = UIImages/startButton.png; sourceTree = "<group>"; };
+		550497F21D0F548A0019F490 /* shuffleButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shuffleButton.png; path = UIImages/shuffleButton.png; sourceTree = "<group>"; };
 		5508007B1D08A9A30022E984 /* cardsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardsButton.png; path = UIImages/cardsButton.png; sourceTree = "<group>"; };
 		5508007C1D08A9A30022E984 /* rulesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rulesButton.png; path = UIImages/rulesButton.png; sourceTree = "<group>"; };
 		5508007D1D08A9A30022E984 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playButton.png; path = UIImages/playButton.png; sourceTree = "<group>"; };
@@ -308,6 +316,10 @@
 		550800791D08A8FA0022E984 /* UIImages */ = {
 			isa = PBXGroup;
 			children = (
+				550497F21D0F548A0019F490 /* shuffleButton.png */,
+				550497EC1D0F22060019F490 /* addButton.png */,
+				550497ED1D0F22060019F490 /* quickstartButton.png */,
+				550497EE1D0F22060019F490 /* startButton.png */,
 				556F2A321D0BDD4400797FA5 /* backButton.png */,
 				556F2A331D0BDD4400797FA5 /* nextButton.png */,
 				5508008E1D0B81A40022E984 /* failButton.png */,
@@ -633,6 +645,7 @@
 				55B43D7E1D022440002CCE78 /* Body_8.png in Resources */,
 				55B43D841D022440002CCE78 /* Body_1.png in Resources */,
 				55B43D611D022440002CCE78 /* Chance_12.png in Resources */,
+				550497F11D0F22060019F490 /* startButton.png in Resources */,
 				55B43D881D022440002CCE78 /* Mind_10.png in Resources */,
 				550800801D08A9A30022E984 /* rulesButton.png in Resources */,
 				55B43D701D022440002CCE78 /* Soul_11.png in Resources */,
@@ -650,6 +663,7 @@
 				55B43D751D022440002CCE78 /* Soul_5.png in Resources */,
 				55B43D8C1D022440002CCE78 /* Mind_6.png in Resources */,
 				550800B71D0BA24E0022E984 /* Soul_16.png in Resources */,
+				550497F01D0F22060019F490 /* quickstartButton.png in Resources */,
 				550800B31D0BA24E0022E984 /* Mind_17.png in Resources */,
 				55B43D671D022440002CCE78 /* Chance_6.png in Resources */,
 				55B43D7F1D022440002CCE78 /* Body_7.png in Resources */,
@@ -676,6 +690,7 @@
 				55B43D7C1D022440002CCE78 /* Body_10.png in Resources */,
 				55B43D871D022440002CCE78 /* Mind_11.png in Resources */,
 				55B43D801D022440002CCE78 /* Body_6.png in Resources */,
+				550497EF1D0F22060019F490 /* addButton.png in Resources */,
 				550800AA1D0BA24E0022E984 /* Chance_15.png in Resources */,
 				550800AD1D0BA24E0022E984 /* Chance_18.png in Resources */,
 				55B43D621D022440002CCE78 /* Chance_11.png in Resources */,
@@ -697,6 +712,7 @@
 				55B43D7B1D022440002CCE78 /* Body_11.png in Resources */,
 				55B43D6A1D022440002CCE78 /* Chance_3.png in Resources */,
 				55B43D601D022440002CCE78 /* Chance_13.png in Resources */,
+				550497F31D0F548A0019F490 /* shuffleButton.png in Resources */,
 				55D3FB0F1CFE0E30006C0A8E /* Assets.xcassets in Resources */,
 				55B43D731D022440002CCE78 /* Soul_7.png in Resources */,
 				55B43D631D022440002CCE78 /* Chance_10.png in Resources */,

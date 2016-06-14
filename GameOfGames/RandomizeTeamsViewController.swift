@@ -13,6 +13,8 @@ class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UIT
     
     var game:Game = Game.getInstance();
     
+    var shuffled:Bool = false;
+    
     @IBOutlet weak var team1Table: UITableView!
     @IBOutlet weak var team2Table: UITableView!
     
@@ -40,15 +42,43 @@ class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UIT
     {
         game.shuffleTeams();
         updateTeamViews();
+        shuffled = true;
     }
     
     @IBAction func FinishButtonPressed(sender: AnyObject)
     {
         //don't need anything here anymore
-        performSegueWithIdentifier("RandomizeTeamsToNameTeams", sender: nil)
+        if shuffled
+        {
+            performSegueWithIdentifier("RandomizeTeamsToNameTeams", sender: nil)
+        }
+        else
+        {
+            alertToConfirm("Are you sure you want to continue without shuffling teams?",
+                           action:
+                           {
+                                action in self.performSegueWithIdentifier("RandomizeTeamsToNameTeams", sender: nil)
+                           })
+        }
     }
     
-    /// table view stuff ////////////////////////////////////
+    func alertToConfirm(msg : String, action : (UIAlertAction) -> Void)
+    {
+        let popup = UIAlertController(title: "Alert",
+                                      message: msg,
+                                      preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let okAction = UIAlertAction(title:"OK", style: .Default, handler: action);
+        popup.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        popup.addAction(cancelAction);
+        
+        self.presentViewController(popup, animated: true,
+                                   completion: nil)
+    }
+    
+    ///////////////////////////// table view stuff ////////////////////////////////////
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
@@ -75,28 +105,35 @@ class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UIT
     {
         let row = indexPath.row
         
+        var cell:UITableViewCell? = nil;
+        var playerNumber: Int = -1;
         if tableView == team1Table
         {
-            let cell = tableView.dequeueReusableCellWithIdentifier("TempCellView1", forIndexPath: indexPath) as UITableViewCell
+            cell = tableView.dequeueReusableCellWithIdentifier("TempCellView1", forIndexPath: indexPath) as UITableViewCell
 
-            let playerNumber : Int = game.getTeam(1)[row];
+            playerNumber = game.getTeam(1)[row];
 
-            cell.textLabel?.text = game.getPlayerName(playerNumber)
             
-            return cell;
         }
         else if tableView == team2Table
         {
-            let cell = tableView.dequeueReusableCellWithIdentifier("TempCellView2", forIndexPath: indexPath) as UITableViewCell
+            cell = tableView.dequeueReusableCellWithIdentifier("TempCellView2", forIndexPath: indexPath) as UITableViewCell
             
-            let playerNumber : Int = game.getTeam(2)[row];
+            playerNumber = game.getTeam(2)[row];
             
-            cell.textLabel?.text = game.getPlayerName(playerNumber)
-            
-            return cell;
         }
         
-        return UITableViewCell()
+        if playerNumber == -1
+        {
+            return UITableViewCell()
+        }
+        
+        cell!.textLabel?.text = game.getPlayerName(playerNumber)
+        
+        cell!.backgroundColor = UIColor.clearColor();
+        cell!.textLabel?.textColor = UIColor.whiteColor();
+        
+        return cell!;
     }
     
     func tableView(tableView: UITableView,

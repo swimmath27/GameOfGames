@@ -19,16 +19,19 @@ class PlayGameViewController: UIViewController
     @IBOutlet weak var Team1ScoreLabel: UILabel!
     @IBOutlet weak var Team2ScoreLabel: UILabel!
     
+    @IBOutlet weak var messageTitleLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
+    
     @IBOutlet weak var upNextLabel: UILabel!
     
     @IBOutlet weak var nextPlayerLabel: UILabel!
-    @IBOutlet weak var nextPlayerTeamLabel: UILabel!
     
     @IBOutlet weak var drawCardButton: UIButton!
     
     private var game:Game = Game.getInstance();
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         team1NameLabel.text = game.getTeamName(1);
@@ -39,28 +42,38 @@ class PlayGameViewController: UIViewController
         
         roundLabel.text = "Round \(game.getCurrentRound())"
         
-        nextPlayerLabel.text = game.getCurrentPlayerName();
-        nextPlayerTeamLabel.text = game.getCurrentTeamName();
+        nextPlayerLabel.text = game.getCurrentPlayerName() + ",";
+        
+        messageTitleLabel.text = game.messageTitle;
+        messageLabel.text = game.message;
+        
+        if game.getCurrentTeam() == 1 // team 2 is up
+        {
+            team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 22)
+            team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 17)
+        }
+        else // team 2 is up
+        {
+            team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 17)
+            team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 22)
+        }
 
         //check if game is over
         if (game.getTeam1Score() >= Game.NUM_CARDS_TO_WIN)
         {
             drawCardButton.hidden = true;
             nextPlayerLabel.text = "";
-            nextPlayerTeamLabel.text = "";
             upNextLabel.text = "Team 1 (\(game.getTeamName(1))) Wins!"
         }
         else if (game.getTeam2Score() >= Game.NUM_CARDS_TO_WIN)
         {
             drawCardButton.hidden = true;
             nextPlayerLabel.text = "";
-            nextPlayerTeamLabel.text = "";
             upNextLabel.text = "Team 2 (\(game.getTeamName(2))) Wins!"
         }
         else if !game.hasNextCard()
         {
             drawCardButton.hidden = true;
-            nextPlayerTeamLabel.text = "";
             upNextLabel.text = "Deck is Out of Cards!"
             
             //reusing these labels...
@@ -88,7 +101,7 @@ class PlayGameViewController: UIViewController
     {
         if game.hasNextCard()
         {
-            DrawCardViewController.currentCard = game.drawCard()
+            game.drawCard()
             performSegueWithIdentifier("PlayGameToDrawCard", sender: nil)
         }
         else

@@ -23,18 +23,11 @@ class NumberOfPlayersViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        titleLabel.textColor = UIColor.whiteColor();
-        questionLabel.textColor = UIColor.whiteColor();
-        
-        setNamesButton.tintColor = UIColor.yellowColor();
-        quickStartButton.tintColor = UIColor.yellowColor();
-        
-        
-        
         
         // Do any additional setup after loading the view, typically from a nib.
         playerCountField.placeholder = "\(Game.MIN_PLAYER_COUNT)-\(Game.MAX_PLAYER_COUNT)"
         
+        playerCountField.becomeFirstResponder();
         //background gradient
         self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
@@ -45,10 +38,10 @@ class NumberOfPlayersViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
-    {
-        playerCountField.resignFirstResponder()
-    }
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+//    {
+//        playerCountField.resignFirstResponder()
+//    }
     
     func checkAndSetPlayerCount() -> Int
     {

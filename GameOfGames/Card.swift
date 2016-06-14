@@ -21,7 +21,8 @@ class Card
         //soul - heart
         //chance - club
         
-        func simpleDescription() -> String {
+        func simpleDescription() -> String
+        {
             switch self {
             case .Joke:
                 return "Joke"
@@ -35,6 +36,103 @@ class Card
                 return "Chance"
             }
         }
+        
+        func wonMessageTitle() -> String
+        {
+            switch self {
+            case .Joke:
+                return "Haha"
+            case .Body:
+                return "#BodyGoals"
+            case .Soul:
+                return "Take a Look at You!"
+            case .Mind:
+                return "Good Thinking"
+            case .Chance:
+                return "It's Your Lucky Day!"
+            }
+        }
+        func wonMessage() -> String
+        {
+            switch self {
+            case .Joke:
+                return "Haha"
+            case .Body:
+                return "Add some beer into the Bitch Cup and send some beer to any player on the other team"
+            case .Soul:
+                return "Add a shot into the Bitch Cup and send a shot to any player on the other team"
+            case .Mind:
+                return "Add some wine into the Bitch Cup and send some wine to any player on the other team"
+            case .Chance:
+                return "I hope another card is good enough because you don't get to send or pour anything"
+            }
+        }
+
+        
+        func lostMessageTitle() -> String
+        {
+            switch self {
+            case .Joke:
+                return "Haha"
+            case .Body:
+                return "Do You Even Lift, Bro?"
+            case .Soul:
+                return "Not Mad, Just Disappointed"
+            case .Mind:
+                return "What Were You Thinking?"
+            case .Chance:
+                return "You Lost a Chance Card"
+            }
+        }
+        func lostMessage() -> String
+        {
+            switch self {
+            case .Joke:
+                return "Haha"
+            case .Body:
+                return "You and a teammate must drink some beer"
+            case .Soul:
+                return "You and a teammate must take a shot"
+            case .Mind:
+                return "You and a teammate must drink some wine"
+            case .Chance:
+                return "How?"
+            }
+        }
+
+        
+        func stolenMessageTitle() -> String
+        {
+            switch self {
+            case .Joke:
+                return "Haha"
+            case .Body:
+                return "You Oughta Hit the Gym"
+            case .Soul:
+                return "That Couldn't Have Felt Good"
+            case .Mind:
+                return "Quick, But Not Quick Enough"
+            case .Chance:
+                return "A Chance card was stolen?"
+            }
+        }
+        func stolenMessage() -> String
+        {
+            switch self {
+            case .Joke:
+                return "Haha"
+            case .Body:
+                return "Add some beer to the Bitch Cup and your counterpart sends some beer to anyone on your team"
+            case .Soul:
+                return "Add a shot to the Bitch Cup and your counterpart sends a shot to anyone on your team"
+            case .Mind:
+                return "Add some wine to the Bitch Cup and your counterpart sends some wine to anyone on your team"
+            case .Chance:
+                return "How?"
+            }
+        }
+
+
     }
     
     private var rank:Int = 0;
@@ -57,6 +155,7 @@ class Card
         self.longDesc = longDescription;
     }
     
+    
     func getDrink() -> String
     {
         switch suit
@@ -74,21 +173,54 @@ class Card
         }
     }
     
+    
     func getShortDescription() -> String
     {
         return self.shortDesc;
     }
+    
     
     func getLongDescription() -> String
     {
         return self.longDesc;
     }
     
+    
+    func getStolenMessage() -> String
+    {
+        return self.suit.stolenMessage()
+    }
+    func getStolenMessageTitle() -> String
+    {
+        return self.suit.stolenMessageTitle();
+    }
+    
+    
+    func getWonMessage() -> String
+    {
+        return self.suit.wonMessage();
+    }
+    func getWonMessageTitle() -> String
+    {
+        return self.suit.wonMessageTitle();
+    }
+    
+    
+    func getLostMessage() -> String
+    {
+        return self.suit.lostMessage();
+    }
+    func getLostMessageTitle() -> String
+    {
+        return self.suit.lostMessageTitle();
+    }
+    
+    
     func getFileName() ->String
     {
-//        return "sampleCard.png"
         return "\(self.suit.simpleDescription())_\(self.rank).png"
     }
+    
     
     func isStealable() -> Bool
     {

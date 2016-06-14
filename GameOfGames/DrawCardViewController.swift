@@ -22,17 +22,27 @@ class DrawCardViewController: UIViewController {
     @IBOutlet weak var lostButton: UIButton!
     @IBOutlet weak var stolenButton: UIButton!
     
-    static var currentCard : Card = Card(suit: Card.Suit.Joke, rank: 0)
     private var game:Game = Game.getInstance();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         playerIntroductionLabel.text = "\(game.getCurrentPlayerName()),"
- 
-        whichCardLabel.text = "\(DrawCardViewController.currentCard.getShortDescription())!";
         
-        let cardPic: UIImage? = UIImage(named: DrawCardViewController.currentCard.getFileName())
+        self.loadCurrentCard();
+        
+        //TODO: check if losable and hide the lose button as well
+        
+        //background gradient
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+    }
+
+    func loadCurrentCard()
+    {
+        
+        whichCardLabel.text = "\(game.getCurrentCard()!.getShortDescription())!";
+        
+        let cardPic: UIImage? = UIImage(named: game.getCurrentCard()!.getFileName())
         if cardPic != nil
         {
             cardImageButton.setImage(cardPic, forState: .Normal)
@@ -41,11 +51,11 @@ class DrawCardViewController: UIViewController {
         }
         else
         {
-            cardImageButton.setTitle(DrawCardViewController.currentCard.toString(), forState: .Normal)
+            cardImageButton.setTitle(game.getCurrentCard()!.toString(), forState: .Normal)
         }
         
         
-        if DrawCardViewController.currentCard.isStealable()
+        if game.getCurrentCard()!.isStealable()
         {
             stolenButton.hidden = false
         }
@@ -54,16 +64,7 @@ class DrawCardViewController: UIViewController {
             stolenButton.hidden = true
         }
         
-        //TODO: check if losable and hide the lose button as well
-        
-        playerIntroductionLabel.textColor = UIColor.whiteColor();
-        youDrewLabel.textColor = UIColor.whiteColor();
-        whichCardLabel.textColor = UIColor.whiteColor();
-        
-        //background gradient
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -71,7 +72,8 @@ class DrawCardViewController: UIViewController {
     
     @IBAction func cardInfoButtonPressed(sender: AnyObject)
     {
-        CardInfoViewController.currentCard = DrawCardViewController.currentCard;
+        
+        CardInfoViewController.currentCard = game.getCurrentCard()!;
         CardInfoViewController.from = "DrawCard";
         performSegueWithIdentifier("DrawCardToCardInfo", sender: nil)
     }
@@ -124,7 +126,9 @@ class DrawCardViewController: UIViewController {
         case "stolen":
             game.cardWasStolen();
         case "skipped":
-            game.cardWasSkipped();
+            game.drawCard();
+            self.loadCurrentCard();
+            return; // stay here if skipped
         default: break
             
         }

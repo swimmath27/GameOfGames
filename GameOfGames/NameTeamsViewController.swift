@@ -23,6 +23,8 @@ class NameTeamsViewController: UIViewController
         
         askTeamNameLabel.text = "What is Team \(currentTeam)'s name?";
         teamNameField.text = "";
+        
+        teamNameField.becomeFirstResponder();
     }
 
     override func didReceiveMemoryWarning()

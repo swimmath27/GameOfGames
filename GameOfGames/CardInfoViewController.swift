@@ -30,8 +30,9 @@ class CardInfoViewController: UIViewController
         // Do any additional setup after loading the view.
         
         //http://stackoverflow.com/questions/990221/multiple-lines-of-text-in-uilabel
-        fullDescriptionLabel.lineBreakMode = .ByWordWrapping
-        fullDescriptionLabel.numberOfLines = 0
+//        fullDescriptionLabel.lineBreakMode = .ByWordWrapping
+//        fullDescriptionLabel.numberOfLines = 0
+        //i did the above in the storyboard but leaving it here for reference
         
         shortDescriptionLabel.lineBreakMode = .ByWordWrapping
         
