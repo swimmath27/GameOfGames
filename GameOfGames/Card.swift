@@ -81,7 +81,7 @@ class Card : Equatable
             case .Mind:
                 return "What Were You Thinking?"
             case .Chance:
-                return "You Lost a Chance Card"
+                return "Better Luck Next Time!"
             }
         }
         func lostMessage() -> String
@@ -96,7 +96,7 @@ class Card : Equatable
             case .Mind:
                 return "You and a teammate must drink some wine"
             case .Chance:
-                return "How?"
+                return "At least your team doesn't have to drink anything!"
             }
         }
 
@@ -128,7 +128,7 @@ class Card : Equatable
             case .Mind:
                 return "Add some wine to the Bitch Cup and your counterpart sends some wine to anyone on your team"
             case .Chance:
-                return "How?"
+                return "This shouldn't be possible"
             }
         }
 
