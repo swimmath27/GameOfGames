@@ -12,6 +12,20 @@
 		550497F01D0F22060019F490 /* quickstartButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497ED1D0F22060019F490 /* quickstartButton.png */; };
 		550497F11D0F22060019F490 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497EE1D0F22060019F490 /* startButton.png */; };
 		550497F31D0F548A0019F490 /* shuffleButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497F21D0F548A0019F490 /* shuffleButton.png */; };
+		550498031D1054010019F490 /* GoG_Icon_app_1024px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497F51D1054010019F490 /* GoG_Icon_app_1024px.png */; };
+		550498041D1054010019F490 /* GoG_Icon_iphone6_3x_180px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497F61D1054010019F490 /* GoG_Icon_iphone6_3x_180px.png */; };
+		550498051D1054010019F490 /* GoG_Icon_ipad_pro_2x_167px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497F71D1054010019F490 /* GoG_Icon_ipad_pro_2x_167px.png */; };
+		550498061D1054010019F490 /* GoG_Icon_ipad_2x_152px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497F81D1054010019F490 /* GoG_Icon_ipad_2x_152px.png */; };
+		550498071D1054010019F490 /* GoG_Icon_iphone6_2x_120px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497F91D1054010019F490 /* GoG_Icon_iphone6_2x_120px.png */; };
+		550498081D1054010019F490 /* GoG_Icon_iphone_spotlight_3x_120px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497FA1D1054010019F490 /* GoG_Icon_iphone_spotlight_3x_120px.png */; };
+		550498091D1054010019F490 /* GoG_Icon_iphone_settings_3x_87px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497FB1D1054010019F490 /* GoG_Icon_iphone_settings_3x_87px.png */; };
+		5504980A1D1054010019F490 /* GoG_Icon_iphone_spotlight_2x_80px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497FC1D1054010019F490 /* GoG_Icon_iphone_spotlight_2x_80px.png */; };
+		5504980B1D1054010019F490 /* GoG_Icon_ipad_spotlight_2x_80px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497FD1D1054010019F490 /* GoG_Icon_ipad_spotlight_2x_80px.png */; };
+		5504980C1D1054010019F490 /* GoG_Icon_ipad_1x_76px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497FE1D1054010019F490 /* GoG_Icon_ipad_1x_76px.png */; };
+		5504980D1D1054010019F490 /* GoG_Icon_ipad_settings_2x_58px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497FF1D1054010019F490 /* GoG_Icon_ipad_settings_2x_58px.png */; };
+		5504980E1D1054010019F490 /* GoG_Icon_iphone_settings_2x_58px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550498001D1054010019F490 /* GoG_Icon_iphone_settings_2x_58px.png */; };
+		5504980F1D1054010019F490 /* GoG_Icon_ipad_spotlight_1x_40px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550498011D1054010019F490 /* GoG_Icon_ipad_spotlight_1x_40px.png */; };
+		550498101D1054010019F490 /* GoG_Icon_ipad_settings_1x_29px.png in Resources */ = {isa = PBXBuildFile; fileRef = 550498021D1054010019F490 /* GoG_Icon_ipad_settings_1x_29px.png */; };
 		5508007F1D08A9A30022E984 /* cardsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508007B1D08A9A30022E984 /* cardsButton.png */; };
 		550800801D08A9A30022E984 /* rulesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508007C1D08A9A30022E984 /* rulesButton.png */; };
 		550800811D08A9A30022E984 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508007D1D08A9A30022E984 /* playButton.png */; };
@@ -152,6 +166,20 @@
 		550497ED1D0F22060019F490 /* quickstartButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quickstartButton.png; path = UIImages/quickstartButton.png; sourceTree = "<group>"; };
 		550497EE1D0F22060019F490 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startButton.png; path = UIImages/startButton.png; sourceTree = "<group>"; };
 		550497F21D0F548A0019F490 /* shuffleButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shuffleButton.png; path = UIImages/shuffleButton.png; sourceTree = "<group>"; };
+		550497F51D1054010019F490 /* GoG_Icon_app_1024px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_app_1024px.png; path = AppIcons/GoG_Icon_app_1024px.png; sourceTree = "<group>"; };
+		550497F61D1054010019F490 /* GoG_Icon_iphone6_3x_180px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_iphone6_3x_180px.png; path = AppIcons/GoG_Icon_iphone6_3x_180px.png; sourceTree = "<group>"; };
+		550497F71D1054010019F490 /* GoG_Icon_ipad_pro_2x_167px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_ipad_pro_2x_167px.png; path = AppIcons/GoG_Icon_ipad_pro_2x_167px.png; sourceTree = "<group>"; };
+		550497F81D1054010019F490 /* GoG_Icon_ipad_2x_152px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_ipad_2x_152px.png; path = AppIcons/GoG_Icon_ipad_2x_152px.png; sourceTree = "<group>"; };
+		550497F91D1054010019F490 /* GoG_Icon_iphone6_2x_120px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_iphone6_2x_120px.png; path = AppIcons/GoG_Icon_iphone6_2x_120px.png; sourceTree = "<group>"; };
+		550497FA1D1054010019F490 /* GoG_Icon_iphone_spotlight_3x_120px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_iphone_spotlight_3x_120px.png; path = AppIcons/GoG_Icon_iphone_spotlight_3x_120px.png; sourceTree = "<group>"; };
+		550497FB1D1054010019F490 /* GoG_Icon_iphone_settings_3x_87px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_iphone_settings_3x_87px.png; path = AppIcons/GoG_Icon_iphone_settings_3x_87px.png; sourceTree = "<group>"; };
+		550497FC1D1054010019F490 /* GoG_Icon_iphone_spotlight_2x_80px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_iphone_spotlight_2x_80px.png; path = AppIcons/GoG_Icon_iphone_spotlight_2x_80px.png; sourceTree = "<group>"; };
+		550497FD1D1054010019F490 /* GoG_Icon_ipad_spotlight_2x_80px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_ipad_spotlight_2x_80px.png; path = AppIcons/GoG_Icon_ipad_spotlight_2x_80px.png; sourceTree = "<group>"; };
+		550497FE1D1054010019F490 /* GoG_Icon_ipad_1x_76px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_ipad_1x_76px.png; path = AppIcons/GoG_Icon_ipad_1x_76px.png; sourceTree = "<group>"; };
+		550497FF1D1054010019F490 /* GoG_Icon_ipad_settings_2x_58px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_ipad_settings_2x_58px.png; path = AppIcons/GoG_Icon_ipad_settings_2x_58px.png; sourceTree = "<group>"; };
+		550498001D1054010019F490 /* GoG_Icon_iphone_settings_2x_58px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_iphone_settings_2x_58px.png; path = AppIcons/GoG_Icon_iphone_settings_2x_58px.png; sourceTree = "<group>"; };
+		550498011D1054010019F490 /* GoG_Icon_ipad_spotlight_1x_40px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_ipad_spotlight_1x_40px.png; path = AppIcons/GoG_Icon_ipad_spotlight_1x_40px.png; sourceTree = "<group>"; };
+		550498021D1054010019F490 /* GoG_Icon_ipad_settings_1x_29px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoG_Icon_ipad_settings_1x_29px.png; path = AppIcons/GoG_Icon_ipad_settings_1x_29px.png; sourceTree = "<group>"; };
 		5508007B1D08A9A30022E984 /* cardsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardsButton.png; path = UIImages/cardsButton.png; sourceTree = "<group>"; };
 		5508007C1D08A9A30022E984 /* rulesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rulesButton.png; path = UIImages/rulesButton.png; sourceTree = "<group>"; };
 		5508007D1D08A9A30022E984 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playButton.png; path = UIImages/playButton.png; sourceTree = "<group>"; };
@@ -313,6 +341,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		550497F41D1053F40019F490 /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				550497F51D1054010019F490 /* GoG_Icon_app_1024px.png */,
+				550497F61D1054010019F490 /* GoG_Icon_iphone6_3x_180px.png */,
+				550497F71D1054010019F490 /* GoG_Icon_ipad_pro_2x_167px.png */,
+				550497F81D1054010019F490 /* GoG_Icon_ipad_2x_152px.png */,
+				550497F91D1054010019F490 /* GoG_Icon_iphone6_2x_120px.png */,
+				550497FA1D1054010019F490 /* GoG_Icon_iphone_spotlight_3x_120px.png */,
+				550497FB1D1054010019F490 /* GoG_Icon_iphone_settings_3x_87px.png */,
+				550497FC1D1054010019F490 /* GoG_Icon_iphone_spotlight_2x_80px.png */,
+				550497FD1D1054010019F490 /* GoG_Icon_ipad_spotlight_2x_80px.png */,
+				550497FE1D1054010019F490 /* GoG_Icon_ipad_1x_76px.png */,
+				550497FF1D1054010019F490 /* GoG_Icon_ipad_settings_2x_58px.png */,
+				550498001D1054010019F490 /* GoG_Icon_iphone_settings_2x_58px.png */,
+				550498011D1054010019F490 /* GoG_Icon_ipad_spotlight_1x_40px.png */,
+				550498021D1054010019F490 /* GoG_Icon_ipad_settings_1x_29px.png */,
+			);
+			name = AppIcons;
+			sourceTree = "<group>";
+		};
 		550800791D08A8FA0022E984 /* UIImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +479,7 @@
 		55D3FAF91CFE0E30006C0A8E = {
 			isa = PBXGroup;
 			children = (
+				550497F41D1053F40019F490 /* AppIcons */,
 				550800861D08CF7E0022E984 /* Fonts */,
 				550800791D08A8FA0022E984 /* UIImages */,
 				55B43CC11D022294002CCE78 /* CardImages */,
@@ -647,6 +697,7 @@
 				55B43D611D022440002CCE78 /* Chance_12.png in Resources */,
 				550497F11D0F22060019F490 /* startButton.png in Resources */,
 				55B43D881D022440002CCE78 /* Mind_10.png in Resources */,
+				5504980F1D1054010019F490 /* GoG_Icon_ipad_spotlight_1x_40px.png in Resources */,
 				550800801D08A9A30022E984 /* rulesButton.png in Resources */,
 				55B43D701D022440002CCE78 /* Soul_11.png in Resources */,
 				55B43D8A1D022440002CCE78 /* Mind_8.png in Resources */,
@@ -673,18 +724,26 @@
 				55B43D721D022440002CCE78 /* Soul_8.png in Resources */,
 				55B43D5F1D022440002CCE78 /* Soul_10.png in Resources */,
 				550800AF1D0BA24E0022E984 /* Chance_20.png in Resources */,
+				5504980A1D1054010019F490 /* GoG_Icon_iphone_spotlight_2x_80px.png in Resources */,
+				5504980E1D1054010019F490 /* GoG_Icon_iphone_settings_2x_58px.png in Resources */,
 				5508008A1D08CFF30022E984 /* Lobster_1.3.otf in Resources */,
 				55B43D821D022440002CCE78 /* Body_3.png in Resources */,
 				55B43D651D022440002CCE78 /* Chance_8.png in Resources */,
 				55B43D8F1D022440002CCE78 /* Mind_3.png in Resources */,
 				550800AC1D0BA24E0022E984 /* Chance_17.png in Resources */,
+				550498061D1054010019F490 /* GoG_Icon_ipad_2x_152px.png in Resources */,
+				550498091D1054010019F490 /* GoG_Icon_iphone_settings_3x_87px.png in Resources */,
+				550498071D1054010019F490 /* GoG_Icon_iphone6_2x_120px.png in Resources */,
 				55B43D7D1D022440002CCE78 /* Body_9.png in Resources */,
 				550800831D08C1400022E984 /* logo.png in Resources */,
 				55B43D911D022440002CCE78 /* Mind_1.png in Resources */,
 				55B43D681D022440002CCE78 /* Chance_5.png in Resources */,
 				55B43D791D022440002CCE78 /* Body_13.png in Resources */,
+				550498081D1054010019F490 /* GoG_Icon_iphone_spotlight_3x_120px.png in Resources */,
+				550498101D1054010019F490 /* GoG_Icon_ipad_settings_1x_29px.png in Resources */,
 				55B43D8E1D022440002CCE78 /* Mind_4.png in Resources */,
 				55B43D761D022440002CCE78 /* Soul_4.png in Resources */,
+				5504980B1D1054010019F490 /* GoG_Icon_ipad_spotlight_2x_80px.png in Resources */,
 				55B43D661D022440002CCE78 /* Chance_7.png in Resources */,
 				55B43D781D022440002CCE78 /* Soul_2.png in Resources */,
 				55B43D7C1D022440002CCE78 /* Body_10.png in Resources */,
@@ -698,6 +757,8 @@
 				550800A71D0BA24E0022E984 /* Body_14.png in Resources */,
 				55B43D861D022440002CCE78 /* Mind_12.png in Resources */,
 				55B43D691D022440002CCE78 /* Chance_4.png in Resources */,
+				550498051D1054010019F490 /* GoG_Icon_ipad_pro_2x_167px.png in Resources */,
+				550498041D1054010019F490 /* GoG_Icon_iphone6_3x_180px.png in Resources */,
 				55B43D811D022440002CCE78 /* Body_5.png in Resources */,
 				55B43D891D022440002CCE78 /* Mind_9.png in Resources */,
 				55B43D5E1D022440002CCE78 /* Body_4.png in Resources */,
@@ -709,8 +770,11 @@
 				550800931D0B81A40022E984 /* skipButton.png in Resources */,
 				550800B51D0BA24E0022E984 /* Soul_14.png in Resources */,
 				55B43D8B1D022440002CCE78 /* Mind_7.png in Resources */,
+				5504980D1D1054010019F490 /* GoG_Icon_ipad_settings_2x_58px.png in Resources */,
 				55B43D7B1D022440002CCE78 /* Body_11.png in Resources */,
+				550498031D1054010019F490 /* GoG_Icon_app_1024px.png in Resources */,
 				55B43D6A1D022440002CCE78 /* Chance_3.png in Resources */,
+				5504980C1D1054010019F490 /* GoG_Icon_ipad_1x_76px.png in Resources */,
 				55B43D601D022440002CCE78 /* Chance_13.png in Resources */,
 				550497F31D0F548A0019F490 /* shuffleButton.png in Resources */,
 				55D3FB0F1CFE0E30006C0A8E /* Assets.xcassets in Resources */,
