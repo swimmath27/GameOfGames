@@ -101,8 +101,7 @@ class DrawCardViewController: UIViewController {
     
     @IBAction func skipCardButtonPressed(sender: AnyObject)
     {
-        
-        alertAndGoBack("Alert", s:"Card will be skipped and your turn will continue (This cannot be undone)",whichAction: "skipped")
+        alertAndGoBack("Alert", s:"Card will be skipped. Make sure both team captains agree as this cannot be undone",whichAction: "skipped")
     }
     
     /*

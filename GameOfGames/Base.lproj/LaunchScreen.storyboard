@@ -16,12 +16,85 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="JQj-5l-1iE">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehc-eM-bFv">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fpd-BZ-MnB">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="40" y="73" width="320" height="200"/>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Fpd-BZ-MnB"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="Fpd-BZ-MnB"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JQj-5l-1iE" firstAttribute="leading" secondItem="ehc-eM-bFv" secondAttribute="leading" id="3gZ-fo-bZX"/>
+                            <constraint firstAttribute="trailing" secondItem="JQj-5l-1iE" secondAttribute="trailing" id="4ea-Xb-c8u"/>
+                            <constraint firstItem="JQj-5l-1iE" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="7ux-zv-rYW"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ehc-eM-bFv" secondAttribute="bottom" constant="255" id="I5d-op-aZF"/>
+                            <constraint firstItem="JQj-5l-1iE" firstAttribute="top" secondItem="ehc-eM-bFv" secondAttribute="top" id="VCR-z2-l0G"/>
+                            <constraint firstItem="ehc-eM-bFv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Zg3-cH-FzI"/>
+                            <constraint firstItem="ehc-eM-bFv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="c2t-yc-Z2s"/>
+                            <constraint firstItem="JQj-5l-1iE" firstAttribute="trailing" secondItem="ehc-eM-bFv" secondAttribute="trailing" id="nuP-WE-3s9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="JQj-5l-1iE"/>
+                                <exclude reference="ehc-eM-bFv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3gZ-fo-bZX"/>
+                                <exclude reference="4ea-Xb-c8u"/>
+                                <exclude reference="7ux-zv-rYW"/>
+                                <exclude reference="VCR-z2-l0G"/>
+                                <exclude reference="nuP-WE-3s9"/>
+                                <exclude reference="Zg3-cH-FzI"/>
+                                <exclude reference="c2t-yc-Z2s"/>
+                                <exclude reference="I5d-op-aZF"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="JQj-5l-1iE"/>
+                                <include reference="ehc-eM-bFv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3gZ-fo-bZX"/>
+                                <include reference="4ea-Xb-c8u"/>
+                                <include reference="7ux-zv-rYW"/>
+                                <include reference="VCR-z2-l0G"/>
+                                <include reference="nuP-WE-3s9"/>
+                                <include reference="Zg3-cH-FzI"/>
+                                <include reference="c2t-yc-Z2s"/>
+                                <include reference="I5d-op-aZF"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.png" width="750" height="1334"/>
+        <image name="logo.png" width="640" height="400"/>
+    </resources>
 </document>

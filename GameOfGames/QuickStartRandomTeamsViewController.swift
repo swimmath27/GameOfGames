@@ -42,6 +42,8 @@ class QuickStartRandomTeamsViewController: UIViewController, UITableViewDataSour
         team2Table.dataSource = self
         
         updateTeamViews();
+        
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
     
     func updateTeamsFromOrder()
@@ -111,28 +113,17 @@ class QuickStartRandomTeamsViewController: UIViewController, UITableViewDataSour
     {
         let row = indexPath.row
         
-        if tableView == team1Table
-        {
-            let cell = tableView.dequeueReusableCellWithIdentifier("TempCellView1", forIndexPath: indexPath) as UITableViewCell
-            
-            let playerNumber : Int = team1List[row];
-            
-            cell.textLabel?.text = "\(playerNumber)"
-            
-            return cell;
-        }
-        else if tableView == team2Table
-        {
-            let cell = tableView.dequeueReusableCellWithIdentifier("TempCellView2", forIndexPath: indexPath) as UITableViewCell
-            
-            let playerNumber : Int = team2List[row];
-            
-            cell.textLabel?.text = "\(playerNumber)"
-            
-            return cell;
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier("TempCellView", forIndexPath: indexPath) as UITableViewCell
         
-        return UITableViewCell()
+        let playerNumber : Int = (tableView == team1Table ? team1List : team2List)[row];
+        
+        cell.textLabel?.text = "\(playerNumber)"
+        
+        cell.textLabel?.textColor = UIColor.whiteColor();
+        cell.textLabel?.font = UIFont(name: "Lobster1.3", size: 22)
+        cell.textLabel?.textAlignment = .Center
+        
+        return cell;
     }
     
     func tableView(tableView: UITableView,

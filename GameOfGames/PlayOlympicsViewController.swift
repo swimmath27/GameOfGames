@@ -25,6 +25,7 @@ class PlayOlympicsViewController: UIViewController {
         game2Segment.selectedSegmentIndex = 1;
         game3Segment.selectedSegmentIndex = 1;
         
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
 
     override func didReceiveMemoryWarning() {

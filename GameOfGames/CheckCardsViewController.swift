@@ -25,7 +25,8 @@ class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         teamNameLabel.text = "\(game.getTeamName(CheckCardsViewController.whichTeam))'s Cards"
 
-        // Do any additional setup after loading the view.
+        
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,7 +64,11 @@ class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let card : Card = game.getTeamCards(CheckCardsViewController.whichTeam)[row]
         
-        cell.textLabel?.text = card.toString();
+        cell.textLabel?.text = card.getShortDescription();
+        
+        cell.textLabel?.textColor = UIColor.whiteColor();
+        cell.textLabel?.font = UIFont(name: "Lobster1.3", size: 22)
+        cell.textLabel?.textAlignment = .Center
         
         return cell;
     }

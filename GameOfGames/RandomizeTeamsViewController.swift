@@ -30,6 +30,8 @@ class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UIT
         team2Table.dataSource = self
         
         updateTeamViews();
+        
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
 
     func updateTeamViews()
@@ -105,35 +107,17 @@ class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UIT
     {
         let row = indexPath.row
         
-        var cell:UITableViewCell? = nil;
-        var playerNumber: Int = -1;
-        if tableView == team1Table
-        {
-            cell = tableView.dequeueReusableCellWithIdentifier("TempCellView1", forIndexPath: indexPath) as UITableViewCell
-
-            playerNumber = game.getTeam(1)[row];
-
-            
-        }
-        else if tableView == team2Table
-        {
-            cell = tableView.dequeueReusableCellWithIdentifier("TempCellView2", forIndexPath: indexPath) as UITableViewCell
-            
-            playerNumber = game.getTeam(2)[row];
-            
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier("TempCellView", forIndexPath: indexPath) as UITableViewCell
         
-        if playerNumber == -1
-        {
-            return UITableViewCell()
-        }
+        let playerNumber: Int = game.getTeam(tableView == team1Table ? 1 : 2)[row];
         
-        cell!.textLabel?.text = game.getPlayerName(playerNumber)
+        cell.textLabel?.text = game.getPlayerName(playerNumber)
+          
+        cell.textLabel?.textColor = UIColor.whiteColor();
+        cell.textLabel?.font = UIFont(name: "Lobster1.3", size: 22)
+        cell.textLabel?.textAlignment = .Center
         
-        cell!.backgroundColor = UIColor.clearColor();
-        cell!.textLabel?.textColor = UIColor.whiteColor();
-        
-        return cell!;
+        return cell;
     }
     
     func tableView(tableView: UITableView,

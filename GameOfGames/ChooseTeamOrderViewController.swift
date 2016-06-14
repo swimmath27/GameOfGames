@@ -32,6 +32,9 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
         currentTeam = game.getCurrentTeam()
         
         currentTeamLabel.text = "Team \(currentTeam) (\(game.getTeamName(currentTeam)))"
+        
+        
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
 
 
@@ -86,6 +89,10 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
         let playerNumber : Int = game.getTeam(currentTeam)[row];
         
         cell.textLabel?.text = game.getPlayerName(playerNumber)
+        
+        cell.textLabel?.textColor = UIColor.whiteColor();
+        cell.textLabel?.font = UIFont(name: "Lobster1.3", size: 22)
+        cell.textLabel?.textAlignment = .Center
         
         return cell;
         

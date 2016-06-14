@@ -92,7 +92,8 @@ class RoundRouletteViewController: UIViewController {
             rollButton.setTitle("Continue", forState: .Normal)
             self.rolled = true;
         }
-        // Do any additional setup after loading the view.
+        
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
 
     override func didReceiveMemoryWarning() {

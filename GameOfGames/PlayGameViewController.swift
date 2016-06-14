@@ -49,13 +49,13 @@ class PlayGameViewController: UIViewController
         
         if game.getCurrentTeam() == 1 // team 2 is up
         {
-            team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 22)
-            team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 17)
+            team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 27)
+            team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 22)
         }
         else // team 2 is up
         {
-            team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 17)
-            team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 22)
+            team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 22)
+            team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 27)
         }
 
         //check if game is over
@@ -93,8 +93,9 @@ class PlayGameViewController: UIViewController
             }
 
         }
-        ///
-        // Do any additional setup after loading the view.
+        
+        
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
 
     @IBAction func drawCardButtonPressed(sender: AnyObject)

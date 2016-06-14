@@ -25,6 +25,8 @@ class NameTeamsViewController: UIViewController
         teamNameField.text = "";
         
         teamNameField.becomeFirstResponder();
+        
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
 
     override func didReceiveMemoryWarning()

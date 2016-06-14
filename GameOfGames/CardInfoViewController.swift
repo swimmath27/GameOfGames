@@ -21,7 +21,6 @@ class CardInfoViewController: UIViewController
     
     @IBOutlet weak var cardNameLabel: UILabel!
     
-    @IBOutlet weak var shortDescriptionLabel: UILabel!
     @IBOutlet weak var fullDescriptionLabel: UILabel!
     
     override func viewDidLoad()
@@ -34,13 +33,14 @@ class CardInfoViewController: UIViewController
 //        fullDescriptionLabel.numberOfLines = 0
         //i did the above in the storyboard but leaving it here for reference
         
-        shortDescriptionLabel.lineBreakMode = .ByWordWrapping
+        cardNameLabel.lineBreakMode = .ByWordWrapping
         
         cardImage.image = UIImage(named: CardInfoViewController.currentCard.getFileName());
-        cardNameLabel.text = CardInfoViewController.currentCard.toString();
+        cardNameLabel.text = CardInfoViewController.currentCard.getShortDescription();
         
-        shortDescriptionLabel.text = CardInfoViewController.currentCard.getShortDescription();
         fullDescriptionLabel.text = CardInfoViewController.currentCard.getLongDescription();
+        
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
     
     override func didReceiveMemoryWarning()

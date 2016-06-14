@@ -23,8 +23,6 @@ class StartScreenViewController: UIViewController
         super.viewDidLoad()
         
         self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning()
