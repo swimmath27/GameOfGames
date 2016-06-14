@@ -82,21 +82,25 @@ class DrawCardViewController: UIViewController {
     {
         let drink:String = game.getCurrentCard()!.getDrink();
         
-        alertAndGoBack("Congratz", s:"Please add \(drink) into the cup and send \(drink) to any player on the other team", whichAction: "won")
+        //alertAndGoBack("Congratz", s:"Please add \(drink) into the cup and send \(drink) to any player on the other team", whichAction: "won")
+        self.goToNext("won");
+       
     }
 
     @IBAction func LostButtonPressed(sender: AnyObject)
     {
         let drink:String = game.getCurrentCard()!.getDrink();
         
-        alertAndGoBack("Too bad", s:"Please drink \(drink) and give \(drink) to a team member",whichAction: "lost")
+        //alertAndGoBack("Too bad", s:"Please drink \(drink) and give \(drink) to a team member",whichAction: "lost")
+        self.goToNext("lost");
     }
     
     @IBAction func StolenButtonPressed(sender: AnyObject)
     {
         let drink:String = game.getCurrentCard()!.getDrink();
         
-        alertAndGoBack("...", s:"Please add \(drink) into the cup and the other team sends \(drink) to any player on your team", whichAction: "stolen")
+        //alertAndGoBack("...", s:"Please add \(drink) into the cup and the other team sends \(drink) to any player on your team", whichAction: "stolen")
+        self.goToNext("stolen");
     }
     
     @IBAction func skipCardButtonPressed(sender: AnyObject)
