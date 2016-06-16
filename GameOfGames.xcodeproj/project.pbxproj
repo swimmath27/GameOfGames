@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1F946D18C05FC66A679036A6 /* Pods_GameOfGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B80F4386EC94669A39ACCAB /* Pods_GameOfGames.framework */; };
+		55002AC51D124B98008CC3A9 /* cardFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 55002AC41D124B98008CC3A9 /* cardFrame.png */; };
+		55002AD21D124DC7008CC3A9 /* JosefinSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002AC71D124DC7008CC3A9 /* JosefinSans-BoldItalic.ttf */; };
+		55002AD31D124DC7008CC3A9 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002AC81D124DC7008CC3A9 /* JosefinSans-SemiBold.ttf */; };
+		55002AD41D124DC7008CC3A9 /* JosefinSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002AC91D124DC7008CC3A9 /* JosefinSans-SemiBoldItalic.ttf */; };
+		55002AD51D124DC7008CC3A9 /* JosefinSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002ACA1D124DC7008CC3A9 /* JosefinSans-Thin.ttf */; };
+		55002AD61D124DC7008CC3A9 /* JosefinSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002ACB1D124DC7008CC3A9 /* JosefinSans-ThinItalic.ttf */; };
+		55002AD71D124DC7008CC3A9 /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002ACC1D124DC7008CC3A9 /* JosefinSans-Bold.ttf */; };
+		55002AD81D124DC7008CC3A9 /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002ACD1D124DC7008CC3A9 /* JosefinSans-Regular.ttf */; };
+		55002AD91D124DC7008CC3A9 /* JosefinSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002ACE1D124DC7008CC3A9 /* JosefinSans-Italic.ttf */; };
+		55002ADA1D124DC7008CC3A9 /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002ACF1D124DC7008CC3A9 /* JosefinSans-Light.ttf */; };
+		55002ADB1D124DC7008CC3A9 /* JosefinSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002AD01D124DC7008CC3A9 /* JosefinSans-LightItalic.ttf */; };
+		55002ADC1D124DC7008CC3A9 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55002AD11D124DC7008CC3A9 /* SIL Open Font License.txt */; };
 		550497EF1D0F22060019F490 /* addButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497EC1D0F22060019F490 /* addButton.png */; };
 		550497F01D0F22060019F490 /* quickstartButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497ED1D0F22060019F490 /* quickstartButton.png */; };
 		550497F11D0F22060019F490 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497EE1D0F22060019F490 /* startButton.png */; };
@@ -164,6 +176,18 @@
 		22CFCD7B1E0B9FDF190231CA /* Pods-GameOfGamesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfGamesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfGamesUITests/Pods-GameOfGamesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		359A5726D33F5D1696397CBA /* Pods-GameOfGamesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfGamesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfGamesUITests/Pods-GameOfGamesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B80F4386EC94669A39ACCAB /* Pods_GameOfGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55002AC41D124B98008CC3A9 /* cardFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardFrame.png; path = UIImages/cardFrame.png; sourceTree = "<group>"; };
+		55002AC71D124DC7008CC3A9 /* JosefinSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-BoldItalic.ttf"; path = "Fonts/Josefin Sans/JosefinSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		55002AC81D124DC7008CC3A9 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-SemiBold.ttf"; path = "Fonts/Josefin Sans/JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		55002AC91D124DC7008CC3A9 /* JosefinSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-SemiBoldItalic.ttf"; path = "Fonts/Josefin Sans/JosefinSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		55002ACA1D124DC7008CC3A9 /* JosefinSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Thin.ttf"; path = "Fonts/Josefin Sans/JosefinSans-Thin.ttf"; sourceTree = "<group>"; };
+		55002ACB1D124DC7008CC3A9 /* JosefinSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-ThinItalic.ttf"; path = "Fonts/Josefin Sans/JosefinSans-ThinItalic.ttf"; sourceTree = "<group>"; };
+		55002ACC1D124DC7008CC3A9 /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Bold.ttf"; path = "Fonts/Josefin Sans/JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
+		55002ACD1D124DC7008CC3A9 /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Regular.ttf"; path = "Fonts/Josefin Sans/JosefinSans-Regular.ttf"; sourceTree = "<group>"; };
+		55002ACE1D124DC7008CC3A9 /* JosefinSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Italic.ttf"; path = "Fonts/Josefin Sans/JosefinSans-Italic.ttf"; sourceTree = "<group>"; };
+		55002ACF1D124DC7008CC3A9 /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Light.ttf"; path = "Fonts/Josefin Sans/JosefinSans-Light.ttf"; sourceTree = "<group>"; };
+		55002AD01D124DC7008CC3A9 /* JosefinSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-LightItalic.ttf"; path = "Fonts/Josefin Sans/JosefinSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		55002AD11D124DC7008CC3A9 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SIL Open Font License.txt"; path = "Fonts/Josefin Sans/SIL Open Font License.txt"; sourceTree = "<group>"; };
 		550497EC1D0F22060019F490 /* addButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addButton.png; path = UIImages/addButton.png; sourceTree = "<group>"; };
 		550497ED1D0F22060019F490 /* quickstartButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quickstartButton.png; path = UIImages/quickstartButton.png; sourceTree = "<group>"; };
 		550497EE1D0F22060019F490 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startButton.png; path = UIImages/startButton.png; sourceTree = "<group>"; };
@@ -346,6 +370,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		55002AC61D124DA0008CC3A9 /* Josefin Sans */ = {
+			isa = PBXGroup;
+			children = (
+				55002AC71D124DC7008CC3A9 /* JosefinSans-BoldItalic.ttf */,
+				55002AC81D124DC7008CC3A9 /* JosefinSans-SemiBold.ttf */,
+				55002AC91D124DC7008CC3A9 /* JosefinSans-SemiBoldItalic.ttf */,
+				55002ACA1D124DC7008CC3A9 /* JosefinSans-Thin.ttf */,
+				55002ACB1D124DC7008CC3A9 /* JosefinSans-ThinItalic.ttf */,
+				55002ACC1D124DC7008CC3A9 /* JosefinSans-Bold.ttf */,
+				55002ACD1D124DC7008CC3A9 /* JosefinSans-Regular.ttf */,
+				55002ACE1D124DC7008CC3A9 /* JosefinSans-Italic.ttf */,
+				55002ACF1D124DC7008CC3A9 /* JosefinSans-Light.ttf */,
+				55002AD01D124DC7008CC3A9 /* JosefinSans-LightItalic.ttf */,
+				55002AD11D124DC7008CC3A9 /* SIL Open Font License.txt */,
+			);
+			name = "Josefin Sans";
+			sourceTree = "<group>";
+		};
 		550497F41D1053F40019F490 /* AppIcons */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +412,7 @@
 		550800791D08A8FA0022E984 /* UIImages */ = {
 			isa = PBXGroup;
 			children = (
+				55002AC41D124B98008CC3A9 /* cardFrame.png */,
 				5504984F1D10ADED0019F490 /* viewCardsButton.png */,
 				550498501D10ADED0019F490 /* rollButton.png */,
 				550498111D1068160019F490 /* background.png */,
@@ -394,6 +437,7 @@
 		550800861D08CF7E0022E984 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				55002AC61D124DA0008CC3A9 /* Josefin Sans */,
 				550800871D08CFE30022E984 /* Lobster */,
 			);
 			name = Fonts;
@@ -693,17 +737,23 @@
 			files = (
 				550800A91D0BA24E0022E984 /* Chance_14.png in Resources */,
 				550800951D0B81A40022E984 /* wonButton.png in Resources */,
+				55002AC51D124B98008CC3A9 /* cardFrame.png in Resources */,
 				550800B61D0BA24E0022E984 /* Soul_15.png in Resources */,
 				55B43D851D022440002CCE78 /* Mind_13.png in Resources */,
+				55002ADC1D124DC7008CC3A9 /* SIL Open Font License.txt in Resources */,
+				55002AD91D124DC7008CC3A9 /* JosefinSans-Italic.ttf in Resources */,
 				550800B11D0BA24E0022E984 /* Mind_15.png in Resources */,
 				5508008B1D08CFF30022E984 /* SIL Open Font License.txt in Resources */,
 				55B43D8D1D022440002CCE78 /* Mind_5.png in Resources */,
+				55002ADA1D124DC7008CC3A9 /* JosefinSans-Light.ttf in Resources */,
 				55B43D6E1D022440002CCE78 /* Soul_13.png in Resources */,
 				55B43D741D022440002CCE78 /* Soul_6.png in Resources */,
 				55B43D7E1D022440002CCE78 /* Body_8.png in Resources */,
 				55B43D841D022440002CCE78 /* Body_1.png in Resources */,
 				55B43D611D022440002CCE78 /* Chance_12.png in Resources */,
+				55002AD21D124DC7008CC3A9 /* JosefinSans-BoldItalic.ttf in Resources */,
 				550497F11D0F22060019F490 /* startButton.png in Resources */,
+				55002AD61D124DC7008CC3A9 /* JosefinSans-ThinItalic.ttf in Resources */,
 				55B43D881D022440002CCE78 /* Mind_10.png in Resources */,
 				5504980F1D1054010019F490 /* GoG_Icon_ipad_spotlight_1x_40px.png in Resources */,
 				550800801D08A9A30022E984 /* rulesButton.png in Resources */,
@@ -725,9 +775,11 @@
 				550800B71D0BA24E0022E984 /* Soul_16.png in Resources */,
 				550497F01D0F22060019F490 /* quickstartButton.png in Resources */,
 				550800B31D0BA24E0022E984 /* Mind_17.png in Resources */,
+				55002AD81D124DC7008CC3A9 /* JosefinSans-Regular.ttf in Resources */,
 				55B43D671D022440002CCE78 /* Chance_6.png in Resources */,
 				55B43D7F1D022440002CCE78 /* Body_7.png in Resources */,
 				550800811D08A9A30022E984 /* playButton.png in Resources */,
+				55002AD31D124DC7008CC3A9 /* JosefinSans-SemiBold.ttf in Resources */,
 				550800B41D0BA24E0022E984 /* Mind_18.png in Resources */,
 				55B43D641D022440002CCE78 /* Chance_9.png in Resources */,
 				55B43D721D022440002CCE78 /* Soul_8.png in Resources */,
@@ -747,6 +799,7 @@
 				550498071D1054010019F490 /* GoG_Icon_iphone6_2x_120px.png in Resources */,
 				55B43D7D1D022440002CCE78 /* Body_9.png in Resources */,
 				550800831D08C1400022E984 /* logo.png in Resources */,
+				55002AD71D124DC7008CC3A9 /* JosefinSans-Bold.ttf in Resources */,
 				55B43D911D022440002CCE78 /* Mind_1.png in Resources */,
 				55B43D681D022440002CCE78 /* Chance_5.png in Resources */,
 				55B43D791D022440002CCE78 /* Body_13.png in Resources */,
@@ -774,11 +827,14 @@
 				55B43D891D022440002CCE78 /* Mind_9.png in Resources */,
 				55B43D5E1D022440002CCE78 /* Body_4.png in Resources */,
 				550800B21D0BA24E0022E984 /* Mind_16.png in Resources */,
+				55002ADB1D124DC7008CC3A9 /* JosefinSans-LightItalic.ttf in Resources */,
 				55B43D6D1D022440002CCE78 /* Soul_1.png in Resources */,
 				5508007F1D08A9A30022E984 /* cardsButton.png in Resources */,
 				55B43D831D022440002CCE78 /* Body_2.png in Resources */,
+				55002AD51D124DC7008CC3A9 /* JosefinSans-Thin.ttf in Resources */,
 				55B43CBE1D021C4F002CCE78 /* Game-of-Games-Cards-Default.csv in Resources */,
 				550800931D0B81A40022E984 /* skipButton.png in Resources */,
+				55002AD41D124DC7008CC3A9 /* JosefinSans-SemiBoldItalic.ttf in Resources */,
 				550800B51D0BA24E0022E984 /* Soul_14.png in Resources */,
 				55B43D8B1D022440002CCE78 /* Mind_7.png in Resources */,
 				5504980D1D1054010019F490 /* GoG_Icon_ipad_settings_2x_58px.png in Resources */,
@@ -1112,7 +1168,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GameOfGames/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = michael.GameOfGames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1126,7 +1182,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GameOfGames/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = michael.GameOfGames;
 				PRODUCT_NAME = "$(TARGET_NAME)";

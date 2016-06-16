@@ -39,6 +39,8 @@ class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UIC
         imageCollectionView.reloadSections(NSIndexSet(index: 0))
         imageCollectionView.reloadSections(NSIndexSet(index: 0))
         imageCollectionView.reloadSections(NSIndexSet(index: 0))
+        imageCollectionView.reloadSections(NSIndexSet(index: 0))
+        imageCollectionView.reloadSections(NSIndexSet(index: 0))
         // FORGET YOU SAW ANYTHING
         // ...
         // i mean it
@@ -47,6 +49,8 @@ class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UIC
         // 12 of them messed up
         // ...
         // no there is no reason why this happens
+        
+        //edit: there are like 15 messed up now
         
         self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }

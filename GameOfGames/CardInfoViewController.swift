@@ -17,8 +17,6 @@ class CardInfoViewController: UIViewController
     //if false -> go back to check cards view controller
     static var from:String = "";
     
-    @IBOutlet weak var cardImage: UIImageView!
-    
     @IBOutlet weak var cardNameLabel: UILabel!
     
     @IBOutlet weak var fullDescriptionLabel: UILabel!
@@ -35,7 +33,6 @@ class CardInfoViewController: UIViewController
         
         cardNameLabel.lineBreakMode = .ByWordWrapping
         
-        cardImage.image = UIImage(named: CardInfoViewController.currentCard.getFileName());
         cardNameLabel.text = CardInfoViewController.currentCard.getShortDescription();
         
         fullDescriptionLabel.text = CardInfoViewController.currentCard.getLongDescription();
@@ -48,6 +45,13 @@ class CardInfoViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
+        backButtonPressed(self);
+    }
+
     
     /*
      // MARK: - Navigation

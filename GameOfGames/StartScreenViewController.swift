@@ -22,6 +22,14 @@ class StartScreenViewController: UIViewController
     {
         super.viewDidLoad()
         
+//        for familyName in UIFont.familyNames() {
+//            print("\n-- \(familyName) \n")
+//            for fontName in UIFont.fontNamesForFamilyName(familyName) {
+//                print(fontName)
+//            }
+//        }
+        
+        
         self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
 
