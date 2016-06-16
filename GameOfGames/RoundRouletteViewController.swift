@@ -16,6 +16,8 @@ class RoundRouletteViewController: UIViewController {
     @IBOutlet weak var team1Chance: UILabel!
     @IBOutlet weak var team2Chance: UILabel!
     
+    @IBOutlet weak var instructionsLabel: UILabel!
+    
     @IBOutlet weak var rolledNumber: UILabel!
     @IBOutlet weak var chosenTeam: UILabel!
     
@@ -28,6 +30,9 @@ class RoundRouletteViewController: UIViewController {
     var team1Cards:Int = 0;
     var team2Cards:Int = 0;
     var totalCards:Int = 0;
+    
+    @IBOutlet weak var buttonHeight: NSLayoutConstraint!
+    @IBOutlet weak var buttonWidth: NSLayoutConstraint!
     
     var timer:NSTimer?
     
@@ -113,7 +118,8 @@ class RoundRouletteViewController: UIViewController {
             rolledNumber.text = "\(rand)";
 //            rollButton.setTitle("Continue", forState: .Normal)
             rollButton.setImage(UIImage(named:"nextButton.png"), forState: .Normal)
-//            rollButton.frame = CGRectMake(0, 0, 64, 64) // doesn't do anything
+            buttonWidth.constant = 64;
+            buttonHeight.constant = 40;
             rollButton.hidden = false;
             
             let team = game.getTeamName(rand <= team2Cards ? 1 : 2)

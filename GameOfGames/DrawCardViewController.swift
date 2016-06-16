@@ -57,11 +57,13 @@ class DrawCardViewController: UIViewController {
         
         if game.getCurrentCard()!.isStealable()
         {
-            stolenButton.hidden = false
+            stolenButton.enabled = true
+            stolenButton.alpha = 1.0;
         }
         else
         {
-            stolenButton.hidden = true
+            stolenButton.enabled = false
+            stolenButton.alpha = 0.5;
         }
         
     }

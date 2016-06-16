@@ -1924,7 +1924,7 @@
                                     <constraint firstAttribute="width" constant="180" id="O5s-GV-9bh"/>
                                     <constraint firstAttribute="height" constant="27" id="prv-9b-NBy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -1942,7 +1942,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wou-ad-YMb">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1950,28 +1950,31 @@
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="eUR-dc-Yb3"/>
+                                    <constraint firstAttribute="height" constant="24" id="qpe-FR-O8z"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="eUR-dc-Yb3"/>
+                                        <exclude reference="qpe-FR-O8z"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="eUR-dc-Yb3"/>
+                                        <include reference="qpe-FR-O8z"/>
                                     </mask>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZd-Zr-EY3">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="EPB-8m-0AS"/>
+                                    <constraint firstAttribute="height" constant="24" id="EPB-8m-0AS"/>
                                     <constraint firstAttribute="width" constant="100" id="MlF-SZ-dBY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -2042,14 +2045,6 @@
                                     <action selector="viewTeam1CardsButtonPressed:" destination="VOI-er-Jyk" eventType="touchUpInside" id="Vrb-WB-1pj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxA-UP-I2x">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="tintColor" red="1" green="0.92549019607843142" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="View"/>
-                                <connections>
-                                    <action selector="viewTeam2CardsButtonPressed:" destination="VOI-er-Jyk" eventType="touchUpInside" id="CcJ-2g-LDh"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAI-FR-Vgk">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -2117,6 +2112,14 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxA-UP-I2x">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="tintColor" red="1" green="0.92549019607843142" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="View"/>
+                                <connections>
+                                    <action selector="viewTeam2CardsButtonPressed:" destination="VOI-er-Jyk" eventType="touchUpInside" id="CcJ-2g-LDh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.45098039215686275" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -2132,14 +2135,20 @@
                             <constraint firstAttribute="bottom" secondItem="Ynh-66-xQT" secondAttribute="bottom" constant="20" symbolic="YES" id="CoE-ZX-kv9"/>
                             <constraint firstItem="3qf-JM-cse" firstAttribute="centerX" secondItem="97f-OR-wde" secondAttribute="centerX" id="EfM-Vg-3O6"/>
                             <constraint firstItem="3mF-A2-lRz" firstAttribute="centerX" secondItem="Ynh-66-xQT" secondAttribute="centerX" id="K4g-Kg-3tS"/>
-                            <constraint firstItem="97f-OR-wde" firstAttribute="top" secondItem="GZd-Zr-EY3" secondAttribute="bottom" constant="31" id="MLi-46-frb"/>
+                            <constraint firstItem="97f-OR-wde" firstAttribute="top" secondItem="GZd-Zr-EY3" secondAttribute="bottom" constant="31" id="MLi-46-frb">
+                                <variation key="widthClass=compact" constant="35"/>
+                            </constraint>
                             <constraint firstItem="wou-ad-YMb" firstAttribute="trailing" secondItem="GZd-Zr-EY3" secondAttribute="trailing" id="OKt-VC-X07"/>
                             <constraint firstItem="NXw-y8-IJ5" firstAttribute="top" secondItem="y4j-WN-dbn" secondAttribute="bottom" constant="8" symbolic="YES" id="PeL-kg-dCf"/>
-                            <constraint firstItem="GZd-Zr-EY3" firstAttribute="top" secondItem="wou-ad-YMb" secondAttribute="bottom" constant="12" id="Sm6-4L-c7O"/>
+                            <constraint firstItem="GZd-Zr-EY3" firstAttribute="top" secondItem="wou-ad-YMb" secondAttribute="bottom" constant="12" id="Sm6-4L-c7O">
+                                <variation key="widthClass=compact" constant="8"/>
+                            </constraint>
                             <constraint firstItem="3mF-A2-lRz" firstAttribute="top" secondItem="FAI-FR-Vgk" secondAttribute="bottom" constant="8" symbolic="YES" id="TIX-BO-DKG"/>
                             <constraint firstItem="97f-OR-wde" firstAttribute="leading" secondItem="enq-Zn-JAA" secondAttribute="leadingMargin" constant="50" id="Ud3-ly-fsN"/>
                             <constraint firstItem="3qf-JM-cse" firstAttribute="top" secondItem="PV5-ll-zyd" secondAttribute="bottom" constant="8" symbolic="YES" id="Vkt-Tz-XKS"/>
-                            <constraint firstItem="y4j-WN-dbn" firstAttribute="baseline" secondItem="GZd-Zr-EY3" secondAttribute="firstBaseline" id="YQa-ZK-kb0"/>
+                            <constraint firstItem="y4j-WN-dbn" firstAttribute="baseline" secondItem="GZd-Zr-EY3" secondAttribute="firstBaseline" id="YQa-ZK-kb0">
+                                <variation key="widthClass=compact" constant="4"/>
+                            </constraint>
                             <constraint firstItem="3mF-A2-lRz" firstAttribute="trailing" secondItem="FAI-FR-Vgk" secondAttribute="trailing" id="ZAi-RP-WWk"/>
                             <constraint firstItem="ZYu-RP-hqu" firstAttribute="firstBaseline" secondItem="wou-ad-YMb" secondAttribute="firstBaseline" id="ZoS-9n-fnV"/>
                             <constraint firstItem="fPF-M7-jWb" firstAttribute="top" secondItem="97f-OR-wde" secondAttribute="bottom" constant="8" symbolic="YES" id="fZe-0i-OaB"/>
@@ -2163,36 +2172,16 @@
                                 <exclude reference="3qf-JM-cse"/>
                                 <exclude reference="Ynh-66-xQT"/>
                                 <exclude reference="NXw-y8-IJ5"/>
-                                <exclude reference="oxA-UP-I2x"/>
                                 <exclude reference="FAI-FR-Vgk"/>
                                 <exclude reference="97f-OR-wde"/>
                                 <exclude reference="3mF-A2-lRz"/>
                                 <exclude reference="fPF-M7-jWb"/>
+                                <exclude reference="oxA-UP-I2x"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="EfM-Vg-3O6"/>
-                                <exclude reference="Vkt-Tz-XKS"/>
-                                <exclude reference="5oY-Eg-7a5"/>
-                                <exclude reference="9Jm-eB-iZI"/>
-                                <exclude reference="Av6-5x-Td8"/>
-                                <exclude reference="ZoS-9n-fnV"/>
-                                <exclude reference="2ER-YR-SqZ"/>
-                                <exclude reference="YQa-ZK-kb0"/>
-                                <exclude reference="v61-PJ-rlA"/>
                                 <exclude reference="4uX-Ul-KHl"/>
                                 <exclude reference="PeL-kg-dCf"/>
-                                <exclude reference="MLi-46-frb"/>
-                                <exclude reference="Ud3-ly-fsN"/>
-                                <exclude reference="sk8-73-oy3"/>
-                                <exclude reference="w94-AC-Ylq"/>
-                                <exclude reference="3e3-LX-kj4"/>
-                                <exclude reference="C7r-0L-NwZ"/>
-                                <exclude reference="OKt-VC-X07"/>
-                                <exclude reference="hLl-26-3sI"/>
-                                <exclude reference="fZe-0i-OaB"/>
-                                <exclude reference="7ha-sa-UOw"/>
-                                <exclude reference="Sm6-4L-c7O"/>
-                                <exclude reference="fZh-eH-Syl"/>
+                                <exclude reference="CoE-ZX-kv9"/>
                                 <exclude reference="CjV-Ed-LW9"/>
                                 <exclude reference="odD-jp-ulz"/>
                                 <exclude reference="K4g-Kg-3tS"/>
@@ -2200,7 +2189,27 @@
                                 <exclude reference="ZAi-RP-WWk"/>
                                 <exclude reference="iau-A4-pUi"/>
                                 <exclude reference="k8n-9a-AVQ"/>
-                                <exclude reference="CoE-ZX-kv9"/>
+                                <exclude reference="EfM-Vg-3O6"/>
+                                <exclude reference="Vkt-Tz-XKS"/>
+                                <exclude reference="MLi-46-frb"/>
+                                <exclude reference="Ud3-ly-fsN"/>
+                                <exclude reference="sk8-73-oy3"/>
+                                <exclude reference="w94-AC-Ylq"/>
+                                <exclude reference="fZh-eH-Syl"/>
+                                <exclude reference="7ha-sa-UOw"/>
+                                <exclude reference="Sm6-4L-c7O"/>
+                                <exclude reference="5oY-Eg-7a5"/>
+                                <exclude reference="9Jm-eB-iZI"/>
+                                <exclude reference="Av6-5x-Td8"/>
+                                <exclude reference="ZoS-9n-fnV"/>
+                                <exclude reference="fZe-0i-OaB"/>
+                                <exclude reference="3e3-LX-kj4"/>
+                                <exclude reference="C7r-0L-NwZ"/>
+                                <exclude reference="OKt-VC-X07"/>
+                                <exclude reference="hLl-26-3sI"/>
+                                <exclude reference="2ER-YR-SqZ"/>
+                                <exclude reference="YQa-ZK-kb0"/>
+                                <exclude reference="v61-PJ-rlA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -2212,36 +2221,16 @@
                                 <include reference="3qf-JM-cse"/>
                                 <include reference="Ynh-66-xQT"/>
                                 <include reference="NXw-y8-IJ5"/>
-                                <include reference="oxA-UP-I2x"/>
                                 <include reference="FAI-FR-Vgk"/>
                                 <include reference="97f-OR-wde"/>
                                 <include reference="3mF-A2-lRz"/>
                                 <include reference="fPF-M7-jWb"/>
+                                <include reference="oxA-UP-I2x"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="EfM-Vg-3O6"/>
-                                <include reference="Vkt-Tz-XKS"/>
-                                <include reference="5oY-Eg-7a5"/>
-                                <include reference="9Jm-eB-iZI"/>
-                                <include reference="Av6-5x-Td8"/>
-                                <include reference="ZoS-9n-fnV"/>
-                                <include reference="2ER-YR-SqZ"/>
-                                <include reference="YQa-ZK-kb0"/>
-                                <include reference="v61-PJ-rlA"/>
                                 <include reference="4uX-Ul-KHl"/>
                                 <include reference="PeL-kg-dCf"/>
-                                <include reference="MLi-46-frb"/>
-                                <include reference="Ud3-ly-fsN"/>
-                                <include reference="sk8-73-oy3"/>
-                                <include reference="w94-AC-Ylq"/>
-                                <include reference="3e3-LX-kj4"/>
-                                <include reference="C7r-0L-NwZ"/>
-                                <include reference="OKt-VC-X07"/>
-                                <include reference="hLl-26-3sI"/>
-                                <include reference="fZe-0i-OaB"/>
-                                <include reference="7ha-sa-UOw"/>
-                                <include reference="Sm6-4L-c7O"/>
-                                <include reference="fZh-eH-Syl"/>
+                                <include reference="CoE-ZX-kv9"/>
                                 <include reference="CjV-Ed-LW9"/>
                                 <include reference="odD-jp-ulz"/>
                                 <include reference="K4g-Kg-3tS"/>
@@ -2249,7 +2238,27 @@
                                 <include reference="ZAi-RP-WWk"/>
                                 <include reference="iau-A4-pUi"/>
                                 <include reference="k8n-9a-AVQ"/>
-                                <include reference="CoE-ZX-kv9"/>
+                                <include reference="EfM-Vg-3O6"/>
+                                <include reference="Vkt-Tz-XKS"/>
+                                <include reference="MLi-46-frb"/>
+                                <include reference="Ud3-ly-fsN"/>
+                                <include reference="sk8-73-oy3"/>
+                                <include reference="w94-AC-Ylq"/>
+                                <include reference="fZh-eH-Syl"/>
+                                <include reference="7ha-sa-UOw"/>
+                                <include reference="Sm6-4L-c7O"/>
+                                <include reference="5oY-Eg-7a5"/>
+                                <include reference="9Jm-eB-iZI"/>
+                                <include reference="Av6-5x-Td8"/>
+                                <include reference="ZoS-9n-fnV"/>
+                                <include reference="fZe-0i-OaB"/>
+                                <include reference="3e3-LX-kj4"/>
+                                <include reference="C7r-0L-NwZ"/>
+                                <include reference="OKt-VC-X07"/>
+                                <include reference="hLl-26-3sI"/>
+                                <include reference="2ER-YR-SqZ"/>
+                                <include reference="YQa-ZK-kb0"/>
+                                <include reference="v61-PJ-rlA"/>
                             </mask>
                         </variation>
                     </view>
@@ -2371,20 +2380,20 @@ the Bitch Cup</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFO-Ua-AhE">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="bFO-Ua-AhE" secondAttribute="height" multiplier="1:1" id="TSs-wA-gZs"/>
                                     <constraint firstAttribute="width" constant="128" id="oOO-Ui-Iis"/>
+                                    <constraint firstAttribute="height" constant="128" id="smp-bA-fJm"/>
                                 </constraints>
                                 <state key="normal" image="rollButton.png"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="TSs-wA-gZs"/>
                                         <exclude reference="oOO-Ui-Iis"/>
+                                        <exclude reference="smp-bA-fJm"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="TSs-wA-gZs"/>
                                         <include reference="oOO-Ui-Iis"/>
+                                        <include reference="smp-bA-fJm"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -2435,7 +2444,6 @@ the Bitch Cup</string>
                             <constraint firstItem="Zls-jO-YHu" firstAttribute="centerY" secondItem="mcv-sm-fDf" secondAttribute="centerY" id="nm6-pZ-gXL"/>
                             <constraint firstItem="7sT-aI-iTM" firstAttribute="trailing" secondItem="mcv-sm-fDf" secondAttribute="trailingMargin" id="pCw-3J-Jwv"/>
                             <constraint firstItem="KCI-nh-dcm" firstAttribute="top" secondItem="Zls-jO-YHu" secondAttribute="bottom" constant="8" symbolic="YES" id="pdc-7u-Hdk"/>
-                            <constraint firstAttribute="bottom" secondItem="bFO-Ua-AhE" secondAttribute="bottom" constant="20" symbolic="YES" id="plj-6P-Opu"/>
                             <constraint firstItem="xEE-7O-ny5" firstAttribute="leading" secondItem="7if-Pd-RTX" secondAttribute="leading" id="s7k-AZ-oOp"/>
                             <constraint firstItem="7sT-aI-iTM" firstAttribute="top" secondItem="a28-Ng-mCG" secondAttribute="bottom" constant="8" symbolic="YES" id="s99-e8-Eoq"/>
                             <constraint firstItem="xEE-7O-ny5" firstAttribute="baseline" secondItem="Nkj-1a-0Vz" secondAttribute="baseline" id="tZM-5N-Gvq"/>
@@ -2455,34 +2463,33 @@ the Bitch Cup</string>
                                 <exclude reference="KCI-nh-dcm"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="c4a-i8-xmq"/>
+                                <exclude reference="4MP-4e-8km"/>
+                                <exclude reference="Ked-0t-t4V"/>
+                                <exclude reference="mW6-aW-V3w"/>
                                 <exclude reference="A8R-VW-aCA"/>
                                 <exclude reference="AN3-jQ-z2w"/>
                                 <exclude reference="DBm-h2-27r"/>
                                 <exclude reference="pCw-3J-Jwv"/>
                                 <exclude reference="s99-e8-Eoq"/>
-                                <exclude reference="JV4-09-ElC"/>
-                                <exclude reference="Q8P-RF-Iob"/>
-                                <exclude reference="Yde-Kp-MMy"/>
-                                <exclude reference="zJw-cd-wtD"/>
-                                <exclude reference="eQc-eW-FRj"/>
-                                <exclude reference="s7k-AZ-oOp"/>
-                                <exclude reference="tZM-5N-Gvq"/>
-                                <exclude reference="4MP-4e-8km"/>
-                                <exclude reference="Ked-0t-t4V"/>
-                                <exclude reference="mW6-aW-V3w"/>
-                                <exclude reference="XJX-bT-YxV"/>
-                                <exclude reference="cjL-pG-5ZM"/>
-                                <exclude reference="kcw-yS-VtV"/>
+                                <exclude reference="pdc-7u-Hdk"/>
+                                <exclude reference="zTr-Yu-FKg"/>
                                 <exclude reference="INd-GJ-oNA"/>
                                 <exclude reference="WwQ-Rc-STJ"/>
                                 <exclude reference="aM3-gQ-yKc"/>
                                 <exclude reference="Mxf-KY-8qR"/>
                                 <exclude reference="g26-NK-dVE"/>
                                 <exclude reference="nm6-pZ-gXL"/>
-                                <exclude reference="pdc-7u-Hdk"/>
-                                <exclude reference="zTr-Yu-FKg"/>
-                                <exclude reference="c4a-i8-xmq"/>
-                                <exclude reference="plj-6P-Opu"/>
+                                <exclude reference="JV4-09-ElC"/>
+                                <exclude reference="Q8P-RF-Iob"/>
+                                <exclude reference="Yde-Kp-MMy"/>
+                                <exclude reference="zJw-cd-wtD"/>
+                                <exclude reference="XJX-bT-YxV"/>
+                                <exclude reference="cjL-pG-5ZM"/>
+                                <exclude reference="kcw-yS-VtV"/>
+                                <exclude reference="eQc-eW-FRj"/>
+                                <exclude reference="s7k-AZ-oOp"/>
+                                <exclude reference="tZM-5N-Gvq"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -2498,39 +2505,41 @@ the Bitch Cup</string>
                                 <include reference="KCI-nh-dcm"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="c4a-i8-xmq"/>
+                                <include reference="4MP-4e-8km"/>
+                                <include reference="Ked-0t-t4V"/>
+                                <include reference="mW6-aW-V3w"/>
                                 <include reference="A8R-VW-aCA"/>
                                 <include reference="AN3-jQ-z2w"/>
                                 <include reference="DBm-h2-27r"/>
                                 <include reference="pCw-3J-Jwv"/>
                                 <include reference="s99-e8-Eoq"/>
-                                <include reference="JV4-09-ElC"/>
-                                <include reference="Q8P-RF-Iob"/>
-                                <include reference="Yde-Kp-MMy"/>
-                                <include reference="zJw-cd-wtD"/>
-                                <include reference="eQc-eW-FRj"/>
-                                <include reference="s7k-AZ-oOp"/>
-                                <include reference="tZM-5N-Gvq"/>
-                                <include reference="4MP-4e-8km"/>
-                                <include reference="Ked-0t-t4V"/>
-                                <include reference="mW6-aW-V3w"/>
-                                <include reference="XJX-bT-YxV"/>
-                                <include reference="cjL-pG-5ZM"/>
-                                <include reference="kcw-yS-VtV"/>
+                                <include reference="pdc-7u-Hdk"/>
+                                <include reference="zTr-Yu-FKg"/>
                                 <include reference="INd-GJ-oNA"/>
                                 <include reference="WwQ-Rc-STJ"/>
                                 <include reference="aM3-gQ-yKc"/>
                                 <include reference="Mxf-KY-8qR"/>
                                 <include reference="g26-NK-dVE"/>
                                 <include reference="nm6-pZ-gXL"/>
-                                <include reference="pdc-7u-Hdk"/>
-                                <include reference="zTr-Yu-FKg"/>
-                                <include reference="c4a-i8-xmq"/>
-                                <include reference="plj-6P-Opu"/>
+                                <include reference="JV4-09-ElC"/>
+                                <include reference="Q8P-RF-Iob"/>
+                                <include reference="Yde-Kp-MMy"/>
+                                <include reference="zJw-cd-wtD"/>
+                                <include reference="XJX-bT-YxV"/>
+                                <include reference="cjL-pG-5ZM"/>
+                                <include reference="kcw-yS-VtV"/>
+                                <include reference="eQc-eW-FRj"/>
+                                <include reference="s7k-AZ-oOp"/>
+                                <include reference="tZM-5N-Gvq"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="buttonHeight" destination="smp-bA-fJm" id="mP0-5B-KYT"/>
+                        <outlet property="buttonWidth" destination="oOO-Ui-Iis" id="fka-rN-aiT"/>
                         <outlet property="chosenTeam" destination="KCI-nh-dcm" id="cyV-1D-3ml"/>
+                        <outlet property="instructionsLabel" destination="7if-Pd-RTX" id="kXU-ek-3Em"/>
                         <outlet property="rollButton" destination="bFO-Ua-AhE" id="BR1-DI-XeO"/>
                         <outlet property="rolledNumber" destination="Zls-jO-YHu" id="asM-HN-eac"/>
                         <outlet property="team1Chance" destination="xEE-7O-ny5" id="oxF-Ch-9Tr"/>
@@ -2767,26 +2776,6 @@ the Bitch Cup</string>
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPe-vt-ICl">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="dPe-vt-ICl" secondAttribute="height" multiplier="1:1" id="v0j-vY-uyP"/>
-                                </constraints>
-                                <state key="normal" title="Stolen" image="stealButton.png"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="v0j-vY-uyP"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="v0j-vY-uyP"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="StolenButtonPressed:" destination="cNH-vc-q9s" eventType="touchUpInside" id="xGC-wM-Eig"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCy-3V-AcM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
@@ -2866,19 +2855,45 @@ the Bitch Cup</string>
                                     <action selector="cardInfoButtonPressed:" destination="cNH-vc-q9s" eventType="touchUpInside" id="5Mm-mK-v6y"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPe-vt-ICl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dPe-vt-ICl" secondAttribute="height" multiplier="1:1" id="v0j-vY-uyP"/>
+                                </constraints>
+                                <state key="normal" title="Stolen" image="stealButton.png"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="v0j-vY-uyP"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="v0j-vY-uyP"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="StolenButtonPressed:" destination="cNH-vc-q9s" eventType="touchUpInside" id="xGC-wM-Eig"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.45098039220000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="eGQ-9a-X15" firstAttribute="top" secondItem="TCy-3V-AcM" secondAttribute="bottom" constant="33" id="1sO-Cm-mol"/>
                             <constraint firstItem="cWp-3W-GHF" firstAttribute="top" secondItem="vJy-Nq-rR8" secondAttribute="bottom" constant="17" id="25o-27-7Bc"/>
-                            <constraint firstItem="eGQ-9a-X15" firstAttribute="top" secondItem="dPe-vt-ICl" secondAttribute="bottom" constant="51" id="7z6-J9-NiF"/>
-                            <constraint firstItem="NDR-eY-YzM" firstAttribute="top" secondItem="2Ag-PY-UdD" secondAttribute="bottom" constant="26" id="855-8e-IFe"/>
+                            <constraint firstItem="eGQ-9a-X15" firstAttribute="top" secondItem="dPe-vt-ICl" secondAttribute="bottom" constant="51" id="7z6-J9-NiF">
+                                <variation key="widthClass=compact" constant="43"/>
+                            </constraint>
+                            <constraint firstItem="NDR-eY-YzM" firstAttribute="top" secondItem="2Ag-PY-UdD" secondAttribute="bottom" constant="26" id="855-8e-IFe">
+                                <variation key="widthClass=compact" constant="18"/>
+                            </constraint>
                             <constraint firstItem="TCy-3V-AcM" firstAttribute="top" secondItem="2Ag-PY-UdD" secondAttribute="bottom" constant="8" id="BR8-d3-Mv1"/>
                             <constraint firstItem="nT9-kC-bC5" firstAttribute="leading" secondItem="TCy-3V-AcM" secondAttribute="trailing" id="EVJ-uM-W5v"/>
                             <constraint firstItem="Twy-tG-Sva" firstAttribute="top" secondItem="6Wt-p6-8Na" secondAttribute="bottom" constant="8" id="FZb-He-Pqt"/>
                             <constraint firstItem="dPe-vt-ICl" firstAttribute="width" secondItem="NDR-eY-YzM" secondAttribute="width" id="FhM-Ij-X4B"/>
                             <constraint firstItem="eGQ-9a-X15" firstAttribute="top" secondItem="nT9-kC-bC5" secondAttribute="bottom" constant="33" id="HXl-jK-bfG"/>
-                            <constraint firstItem="dPe-vt-ICl" firstAttribute="top" secondItem="2Ag-PY-UdD" secondAttribute="bottom" constant="26" id="IiM-LR-bI6"/>
+                            <constraint firstItem="dPe-vt-ICl" firstAttribute="top" secondItem="2Ag-PY-UdD" secondAttribute="bottom" constant="26" id="IiM-LR-bI6">
+                                <variation key="widthClass=compact" constant="18"/>
+                            </constraint>
                             <constraint firstItem="2Ag-PY-UdD" firstAttribute="centerX" secondItem="MXT-9q-nnt" secondAttribute="centerX" id="Iih-B8-BdW"/>
                             <constraint firstItem="dPe-vt-ICl" firstAttribute="leading" secondItem="nT9-kC-bC5" secondAttribute="trailing" id="Kh6-Xl-lsv"/>
                             <constraint firstItem="nT9-kC-bC5" firstAttribute="height" secondItem="TCy-3V-AcM" secondAttribute="height" id="PZN-JM-bSt"/>
@@ -2886,17 +2901,23 @@ the Bitch Cup</string>
                             <constraint firstItem="2Ag-PY-UdD" firstAttribute="width" secondItem="MXT-9q-nnt" secondAttribute="width" id="QhL-Tg-lgv"/>
                             <constraint firstItem="vJy-Nq-rR8" firstAttribute="leading" secondItem="MXT-9q-nnt" secondAttribute="leadingMargin" constant="28" id="RV2-dq-icR"/>
                             <constraint firstItem="Twy-tG-Sva" firstAttribute="trailing" secondItem="MXT-9q-nnt" secondAttribute="trailingMargin" id="RVU-Bl-GqL"/>
-                            <constraint firstItem="NDR-eY-YzM" firstAttribute="leading" secondItem="MXT-9q-nnt" secondAttribute="leadingMargin" constant="16" id="WmB-Kw-9Kj"/>
+                            <constraint firstItem="NDR-eY-YzM" firstAttribute="leading" secondItem="MXT-9q-nnt" secondAttribute="leadingMargin" constant="16" id="WmB-Kw-9Kj">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="vJy-Nq-rR8" firstAttribute="top" secondItem="Twy-tG-Sva" secondAttribute="bottom" constant="8" id="XMI-dr-TwF"/>
                             <constraint firstItem="2Ag-PY-UdD" firstAttribute="top" secondItem="cWp-3W-GHF" secondAttribute="bottom" constant="8" id="bg8-eV-bjf"/>
                             <constraint firstItem="TCy-3V-AcM" firstAttribute="leading" secondItem="NDR-eY-YzM" secondAttribute="trailing" id="dgY-XR-U3w"/>
                             <constraint firstItem="nT9-kC-bC5" firstAttribute="top" secondItem="2Ag-PY-UdD" secondAttribute="bottom" constant="8" id="gQd-4d-EBU"/>
                             <constraint firstItem="cWp-3W-GHF" firstAttribute="centerX" secondItem="MXT-9q-nnt" secondAttribute="centerX" id="lgF-S5-wMf"/>
                             <constraint firstItem="Twy-tG-Sva" firstAttribute="leading" secondItem="MXT-9q-nnt" secondAttribute="leadingMargin" id="nmN-da-JYq"/>
-                            <constraint firstItem="eGQ-9a-X15" firstAttribute="top" secondItem="NDR-eY-YzM" secondAttribute="bottom" constant="51" id="nrM-CH-DBz"/>
+                            <constraint firstItem="eGQ-9a-X15" firstAttribute="top" secondItem="NDR-eY-YzM" secondAttribute="bottom" constant="51" id="nrM-CH-DBz">
+                                <variation key="widthClass=compact" constant="43"/>
+                            </constraint>
                             <constraint firstItem="nT9-kC-bC5" firstAttribute="top" secondItem="2Ag-PY-UdD" secondAttribute="bottom" constant="8" id="pH8-C3-507"/>
                             <constraint firstItem="vJy-Nq-rR8" firstAttribute="top" secondItem="Twy-tG-Sva" secondAttribute="bottom" constant="8" id="t5x-Pu-KyD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dPe-vt-ICl" secondAttribute="trailing" constant="16" id="u8b-Nm-d47"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dPe-vt-ICl" secondAttribute="trailing" constant="16" id="u8b-Nm-d47">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="nT9-kC-bC5" firstAttribute="bottom" secondItem="TCy-3V-AcM" secondAttribute="bottom" id="uzS-CR-rBK"/>
                             <constraint firstItem="dPe-vt-ICl" firstAttribute="height" secondItem="NDR-eY-YzM" secondAttribute="height" id="xwf-bR-elX"/>
                         </constraints>
@@ -2905,11 +2926,11 @@ the Bitch Cup</string>
                                 <exclude reference="NDR-eY-YzM"/>
                                 <exclude reference="vJy-Nq-rR8"/>
                                 <exclude reference="2Ag-PY-UdD"/>
-                                <exclude reference="dPe-vt-ICl"/>
                                 <exclude reference="TCy-3V-AcM"/>
                                 <exclude reference="nT9-kC-bC5"/>
                                 <exclude reference="Twy-tG-Sva"/>
                                 <exclude reference="cWp-3W-GHF"/>
+                                <exclude reference="dPe-vt-ICl"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="1sO-Cm-mol"/>
@@ -2949,11 +2970,11 @@ the Bitch Cup</string>
                                 <include reference="NDR-eY-YzM"/>
                                 <include reference="vJy-Nq-rR8"/>
                                 <include reference="2Ag-PY-UdD"/>
-                                <include reference="dPe-vt-ICl"/>
                                 <include reference="TCy-3V-AcM"/>
                                 <include reference="nT9-kC-bC5"/>
                                 <include reference="Twy-tG-Sva"/>
                                 <include reference="cWp-3W-GHF"/>
+                                <include reference="dPe-vt-ICl"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="1sO-Cm-mol"/>
@@ -3237,12 +3258,12 @@ the Bitch Cup</string>
         <image name="wonButton.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="noI-aA-zmc"/>
-        <segue reference="V2y-wS-Nwm"/>
-        <segue reference="p5Q-78-JrR"/>
-        <segue reference="thj-IJ-Nqk"/>
-        <segue reference="ZuG-98-wPf"/>
         <segue reference="bD1-Yc-TD5"/>
-        <segue reference="gzv-XR-eZ9"/>
+        <segue reference="6nR-CD-D08"/>
+        <segue reference="p5Q-78-JrR"/>
+        <segue reference="V2y-wS-Nwm"/>
+        <segue reference="C9m-48-zjI"/>
+        <segue reference="noI-aA-zmc"/>
+        <segue reference="ZuG-98-wPf"/>
     </inferredMetricsTieBreakers>
 </document>
