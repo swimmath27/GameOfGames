@@ -40,7 +40,7 @@ class DrawCardViewController: UIViewController {
     func loadCurrentCard()
     {
         
-        whichCardLabel.text = "\(game.getCurrentCard()!.getShortDescription())!";
+        whichCardLabel.text = "\(game.getCurrentCard()!.shortDesc)!";
         
         let cardPic: UIImage? = UIImage(named: game.getCurrentCard()!.getFileName())
         if cardPic != nil
@@ -55,7 +55,7 @@ class DrawCardViewController: UIViewController {
         }
         
         
-        if game.getCurrentCard()!.isStealable()
+        if game.getCurrentCard()!.stealable
         {
             stolenButton.enabled = true
             stolenButton.alpha = 1.0;

@@ -135,11 +135,11 @@ class Card : Equatable
 
     }
     
-    private var rank:Int = 0;
-    private var suit:Suit = Suit.Joke;
-    private var stealable:Bool = false;
-    private var shortDesc:String = "";
-    private var longDesc:String = "";
+    private(set) var rank:Int = 0;
+    private(set) var suit:Suit = Suit.Joke;
+    private(set) var stealable:Bool = false;
+    private(set) var shortDesc:String = "";
+    private(set) var longDesc:String = "";
 
     convenience init (suit:Suit, rank:Int)
     {
@@ -171,18 +171,6 @@ class Card : Equatable
         case .Soul:
             return "a shot of liquor"
         }
-    }
-    
-    
-    func getShortDescription() -> String
-    {
-        return self.shortDesc;
-    }
-    
-    
-    func getLongDescription() -> String
-    {
-        return self.longDesc;
     }
     
     
@@ -220,13 +208,6 @@ class Card : Equatable
     {
         return "\(self.suit.simpleDescription())_\(self.rank).png"
     }
-    
-    
-    func isStealable() -> Bool
-    {
-        return stealable;
-    }
-
     
     func toString() -> String
     {

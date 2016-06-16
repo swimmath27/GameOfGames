@@ -19,7 +19,6 @@
 		55002AD91D124DC7008CC3A9 /* JosefinSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002ACE1D124DC7008CC3A9 /* JosefinSans-Italic.ttf */; };
 		55002ADA1D124DC7008CC3A9 /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002ACF1D124DC7008CC3A9 /* JosefinSans-Light.ttf */; };
 		55002ADB1D124DC7008CC3A9 /* JosefinSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55002AD01D124DC7008CC3A9 /* JosefinSans-LightItalic.ttf */; };
-		55002ADC1D124DC7008CC3A9 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55002AD11D124DC7008CC3A9 /* SIL Open Font License.txt */; };
 		550497EF1D0F22060019F490 /* addButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497EC1D0F22060019F490 /* addButton.png */; };
 		550497F01D0F22060019F490 /* quickstartButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497ED1D0F22060019F490 /* quickstartButton.png */; };
 		550497F11D0F22060019F490 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550497EE1D0F22060019F490 /* startButton.png */; };
@@ -47,7 +46,6 @@
 		550800831D08C1400022E984 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800821D08C1400022E984 /* logo.png */; };
 		550800851D08C68E0022E984 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550800841D08C68E0022E984 /* UIHelper.swift */; };
 		5508008A1D08CFF30022E984 /* Lobster_1.3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 550800881D08CFF30022E984 /* Lobster_1.3.otf */; };
-		5508008B1D08CFF30022E984 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 550800891D08CFF30022E984 /* SIL Open Font License.txt */; };
 		550800921D0B81A40022E984 /* failButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508008E1D0B81A40022E984 /* failButton.png */; };
 		550800931D0B81A40022E984 /* skipButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5508008F1D0B81A40022E984 /* skipButton.png */; };
 		550800941D0B81A40022E984 /* stealButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800901D0B81A40022E984 /* stealButton.png */; };
@@ -740,10 +738,8 @@
 				55002AC51D124B98008CC3A9 /* cardFrame.png in Resources */,
 				550800B61D0BA24E0022E984 /* Soul_15.png in Resources */,
 				55B43D851D022440002CCE78 /* Mind_13.png in Resources */,
-				55002ADC1D124DC7008CC3A9 /* SIL Open Font License.txt in Resources */,
 				55002AD91D124DC7008CC3A9 /* JosefinSans-Italic.ttf in Resources */,
 				550800B11D0BA24E0022E984 /* Mind_15.png in Resources */,
-				5508008B1D08CFF30022E984 /* SIL Open Font License.txt in Resources */,
 				55B43D8D1D022440002CCE78 /* Mind_5.png in Resources */,
 				55002ADA1D124DC7008CC3A9 /* JosefinSans-Light.ttf in Resources */,
 				55B43D6E1D022440002CCE78 /* Soul_13.png in Resources */,

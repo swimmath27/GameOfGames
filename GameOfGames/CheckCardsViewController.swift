@@ -64,7 +64,7 @@ class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let card : Card = game.getTeamCards(CheckCardsViewController.whichTeam)[row]
         
-        cell.textLabel?.text = card.getShortDescription();
+        cell.textLabel?.text = card.shortDesc;
         
         cell.textLabel?.textColor = UIColor.whiteColor();
         cell.textLabel?.font = UIFont(name: "Lobster1.3", size: 22)

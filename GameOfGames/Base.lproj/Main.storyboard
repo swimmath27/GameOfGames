@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nQ3-8M-cjk">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -13,6 +12,7 @@
             <string>JosefinSans</string>
         </mutableArray>
         <mutableArray key="Lobster_1.3.otf">
+            <string>Lobster1.3</string>
             <string>Lobster1.3</string>
             <string>Lobster1.3</string>
             <string>Lobster1.3</string>
@@ -1542,6 +1542,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardFrame.png" translatesAutoresizingMaskIntoConstraints="NO" id="oYm-9v-egP">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZO-rL-KYv">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -1560,6 +1563,15 @@
                                     <mask key="constraints">
                                         <include reference="jsY-OP-0TZ"/>
                                     </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGy-42-cx4">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="142" y="198" width="116" height="22"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duck Duck Grey Goose" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdz-tZ-dF1">
@@ -1581,9 +1593,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardFrame.png" translatesAutoresizingMaskIntoConstraints="NO" id="oYm-9v-egP">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.45098039215686275" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1591,54 +1600,63 @@
                             <constraint firstItem="oYm-9v-egP" firstAttribute="centerX" secondItem="5ZO-rL-KYv" secondAttribute="centerX" id="9Wx-dN-ggv"/>
                             <constraint firstItem="oYm-9v-egP" firstAttribute="leading" secondItem="B1F-6c-bmi" secondAttribute="leading" id="ACt-c7-tB7"/>
                             <constraint firstAttribute="bottomMargin" secondItem="oYm-9v-egP" secondAttribute="bottom" constant="-12" id="CVc-tp-a4X"/>
-                            <constraint firstItem="Zdz-tZ-dF1" firstAttribute="top" secondItem="QfG-I6-fGx" secondAttribute="bottom" constant="93" id="EmU-Ii-lTz"/>
-                            <constraint firstItem="5ZO-rL-KYv" firstAttribute="top" secondItem="Zdz-tZ-dF1" secondAttribute="bottom" constant="8" symbolic="YES" id="JfY-3G-ox9"/>
-                            <constraint firstItem="Qde-ja-iU1" firstAttribute="top" secondItem="5ZO-rL-KYv" secondAttribute="bottom" constant="97" id="MdP-CJ-OuL"/>
+                            <constraint firstItem="Zdz-tZ-dF1" firstAttribute="top" secondItem="QfG-I6-fGx" secondAttribute="bottom" constant="93" id="EmU-Ii-lTz">
+                                <variation key="widthClass=compact" constant="106"/>
+                            </constraint>
+                            <constraint firstItem="5ZO-rL-KYv" firstAttribute="top" secondItem="Zdz-tZ-dF1" secondAttribute="bottom" constant="8" symbolic="YES" id="JfY-3G-ox9">
+                                <variation key="widthClass=compact" constant="38"/>
+                            </constraint>
+                            <constraint firstItem="Qde-ja-iU1" firstAttribute="top" secondItem="5ZO-rL-KYv" secondAttribute="bottom" constant="97" id="MdP-CJ-OuL">
+                                <variation key="widthClass=compact" constant="90"/>
+                            </constraint>
                             <constraint firstItem="oYm-9v-egP" firstAttribute="top" secondItem="B1F-6c-bmi" secondAttribute="topMargin" constant="12" id="jtP-4f-QrE"/>
                             <constraint firstItem="Zdz-tZ-dF1" firstAttribute="leading" secondItem="5ZO-rL-KYv" secondAttribute="leading" id="uhl-Gf-6JF"/>
                             <constraint firstItem="Zdz-tZ-dF1" firstAttribute="trailing" secondItem="5ZO-rL-KYv" secondAttribute="trailing" id="uxv-KI-ZYM"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="5ZO-rL-KYv"/>
-                                <exclude reference="Zdz-tZ-dF1"/>
                                 <exclude reference="oYm-9v-egP"/>
+                                <exclude reference="5ZO-rL-KYv"/>
+                                <exclude reference="yGy-42-cx4"/>
+                                <exclude reference="Zdz-tZ-dF1"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="MdP-CJ-OuL"/>
+                                <exclude reference="JfY-3G-ox9"/>
+                                <exclude reference="EmU-Ii-lTz"/>
+                                <exclude reference="uhl-Gf-6JF"/>
+                                <exclude reference="uxv-KI-ZYM"/>
                                 <exclude reference="9BN-aq-LLH"/>
                                 <exclude reference="9Wx-dN-ggv"/>
                                 <exclude reference="ACt-c7-tB7"/>
                                 <exclude reference="CVc-tp-a4X"/>
                                 <exclude reference="jtP-4f-QrE"/>
-                                <exclude reference="EmU-Ii-lTz"/>
-                                <exclude reference="uhl-Gf-6JF"/>
-                                <exclude reference="uxv-KI-ZYM"/>
-                                <exclude reference="JfY-3G-ox9"/>
-                                <exclude reference="MdP-CJ-OuL"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="5ZO-rL-KYv"/>
-                                <include reference="Zdz-tZ-dF1"/>
                                 <include reference="oYm-9v-egP"/>
+                                <include reference="5ZO-rL-KYv"/>
+                                <include reference="yGy-42-cx4"/>
+                                <include reference="Zdz-tZ-dF1"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="MdP-CJ-OuL"/>
+                                <include reference="JfY-3G-ox9"/>
+                                <include reference="EmU-Ii-lTz"/>
+                                <include reference="uhl-Gf-6JF"/>
+                                <include reference="uxv-KI-ZYM"/>
                                 <include reference="9BN-aq-LLH"/>
                                 <include reference="9Wx-dN-ggv"/>
                                 <include reference="ACt-c7-tB7"/>
                                 <include reference="CVc-tp-a4X"/>
                                 <include reference="jtP-4f-QrE"/>
-                                <include reference="EmU-Ii-lTz"/>
-                                <include reference="uhl-Gf-6JF"/>
-                                <include reference="uxv-KI-ZYM"/>
-                                <include reference="JfY-3G-ox9"/>
-                                <include reference="MdP-CJ-OuL"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="cardNameLabel" destination="Zdz-tZ-dF1" id="aDI-fP-vg9"/>
+                        <outlet property="cardSuitLabel" destination="yGy-42-cx4" id="4CB-9r-JHD"/>
                         <outlet property="fullDescriptionLabel" destination="5ZO-rL-KYv" id="C6L-oy-cSz"/>
                         <segue destination="7XB-54-5GX" kind="show" identifier="CardInfoToCheckCards" animates="NO" id="pfp-VP-7PV"/>
                         <segue destination="cNH-vc-q9s" kind="show" identifier="CardInfoToDrawCard" animates="NO" id="UDe-Fb-QEH"/>
@@ -3198,12 +3216,12 @@ the Bitch Cup</string>
         <image name="wonButton.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pfp-VP-7PV"/>
-        <segue reference="S8H-xV-DjT"/>
-        <segue reference="noI-aA-zmc"/>
         <segue reference="ZuG-98-wPf"/>
-        <segue reference="UDe-Fb-QEH"/>
+        <segue reference="noI-aA-zmc"/>
+        <segue reference="V2y-wS-Nwm"/>
+        <segue reference="p5Q-78-JrR"/>
         <segue reference="6nR-CD-D08"/>
+        <segue reference="bD1-Yc-TD5"/>
         <segue reference="C9m-48-zjI"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,6 +21,8 @@ class CardInfoViewController: UIViewController
     
     @IBOutlet weak var fullDescriptionLabel: UILabel!
     
+    @IBOutlet weak var cardSuitLabel: UILabel!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -33,9 +35,11 @@ class CardInfoViewController: UIViewController
         
         cardNameLabel.lineBreakMode = .ByWordWrapping
         
-        cardNameLabel.text = CardInfoViewController.currentCard.getShortDescription();
+        cardNameLabel.text = CardInfoViewController.currentCard.shortDesc
         
-        fullDescriptionLabel.text = CardInfoViewController.currentCard.getLongDescription();
+        cardSuitLabel.text = CardInfoViewController.currentCard.suit.simpleDescription();
+        
+        fullDescriptionLabel.text = CardInfoViewController.currentCard.longDesc;
         
         self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
