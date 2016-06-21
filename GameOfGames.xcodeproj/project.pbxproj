@@ -72,6 +72,8 @@
 		556997C41D19E36B00AE7D4E /* questionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 556997C11D19E36B00AE7D4E /* questionButton.png */; };
 		556997C51D19E36B00AE7D4E /* trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = 556997C21D19E36B00AE7D4E /* trophy.png */; };
 		556997C61D19E36B00AE7D4E /* torch.png in Resources */ = {isa = PBXBuildFile; fileRef = 556997C31D19E36B00AE7D4E /* torch.png */; };
+		556997C81D19F0D500AE7D4E /* OlympicsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556997C71D19F0D500AE7D4E /* OlympicsInfoViewController.swift */; };
+		556997CA1D19F0E500AE7D4E /* GoGOlympicsRules.txt in Resources */ = {isa = PBXBuildFile; fileRef = 556997C91D19F0E500AE7D4E /* GoGOlympicsRules.txt */; };
 		556F2A341D0BDD4400797FA5 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 556F2A321D0BDD4400797FA5 /* backButton.png */; };
 		556F2A351D0BDD4400797FA5 /* nextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 556F2A331D0BDD4400797FA5 /* nextButton.png */; };
 		559ED9991D0607480040D36A /* WholeDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ED9981D0607480040D36A /* WholeDeckViewController.swift */; };
@@ -245,6 +247,8 @@
 		556997C11D19E36B00AE7D4E /* questionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = questionButton.png; path = UIImages/questionButton.png; sourceTree = "<group>"; };
 		556997C21D19E36B00AE7D4E /* trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trophy.png; path = UIImages/trophy.png; sourceTree = "<group>"; };
 		556997C31D19E36B00AE7D4E /* torch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = torch.png; path = UIImages/torch.png; sourceTree = "<group>"; };
+		556997C71D19F0D500AE7D4E /* OlympicsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlympicsInfoViewController.swift; sourceTree = "<group>"; };
+		556997C91D19F0E500AE7D4E /* GoGOlympicsRules.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GoGOlympicsRules.txt; sourceTree = "<group>"; };
 		556F2A321D0BDD4400797FA5 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButton.png; path = UIImages/backButton.png; sourceTree = "<group>"; };
 		556F2A331D0BDD4400797FA5 /* nextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nextButton.png; path = UIImages/nextButton.png; sourceTree = "<group>"; };
 		559ED9981D0607480040D36A /* WholeDeckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WholeDeckViewController.swift; sourceTree = "<group>"; };
@@ -542,6 +546,7 @@
 		55D3FAF91CFE0E30006C0A8E = {
 			isa = PBXGroup;
 			children = (
+				556997C91D19F0E500AE7D4E /* GoGOlympicsRules.txt */,
 				550497F41D1053F40019F490 /* AppIcons */,
 				550800861D08CF7E0022E984 /* Fonts */,
 				550800791D08A8FA0022E984 /* UIImages */,
@@ -598,6 +603,7 @@
 				55B43CBB1D0210FE002CCE78 /* CardInfoViewController.swift */,
 				556997BD1D19E27B00AE7D4E /* StartOlympicsViewController.swift */,
 				556997BF1D19E28700AE7D4E /* EndOlympicsViewController.swift */,
+				556997C71D19F0D500AE7D4E /* OlympicsInfoViewController.swift */,
 			);
 			path = GameOfGames;
 			sourceTree = "<group>";
@@ -790,6 +796,7 @@
 				55B43D671D022440002CCE78 /* Chance_6.png in Resources */,
 				55B43D7F1D022440002CCE78 /* Body_7.png in Resources */,
 				550800811D08A9A30022E984 /* playButton.png in Resources */,
+				556997CA1D19F0E500AE7D4E /* GoGOlympicsRules.txt in Resources */,
 				55002AD31D124DC7008CC3A9 /* JosefinSans-SemiBold.ttf in Resources */,
 				550800B41D0BA24E0022E984 /* Mind_18.png in Resources */,
 				55B43D641D022440002CCE78 /* Chance_9.png in Resources */,
@@ -1020,6 +1027,7 @@
 				559ED99D1D0609E80040D36A /* ImageCollectionViewCell.swift in Sources */,
 				55D3FB421CFE57E2006C0A8E /* DrawCardViewController.swift in Sources */,
 				550800851D08C68E0022E984 /* UIHelper.swift in Sources */,
+				556997C81D19F0D500AE7D4E /* OlympicsInfoViewController.swift in Sources */,
 				55D3FB501CFFA3CD006C0A8E /* CheckCardsViewController.swift in Sources */,
 				559ED9991D0607480040D36A /* WholeDeckViewController.swift in Sources */,
 				556997C01D19E28700AE7D4E /* EndOlympicsViewController.swift in Sources */,
