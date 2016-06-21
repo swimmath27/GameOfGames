@@ -30,6 +30,9 @@ class OlympicsInfoViewController: UIViewController
         infoTextView.font = UIFont(name: "JosefinSans", size: 20)
         infoTextView.textColor = UIColor.whiteColor();
         
+        
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        
     }
 
     override func didReceiveMemoryWarning() {
