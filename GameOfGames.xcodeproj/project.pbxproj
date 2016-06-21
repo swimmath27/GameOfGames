@@ -67,6 +67,11 @@
 		550800B51D0BA24E0022E984 /* Soul_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A41D0BA24E0022E984 /* Soul_14.png */; };
 		550800B61D0BA24E0022E984 /* Soul_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A51D0BA24E0022E984 /* Soul_15.png */; };
 		550800B71D0BA24E0022E984 /* Soul_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A61D0BA24E0022E984 /* Soul_16.png */; };
+		556997BE1D19E27B00AE7D4E /* StartOlympicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556997BD1D19E27B00AE7D4E /* StartOlympicsViewController.swift */; };
+		556997C01D19E28700AE7D4E /* EndOlympicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556997BF1D19E28700AE7D4E /* EndOlympicsViewController.swift */; };
+		556997C41D19E36B00AE7D4E /* questionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 556997C11D19E36B00AE7D4E /* questionButton.png */; };
+		556997C51D19E36B00AE7D4E /* trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = 556997C21D19E36B00AE7D4E /* trophy.png */; };
+		556997C61D19E36B00AE7D4E /* torch.png in Resources */ = {isa = PBXBuildFile; fileRef = 556997C31D19E36B00AE7D4E /* torch.png */; };
 		556F2A341D0BDD4400797FA5 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 556F2A321D0BDD4400797FA5 /* backButton.png */; };
 		556F2A351D0BDD4400797FA5 /* nextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 556F2A331D0BDD4400797FA5 /* nextButton.png */; };
 		559ED9991D0607480040D36A /* WholeDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ED9981D0607480040D36A /* WholeDeckViewController.swift */; };
@@ -235,6 +240,11 @@
 		550800A41D0BA24E0022E984 /* Soul_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_14.png; path = CardImages/Soul_14.png; sourceTree = "<group>"; };
 		550800A51D0BA24E0022E984 /* Soul_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_15.png; path = CardImages/Soul_15.png; sourceTree = "<group>"; };
 		550800A61D0BA24E0022E984 /* Soul_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_16.png; path = CardImages/Soul_16.png; sourceTree = "<group>"; };
+		556997BD1D19E27B00AE7D4E /* StartOlympicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartOlympicsViewController.swift; sourceTree = "<group>"; };
+		556997BF1D19E28700AE7D4E /* EndOlympicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndOlympicsViewController.swift; sourceTree = "<group>"; };
+		556997C11D19E36B00AE7D4E /* questionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = questionButton.png; path = UIImages/questionButton.png; sourceTree = "<group>"; };
+		556997C21D19E36B00AE7D4E /* trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trophy.png; path = UIImages/trophy.png; sourceTree = "<group>"; };
+		556997C31D19E36B00AE7D4E /* torch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = torch.png; path = UIImages/torch.png; sourceTree = "<group>"; };
 		556F2A321D0BDD4400797FA5 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButton.png; path = UIImages/backButton.png; sourceTree = "<group>"; };
 		556F2A331D0BDD4400797FA5 /* nextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nextButton.png; path = UIImages/nextButton.png; sourceTree = "<group>"; };
 		559ED9981D0607480040D36A /* WholeDeckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WholeDeckViewController.swift; sourceTree = "<group>"; };
@@ -410,6 +420,9 @@
 		550800791D08A8FA0022E984 /* UIImages */ = {
 			isa = PBXGroup;
 			children = (
+				556997C11D19E36B00AE7D4E /* questionButton.png */,
+				556997C21D19E36B00AE7D4E /* trophy.png */,
+				556997C31D19E36B00AE7D4E /* torch.png */,
 				55002AC41D124B98008CC3A9 /* cardFrame.png */,
 				5504984F1D10ADED0019F490 /* viewCardsButton.png */,
 				550498501D10ADED0019F490 /* rollButton.png */,
@@ -583,6 +596,8 @@
 				55D3FB4F1CFFA3CD006C0A8E /* CheckCardsViewController.swift */,
 				55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */,
 				55B43CBB1D0210FE002CCE78 /* CardInfoViewController.swift */,
+				556997BD1D19E27B00AE7D4E /* StartOlympicsViewController.swift */,
+				556997BF1D19E28700AE7D4E /* EndOlympicsViewController.swift */,
 			);
 			path = GameOfGames;
 			sourceTree = "<group>";
@@ -780,6 +795,7 @@
 				55B43D641D022440002CCE78 /* Chance_9.png in Resources */,
 				55B43D721D022440002CCE78 /* Soul_8.png in Resources */,
 				55B43D5F1D022440002CCE78 /* Soul_10.png in Resources */,
+				556997C61D19E36B00AE7D4E /* torch.png in Resources */,
 				550800AF1D0BA24E0022E984 /* Chance_20.png in Resources */,
 				550498121D1068160019F490 /* background.png in Resources */,
 				5504980A1D1054010019F490 /* GoG_Icon_iphone_spotlight_2x_80px.png in Resources */,
@@ -810,11 +826,13 @@
 				55B43D871D022440002CCE78 /* Mind_11.png in Resources */,
 				55B43D801D022440002CCE78 /* Body_6.png in Resources */,
 				550497EF1D0F22060019F490 /* addButton.png in Resources */,
+				556997C51D19E36B00AE7D4E /* trophy.png in Resources */,
 				550800AA1D0BA24E0022E984 /* Chance_15.png in Resources */,
 				550800AD1D0BA24E0022E984 /* Chance_18.png in Resources */,
 				55B43D621D022440002CCE78 /* Chance_11.png in Resources */,
 				55D3FB121CFE0E30006C0A8E /* LaunchScreen.storyboard in Resources */,
 				550800A71D0BA24E0022E984 /* Body_14.png in Resources */,
+				556997C41D19E36B00AE7D4E /* questionButton.png in Resources */,
 				55B43D861D022440002CCE78 /* Mind_12.png in Resources */,
 				55B43D691D022440002CCE78 /* Chance_4.png in Resources */,
 				550498051D1054010019F490 /* GoG_Icon_ipad_pro_2x_167px.png in Resources */,
@@ -1004,7 +1022,9 @@
 				550800851D08C68E0022E984 /* UIHelper.swift in Sources */,
 				55D3FB501CFFA3CD006C0A8E /* CheckCardsViewController.swift in Sources */,
 				559ED9991D0607480040D36A /* WholeDeckViewController.swift in Sources */,
+				556997C01D19E28700AE7D4E /* EndOlympicsViewController.swift in Sources */,
 				55D2E5FA1CFFBA2E004768FE /* RoundRouletteViewController.swift in Sources */,
+				556997BE1D19E27B00AE7D4E /* StartOlympicsViewController.swift in Sources */,
 				55B43CBA1D020C6B002CCE78 /* HttpDownloader.swift in Sources */,
 				55D3FB401CFE54F5006C0A8E /* PlayGameViewController.swift in Sources */,
 				55D3FB061CFE0E30006C0A8E /* AppDelegate.swift in Sources */,

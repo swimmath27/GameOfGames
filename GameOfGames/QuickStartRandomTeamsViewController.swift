@@ -84,14 +84,14 @@ class QuickStartRandomTeamsViewController: UIViewController, UITableViewDataSour
     {
         if shuffled
         {
-            performSegueWithIdentifier("QuickStartRandomizeTeamsToPlayOlympics", sender: nil)
+            performSegueWithIdentifier("QuickStartRandomizeTeamsToStartOlympics", sender: nil)
         }
         else
         {
             alertToConfirm("Are you sure you want to continue without shuffling teams?",
                            action:
                 {
-                    action in self.performSegueWithIdentifier("QuickStartRandomizeTeamsToPlayOlympics", sender: nil)
+                    action in self.performSegueWithIdentifier("QuickStartRandomizeTeamsToStartOlympics", sender: nil)
             })
         }
     }

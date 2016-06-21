@@ -57,7 +57,7 @@ class NameTeamsViewController: UIViewController
                 if currentTeam > 2
                 {
                     // both teams have been named now
-                    performSegueWithIdentifier("NameTeamsToPlayOlympics", sender: nil)
+                    performSegueWithIdentifier("NameTeamsToStartOlympics", sender: nil)
                 }
                 else
                 {

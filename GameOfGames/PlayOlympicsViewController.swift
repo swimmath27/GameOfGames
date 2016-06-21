@@ -71,15 +71,8 @@ class PlayOlympicsViewController: UIViewController {
         }
         //team 1 is automatically set to go first so we don't have to update it
         
-        if game.wasQuickStarted()
-        {
-            //skip choosing team order if the game was quick started
-            performSegueWithIdentifier("PlayOlympicsToPlayGame", sender: nil)
-        }
-        else
-        {
-            performSegueWithIdentifier("PlayOlympicsToChooseTeamOrder", sender: nil)
-        }
+        performSegueWithIdentifier("PlayOlympicsToEndOlympics", sender: nil)
+        
     }
     
     func alert(s : String)
