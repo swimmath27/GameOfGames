@@ -131,26 +131,26 @@ class Card : Equatable
                 return "This shouldn't be possible"
             }
         }
-
-
     }
     
     private(set) var rank:Int = 0;
     private(set) var suit:Suit = Suit.Joke;
     private(set) var stealable:Bool = false;
+    private(set) var playable:Bool = false;
     private(set) var shortDesc:String = "";
     private(set) var longDesc:String = "";
 
     convenience init (suit:Suit, rank:Int)
     {
-        self.init(suit: suit, rank: rank, stealable: false, shortDescription: "", longDescription: "");
+        self.init(suit: suit, rank: rank, stealable: false, playable: false, shortDescription: "", longDescription: "");
     }
     
-    init (suit:Suit, rank:Int, stealable:Bool, shortDescription:String, longDescription:String)
+    init (suit:Suit, rank:Int, stealable:Bool, playable: Bool, shortDescription:String, longDescription:String)
     {
         self.suit = suit;
         self.rank = rank;
         self.stealable = stealable;
+        self.playable = playable;
         self.shortDesc = shortDescription;
         self.longDesc = longDescription;
     }
@@ -215,6 +215,7 @@ class Card : Equatable
     }
 }
 
+//Equatable
 func ==(lhs:Card, rhs:Card) -> Bool
 {
     return lhs.rank == rhs.rank && lhs.suit == rhs.suit

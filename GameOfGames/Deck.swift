@@ -11,7 +11,12 @@ import CSwiftV
 
 class Deck
 {
-    private static let CARDS_URL:String = "http://nathanand.co/wp-content/uploads/2016/06/Game-of-Games-Cards.csv"
+    //old one with no headers
+    //private static let CARDS_URL:String = "http://nathanand.co/wp-content/uploads/2016/06/Game-of-Games-Cards.csv"
+    
+    //new one with headers and a 5th column, "Playable"
+    private static let CARDS_URL:String = "http://nathanand.co/wp-content/uploads/2016/06/Game-of-Games-Cards-1.csv"
+    
     private static let CARDS_DEFAULT_NAME:String = "Game-of-Games-Cards-Default.csv"
     private static let CARDS_DOWNLOAD_NAME:String = "Game-of-Games-Cards.csv"
     
@@ -40,6 +45,7 @@ class Deck
                     self.loadCards(fileURL.path!);
                 }
                 self.shuffle();
+                Game.instance.readyToGo = true;
             })
     }
     
@@ -72,14 +78,29 @@ class Deck
             
                 //its being mean when i leave out separator, but the default is "," so i put that in
                 // the header is left out of the file because it was causing problems before with the stupid parser
-                let csv = CSwiftV(string: content.description, separator: ",", headers: ["Type","Name","Stealable","Description"]);
+                //let csv = CSwiftV(string: content.description, separator: ",", headers: ["Type","Name","Stealable","Description"]);
+                
+                //update: header is back in
+                let csv = CSwiftV(string: content.description);
+                
+                let headers = csv.headers;
+                
+                if (!headers.contains("Type") || !headers.contains("Title") || !headers.contains("Stealable") || !headers.contains("Playable") || !headers.contains("Description"))
+                {
+                    print("error, file doesn't have correct headers, using default")
+                    
+                    let bundleURL = NSBundle.mainBundle().bundleURL
+                    let fileURL = bundleURL.URLByAppendingPathComponent(Deck.CARDS_DEFAULT_NAME)
+                    
+                    return self.parseCSV(fileURL.path!, encoding: NSUTF8StringEncoding, error: nil);
+                }
                 
                 //print(csv.headers);
-                for row in csv.rows
+                for row in csv.keyedRows!
                 {
                     var suit:Card.Suit = Card.Suit.Joke;
                     var rank:Int = 0;
-                    switch row[0]
+                    switch row["Type"]!
                     {
                     case "M":
                         mindCount+=1
@@ -100,8 +121,10 @@ class Deck
                     default:break
                     }
                     
-                    let stealable:Bool = row[2] == "Y";
-                    ret.append(Card(suit: suit, rank: rank, stealable: stealable, shortDescription: row[1], longDescription: row[3]))
+                    let stealable:Bool = row["Stealable"] == "Y";
+                    let playable:Bool = row["Playable"] == "Y";
+                    
+                    ret.append(Card(suit: suit, rank: rank, stealable: stealable, playable: playable, shortDescription: row["Title"]!, longDescription: row["Description"]!))
                     //print(row[1]);
                     
                     //type - values[0]

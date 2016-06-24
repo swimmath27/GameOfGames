@@ -70,6 +70,12 @@ class HttpDownloader
                                 completion(path: destinationUrl.path!, error:error)
                             }
                         }
+                        else
+                        {
+                            print("error downloading file")
+                            let error = NSError(domain:"Error downloading file", code:1001, userInfo:nil)
+                            completion(path: "", error:error)
+                        }
                     }
                 }
                 else {
@@ -148,6 +154,12 @@ class HttpDownloader
                                     let error = NSError(domain:"Error saving file", code:1001, userInfo:nil)
                                     completion(path: destinationUrl.path!, error:error)
                                 }
+                            }
+                            else
+                            {
+                                print("error downloading file")
+                                let error = NSError(domain:"Error downloading file", code:1001, userInfo:nil)
+                                completion(path: "", error:error)
                             }
                         }
                     }

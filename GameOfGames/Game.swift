@@ -23,7 +23,7 @@ class Game
     internal static let RULEBOOK_URL = "http://nathanand.co/wp-content/uploads/2016/05/The-Game-of-Games-Rulebook.pdf";
     
     ///////////////////////////////////////////////////////////
-    private static var singleton: Game = Game();
+    private(set) static var instance: Game = Game();
     
     private var deck: Deck = Deck();
     
@@ -52,17 +52,23 @@ class Game
     
     private var quickStarted = false;
     
+    //uh... "internal" means public?
+    internal var messageTitle:String  = "";
+    internal var message:String = "";
     
-    internal var messageTitle = "";
-    internal var message = "";
+    internal var readyToGo:Bool = false;
     
     private init()
+    { }
+    
+    class func load(completion: ()->())
     {
+        
     }
     
     class func getInstance() -> Game
     {
-        return singleton;
+        return instance;
     }
     
     func getOrderedCards() -> [Card]

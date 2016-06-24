@@ -1338,25 +1338,30 @@
                                 <exclude reference="taL-U0-fYB"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="6lZ-an-cxD"/>
+                                <exclude reference="KZC-f4-cNV"/>
+                                <exclude reference="Xv0-re-KBB"/>
+                                <exclude reference="s5J-FP-Yta"/>
+                                <exclude reference="LKf-YR-Mgm"/>
+                                <exclude reference="OC7-eY-Tke"/>
+                                <exclude reference="cmk-xl-JAk"/>
+                                <exclude reference="KBQ-ui-qSm"/>
+                                <exclude reference="PLk-Mz-BIN"/>
+                                <exclude reference="Qwb-lp-Xuf"/>
                                 <exclude reference="6KP-Sf-cwV"/>
                                 <exclude reference="7iv-fq-Bb2"/>
                                 <exclude reference="Z6k-d1-oIz"/>
                                 <exclude reference="iea-nl-hhC"/>
                                 <exclude reference="tIe-hk-dv7"/>
-                                <exclude reference="1k0-Bp-dMx"/>
-                                <exclude reference="Qqg-PD-seU"/>
-                                <exclude reference="YWu-X2-Xj4"/>
-                                <exclude reference="KBQ-ui-qSm"/>
-                                <exclude reference="PLk-Mz-BIN"/>
-                                <exclude reference="Qwb-lp-Xuf"/>
+                                <exclude reference="EFa-bl-Jqr"/>
+                                <exclude reference="Y7e-yY-LZe"/>
                                 <exclude reference="WGc-hX-0uB"/>
                                 <exclude reference="b7h-ev-Vp0"/>
                                 <exclude reference="sT7-ke-FW9"/>
-                                <exclude reference="EFa-bl-Jqr"/>
-                                <exclude reference="Y7e-yY-LZe"/>
-                                <exclude reference="LKf-YR-Mgm"/>
-                                <exclude reference="OC7-eY-Tke"/>
-                                <exclude reference="cmk-xl-JAk"/>
+                                <exclude reference="1k0-Bp-dMx"/>
+                                <exclude reference="Qqg-PD-seU"/>
+                                <exclude reference="YWu-X2-Xj4"/>
+                                <exclude reference="6X6-Wk-DHC"/>
                                 <exclude reference="JWh-Kg-oLD"/>
                                 <exclude reference="SU0-hF-CMX"/>
                                 <exclude reference="fO3-w5-E1t"/>
@@ -1365,11 +1370,6 @@
                                 <exclude reference="Dwe-mx-HvD"/>
                                 <exclude reference="IvR-rQ-XuK"/>
                                 <exclude reference="TbR-90-9FG"/>
-                                <exclude reference="6lZ-an-cxD"/>
-                                <exclude reference="KZC-f4-cNV"/>
-                                <exclude reference="6X6-Wk-DHC"/>
-                                <exclude reference="Xv0-re-KBB"/>
-                                <exclude reference="s5J-FP-Yta"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1387,25 +1387,30 @@
                                 <include reference="taL-U0-fYB"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="6lZ-an-cxD"/>
+                                <include reference="KZC-f4-cNV"/>
+                                <include reference="Xv0-re-KBB"/>
+                                <include reference="s5J-FP-Yta"/>
+                                <include reference="LKf-YR-Mgm"/>
+                                <include reference="OC7-eY-Tke"/>
+                                <include reference="cmk-xl-JAk"/>
+                                <include reference="KBQ-ui-qSm"/>
+                                <include reference="PLk-Mz-BIN"/>
+                                <include reference="Qwb-lp-Xuf"/>
                                 <include reference="6KP-Sf-cwV"/>
                                 <include reference="7iv-fq-Bb2"/>
                                 <include reference="Z6k-d1-oIz"/>
                                 <include reference="iea-nl-hhC"/>
                                 <include reference="tIe-hk-dv7"/>
-                                <include reference="1k0-Bp-dMx"/>
-                                <include reference="Qqg-PD-seU"/>
-                                <include reference="YWu-X2-Xj4"/>
-                                <include reference="KBQ-ui-qSm"/>
-                                <include reference="PLk-Mz-BIN"/>
-                                <include reference="Qwb-lp-Xuf"/>
+                                <include reference="EFa-bl-Jqr"/>
+                                <include reference="Y7e-yY-LZe"/>
                                 <include reference="WGc-hX-0uB"/>
                                 <include reference="b7h-ev-Vp0"/>
                                 <include reference="sT7-ke-FW9"/>
-                                <include reference="EFa-bl-Jqr"/>
-                                <include reference="Y7e-yY-LZe"/>
-                                <include reference="LKf-YR-Mgm"/>
-                                <include reference="OC7-eY-Tke"/>
-                                <include reference="cmk-xl-JAk"/>
+                                <include reference="1k0-Bp-dMx"/>
+                                <include reference="Qqg-PD-seU"/>
+                                <include reference="YWu-X2-Xj4"/>
+                                <include reference="6X6-Wk-DHC"/>
                                 <include reference="JWh-Kg-oLD"/>
                                 <include reference="SU0-hF-CMX"/>
                                 <include reference="fO3-w5-E1t"/>
@@ -1414,11 +1419,6 @@
                                 <include reference="Dwe-mx-HvD"/>
                                 <include reference="IvR-rQ-XuK"/>
                                 <include reference="TbR-90-9FG"/>
-                                <include reference="6lZ-an-cxD"/>
-                                <include reference="KZC-f4-cNV"/>
-                                <include reference="6X6-Wk-DHC"/>
-                                <include reference="Xv0-re-KBB"/>
-                                <include reference="s5J-FP-Yta"/>
                             </mask>
                         </variation>
                     </view>
@@ -3453,26 +3453,6 @@ the Bitch Cup</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMU-VS-Yej">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="TMU-VS-Yej" secondAttribute="height" multiplier="80:17" id="Fh3-dW-EmH"/>
-                                </constraints>
-                                <state key="normal" title="Click to Play" image="playButton.png"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Fh3-dW-EmH"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Fh3-dW-EmH"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="9pv-A4-QxB" kind="presentation" id="paI-TE-jpe"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVU-ht-Iyi">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
@@ -3490,7 +3470,7 @@ the Bitch Cup</string>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="bbP-wJ-Eqh" kind="show" id="dN5-zG-pF1"/>
+                                    <action selector="cardsButtonPressed:" destination="nQ3-8M-cjk" eventType="touchUpInside" id="flh-Lv-tH0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOv-vo-A7b">
@@ -3564,6 +3544,26 @@ the Bitch Cup</string>
                                     </mask>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMU-VS-Yej">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TMU-VS-Yej" secondAttribute="height" multiplier="80:17" id="Fh3-dW-EmH"/>
+                                </constraints>
+                                <state key="normal" title="Click to Play" image="playButton.png"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fh3-dW-EmH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Fh3-dW-EmH"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="nQ3-8M-cjk" eventType="touchUpInside" id="S54-7h-W5W"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.45098039215686275" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -3587,10 +3587,10 @@ the Bitch Cup</string>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="TMU-VS-Yej"/>
                                 <exclude reference="nVU-ht-Iyi"/>
                                 <exclude reference="yOv-vo-A7b"/>
                                 <exclude reference="8vV-xY-ppN"/>
+                                <exclude reference="TMU-VS-Yej"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="WyH-BN-6dh"/>
@@ -3614,10 +3614,10 @@ the Bitch Cup</string>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="TMU-VS-Yej"/>
                                 <include reference="nVU-ht-Iyi"/>
                                 <include reference="yOv-vo-A7b"/>
                                 <include reference="8vV-xY-ppN"/>
+                                <include reference="TMU-VS-Yej"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="WyH-BN-6dh"/>
@@ -3644,6 +3644,8 @@ the Bitch Cup</string>
                         <outlet property="cardsButton" destination="nVU-ht-Iyi" id="R0l-7m-0WS"/>
                         <outlet property="playButton" destination="TMU-VS-Yej" id="Gc2-04-0jS"/>
                         <outlet property="rulebookButton" destination="yOv-vo-A7b" id="k0b-Fd-JC8"/>
+                        <segue destination="9pv-A4-QxB" kind="show" identifier="StartScreenToNumPlayers" id="wQL-ry-PPx"/>
+                        <segue destination="bbP-wJ-Eqh" kind="show" identifier="StartScreenToWholeDeck" id="Gqy-Df-jlR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buy-yP-oHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3675,10 +3677,10 @@ the Bitch Cup</string>
         <image name="wonButton.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="E8k-bo-GTQ"/>
         <segue reference="TWS-dK-L4k"/>
+        <segue reference="E8k-bo-GTQ"/>
         <segue reference="gzv-XR-eZ9"/>
-        <segue reference="noI-aA-zmc"/>
+        <segue reference="Gqy-Df-jlR"/>
         <segue reference="S8H-xV-DjT"/>
         <segue reference="pfp-VP-7PV"/>
         <segue reference="UDe-Fb-QEH"/>

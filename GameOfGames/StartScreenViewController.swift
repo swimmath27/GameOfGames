@@ -21,6 +21,12 @@ class StartScreenViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //maybe have an activity indicator here to let them know that its still loading
+        //the problem with that is that i can't figure a way to tell the deck
+        //how to stop the activity indicator animation
+        //because theres no way to get a method into the deck constructor
+        
+        //maybe have a public static variable that we set to the local one?
         
 //        for familyName in UIFont.familyNames() {
 //            print("\n-- \(familyName) \n")
@@ -28,7 +34,6 @@ class StartScreenViewController: UIViewController
 //                print(fontName)
 //            }
 //        }
-        
         
         self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
     }
@@ -39,7 +44,31 @@ class StartScreenViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func cardsButtonPressed(sender: AnyObject)
+    {
+        if (game.readyToGo)
+        {
+            performSegueWithIdentifier("StartScreenToWholeDeck", sender: nil)
+        }
+        else
+        {
+            alert("Alert", msg: "The game is still loading necessary files, please wait")
+        }
 
+    }
+
+    @IBAction func playButtonPressed(sender: AnyObject)
+    {
+        // uhhhh im not sure how to do thread compliant stuff -> it could be ready and not notice yet?
+        if (game.readyToGo)
+        {
+            performSegueWithIdentifier("StartScreenToNumPlayers", sender: nil)
+        }
+        else
+        {
+            alert("Alert", msg: "The game is still loading necessary files, please wait")
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -49,7 +78,7 @@ class StartScreenViewController: UIViewController
         // Pass the selected object to the new view controller.
     }
     */
-
+    
     @IBAction func rulebookButtonPressed(sender: AnyObject)
     {
         if let url = NSURL(string: Game.RULEBOOK_URL)
@@ -57,4 +86,21 @@ class StartScreenViewController: UIViewController
             UIApplication.sharedApplication().openURL(url)
         }
     }
+    
+    
+    func alert(title: String, msg : String)
+    {
+        let popup = UIAlertController(title: title,
+                                      message: msg,
+                                      preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .Cancel, handler: nil)
+        
+        popup.addAction(cancelAction)
+        self.presentViewController(popup, animated: true,
+                                   completion: nil)
+        
+    }
+
 }
