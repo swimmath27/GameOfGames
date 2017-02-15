@@ -10,7 +10,7 @@ import UIKit
 
 class CardInfoViewController: UIViewController
 {
-    static var currentCard:Card = Card(suit: Card.Suit.Joke, rank: 0);
+    static var currentCard:Card = Card(suit: Card.Suit.joke, rank: 0);
     
     //whether or not this was initialized from draw card view controller
     //if true -> go back to draw card view controller
@@ -33,7 +33,7 @@ class CardInfoViewController: UIViewController
 //        fullDescriptionLabel.numberOfLines = 0
         //i did the above in the storyboard but leaving it here for reference
         
-        cardNameLabel.lineBreakMode = .ByWordWrapping
+        cardNameLabel.lineBreakMode = .byWordWrapping
         
         cardNameLabel.text = CardInfoViewController.currentCard.shortDesc
         
@@ -41,7 +41,7 @@ class CardInfoViewController: UIViewController
         
         fullDescriptionLabel.text = CardInfoViewController.currentCard.longDesc;
         
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
     
     override func didReceiveMemoryWarning()
@@ -51,7 +51,7 @@ class CardInfoViewController: UIViewController
     }
     
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         backButtonPressed(self);
     }
@@ -67,12 +67,12 @@ class CardInfoViewController: UIViewController
      }
      */
     
-    @IBAction func backButtonPressed(sender: AnyObject)
+    @IBAction func backButtonPressed(_ sender: AnyObject)
     {
         
         let segueID:String = "CardInfoTo"+CardInfoViewController.from; // back to where we came from
         
-        performSegueWithIdentifier(segueID, sender: nil)
+        performSegue(withIdentifier: segueID, sender: nil)
        
     }
     

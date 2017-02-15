@@ -13,7 +13,7 @@ class StartOlympicsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
 
     override func didReceiveMemoryWarning() {

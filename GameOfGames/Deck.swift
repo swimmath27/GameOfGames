@@ -15,20 +15,20 @@ class Deck
     //private static let CARDS_URL:String = "http://nathanand.co/wp-content/uploads/2016/06/Game-of-Games-Cards.csv"
     
     //new one with headers and a 5th column, "Playable"
-    private static let CARDS_URL:String = "http://nathanand.co/wp-content/uploads/2016/06/Game-of-Games-Cards-1.csv"
+    fileprivate static let CARDS_URL:String = "http://nathanand.co/wp-content/uploads/2016/06/Game-of-Games-Cards-1.csv"
     
-    private static let CARDS_DEFAULT_NAME:String = "Game-of-Games-Cards-Default.csv"
-    private static let CARDS_DOWNLOAD_NAME:String = "Game-of-Games-Cards.csv"
+    fileprivate static let CARDS_DEFAULT_NAME:String = "Game-of-Games-Cards-Default.csv"
+    fileprivate static let CARDS_DOWNLOAD_NAME:String = "Game-of-Games-Cards.csv"
     
-    private(set) var deck = [Card]()
-    private var order:[Int] = [Int]()
-    private var index:Int = 0
+    fileprivate(set) var deck = [Card]()
+    fileprivate var order:[Int] = [Int]()
+    fileprivate var index:Int = 0
     
     init()
     {
         //print(Deck.CARDS_URL);
         
-        HttpDownloader.loadFileAsync(NSURL(string: Deck.CARDS_URL)!,
+        HttpDownloader.loadFileAsync(URL(string: Deck.CARDS_URL)!,
             completion:
             { (path, error) -> Void in
                 if error == nil
@@ -39,28 +39,28 @@ class Deck
                 {
                     //if there was an error, ignore it and load the default cards
                     print("error getting cards url, ignoring and loading defaults");
-                    let bundleURL = NSBundle.mainBundle().bundleURL
-                    let fileURL = bundleURL.URLByAppendingPathComponent(Deck.CARDS_DEFAULT_NAME)
+                    let bundleURL = Bundle.main.bundleURL
+                    let fileURL = bundleURL.appendingPathComponent(Deck.CARDS_DEFAULT_NAME)
                     
-                    self.loadCards(fileURL.path!);
+                    self.loadCards(fileURL.path);
                 }
                 self.shuffle();
                 Game.instance.readyToGo = true;
             })
     }
     
-    private func loadCards(path:String)
+    fileprivate func loadCards(_ path:String)
     {
         // because this is happening from another thread, might as well lock it
         objc_sync_enter(deck)
-        deck = parseCSV(path, encoding: NSUTF8StringEncoding, error: nil)
+        deck = parseCSV(path, encoding: String.Encoding.utf8, error: nil)
         objc_sync_exit(deck)
     }
     
     //adapted from
     //http://stackoverflow.com/questions/32313938/parsing-csv-file-in-swift
     //edit: that one sucked (like a lot) so i'm using CSwiftV now
-    private func parseCSV (contentsOfFile: String, encoding: NSStringEncoding, error: NSErrorPointer) -> [Card] {
+    fileprivate func parseCSV (_ contentsOfFile: String, encoding: String.Encoding, error: NSErrorPointer) -> [Card] {
         
         var mindCount:Int = 0;
         var bodyCount:Int = 0;
@@ -71,9 +71,9 @@ class Deck
         
         print("loading \"\(contentsOfFile)\"")
         
-        if let data = NSData(contentsOfFile: contentsOfFile)
+        if let data = try? Data(contentsOf: URL(fileURLWithPath: contentsOfFile))
         {
-            if let content = NSString(data: data, encoding: NSUTF8StringEncoding)
+            if let content = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
             {
             
                 //its being mean when i leave out separator, but the default is "," so i put that in
@@ -89,35 +89,35 @@ class Deck
                 {
                     print("error, file doesn't have correct headers, using default")
                     
-                    let bundleURL = NSBundle.mainBundle().bundleURL
-                    let fileURL = bundleURL.URLByAppendingPathComponent(Deck.CARDS_DEFAULT_NAME)
+                    let bundleURL = Bundle.main.bundleURL
+                    let fileURL = bundleURL.appendingPathComponent(Deck.CARDS_DEFAULT_NAME)
                     
-                    return self.parseCSV(fileURL.path!, encoding: NSUTF8StringEncoding, error: nil);
+                    return self.parseCSV(fileURL.path, encoding: String.Encoding.utf8, error: nil);
                 }
                 
                 //print(csv.headers);
                 for row in csv.keyedRows!
                 {
-                    var suit:Card.Suit = Card.Suit.Joke;
+                    var suit:Card.Suit = Card.Suit.joke;
                     var rank:Int = 0;
                     switch row["Type"]!
                     {
                     case "M":
                         mindCount+=1
                         rank = mindCount;
-                        suit = Card.Suit.Mind;
+                        suit = Card.Suit.mind;
                     case "S":
                         soulCount+=1
                         rank = soulCount;
-                        suit = Card.Suit.Soul;
+                        suit = Card.Suit.soul;
                     case "C":
                         chanceCount+=1
                         rank = chanceCount
-                        suit = Card.Suit.Chance;
+                        suit = Card.Suit.chance;
                     case "B":
                         bodyCount+=1
                         rank = bodyCount
-                        suit = Card.Suit.Body;
+                        suit = Card.Suit.body;
                     default:break
                     }
                     
@@ -148,7 +148,7 @@ class Deck
                 order.append(i);
             }
         }
-        order.shuffleInPlace()
+        order.shuffle()
     }
     
     func hasNextCard() -> Bool

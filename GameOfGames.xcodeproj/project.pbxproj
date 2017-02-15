@@ -155,6 +155,9 @@
 		55D3FB481CFF4525006C0A8E /* PlayOlympicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB471CFF4525006C0A8E /* PlayOlympicsViewController.swift */; };
 		55D3FB4A1CFF4C64006C0A8E /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */; };
 		55D3FB501CFFA3CD006C0A8E /* CheckCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3FB4F1CFFA3CD006C0A8E /* CheckCardsViewController.swift */; };
+		55E25A121E53FEA4007B46B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55E25A111E53FEA4007B46B8 /* GoogleService-Info.plist */; };
+		55E25A131E53FEA4007B46B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55E25A111E53FEA4007B46B8 /* GoogleService-Info.plist */; };
+		55E25A141E53FEA4007B46B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55E25A111E53FEA4007B46B8 /* GoogleService-Info.plist */; };
 		D00A5D9E40F578A1DE7B7E0E /* Pods_GameOfGamesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B3666DF8B25173CC842181 /* Pods_GameOfGamesTests.framework */; };
 		DAB706C55530418EE798427B /* Pods_GameOfGamesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1748481E1481FB447209988A /* Pods_GameOfGamesUITests.framework */; };
 /* End PBXBuildFile section */
@@ -337,6 +340,7 @@
 		55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		55D3FB4F1CFFA3CD006C0A8E /* CheckCardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCardsViewController.swift; sourceTree = "<group>"; };
 		55D7E0341D062581000D0B14 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		55E25A111E53FEA4007B46B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		564313C2567F5252F87386A4 /* Pods-GameOfGames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfGames.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfGames/Pods-GameOfGames.release.xcconfig"; sourceTree = "<group>"; };
 		955504E0F32B68FF60869A52 /* Pods-GameOfGamesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfGamesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfGamesTests/Pods-GameOfGamesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8B1BA92CDE764BFA446E69E /* Pods-GameOfGamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfGamesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfGamesTests/Pods-GameOfGamesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -575,6 +579,7 @@
 		55D3FB041CFE0E30006C0A8E /* GameOfGames */ = {
 			isa = PBXGroup;
 			children = (
+				55E25A111E53FEA4007B46B8 /* GoogleService-Info.plist */,
 				55D3FB351CFE3D62006C0A8E /* Game.swift */,
 				55D3FB391CFE4284006C0A8E /* Deck.swift */,
 				55D3FB371CFE4262006C0A8E /* Card.swift */,
@@ -692,6 +697,7 @@
 				55D3FB201CFE0E30006C0A8E /* Frameworks */,
 				55D3FB211CFE0E30006C0A8E /* Resources */,
 				560A1A5B2ADE4985EA4A8E65 /* [CP] Copy Pods Resources */,
+				9749118AAE64F09AC67729A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -710,21 +716,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Michael Lombardo";
 				TargetAttributes = {
 					55D3FB011CFE0E30006C0A8E = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = SM7VLH62CK;
+						LastSwiftMigration = 0820;
 					};
 					55D3FB171CFE0E30006C0A8E = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = SM7VLH62CK;
+						LastSwiftMigration = 0820;
 						TestTargetID = 55D3FB011CFE0E30006C0A8E;
 					};
 					55D3FB221CFE0E30006C0A8E = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = SM7VLH62CK;
+						LastSwiftMigration = 0820;
 						TestTargetID = 55D3FB011CFE0E30006C0A8E;
 					};
 				};
@@ -839,6 +848,7 @@
 				55B43D621D022440002CCE78 /* Chance_11.png in Resources */,
 				55D3FB121CFE0E30006C0A8E /* LaunchScreen.storyboard in Resources */,
 				550800A71D0BA24E0022E984 /* Body_14.png in Resources */,
+				55E25A121E53FEA4007B46B8 /* GoogleService-Info.plist in Resources */,
 				556997C41D19E36B00AE7D4E /* questionButton.png in Resources */,
 				55B43D861D022440002CCE78 /* Mind_12.png in Resources */,
 				55B43D691D022440002CCE78 /* Chance_4.png in Resources */,
@@ -881,6 +891,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E25A131E53FEA4007B46B8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,6 +899,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E25A141E53FEA4007B46B8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -921,7 +933,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		72DB76575145C834E6D5ABB9 /* [CP] Check Pods Manifest.lock */ = {
@@ -936,7 +948,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9749118AAE64F09AC67729A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfGamesUITests/Pods-GameOfGamesUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A791C3BCFEB383BCA38289CF /* [CP] Copy Pods Resources */ = {
@@ -996,7 +1023,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EEBC6896634C2EF48DC3FFEC /* [CP] Copy Pods Resources */ = {
@@ -1114,8 +1141,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1160,8 +1189,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1180,6 +1211,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1189,13 +1221,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F47F141C021327A998122A31 /* Pods-GameOfGames.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GameOfGames/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = michael.GameOfGames;
+				PRODUCT_BUNDLE_IDENTIFIER = hmmrdapp.hmmrd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1203,13 +1237,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 564313C2567F5252F87386A4 /* Pods-GameOfGames.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GameOfGames/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = michael.GameOfGames;
+				PRODUCT_BUNDLE_IDENTIFIER = hmmrdapp.hmmrd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1222,6 +1258,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = michael.GameOfGamesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameOfGames.app/GameOfGames";
 			};
 			name = Debug;
@@ -1235,6 +1272,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = michael.GameOfGamesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameOfGames.app/GameOfGames";
 			};
 			name = Release;
@@ -1247,6 +1285,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = michael.GameOfGamesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = GameOfGames;
 			};
 			name = Debug;
@@ -1259,6 +1298,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = michael.GameOfGamesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = GameOfGames;
 			};
 			name = Release;

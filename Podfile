@@ -9,14 +9,16 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'GameOfGames' do
-  pod 'CSwiftV'
+    pod 'CSwiftV'
+    pod 'Firebase/Core'
 end
 
 target 'GameOfGamesTests' do
-
+    pod 'CSwiftV'
+    pod 'Firebase/Core'
 end
 
 target 'GameOfGamesUITests' do
-
+    pod 'CSwiftV'
+    pod 'Firebase/Core'
 end
-

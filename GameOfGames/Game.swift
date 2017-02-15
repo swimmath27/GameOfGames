@@ -23,34 +23,34 @@ class Game
     internal static let RULEBOOK_URL = "http://nathanand.co/wp-content/uploads/2016/05/The-Game-of-Games-Rulebook.pdf";
     
     ///////////////////////////////////////////////////////////
-    private(set) static var instance: Game = Game();
+    fileprivate(set) static var instance: Game = Game();
     
-    private var deck: Deck = Deck();
+    fileprivate var deck: Deck = Deck();
     
-    private var numPlayers = 0;
-    private var currentTurn = 0;
+    fileprivate var numPlayers = 0;
+    fileprivate var currentTurn = 0;
     
-    private var currentCard: Card = Card(suit: Card.Suit.Joke,rank: 0);
+    fileprivate var currentCard: Card = Card(suit: Card.Suit.joke,rank: 0);
     
-    private var team1:[Int] = [Int]()
-    private var team2:[Int] = [Int]()
+    fileprivate var team1:[Int] = [Int]()
+    fileprivate var team2:[Int] = [Int]()
     
-    private var team1Name:String = ""
-    private var team2Name:String = ""
+    fileprivate var team1Name:String = ""
+    fileprivate var team2Name:String = ""
     
-    private var playerOrder:[Int] = [Int]()
+    fileprivate var playerOrder:[Int] = [Int]()
     
-    private var playerNames:[String] = [String]()
+    fileprivate var playerNames:[String] = [String]()
     
-    private var whichTeamGoesFirst:Int = 1; // team 1 goes first by default but this is changed later
+    fileprivate var whichTeamGoesFirst:Int = 1; // team 1 goes first by default but this is changed later
     
-    private var team1CardsWon:[Card] = [Card]()
-    private var team2CardsWon:[Card] = [Card]()
+    fileprivate var team1CardsWon:[Card] = [Card]()
+    fileprivate var team2CardsWon:[Card] = [Card]()
     
-    private var team1CardsPerRound:[Int] = [Int]()
-    private var team2CardsPerRound:[Int] = [Int]()
+    fileprivate var team1CardsPerRound:[Int] = [Int]()
+    fileprivate var team2CardsPerRound:[Int] = [Int]()
     
-    private var quickStarted = false;
+    fileprivate var quickStarted = false;
     
     //uh... "internal" means public?
     internal var messageTitle:String  = "";
@@ -58,10 +58,10 @@ class Game
     
     internal var readyToGo:Bool = false;
     
-    private init()
+    fileprivate init()
     { }
     
-    class func load(completion: ()->())
+    class func load(_ completion: ()->())
     {
         
     }
@@ -76,10 +76,10 @@ class Game
         return self.deck.deck;
     }
     
-    func setNumPlayers(num: Int)
+    func setNumPlayers(_ num: Int)
     {
         self.numPlayers = num;
-        playerNames = [String](count:num, repeatedValue: "");
+        playerNames = [String](repeating: "", count: num);
         
         self.playerOrder = [Int]()
         
@@ -92,7 +92,7 @@ class Game
         self.updateTeamsFromOrder()
     }
     
-    private func updateTeamsFromOrder()
+    fileprivate func updateTeamsFromOrder()
     {
         self.team1 = [1];
         self.team2 = [2];
@@ -114,7 +114,7 @@ class Game
         return self.numPlayers;
     }
     
-    func setPlayerName(num:Int, name:String)
+    func setPlayerName(_ num:Int, name:String)
     {
         if (num <= self.numPlayers)
         {
@@ -122,19 +122,19 @@ class Game
         }
     }
     
-    func getPlayerName(num:Int) -> String
+    func getPlayerName(_ num:Int) -> String
     {
         return playerNames[num-1];
     }
     
     func shuffleTeams()
     {
-        playerOrder.shuffleInPlace();
+        playerOrder.shuffle();
         
         self.updateTeamsFromOrder()
     }
     
-    func getTeam(which:Int) -> [Int]
+    func getTeam(_ which:Int) -> [Int]
     {
         if which == 1
         {
@@ -150,7 +150,7 @@ class Game
         }
     }
     
-    func setTeamName(whichTeam:Int, name:String)
+    func setTeamName(_ whichTeam:Int, name:String)
     {
         if whichTeam == 1
         {
@@ -162,7 +162,7 @@ class Game
         }
     }
     
-    func getTeamName(whichTeam:Int) -> String
+    func getTeamName(_ whichTeam:Int) -> String
     {
         if whichTeam == 1
         {
@@ -175,7 +175,7 @@ class Game
         return ""
     }
     
-    func setTeamGoingFirst(team:Int)
+    func setTeamGoingFirst(_ team:Int)
     {
         if team == 1
         {
@@ -207,7 +207,7 @@ class Game
         return team2CardsWon;
     }
     
-    func getTeamScore(which : Int) -> Int
+    func getTeamScore(_ which : Int) -> Int
     {
         if which == 1
         {
@@ -220,7 +220,7 @@ class Game
         return 0;
     }
 
-    func getTeamCards(which : Int) -> [Card]
+    func getTeamCards(_ which : Int) -> [Card]
     {
         if which == 1
         {
@@ -306,13 +306,13 @@ class Game
         currentTurn -= 1
         if self.getCurrentTeam() == 1 && team1CardsWon.contains(currentCard)
         {
-            team1CardsWon.removeAtIndex( team1CardsWon.indexOf(currentCard)!)
+            team1CardsWon.remove( at: team1CardsWon.index(of: currentCard)!)
             team1CardsPerRound[self.getCurrentRound()] -= 1;
             
         }
         else if self.getCurrentTeam() == 2 && team2CardsWon.contains(currentCard)
         {
-            team2CardsWon.removeAtIndex( team2CardsWon.indexOf(currentCard)!)
+            team2CardsWon.remove( at: team2CardsWon.index(of: currentCard)!)
             team2CardsPerRound[self.getCurrentRound()] -= 1;
         }
     }
@@ -388,7 +388,7 @@ class Game
         self.advanceTurn();
     }
     
-    func addOneToTeamInCurrentRound(which:Int)
+    func addOneToTeamInCurrentRound(_ which:Int)
     {
         let roundNum = self.getCurrentRound()-1; // zero indexing
         if which == 1
@@ -417,7 +417,7 @@ class Game
         return (currentTurn % numPlayers) == 0;
     }
     
-    func getTeamCardsInLastRound(team:Int) -> Int
+    func getTeamCardsInLastRound(_ team:Int) -> Int
     {
         if self.getCurrentRound() < 2
         {
@@ -427,13 +427,13 @@ class Game
         return self.getTeamCardsInRound(team, round: self.getCurrentRound()-1);
     }
     
-    func getTeamCardsInCurrentRound(team:Int) -> Int
+    func getTeamCardsInCurrentRound(_ team:Int) -> Int
     {
         return self.getTeamCardsInRound(team, round: self.getCurrentRound());
     }
 
     
-    func getTeamCardsInRound(team:Int, round:Int) -> Int
+    func getTeamCardsInRound(_ team:Int, round:Int) -> Int
     {
         if team == 1
         {
@@ -472,12 +472,12 @@ class Game
         return self.getCardsWonInRound(self.getCurrentRound());
     }
 
-    func getCardsWonInRound(round:Int) -> Int
+    func getCardsWonInRound(_ round:Int) -> Int
     {
         return team1CardsPerRound[round-1] + team2CardsPerRound[round-1]
     }
     
-    func quickStart(players:Int)
+    func quickStart(_ players:Int)
     {
         print("quick starting");
         quickStarted = true;
@@ -493,7 +493,7 @@ class Game
         return self.quickStarted;
     }
     
-    func sendPlayerToEndOfTeam(playerIndex:Int, team:Int)
+    func sendPlayerToEndOfTeam(_ playerIndex:Int, team:Int)
     {
         var index = playerIndex
         if (team != 1 && team != 2)
@@ -520,7 +520,7 @@ class Game
         }
     }
     
-    func swapPlayersInTeam(player1:Int, player2:Int, team:Int)
+    func swapPlayersInTeam(_ player1:Int, player2:Int, team:Int)
     {
         
         if (team != 1 && team != 2)

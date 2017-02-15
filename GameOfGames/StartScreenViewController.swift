@@ -35,7 +35,7 @@ class StartScreenViewController: UIViewController
 //            }
 //        }
         
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
 
     override func didReceiveMemoryWarning()
@@ -44,11 +44,11 @@ class StartScreenViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cardsButtonPressed(sender: AnyObject)
+    @IBAction func cardsButtonPressed(_ sender: AnyObject)
     {
         if (game.readyToGo)
         {
-            performSegueWithIdentifier("StartScreenToWholeDeck", sender: nil)
+            performSegue(withIdentifier: "StartScreenToWholeDeck", sender: nil)
         }
         else
         {
@@ -57,12 +57,12 @@ class StartScreenViewController: UIViewController
 
     }
 
-    @IBAction func playButtonPressed(sender: AnyObject)
+    @IBAction func playButtonPressed(_ sender: AnyObject)
     {
         // uhhhh im not sure how to do thread compliant stuff -> it could be ready and not notice yet?
         if (game.readyToGo)
         {
-            performSegueWithIdentifier("StartScreenToNumPlayers", sender: nil)
+            performSegue(withIdentifier: "StartScreenToNumPlayers", sender: nil)
         }
         else
         {
@@ -79,26 +79,26 @@ class StartScreenViewController: UIViewController
     }
     */
     
-    @IBAction func rulebookButtonPressed(sender: AnyObject)
+    @IBAction func rulebookButtonPressed(_ sender: AnyObject)
     {
-        if let url = NSURL(string: Game.RULEBOOK_URL)
+        if let url = URL(string: Game.RULEBOOK_URL)
         {
-            UIApplication.sharedApplication().openURL(url)
+            UIApplication.shared.openURL(url)
         }
     }
     
     
-    func alert(title: String, msg : String)
+    func alert(_ title: String, msg : String)
     {
         let popup = UIAlertController(title: title,
                                       message: msg,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         
         let cancelAction = UIAlertAction(title: "OK",
-                                         style: .Cancel, handler: nil)
+                                         style: .cancel, handler: nil)
         
         popup.addAction(cancelAction)
-        self.presentViewController(popup, animated: true,
+        self.present(popup, animated: true,
                                    completion: nil)
         
     }

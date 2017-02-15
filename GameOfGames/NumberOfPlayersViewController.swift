@@ -18,7 +18,7 @@ class NumberOfPlayersViewController: UIViewController
     @IBOutlet weak var setNamesButton: UIButton!
     @IBOutlet weak var quickStartButton: UIButton!
     
-    private var game:Game = Game.getInstance();
+    fileprivate var game:Game = Game.getInstance();
     
     override func viewDidLoad()
     {
@@ -29,7 +29,7 @@ class NumberOfPlayersViewController: UIViewController
         
         playerCountField.becomeFirstResponder();
         //background gradient
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
 
     override func didReceiveMemoryWarning()
@@ -72,7 +72,7 @@ class NumberOfPlayersViewController: UIViewController
         
     }
     
-    @IBAction func submitPlayerCount(sender: AnyObject)
+    @IBAction func submitPlayerCount(_ sender: AnyObject)
     {
         let num = checkAndSetPlayerCount()
         if num != -1
@@ -80,13 +80,13 @@ class NumberOfPlayersViewController: UIViewController
             game.setNumPlayers(num);
             alertToConfirm("Start", msg: "Start Game by setting all players and team names", action:
                 {
-                    action in self.performSegueWithIdentifier("NumPlayersToNamePlayers", sender: nil)
+                    action in self.performSegue(withIdentifier: "NumPlayersToNamePlayers", sender: nil)
                 })
             
         }
     }
     
-    @IBAction func quickStartPressed(sender: AnyObject)
+    @IBAction func quickStartPressed(_ sender: AnyObject)
     {
         let num = checkAndSetPlayerCount()
         if num != -1
@@ -94,40 +94,40 @@ class NumberOfPlayersViewController: UIViewController
             game.quickStart(num)
             alertToConfirm("Quick Start", msg: "Start the game without entering the names of players and teams", action:
                 {
-                    action in self.performSegueWithIdentifier("NumPlayersToQuickStartRandomizeTeams", sender: nil)
+                    action in self.performSegue(withIdentifier: "NumPlayersToQuickStartRandomizeTeams", sender: nil)
             })
         }
     }
     
     
-    func alert(s : String)
+    func alert(_ s : String)
     {
         let popup = UIAlertController(title: "Error",
         message: s,
-        preferredStyle: UIAlertControllerStyle.Alert)
+        preferredStyle: UIAlertControllerStyle.alert)
     
         let cancelAction = UIAlertAction(title: "OK",
-                                         style: .Cancel, handler: nil)
+                                         style: .cancel, handler: nil)
     
         popup.addAction(cancelAction)
-        self.presentViewController(popup, animated: true,
+        self.present(popup, animated: true,
                                    completion: nil)
 
     }
     
-    func alertToConfirm(title: String, msg : String, action : (UIAlertAction) -> Void)
+    func alertToConfirm(_ title: String, msg : String, action : @escaping (UIAlertAction) -> Void)
     {
         let popup = UIAlertController(title: title,
                                       message: msg,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         
-        let okAction = UIAlertAction(title:"OK", style: .Default, handler: action);
+        let okAction = UIAlertAction(title:"OK", style: .default, handler: action);
         popup.addAction(okAction)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         popup.addAction(cancelAction);
         
-        self.presentViewController(popup, animated: true,
+        self.present(popup, animated: true,
                                    completion: nil)
     }
     

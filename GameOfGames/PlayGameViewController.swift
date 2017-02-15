@@ -11,7 +11,7 @@ import UIKit
 class PlayGameViewController: UIViewController
 {
     
-    static private var wasNewRound:Bool = true;
+    static fileprivate var wasNewRound:Bool = true;
     
     @IBOutlet weak var roundLabel: UILabel!
     
@@ -31,7 +31,7 @@ class PlayGameViewController: UIViewController
     @IBOutlet weak var drawCardButton: UIButton!
     
     
-    private var game:Game = Game.getInstance();
+    fileprivate var game:Game = Game.getInstance();
     
     override func viewDidLoad()
     {
@@ -55,11 +55,11 @@ class PlayGameViewController: UIViewController
             if !PlayGameViewController.wasNewRound
             {
                 
-                nextPlayerLabel.textAlignment = .Center;
+                nextPlayerLabel.textAlignment = .center;
                 nextPlayerLabel.text = "End of Round, Click to"
                 upNextLabel.text = "go to Round Roulette"
                 
-                drawCardButton.setImage(UIImage(named:"rollButton.png"), forState: .Normal);
+                drawCardButton.setImage(UIImage(named:"rollButton.png"), for: UIControlState());
             }
         }
         else
@@ -68,31 +68,31 @@ class PlayGameViewController: UIViewController
             
             if game.getCurrentTeam() == 1 // team 2 is up
             {
-                team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 27)
-                team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 22)
+                team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor, size: 27)
+                team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor, size: 22)
             }
             else // team 2 is up
             {
-                team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 22)
-                team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor(), size: 27)
+                team1NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor, size: 22)
+                team2NameLabel.font = UIFont(descriptor: team1NameLabel.font.fontDescriptor, size: 27)
             }
             
             //check if game is over
             if (game.getTeam1Score() >= Game.NUM_CARDS_TO_WIN)
             {
-                drawCardButton.hidden = true;
+                drawCardButton.isHidden = true;
                 nextPlayerLabel.text = "";
                 upNextLabel.text = "\(game.getTeamName(1)) Win!"
             }
             else if (game.getTeam2Score() >= Game.NUM_CARDS_TO_WIN)
             {
-                drawCardButton.hidden = true;
+                drawCardButton.isHidden = true;
                 nextPlayerLabel.text = "";
                 upNextLabel.text = "\(game.getTeamName(2)) Win!"
             }
             else if !game.hasNextCard()
             {
-                drawCardButton.hidden = true;
+                drawCardButton.isHidden = true;
                 upNextLabel.text = "Deck is Out of Cards!"
                 
                 //reusing these labels...
@@ -115,20 +115,20 @@ class PlayGameViewController: UIViewController
         }
         
         
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
 
-    @IBAction func drawCardButtonPressed(sender: AnyObject)
+    @IBAction func drawCardButtonPressed(_ sender: AnyObject)
     {
         if (game.isNewRound() && !PlayGameViewController.wasNewRound)
         {
             PlayGameViewController.wasNewRound = true;
-            performSegueWithIdentifier("PlayGameToRoundRoulette", sender: nil)
+            performSegue(withIdentifier: "PlayGameToRoundRoulette", sender: nil)
         }
         else if game.hasNextCard()
         {
-            game.drawCard()
-            performSegueWithIdentifier("PlayGameToDrawCard", sender: nil)
+            _ = game.drawCard()
+            performSegue(withIdentifier: "PlayGameToDrawCard", sender: nil)
         }
         else
         {
@@ -136,21 +136,21 @@ class PlayGameViewController: UIViewController
         }
     }
     
-    @IBAction func viewTeam1CardsButtonPressed(sender: AnyObject)
+    @IBAction func viewTeam1CardsButtonPressed(_ sender: AnyObject)
     {
         viewTeamCards(1);
     }
     
-    @IBAction func viewTeam2CardsButtonPressed(sender: AnyObject)
+    @IBAction func viewTeam2CardsButtonPressed(_ sender: AnyObject)
     {
         viewTeamCards(2);
     }
     
     
-    func viewTeamCards(which:Int)
+    func viewTeamCards(_ which:Int)
     {
         CheckCardsViewController.whichTeam = which;
-        performSegueWithIdentifier("PlayGameToCheckCards", sender: nil)
+        performSegue(withIdentifier: "PlayGameToCheckCards", sender: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -168,17 +168,17 @@ class PlayGameViewController: UIViewController
     }
      */
     
-    func alert(s : String)
+    func alert(_ s : String)
     {
         let popup = UIAlertController(title: "Error",
                                       message: s,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         
         let cancelAction = UIAlertAction(title: "OK",
-                                         style: .Cancel, handler: nil)
+                                         style: .cancel, handler: nil)
         
         popup.addAction(cancelAction)
-        self.presentViewController(popup, animated: true,
+        self.present(popup, animated: true,
                                    completion: nil)
         
     }

@@ -18,20 +18,20 @@ class OlympicsInfoViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let path = NSBundle.mainBundle().pathForResource("GoGOlympicsRules", ofType: "txt");
+        let path = Bundle.main.path(forResource: "GoGOlympicsRules", ofType: "txt");
         
         do
         {
-            infoTextView.text = try NSString(contentsOfURL: NSURL(fileURLWithPath: path!), encoding: NSUTF8StringEncoding) as String
+            infoTextView.text = try NSString(contentsOf: URL(fileURLWithPath: path!), encoding: String.Encoding.utf8.rawValue) as String
         }
         catch {}
         
         //i'm not sure why i need to put this here, but it doesn't work if its on the storyboard
         infoTextView.font = UIFont(name: "JosefinSans", size: 20)
-        infoTextView.textColor = UIColor.whiteColor();
+        infoTextView.textColor = UIColor.white;
         
         
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
         
     }
 

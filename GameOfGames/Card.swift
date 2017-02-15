@@ -13,8 +13,8 @@ class Card : Equatable
     //taken from http://stackoverflow.com/questions/24007461/how-to-enumerate-an-enum-with-string-type
     
     enum Suit: Int {
-        case Joke = 0 // 1 starts the actual types
-        case Body, Soul, Mind, Chance
+        case joke = 0 // 1 starts the actual types
+        case body, soul, mind, chance
         
         //mind - diamond
         //body - spade
@@ -24,15 +24,15 @@ class Card : Equatable
         func simpleDescription() -> String
         {
             switch self {
-            case .Joke:
+            case .joke:
                 return "Joke"
-            case .Body:
+            case .body:
                 return "Body"
-            case .Soul:
+            case .soul:
                 return "Soul"
-            case .Mind:
+            case .mind:
                 return "Mind"
-            case .Chance:
+            case .chance:
                 return "Chance"
             }
         }
@@ -40,30 +40,30 @@ class Card : Equatable
         func wonMessageTitle() -> String
         {
             switch self {
-            case .Joke:
+            case .joke:
                 return "Haha"
-            case .Body:
+            case .body:
                 return "#BodyGoals"
-            case .Soul:
+            case .soul:
                 return "Take a Look at You!"
-            case .Mind:
+            case .mind:
                 return "Good Thinking"
-            case .Chance:
+            case .chance:
                 return "It's Your Lucky Day!"
             }
         }
         func wonMessage() -> String
         {
             switch self {
-            case .Joke:
+            case .joke:
                 return "Haha"
-            case .Body:
+            case .body:
                 return "Add some beer into the Bitch Cup and send some beer to any player on the other team"
-            case .Soul:
+            case .soul:
                 return "Add a shot into the Bitch Cup and send a shot to any player on the other team"
-            case .Mind:
+            case .mind:
                 return "Add some wine into the Bitch Cup and send some wine to any player on the other team"
-            case .Chance:
+            case .chance:
                 return "I hope another card is good enough because you don't get to send or pour anything"
             }
         }
@@ -72,30 +72,30 @@ class Card : Equatable
         func lostMessageTitle() -> String
         {
             switch self {
-            case .Joke:
+            case .joke:
                 return "Haha"
-            case .Body:
+            case .body:
                 return "Do You Even Lift, Bro?"
-            case .Soul:
+            case .soul:
                 return "Not Mad, Just Disappointed"
-            case .Mind:
+            case .mind:
                 return "What Were You Thinking?"
-            case .Chance:
+            case .chance:
                 return "Better Luck Next Time!"
             }
         }
         func lostMessage() -> String
         {
             switch self {
-            case .Joke:
+            case .joke:
                 return "Haha"
-            case .Body:
+            case .body:
                 return "You and a teammate must drink some beer"
-            case .Soul:
+            case .soul:
                 return "You and a teammate must take a shot"
-            case .Mind:
+            case .mind:
                 return "You and a teammate must drink some wine"
-            case .Chance:
+            case .chance:
                 return "At least your team doesn't have to drink anything!"
             }
         }
@@ -104,41 +104,41 @@ class Card : Equatable
         func stolenMessageTitle() -> String
         {
             switch self {
-            case .Joke:
+            case .joke:
                 return "Haha"
-            case .Body:
+            case .body:
                 return "You Oughta Hit the Gym"
-            case .Soul:
+            case .soul:
                 return "That Couldn't Have Felt Good"
-            case .Mind:
+            case .mind:
                 return "Quick, But Not Quick Enough"
-            case .Chance:
+            case .chance:
                 return "A Chance card was stolen?"
             }
         }
         func stolenMessage() -> String
         {
             switch self {
-            case .Joke:
+            case .joke:
                 return "Haha"
-            case .Body:
+            case .body:
                 return "Add some beer to the Bitch Cup and your counterpart sends some beer to anyone on your team"
-            case .Soul:
+            case .soul:
                 return "Add a shot to the Bitch Cup and your counterpart sends a shot to anyone on your team"
-            case .Mind:
+            case .mind:
                 return "Add some wine to the Bitch Cup and your counterpart sends some wine to anyone on your team"
-            case .Chance:
+            case .chance:
                 return "This shouldn't be possible"
             }
         }
     }
     
-    private(set) var rank:Int = 0;
-    private(set) var suit:Suit = Suit.Joke;
-    private(set) var stealable:Bool = false;
-    private(set) var playable:Bool = false;
-    private(set) var shortDesc:String = "";
-    private(set) var longDesc:String = "";
+    fileprivate(set) var rank:Int = 0;
+    fileprivate(set) var suit:Suit = Suit.joke;
+    fileprivate(set) var stealable:Bool = false;
+    fileprivate(set) var playable:Bool = false;
+    fileprivate(set) var shortDesc:String = "";
+    fileprivate(set) var longDesc:String = "";
 
     convenience init (suit:Suit, rank:Int)
     {
@@ -160,15 +160,15 @@ class Card : Equatable
     {
         switch suit
         {
-        case .Joke:
+        case .joke:
             return "nothing"
-        case .Body:
+        case .body:
             return "a quarter can of beer"
-        case .Chance:
+        case .chance:
             return "nothing"
-        case .Mind:
+        case .mind:
             return "a quarter glass of wine"
-        case .Soul:
+        case .soul:
             return "a shot of liquor"
         }
     }

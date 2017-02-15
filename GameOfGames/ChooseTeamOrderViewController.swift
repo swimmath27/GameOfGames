@@ -34,7 +34,7 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
         currentTeamLabel.text = "Team \(currentTeam) (\(game.getTeamName(currentTeam)))"
         
         
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
 
 
@@ -45,13 +45,13 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
     }
 
     
-    @IBAction func nextButtonPressed(sender: AnyObject)
+    @IBAction func nextButtonPressed(_ sender: AnyObject)
     {
         numTeamsDone += 1;
         if numTeamsDone > 1
         {
             // both teams have chosen their order
-            performSegueWithIdentifier("ChooseTeamOrderToPlayGame", sender: nil)
+            performSegue(withIdentifier: "ChooseTeamOrderToPlayGame", sender: nil)
         }
         else
         {
@@ -69,42 +69,42 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
     
     /// table view stuff ////////////////////////////////////
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         
         return game.getTeam(currentTeam).count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let row = indexPath.row
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("TempCellView", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TempCellView", for: indexPath) as UITableViewCell
         
         let playerNumber : Int = game.getTeam(currentTeam)[row];
         
         cell.textLabel?.text = game.getPlayerName(playerNumber)
         
-        cell.textLabel?.textColor = UIColor.whiteColor();
+        cell.textLabel?.textColor = UIColor.white;
         cell.textLabel?.font = UIFont(name: "Lobster1.3", size: 22)
-        cell.textLabel?.textAlignment = .Center
+        cell.textLabel?.textAlignment = .center
         
         return cell;
         
     }
     
-    func tableView(tableView: UITableView,
-                   didSelectRowAtIndexPath indexPath: NSIndexPath)
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath)
     {
         //unselect this cell
-        if tableView.cellForRowAtIndexPath(indexPath) != nil
+        if tableView.cellForRow(at: indexPath) != nil
         {
-            tableView.deselectRowAtIndexPath(indexPath, animated: false)
+            tableView.deselectRow(at: indexPath, animated: false)
         }
         
         let row = indexPath.row
@@ -115,9 +115,9 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
         else if (swapPos == -1) // this is the first selection
         {
             swapPos = row;
-            if let cell = tableView.cellForRowAtIndexPath(indexPath)
+            if let cell = tableView.cellForRow(at: indexPath)
             {
-                cell.backgroundColor = UIColor.redColor()
+                cell.backgroundColor = UIColor.red
             }
         }
         else // this is the second selection
@@ -126,9 +126,9 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
             {
                 game.swapPlayersInTeam(swapPos, player2: row, team: currentTeam);
             }
-            if let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: swapPos, inSection: 0))
+            if let cell = tableView.cellForRow(at: IndexPath(row: swapPos, section: 0))
             {
-                cell.backgroundColor = UIColor.clearColor();
+                cell.backgroundColor = UIColor.clear;
             }
             
             //game.sendPlayerToEndOfTeam(row,team:currentTeam)
@@ -139,17 +139,17 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
     
 
     
-    func alert(s : String)
+    func alert(_ s : String)
     {
         let popup = UIAlertController(title: "Error",
                                       message: s,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         
         let cancelAction = UIAlertAction(title: "OK",
-                                         style: .Cancel, handler: nil)
+                                         style: .cancel, handler: nil)
         
         popup.addAction(cancelAction)
-        self.presentViewController(popup, animated: true,
+        self.present(popup, animated: true,
                                    completion: nil)
         
     }

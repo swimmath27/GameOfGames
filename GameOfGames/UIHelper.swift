@@ -22,10 +22,10 @@ class UIHelper
         //   to
         //  #2673B9 = rgb(38,115,185)
         
-        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenSize: CGRect = UIScreen.main.bounds
         
-        let colorTop = UIColor(red: 64.0/255.0, green: 156.0/255.0, blue: 227.0/255.0, alpha: 1.0).CGColor
-        let colorBottom = UIColor(red: 38.0/255.0, green: 115.0/255.0, blue: 185.0/255.0, alpha: 1.0).CGColor
+        let colorTop = UIColor(red: 64.0/255.0, green: 156.0/255.0, blue: 227.0/255.0, alpha: 1.0).cgColor
+        let colorBottom = UIColor(red: 38.0/255.0, green: 115.0/255.0, blue: 185.0/255.0, alpha: 1.0).cgColor
         
         let grad:CAGradientLayer? = CAGradientLayer()
         

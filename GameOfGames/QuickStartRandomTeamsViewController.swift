@@ -44,7 +44,7 @@ class QuickStartRandomTeamsViewController: UIViewController, UITableViewDataSour
         
         updateTeamViews();
         
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
     
     func updateTeamsFromOrder()
@@ -71,54 +71,54 @@ class QuickStartRandomTeamsViewController: UIViewController, UITableViewDataSour
         team2Table.reloadData();
     }
     
-    @IBAction func RandomizeButtonPressed(sender: AnyObject)
+    @IBAction func RandomizeButtonPressed(_ sender: AnyObject)
     {
-        playerOrder.shuffleInPlace();
+        playerOrder.shuffle();
         updateTeamsFromOrder();
         
         updateTeamViews();
         shuffled = true;
     }
     
-    @IBAction func FinishButtonPressed(sender: AnyObject)
+    @IBAction func FinishButtonPressed(_ sender: AnyObject)
     {
         if shuffled
         {
-            performSegueWithIdentifier("QuickStartRandomizeTeamsToStartOlympics", sender: nil)
+            performSegue(withIdentifier: "QuickStartRandomizeTeamsToStartOlympics", sender: nil)
         }
         else
         {
             alertToConfirm("Are you sure you want to continue without shuffling teams?",
                            action:
                 {
-                    action in self.performSegueWithIdentifier("QuickStartRandomizeTeamsToStartOlympics", sender: nil)
+                    action in self.performSegue(withIdentifier: "QuickStartRandomizeTeamsToStartOlympics", sender: nil)
             })
         }
     }
     
-    func alertToConfirm(msg : String, action : (UIAlertAction) -> Void)
+    func alertToConfirm(_ msg : String, action : @escaping (UIAlertAction) -> Void)
     {
         let popup = UIAlertController(title: "Alert",
                                       message: msg,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         
-        let okAction = UIAlertAction(title:"OK", style: .Default, handler: action);
+        let okAction = UIAlertAction(title:"OK", style: .default, handler: action);
         popup.addAction(okAction)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         popup.addAction(cancelAction);
         
-        self.presentViewController(popup, animated: true,
+        self.present(popup, animated: true,
                                    completion: nil)
     }
     /// table view stuff ////////////////////////////////////
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         if tableView == team1Table
         {
@@ -134,32 +134,32 @@ class QuickStartRandomTeamsViewController: UIViewController, UITableViewDataSour
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let row = indexPath.row
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("TempCellView", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TempCellView", for: indexPath) as UITableViewCell
         
         let playerNumber : Int = (tableView == team1Table ? team1List : team2List)[row];
         
         cell.textLabel?.text = "\(playerNumber)"
         
-        cell.textLabel?.textColor = UIColor.whiteColor();
+        cell.textLabel?.textColor = UIColor.white;
         cell.textLabel?.font = UIFont(name: "Lobster1.3", size: 22)
-        cell.textLabel?.textAlignment = .Center
+        cell.textLabel?.textAlignment = .center
         
         return cell;
     }
     
-    func tableView(tableView: UITableView,
-                   didSelectRowAtIndexPath indexPath: NSIndexPath)
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath)
     {
         //nothing when they select names
         
         //unselect this cell
-        if tableView.cellForRowAtIndexPath(indexPath) != nil
+        if tableView.cellForRow(at: indexPath) != nil
         {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     

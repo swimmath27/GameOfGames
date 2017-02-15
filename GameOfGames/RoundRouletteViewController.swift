@@ -34,7 +34,7 @@ class RoundRouletteViewController: UIViewController {
     @IBOutlet weak var buttonHeight: NSLayoutConstraint!
     @IBOutlet weak var buttonWidth: NSLayoutConstraint!
     
-    var timer:NSTimer?
+    var timer:Timer?
     
     var delay:Double = 0.01;
     
@@ -82,7 +82,7 @@ class RoundRouletteViewController: UIViewController {
             rolledNumber.text = ""
             chosenTeam.text = ""
             
-            rollButton.setTitle("Roll", forState: .Normal)
+            rollButton.setTitle("Roll", for: UIControlState())
         }
         else
         {
@@ -94,11 +94,11 @@ class RoundRouletteViewController: UIViewController {
             rolledNumber.text = ""
             
             chosenTeam.text = "Nobody has won any cards this round"
-            rollButton.setTitle("Continue", forState: .Normal)
+            rollButton.setTitle("Continue", for: UIControlState())
             self.rolled = true;
         }
         
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,7 +106,7 @@ class RoundRouletteViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func timerFire(thisTimer:NSTimer)
+    func timerFire(_ thisTimer:Timer)
     {
         //print("\(delay)")
         
@@ -117,10 +117,10 @@ class RoundRouletteViewController: UIViewController {
             let rand = Int(arc4random_uniform(UInt32(totalCards)))+1
             rolledNumber.text = "\(rand)";
 //            rollButton.setTitle("Continue", forState: .Normal)
-            rollButton.setImage(UIImage(named:"nextButton.png"), forState: .Normal)
+            rollButton.setImage(UIImage(named:"nextButton.png"), for: UIControlState())
             buttonWidth.constant = 64;
             buttonHeight.constant = 40;
-            rollButton.hidden = false;
+            rollButton.isHidden = false;
             
             let team = game.getTeamName(rand <= team2Cards ? 1 : 2)
             chosenTeam.text = team
@@ -138,7 +138,7 @@ class RoundRouletteViewController: UIViewController {
             delay *= (1.0+delay)
             //delay *= 1.1
             
-            timer = NSTimer.scheduledTimerWithTimeInterval(delay,
+            timer = Timer.scheduledTimer(timeInterval: delay,
                                                            target: self,
                                                            selector: #selector(RoundRouletteViewController.timerFire(_:)),
                                                            userInfo: nil,
@@ -146,23 +146,23 @@ class RoundRouletteViewController: UIViewController {
         }
     }
 
-    @IBAction func rollButtonPressed(sender: AnyObject)
+    @IBAction func rollButtonPressed(_ sender: AnyObject)
     {
         
         if (self.rolled)
         {
-            performSegueWithIdentifier("RoundRouletteToPlayGame", sender: nil);
+            performSegue(withIdentifier: "RoundRouletteToPlayGame", sender: nil);
         }
         else
         {
             self.rolled = true
             
-            timer = NSTimer.scheduledTimerWithTimeInterval(delay,
+            timer = Timer.scheduledTimer(timeInterval: delay,
                                                            target: self,
                                                            selector: #selector(RoundRouletteViewController.timerFire(_:)),
                                                            userInfo: nil,
                                                            repeats: false)
-            rollButton.hidden = true;
+            rollButton.isHidden = true;
         }
     }
     
@@ -176,17 +176,17 @@ class RoundRouletteViewController: UIViewController {
     }
     */
     
-    func alert(s : String)
+    func alert(_ s : String)
     {
         let popup = UIAlertController(title: "Alert",
                                       message: s,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         
         let cancelAction = UIAlertAction(title: "OK",
-                                         style: .Cancel, handler: nil)
+                                         style: .cancel, handler: nil)
         
         popup.addAction(cancelAction)
-        self.presentViewController(popup, animated: true,
+        self.present(popup, animated: true,
                                    completion: nil)
         
     }

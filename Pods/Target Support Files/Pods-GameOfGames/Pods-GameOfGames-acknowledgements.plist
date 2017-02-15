@@ -44,8 +44,70 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 </string>
+			<key>License</key>
+			<string>MIT</string>
 			<key>Title</key>
 			<string>CSwiftV</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2016 Google Inc.</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>Firebase</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2016 Google Inc.</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>FirebaseAnalytics</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2016 Google Inc.</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>FirebaseInstanceID</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2015 Google Inc.</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>GoogleInterchangeUtilities</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2015 Google Inc.</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>GoogleSymbolUtilities</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2015 Google Inc.</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>GoogleUtilities</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

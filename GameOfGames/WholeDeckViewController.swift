@@ -23,7 +23,7 @@ class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UIC
         imageCollectionView.delegate = self;
         imageCollectionView.dataSource = self;
         
-        imageCollectionView.backgroundColor = UIColor.clearColor();
+        imageCollectionView.backgroundColor = UIColor.clear;
         
         imageCollectionView.reloadData();
         
@@ -33,14 +33,14 @@ class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UIC
         // dont even ask
         // nevermind DONT EVEN LOOK HERE
         // THIS CODE DOESNT EXIST
-        imageCollectionView.reloadSections(NSIndexSet(index: 0))
-        imageCollectionView.reloadSections(NSIndexSet(index: 0))
-        imageCollectionView.reloadSections(NSIndexSet(index: 0))
-        imageCollectionView.reloadSections(NSIndexSet(index: 0))
-        imageCollectionView.reloadSections(NSIndexSet(index: 0))
-        imageCollectionView.reloadSections(NSIndexSet(index: 0))
-        imageCollectionView.reloadSections(NSIndexSet(index: 0))
-        imageCollectionView.reloadSections(NSIndexSet(index: 0))
+        imageCollectionView.reloadSections(IndexSet(integer: 0))
+        imageCollectionView.reloadSections(IndexSet(integer: 0))
+        imageCollectionView.reloadSections(IndexSet(integer: 0))
+        imageCollectionView.reloadSections(IndexSet(integer: 0))
+        imageCollectionView.reloadSections(IndexSet(integer: 0))
+        imageCollectionView.reloadSections(IndexSet(integer: 0))
+        imageCollectionView.reloadSections(IndexSet(integer: 0))
+        imageCollectionView.reloadSections(IndexSet(integer: 0))
         // FORGET YOU SAW ANYTHING
         // ...
         // i mean it
@@ -52,7 +52,7 @@ class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UIC
         
         //edit: there are like 15 messed up now
         
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
     
     override func didReceiveMemoryWarning()
@@ -76,37 +76,37 @@ class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UIC
     /////////////Collection View stuff //////////////////
     
     // tell the collection view how many cells to make
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return game.getOrderedCards().count
     }
     
     // make a cell for each cell index path
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
      
         let row:Int = indexPath.row
         let card:Card = game.getOrderedCards()[row];
         
         // get a reference to our storyboard cell
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ImageCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
 
         // Use the outlet in our custom class to get a reference to the UIImageView in the cell
         cell.imageView.image = UIImage(named: card.getFileName())
-        cell.imageView.contentMode = .ScaleAspectFill;
+        cell.imageView.contentMode = .scaleAspectFill;
         cell.imageView.clipsToBounds = true;
         
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         let row:Int = indexPath.row
         
         CardInfoViewController.currentCard = game.getOrderedCards()[row]
         CardInfoViewController.from = "WholeDeck"
         
-        performSegueWithIdentifier("WholeDeckToCardInfo", sender: nil)
+        performSegue(withIdentifier: "WholeDeckToCardInfo", sender: nil)
         
     }
     

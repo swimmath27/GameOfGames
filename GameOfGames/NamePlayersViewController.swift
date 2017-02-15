@@ -17,8 +17,8 @@ class NamePlayersViewController: UIViewController
     
     @IBOutlet weak var submitButton: UIButton!
     
-    private var game : Game = Game.getInstance();
-    private var currentPlayer : Int = 1;
+    fileprivate var game : Game = Game.getInstance();
+    fileprivate var currentPlayer : Int = 1;
     
     override func viewDidLoad()
     {
@@ -29,7 +29,7 @@ class NamePlayersViewController: UIViewController
         
         playerNameField.becomeFirstResponder();
         //background gradient
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
 
     override func didReceiveMemoryWarning()
@@ -39,7 +39,7 @@ class NamePlayersViewController: UIViewController
     }
     
 
-    @IBAction func submitButtonPressed(sender: AnyObject)
+    @IBAction func submitButtonPressed(_ sender: AnyObject)
     {
         if let s : String = playerNameField.text
         {
@@ -50,7 +50,7 @@ class NamePlayersViewController: UIViewController
                 if currentPlayer > game.getNumPlayers()
                 {
                     // all players have been named now
-                    performSegueWithIdentifier("NamePlayerstoRandomizeTeams", sender: nil)
+                    performSegue(withIdentifier: "NamePlayerstoRandomizeTeams", sender: nil)
                 }
                 else
                 {
@@ -79,17 +79,17 @@ class NamePlayersViewController: UIViewController
         // Pass the selected object to the new view controller.
     }
     */
-    func alert(s : String)
+    func alert(_ s : String)
     {
         let popup = UIAlertController(title: "Error",
                                       message: s,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         
         let cancelAction = UIAlertAction(title: "OK",
-                                         style: .Cancel, handler: nil)
+                                         style: .cancel, handler: nil)
         
         popup.addAction(cancelAction)
-        self.presentViewController(popup, animated: true,
+        self.present(popup, animated: true,
                                    completion: nil)
         
     }

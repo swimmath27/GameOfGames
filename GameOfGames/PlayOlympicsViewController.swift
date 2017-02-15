@@ -14,7 +14,7 @@ class PlayOlympicsViewController: UIViewController {
     @IBOutlet weak var game2Segment: UISegmentedControl!
     @IBOutlet weak var game3Segment: UISegmentedControl!
     
-    private let game : Game = Game.getInstance();
+    fileprivate let game : Game = Game.getInstance();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class PlayOlympicsViewController: UIViewController {
         game2Segment.selectedSegmentIndex = 1;
         game3Segment.selectedSegmentIndex = 1;
         
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +44,7 @@ class PlayOlympicsViewController: UIViewController {
     }
     */
 
-    @IBAction func submitButtonPressed(sender: AnyObject)
+    @IBAction func submitButtonPressed(_ sender: AnyObject)
     {
         var team1Wins : Int = 0;
         var team2Wins : Int = 0;
@@ -71,21 +71,21 @@ class PlayOlympicsViewController: UIViewController {
         }
         //team 1 is automatically set to go first so we don't have to update it
         
-        performSegueWithIdentifier("PlayOlympicsToEndOlympics", sender: nil)
+        performSegue(withIdentifier: "PlayOlympicsToEndOlympics", sender: nil)
         
     }
     
-    func alert(s : String)
+    func alert(_ s : String)
     {
         let popup = UIAlertController(title: "Error",
                                       message: s,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         
         let cancelAction = UIAlertAction(title: "OK",
-                                         style: .Cancel, handler: nil)
+                                         style: .cancel, handler: nil)
         
         popup.addAction(cancelAction)
-        self.presentViewController(popup, animated: true,
+        self.present(popup, animated: true,
                                    completion: nil)
         
     }

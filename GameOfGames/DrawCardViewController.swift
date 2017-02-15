@@ -22,7 +22,7 @@ class DrawCardViewController: UIViewController {
     @IBOutlet weak var lostButton: UIButton!
     @IBOutlet weak var stolenButton: UIButton!
     
-    private var game:Game = Game.getInstance();
+    fileprivate var game:Game = Game.getInstance();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class DrawCardViewController: UIViewController {
         //TODO: check if losable and hide the lose button as well
         
         //background gradient
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
 
     func loadCurrentCard()
@@ -45,24 +45,24 @@ class DrawCardViewController: UIViewController {
         let cardPic: UIImage? = UIImage(named: game.getCurrentCard()!.getFileName())
         if cardPic != nil
         {
-            cardImageButton.setImage(cardPic, forState: .Normal)
+            cardImageButton.setImage(cardPic, for: UIControlState())
             
             cardImageButton.imageEdgeInsets = UIEdgeInsetsMake(0,0,0,0)
         }
         else
         {
-            cardImageButton.setTitle(game.getCurrentCard()!.toString(), forState: .Normal)
+            cardImageButton.setTitle(game.getCurrentCard()!.toString(), for: UIControlState())
         }
         
         
         if game.getCurrentCard()!.stealable
         {
-            stolenButton.enabled = true
+            stolenButton.isEnabled = true
             stolenButton.alpha = 1.0;
         }
         else
         {
-            stolenButton.enabled = false
+            stolenButton.isEnabled = false
             stolenButton.alpha = 0.5;
         }
         
@@ -72,15 +72,15 @@ class DrawCardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cardInfoButtonPressed(sender: AnyObject)
+    @IBAction func cardInfoButtonPressed(_ sender: AnyObject)
     {
         
         CardInfoViewController.currentCard = game.getCurrentCard()!;
         CardInfoViewController.from = "DrawCard";
-        performSegueWithIdentifier("DrawCardToCardInfo", sender: nil)
+        performSegue(withIdentifier: "DrawCardToCardInfo", sender: nil)
     }
     
-    @IBAction func WonButtonPressed(sender: AnyObject)
+    @IBAction func WonButtonPressed(_ sender: AnyObject)
     {
 //        let drink:String = game.getCurrentCard()!.getDrink();
         
@@ -89,7 +89,7 @@ class DrawCardViewController: UIViewController {
        
     }
 
-    @IBAction func LostButtonPressed(sender: AnyObject)
+    @IBAction func LostButtonPressed(_ sender: AnyObject)
     {
 //        let drink:String = game.getCurrentCard()!.getDrink();
         
@@ -97,7 +97,7 @@ class DrawCardViewController: UIViewController {
         self.goToNext("lost");
     }
     
-    @IBAction func StolenButtonPressed(sender: AnyObject)
+    @IBAction func StolenButtonPressed(_ sender: AnyObject)
     {
 //        let drink:String = game.getCurrentCard()!.getDrink();
         
@@ -105,7 +105,7 @@ class DrawCardViewController: UIViewController {
         self.goToNext("stolen");
     }
     
-    @IBAction func skipCardButtonPressed(sender: AnyObject)
+    @IBAction func skipCardButtonPressed(_ sender: AnyObject)
     {
         alertAndGoBack("Alert", s:"Card will be skipped. Make sure both team captains agree as this cannot be undone",whichAction: "skipped")
     }
@@ -120,7 +120,7 @@ class DrawCardViewController: UIViewController {
     }
      */
     
-    func goToNext(whichAction:String)
+    func goToNext(_ whichAction:String)
     {
         switch whichAction
         {
@@ -131,23 +131,23 @@ class DrawCardViewController: UIViewController {
         case "stolen":
             game.cardWasStolen();
         case "skipped":
-            game.drawCard();
+            _ = game.drawCard();
             self.loadCurrentCard();
             return; // stay here if skipped
         default: break
         }
         
-        self.performSegueWithIdentifier(
-                "DrawCardToPlayGame", sender: self)
+        self.performSegue(
+                withIdentifier: "DrawCardToPlayGame", sender: self)
     }
     
-    func alertAndGoBack(t:String, s : String, whichAction:String)
+    func alertAndGoBack(_ t:String, s : String, whichAction:String)
     {
         let popup = UIAlertController(title: t,
                                       message: s,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         
-        let okAction = UIAlertAction(title:"OK", style: .Default, handler:
+        let okAction = UIAlertAction(title:"OK", style: .default, handler:
                                     {
                                         action in self.goToNext(whichAction)
                                     })
@@ -155,10 +155,10 @@ class DrawCardViewController: UIViewController {
         
         
         let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .Cancel, handler: nil)
+                                         style: .cancel, handler: nil)
         popup.addAction(cancelAction);
         
-        self.presentViewController(popup, animated: true,
+        self.present(popup, animated: true,
                                    completion: nil)
         
     }

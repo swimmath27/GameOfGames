@@ -26,7 +26,7 @@ class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableVi
         teamNameLabel.text = "\(game.getTeamName(CheckCardsViewController.whichTeam))'s Cards"
 
         
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), atIndex: 0)
+        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,40 +46,40 @@ class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableVi
     */
     /// table view stuff ////////////////////////////////////
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return game.getTeamCards(CheckCardsViewController.whichTeam).count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let row = indexPath.row
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("TempCellView", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TempCellView", for: indexPath) as UITableViewCell
         
         let card : Card = game.getTeamCards(CheckCardsViewController.whichTeam)[row]
         
         cell.textLabel?.text = card.shortDesc;
         
-        cell.textLabel?.textColor = UIColor.whiteColor();
+        cell.textLabel?.textColor = UIColor.white;
         cell.textLabel?.font = UIFont(name: "Lobster1.3", size: 22)
-        cell.textLabel?.textAlignment = .Center
+        cell.textLabel?.textAlignment = .center
         
         return cell;
     }
     
-    func tableView(tableView: UITableView,
-                   didSelectRowAtIndexPath indexPath: NSIndexPath)
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath)
     {
         //unselect this cell
-        if tableView.cellForRowAtIndexPath(indexPath) != nil
+        if tableView.cellForRow(at: indexPath) != nil
         {
-            tableView.deselectRowAtIndexPath(indexPath, animated: false)
+            tableView.deselectRow(at: indexPath, animated: false)
         }
         
         let row = indexPath.row
@@ -89,7 +89,7 @@ class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableVi
         
        
         
-        performSegueWithIdentifier("CheckCardsToCardInfo", sender: nil)
+        performSegue(withIdentifier: "CheckCardsToCardInfo", sender: nil)
         
     }
     
