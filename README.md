@@ -1,12 +1,12 @@
 #Game Of Games
-to install:
+To Install:
 
-1. download/clone this git repo
-2. navigate to the directory in a terminal
-3. run "pod install"
- 1. you may need to "gem install cocoapods", try that if it doesn't work
-4. open GameOfGames.xcworkspace
-5. select your iphone in the toolbar at the top for GameOfGames > [here]
-6. click the play button
-7. enjoy!
+1. Download/Clone this git repo (Xcode can do this or you can do it from a Terminal).
+2. Navigate to the directory in a Terminal.
+3. Run `pod install`.
+ 1. You may need to `gem install cocoapods`, try that if it doesn't work.
+4. Open GameOfGames.xcworkspace in Xcode.
+5. Select your iPhone in the toolbar at the top left (next to the play and stop buttons) for [GameOfGames > MyIphone]
+6. Click the play button.
+7. Enjoy!
 

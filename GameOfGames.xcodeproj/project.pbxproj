@@ -471,6 +471,43 @@
 			name = Lobster;
 			sourceTree = "<group>";
 		};
+		55277B471E5411DA00345EFE /* Pojos */ = {
+			isa = PBXGroup;
+			children = (
+				55D3FB371CFE4262006C0A8E /* Card.swift */,
+				55D3FB391CFE4284006C0A8E /* Deck.swift */,
+				55D3FB351CFE3D62006C0A8E /* Game.swift */,
+				550800841D08C68E0022E984 /* UIHelper.swift */,
+				55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */,
+			);
+			name = Pojos;
+			sourceTree = "<group>";
+		};
+		55277B481E54120700345EFE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				55B43CBB1D0210FE002CCE78 /* CardInfoViewController.swift */,
+				55D3FB4F1CFFA3CD006C0A8E /* CheckCardsViewController.swift */,
+				55B8310C1D03669D00F19A63 /* ChooseTeamOrderViewController.swift */,
+				55D3FB411CFE57E2006C0A8E /* DrawCardViewController.swift */,
+				556997BF1D19E28700AE7D4E /* EndOlympicsViewController.swift */,
+				559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */,
+				55D3FB431CFF384A006C0A8E /* NamePlayersViewController.swift */,
+				55D3FB451CFF3DDB006C0A8E /* NameTeamsViewController.swift */,
+				55D3FB071CFE0E30006C0A8E /* NumberOfPlayersViewController.swift */,
+				556997C71D19F0D500AE7D4E /* OlympicsInfoViewController.swift */,
+				55D3FB3F1CFE54F5006C0A8E /* PlayGameViewController.swift */,
+				55D3FB471CFF4525006C0A8E /* PlayOlympicsViewController.swift */,
+				55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */,
+				55D3FB3D1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift */,
+				55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */,
+				556997BD1D19E27B00AE7D4E /* StartOlympicsViewController.swift */,
+				55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */,
+				559ED9981D0607480040D36A /* WholeDeckViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		55B43CC11D022294002CCE78 /* CardImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -580,35 +617,14 @@
 			isa = PBXGroup;
 			children = (
 				55E25A111E53FEA4007B46B8 /* GoogleService-Info.plist */,
-				55D3FB351CFE3D62006C0A8E /* Game.swift */,
-				55D3FB391CFE4284006C0A8E /* Deck.swift */,
-				55D3FB371CFE4262006C0A8E /* Card.swift */,
-				55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */,
-				550800841D08C68E0022E984 /* UIHelper.swift */,
-				55D3FB0B1CFE0E30006C0A8E /* Main.storyboard */,
-				55D3FB0E1CFE0E30006C0A8E /* Assets.xcassets */,
-				55D3FB101CFE0E30006C0A8E /* LaunchScreen.storyboard */,
-				55D3FB3B1CFE4B57006C0A8E /* extensions.swift */,
-				55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */,
 				55D3FB131CFE0E30006C0A8E /* Info.plist */,
-				55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */,
-				559ED9981D0607480040D36A /* WholeDeckViewController.swift */,
-				559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */,
-				55D3FB071CFE0E30006C0A8E /* NumberOfPlayersViewController.swift */,
-				55D3FB431CFF384A006C0A8E /* NamePlayersViewController.swift */,
-				55D3FB3D1CFE4D1C006C0A8E /* RandomizeTeamsViewController.swift */,
-				55B43CB51D01F942002CCE78 /* QuickStartRandomTeamsViewController.swift */,
-				55D3FB451CFF3DDB006C0A8E /* NameTeamsViewController.swift */,
-				55D3FB471CFF4525006C0A8E /* PlayOlympicsViewController.swift */,
-				55B8310C1D03669D00F19A63 /* ChooseTeamOrderViewController.swift */,
-				55D3FB3F1CFE54F5006C0A8E /* PlayGameViewController.swift */,
-				55D3FB411CFE57E2006C0A8E /* DrawCardViewController.swift */,
-				55D3FB4F1CFFA3CD006C0A8E /* CheckCardsViewController.swift */,
-				55D2E5F91CFFBA2D004768FE /* RoundRouletteViewController.swift */,
-				55B43CBB1D0210FE002CCE78 /* CardInfoViewController.swift */,
-				556997BD1D19E27B00AE7D4E /* StartOlympicsViewController.swift */,
-				556997BF1D19E28700AE7D4E /* EndOlympicsViewController.swift */,
-				556997C71D19F0D500AE7D4E /* OlympicsInfoViewController.swift */,
+				55277B471E5411DA00345EFE /* Pojos */,
+				55277B481E54120700345EFE /* ViewControllers */,
+				55D3FB0B1CFE0E30006C0A8E /* Main.storyboard */,
+				55D3FB101CFE0E30006C0A8E /* LaunchScreen.storyboard */,
+				55D3FB0E1CFE0E30006C0A8E /* Assets.xcassets */,
+				55D3FB051CFE0E30006C0A8E /* AppDelegate.swift */,
+				55D3FB3B1CFE4B57006C0A8E /* extensions.swift */,
 			);
 			path = GameOfGames;
 			sourceTree = "<group>";
