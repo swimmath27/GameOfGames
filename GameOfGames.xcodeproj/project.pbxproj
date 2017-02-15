@@ -480,7 +480,7 @@
 				550800841D08C68E0022E984 /* UIHelper.swift */,
 				55B43CB91D020C6B002CCE78 /* HttpDownloader.swift */,
 			);
-			name = Pojos;
+			path = Pojos;
 			sourceTree = "<group>";
 		};
 		55277B481E54120700345EFE /* ViewControllers */ = {
@@ -491,7 +491,6 @@
 				55B8310C1D03669D00F19A63 /* ChooseTeamOrderViewController.swift */,
 				55D3FB411CFE57E2006C0A8E /* DrawCardViewController.swift */,
 				556997BF1D19E28700AE7D4E /* EndOlympicsViewController.swift */,
-				559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */,
 				55D3FB431CFF384A006C0A8E /* NamePlayersViewController.swift */,
 				55D3FB451CFF3DDB006C0A8E /* NameTeamsViewController.swift */,
 				55D3FB071CFE0E30006C0A8E /* NumberOfPlayersViewController.swift */,
@@ -505,7 +504,15 @@
 				55D3FB491CFF4C64006C0A8E /* StartScreenViewController.swift */,
 				559ED9981D0607480040D36A /* WholeDeckViewController.swift */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		55277B821E54174500345EFE /* OtherUI */ = {
+			isa = PBXGroup;
+			children = (
+				559ED99C1D0609E80040D36A /* ImageCollectionViewCell.swift */,
+			);
+			path = OtherUI;
 			sourceTree = "<group>";
 		};
 		55B43CC11D022294002CCE78 /* CardImages */ = {
@@ -620,6 +627,7 @@
 				55D3FB131CFE0E30006C0A8E /* Info.plist */,
 				55277B471E5411DA00345EFE /* Pojos */,
 				55277B481E54120700345EFE /* ViewControllers */,
+				55277B821E54174500345EFE /* OtherUI */,
 				55D3FB0B1CFE0E30006C0A8E /* Main.storyboard */,
 				55D3FB101CFE0E30006C0A8E /* LaunchScreen.storyboard */,
 				55D3FB0E1CFE0E30006C0A8E /* Assets.xcassets */,
