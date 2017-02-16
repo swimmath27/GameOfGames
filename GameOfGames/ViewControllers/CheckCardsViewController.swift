@@ -8,16 +8,14 @@
 
 import UIKit
 
-class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
-{
+class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   static var whichTeam = 1;
   
   @IBOutlet weak var teamNameLabel: UILabel!
   @IBOutlet weak var cardsTable: UITableView!
   
   let game : Game = Game.getInstance();
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
     
     cardsTable.delegate = self
@@ -46,18 +44,15 @@ class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableVi
   */
   /// table view stuff ////////////////////////////////////
   
-  func numberOfSections(in tableView: UITableView) -> Int
-  {
+  func numberOfSections(in tableView: UITableView) -> Int {
     return 1;
   }
   
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-  {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return game.getTeamCards(CheckCardsViewController.whichTeam).count
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-  {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let row = indexPath.row
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "TempCellView", for: indexPath) as UITableViewCell
@@ -74,11 +69,9 @@ class CheckCardsViewController: UIViewController, UITableViewDelegate, UITableVi
   }
   
   func tableView(_ tableView: UITableView,
-           didSelectRowAt indexPath: IndexPath)
-  {
+           didSelectRowAt indexPath: IndexPath) {
     //unselect this cell
-    if tableView.cellForRow(at: indexPath) != nil
-    {
+    if tableView.cellForRow(at: indexPath) != nil {
       tableView.deselectRow(at: indexPath, animated: false)
     }
     

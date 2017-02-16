@@ -8,8 +8,7 @@
 
 import UIKit
 
-class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
-{
+class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   @IBOutlet weak var team1Table: UITableView!
   @IBOutlet weak var team2Table: UITableView!
   
@@ -17,8 +16,7 @@ class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UIT
   
   var shuffled:Bool = false;
   
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
     
     team1Table.delegate = self
@@ -32,37 +30,30 @@ class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UIT
     self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
   }
 
-  func updateTeamViews()
-  {
+  func updateTeamViews() {
     team1Table.reloadData();
     team2Table.reloadData();
   }
   
-  @IBAction func RandomizeButtonPressed(_ sender: AnyObject)
-  {
+  @IBAction func RandomizeButtonPressed(_ sender: AnyObject) {
     game.shuffleTeams();
     updateTeamViews();
     shuffled = true;
   }
   
-  @IBAction func FinishButtonPressed(_ sender: AnyObject)
-  {
-    if shuffled
-    {
+  @IBAction func FinishButtonPressed(_ sender: AnyObject) {
+    if shuffled {
       performSegue(withIdentifier: "RandomizeTeamsToNameTeams", sender: nil)
     }
-    else
-    {
+    else {
       alertToConfirm("Are you sure you want to continue without shuffling teams?",
-               action:
-               {
+               action: {
                 action in self.performSegue(withIdentifier: "RandomizeTeamsToNameTeams", sender: nil)
                })
     }
   }
   
-  func alertToConfirm(_ msg : String, action : @escaping (UIAlertAction) -> Void)
-  {
+  func alertToConfirm(_ msg : String, action : @escaping (UIAlertAction) -> Void) {
     let popup = UIAlertController(title: "Alert",
                     message: msg,
                     preferredStyle: UIAlertControllerStyle.alert)
@@ -79,29 +70,23 @@ class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UIT
   
   ///////////////////////////// table view stuff ////////////////////////////////////
   
-  func numberOfSections(in tableView: UITableView) -> Int
-  {
+  func numberOfSections(in tableView: UITableView) -> Int {
     return 1;
   }
   
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-  {
-    if tableView == team1Table
-    {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    if tableView == team1Table {
       return game.getTeam(1).count;
     }
-    else if tableView == team2Table
-    {
+    else if tableView == team2Table {
       return game.getTeam(2).count;
     }
-    else
-    {
+    else {
       return 0;
     }
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-  {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let row = indexPath.row
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "TempCellView", for: indexPath) as UITableViewCell
@@ -118,13 +103,11 @@ class RandomizeTeamsViewController: UIViewController, UITableViewDataSource, UIT
   }
   
   func tableView(_ tableView: UITableView,
-           didSelectRowAt indexPath: IndexPath)
-  {
+           didSelectRowAt indexPath: IndexPath) {
     //nothing when they select names
     
     //unselect this cell
-    if tableView.cellForRow(at: indexPath) != nil
-    {
+    if tableView.cellForRow(at: indexPath) != nil {
       tableView.deselectRow(at: indexPath, animated: true)
     }
   }

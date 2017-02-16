@@ -8,8 +8,7 @@
 
 import UIKit
 
-class OlympicsInfoViewController: UIViewController
-{
+class OlympicsInfoViewController: UIViewController {
 
   @IBOutlet weak var infoTextView: UITextView!
   
@@ -20,8 +19,7 @@ class OlympicsInfoViewController: UIViewController
     
     let path = Bundle.main.path(forResource: "GoGOlympicsRules", ofType: "txt");
     
-    do
-    {
+    do {
       infoTextView.text = try NSString(contentsOf: URL(fileURLWithPath: path!), encoding: String.Encoding.utf8.rawValue) as String
     }
     catch {}

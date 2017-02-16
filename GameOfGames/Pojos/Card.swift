@@ -8,8 +8,7 @@
 
 import Foundation
 
-class Card : Equatable
-{
+class Card : Equatable {
   //taken from http://stackoverflow.com/questions/24007461/how-to-enumerate-an-enum-with-string-type
   
   enum Suit: Int {
@@ -21,8 +20,7 @@ class Card : Equatable
     //soul - heart
     //chance - club
     
-    func simpleDescription() -> String
-    {
+    func simpleDescription() -> String {
       switch self {
       case .joke:
         return "Joke"
@@ -37,8 +35,7 @@ class Card : Equatable
       }
     }
     
-    func wonMessageTitle() -> String
-    {
+    func wonMessageTitle() -> String {
       switch self {
       case .joke:
         return "Haha"
@@ -52,8 +49,7 @@ class Card : Equatable
         return "It's Your Lucky Day!"
       }
     }
-    func wonMessage() -> String
-    {
+    func wonMessage() -> String {
       switch self {
       case .joke:
         return "Haha"
@@ -69,8 +65,7 @@ class Card : Equatable
     }
 
     
-    func lostMessageTitle() -> String
-    {
+    func lostMessageTitle() -> String {
       switch self {
       case .joke:
         return "Haha"
@@ -84,8 +79,7 @@ class Card : Equatable
         return "Better Luck Next Time!"
       }
     }
-    func lostMessage() -> String
-    {
+    func lostMessage() -> String {
       switch self {
       case .joke:
         return "Haha"
@@ -101,8 +95,7 @@ class Card : Equatable
     }
 
     
-    func stolenMessageTitle() -> String
-    {
+    func stolenMessageTitle() -> String {
       switch self {
       case .joke:
         return "Haha"
@@ -116,8 +109,7 @@ class Card : Equatable
         return "A Chance card was stolen?"
       }
     }
-    func stolenMessage() -> String
-    {
+    func stolenMessage() -> String {
       switch self {
       case .joke:
         return "Haha"
@@ -140,13 +132,11 @@ class Card : Equatable
   fileprivate(set) var shortDesc:String = "";
   fileprivate(set) var longDesc:String = "";
 
-  convenience init (suit:Suit, rank:Int)
-  {
+  convenience init (suit:Suit, rank:Int) {
     self.init(suit: suit, rank: rank, stealable: false, playable: false, shortDescription: "", longDescription: "");
   }
   
-  init (suit:Suit, rank:Int, stealable:Bool, playable: Bool, shortDescription:String, longDescription:String)
-  {
+  init (suit:Suit, rank:Int, stealable:Bool, playable: Bool, shortDescription:String, longDescription:String) {
     self.suit = suit;
     self.rank = rank;
     self.stealable = stealable;
@@ -156,10 +146,8 @@ class Card : Equatable
   }
   
   
-  func getDrink() -> String
-  {
-    switch suit
-    {
+  func getDrink() -> String {
+    switch suit {
     case .joke:
       return "nothing"
     case .body:
@@ -174,49 +162,40 @@ class Card : Equatable
   }
   
   
-  func getStolenMessage() -> String
-  {
+  func getStolenMessage() -> String {
     return self.suit.stolenMessage()
   }
-  func getStolenMessageTitle() -> String
-  {
+  func getStolenMessageTitle() -> String {
     return self.suit.stolenMessageTitle();
   }
   
   
-  func getWonMessage() -> String
-  {
+  func getWonMessage() -> String {
     return self.suit.wonMessage();
   }
-  func getWonMessageTitle() -> String
-  {
+  func getWonMessageTitle() -> String {
     return self.suit.wonMessageTitle();
   }
   
   
-  func getLostMessage() -> String
-  {
+  func getLostMessage() -> String {
     return self.suit.lostMessage();
   }
-  func getLostMessageTitle() -> String
-  {
+  func getLostMessageTitle() -> String {
     return self.suit.lostMessageTitle();
   }
   
   
-  func getFileName() ->String
-  {
+  func getFileName() ->String {
     return "\(self.suit.simpleDescription())_\(self.rank).png"
   }
   
-  func toString() -> String
-  {
+  func toString() -> String {
     return "\(self.suit.simpleDescription()) card number \(self.rank)"
   }
 }
 
 //Equatable
-func ==(lhs:Card, rhs:Card) -> Bool
-{
+func ==(lhs:Card, rhs:Card) -> Bool {
   return lhs.rank == rhs.rank && lhs.suit == rhs.suit
 }

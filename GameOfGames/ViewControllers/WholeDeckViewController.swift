@@ -8,16 +8,14 @@
 
 import UIKit
 
-class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate
-{
+class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
   
   @IBOutlet weak var imageCollectionView: UICollectionView!
   let reuseIdentifier = "ImageCollectionViewCell";
   
   let game : Game = Game.getInstance();
   
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
     
     imageCollectionView.delegate = self;
@@ -55,8 +53,7 @@ class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UIC
     self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
   }
   
-  override func didReceiveMemoryWarning()
-  {
+  override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
@@ -76,14 +73,12 @@ class WholeDeckViewController: UIViewController, UICollectionViewDataSource, UIC
   /////////////Collection View stuff //////////////////
   
   // tell the collection view how many cells to make
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
-  {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return game.getOrderedCards().count
   }
   
   // make a cell for each cell index path
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-  {
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
    
     let row:Int = indexPath.row
     let card:Card = game.getOrderedCards()[row];

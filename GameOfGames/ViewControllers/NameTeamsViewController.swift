@@ -8,8 +8,7 @@
 
 import UIKit
 
-class NameTeamsViewController: UIViewController
-{
+class NameTeamsViewController: UIViewController {
 
   @IBOutlet weak var askTeamNameLabel: UILabel!
   @IBOutlet weak var teamNameField: UITextField!
@@ -17,8 +16,7 @@ class NameTeamsViewController: UIViewController
   fileprivate let game : Game = Game.getInstance();
   
   fileprivate var currentTeam : Int = 1;
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
     
     askTeamNameLabel.text = "What is Team \(currentTeam)'s name?";
@@ -29,8 +27,7 @@ class NameTeamsViewController: UIViewController
     self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
   }
 
-  override func didReceiveMemoryWarning()
-  {
+  override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
@@ -46,21 +43,16 @@ class NameTeamsViewController: UIViewController
   }
   */
 
-  @IBAction func submitButtonPressed(_ sender: AnyObject)
-  {
-    if let s : String = teamNameField.text
-    {
-      if s != ""
-      {
+  @IBAction func submitButtonPressed(_ sender: AnyObject) {
+    if let s : String = teamNameField.text {
+      if s != "" {
         game.setTeamName(currentTeam,name: s);
         currentTeam += 1;
-        if currentTeam > 2
-        {
+        if currentTeam > 2 {
           // both teams have been named now
           performSegue(withIdentifier: "NameTeamsToStartOlympics", sender: nil)
         }
-        else
-        {
+        else {
           askTeamNameLabel.text = "What is Team \(currentTeam)'s name?";
           teamNameField.text = "";
         }
@@ -72,8 +64,7 @@ class NameTeamsViewController: UIViewController
   }
   
   
-  func alert(_ s : String)
-  {
+  func alert(_ s : String) {
     let popup = UIAlertController(title: "Error",
                     message: s,
                     preferredStyle: UIAlertControllerStyle.alert)

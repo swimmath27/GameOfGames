@@ -9,67 +9,53 @@
 
 import Foundation
 
-class HttpDownloader
-{
+class HttpDownloader {
   
-  class func loadFileSync(_ url: URL, completion:(_ path:String, _ error:Error?) -> Void)
-  {
+  class func loadFileSync(_ url: URL, completion:(_ path:String, _ error:Error?) -> Void) {
     let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as URL
     let destinationUrl = documentsUrl.appendingPathComponent(url.lastPathComponent)
     
 
-    if let dataFromURL = try? Data(contentsOf: url)
-    {
-      if (try? dataFromURL.write(to: destinationUrl, options: [.atomic])) != nil
-      {
+    if let dataFromURL = try? Data(contentsOf: url) {
+      if (try? dataFromURL.write(to: destinationUrl, options: [.atomic])) != nil {
         print("file saved [\(destinationUrl.path)]")
         completion(destinationUrl.path, nil)
       }
-      else
-      {
+      else {
         print("error saving file")
         let error = NSError(domain:"Error saving file", code:1001, userInfo:nil)
         completion(destinationUrl.path, error)
       }
     }
-    else
-    {
+    else {
       let error = NSError(domain:"Error downloading file", code:1002, userInfo:nil)
       completion(destinationUrl.path, error)
     }
   }
   
-  class func loadFileAsync(_ url: URL, completion:@escaping (_ path:String, _ error:Error?) -> Void)
-  {
+  class func loadFileAsync(_ url: URL, completion:@escaping (_ path:String, _ error:Error?) -> Void) {
     let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as URL
     let destinationUrl = documentsUrl.appendingPathComponent(url.lastPathComponent)
 
     let sessionConfig = URLSessionConfiguration.default
     let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
     let task = session.dataTask(with: url,
-                         completionHandler:
-      { (data: Data?, response: URLResponse?, error: Error?) -> Void in
-        if (error == nil)
-        {
-          if let response = response as? HTTPURLResponse
-          {
+                         completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+        if (error == nil) {
+          if let response = response as? HTTPURLResponse {
             print("response=\(response)")
-            if response.statusCode == 200
-            {
-              if (try? data!.write(to: destinationUrl, options: [.atomic])) != nil
-              {
+            if response.statusCode == 200 {
+              if (try? data!.write(to: destinationUrl, options: [.atomic])) != nil {
                 print("file saved [\(destinationUrl.path)]")
                 completion(destinationUrl.path, error)
               }
-              else
-              {
+              else {
                 print("error saving file")
                 let error = NSError(domain:"Error saving file", code:1001, userInfo:nil)
                 completion(destinationUrl.path, error)
               }
             }
-            else
-            {
+            else {
               print("error downloading file")
               let error = NSError(domain:"Error downloading file", code:1001, userInfo:nil)
               completion("", error)
@@ -85,74 +71,58 @@ class HttpDownloader
     
   }
   
-  class func loadFileSyncNoOverwrite(_ url: URL, completion:(_ path:String, _ error:NSError?) -> Void)
-  {
+  class func loadFileSyncNoOverwrite(_ url: URL, completion:(_ path:String, _ error:NSError?) -> Void) {
     let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as URL
     let destinationUrl = documentsUrl.appendingPathComponent(url.lastPathComponent)
     
-    if FileManager().fileExists(atPath: destinationUrl.path)
-    {
+    if FileManager().fileExists(atPath: destinationUrl.path) {
       print("file already exists [\(destinationUrl.path)]")
       completion(destinationUrl.path, nil)
     }
-    else if let dataFromURL = try? Data(contentsOf: url)
-    {
-      if (try? dataFromURL.write(to: destinationUrl, options: [.atomic])) != nil
-      {
+    else if let dataFromURL = try? Data(contentsOf: url) {
+      if (try? dataFromURL.write(to: destinationUrl, options: [.atomic])) != nil {
         print("file saved [\(destinationUrl.path)]")
         completion(destinationUrl.path, nil)
       }
-      else
-      {
+      else {
         print("error saving file")
         let error = NSError(domain:"Error saving file", code:1001, userInfo:nil)
         completion(destinationUrl.path, error)
       }
     }
-    else
-    {
+    else {
       let error = NSError(domain:"Error downloading file", code:1002, userInfo:nil)
       completion(destinationUrl.path, error)
     }
   }
   
-  class func loadFileAsyncNoOverwrite(_ url: URL, completion:@escaping (_ path:String, _ error:Error?) -> Void)
-  {
+  class func loadFileAsyncNoOverwrite(_ url: URL, completion:@escaping (_ path:String, _ error:Error?) -> Void) {
     let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as URL
     let destinationUrl = documentsUrl.appendingPathComponent(url.lastPathComponent)
-    if FileManager().fileExists(atPath: destinationUrl.path)
-    {
+    if FileManager().fileExists(atPath: destinationUrl.path) {
       print("file already exists [\(destinationUrl.path)]")
       completion(destinationUrl.path, nil)
     }
-    else
-    {
+    else {
       let sessionConfig = URLSessionConfiguration.default
       let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
       let task = session.dataTask(with: url,
-                           completionHandler:
-        { (data: Data?, response: URLResponse?, error: Error?) -> Void in
-          if (error == nil)
-          {
-            if let response = response as? HTTPURLResponse
-            {
+                           completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+          if (error == nil) {
+            if let response = response as? HTTPURLResponse {
               print("response=\(response)")
-              if response.statusCode == 200
-              {
-                if (try? data!.write(to: destinationUrl, options: [.atomic])) != nil
-                {
+              if response.statusCode == 200 {
+                if (try? data!.write(to: destinationUrl, options: [.atomic])) != nil {
                   print("file saved [\(destinationUrl.path)]")
                   completion(destinationUrl.path, error)
                 }
-                else
-                {
+                else {
                   print("error saving file")
                   let error = NSError(domain:"Error saving file", code:1001, userInfo:nil)
                   completion(destinationUrl.path, error)
                 }
               }
-              else
-              {
+              else {
                 print("error downloading file")
                 let error = NSError(domain:"Error downloading file", code:1001, userInfo:nil)
                 completion("", error)
@@ -173,8 +143,7 @@ class HttpDownloader
  usage:
   let url = NSURL(string: "http://www.mywebsite.com/myfile.pdf")
   HttpDownloader.loadFileAsync(url,
-    completion:
-    { (path:String, error:NSError!) in
+    completion: { (path:String, error:NSError!) in
       println("pdf downloaded to: \(path)")
     })
 */

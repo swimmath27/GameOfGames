@@ -8,8 +8,7 @@
 
 import UIKit
 
-class CardInfoViewController: UIViewController
-{
+class CardInfoViewController: UIViewController {
   static var currentCard:Card = Card(suit: Card.Suit.joke, rank: 0);
   
   //whether or not this was initialized from draw card view controller
@@ -23,8 +22,7 @@ class CardInfoViewController: UIViewController
   
   @IBOutlet weak var cardSuitLabel: UILabel!
   
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     
@@ -44,15 +42,13 @@ class CardInfoViewController: UIViewController
     self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
   }
   
-  override func didReceiveMemoryWarning()
-  {
+  override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
   
   
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
-  {
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     backButtonPressed(self);
   }
 
@@ -67,8 +63,7 @@ class CardInfoViewController: UIViewController
    }
    */
   
-  @IBAction func backButtonPressed(_ sender: AnyObject)
-  {
+  @IBAction func backButtonPressed(_ sender: AnyObject) {
     
     let segueID:String = "CardInfoTo"+CardInfoViewController.from; // back to where we came from
     

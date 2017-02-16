@@ -9,11 +9,9 @@
 import Foundation
 import UIKit
 
-class UIHelper
-{
+class UIHelper {
    
-  class func getBackgroundGradient() -> CAGradientLayer
-  {
+  class func getBackgroundGradient() -> CAGradientLayer {
     //need to make a new one every time it's called or it disapears from the previous view controller before the next one fully shows
     
     /////////////////////////////////////////////////////////////////////////

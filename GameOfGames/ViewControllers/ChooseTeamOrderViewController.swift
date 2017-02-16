@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
-{
+class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
   
   @IBOutlet weak var currentTeamLabel: UILabel!
@@ -22,8 +21,7 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
   
   var swapPos:Int = -1;
   
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
     
     tableView.delegate = self;
@@ -45,16 +43,13 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
   }
 
   
-  @IBAction func nextButtonPressed(_ sender: AnyObject)
-  {
+  @IBAction func nextButtonPressed(_ sender: AnyObject) {
     numTeamsDone += 1;
-    if numTeamsDone > 1
-    {
+    if numTeamsDone > 1 {
       // both teams have chosen their order
       performSegue(withIdentifier: "ChooseTeamOrderToPlayGame", sender: nil)
     }
-    else
-    {
+    else {
       //the other team must choose their order
       currentTeam = (currentTeam==1 ? 2 : 1);
       
@@ -69,19 +64,16 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
   
   /// table view stuff ////////////////////////////////////
   
-  func numberOfSections(in tableView: UITableView) -> Int
-  {
+  func numberOfSections(in tableView: UITableView) -> Int {
     return 1;
   }
   
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-  {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
     return game.getTeam(currentTeam).count;
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-  {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let row = indexPath.row
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "TempCellView", for: indexPath) as UITableViewCell
@@ -99,35 +91,27 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
   }
   
   func tableView(_ tableView: UITableView,
-           didSelectRowAt indexPath: IndexPath)
-  {
+           didSelectRowAt indexPath: IndexPath) {
     //unselect this cell
-    if tableView.cellForRow(at: indexPath) != nil
-    {
+    if tableView.cellForRow(at: indexPath) != nil {
       tableView.deselectRow(at: indexPath, animated: false)
     }
     
     let row = indexPath.row
-    if row == 0
-    {
+    if row == 0 {
       alert("Team Captain must always be first");
     }
-    else if (swapPos == -1) // this is the first selection
-    {
+    else if (swapPos == -1)  {  // this is the first selection 
       swapPos = row;
-      if let cell = tableView.cellForRow(at: indexPath)
-      {
+      if let cell = tableView.cellForRow(at: indexPath) {
         cell.backgroundColor = UIColor.red
       }
     }
-    else // this is the second selection
-    {
-      if (swapPos != row)
-      {
+    else  {  // this is the second selection 
+      if (swapPos != row) {
         game.swapPlayersInTeam(swapPos, player2: row, team: currentTeam);
       }
-      if let cell = tableView.cellForRow(at: IndexPath(row: swapPos, section: 0))
-      {
+      if let cell = tableView.cellForRow(at: IndexPath(row: swapPos, section: 0)) {
         cell.backgroundColor = UIColor.clear;
       }
       
@@ -139,8 +123,7 @@ class ChooseTeamOrderViewController: UIViewController, UITableViewDataSource, UI
   
 
   
-  func alert(_ s : String)
-  {
+  func alert(_ s : String) {
     let popup = UIAlertController(title: "Error",
                     message: s,
                     preferredStyle: UIAlertControllerStyle.alert)

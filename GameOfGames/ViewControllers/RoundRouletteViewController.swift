@@ -55,26 +55,21 @@ class RoundRouletteViewController: UIViewController {
     
     totalCards = team1Cards+team2Cards;
     
-    if (totalCards > 0)
-    {
-      if (team2Cards > 0)
-      {
+    if (totalCards > 0) {
+      if (team2Cards > 0) {
         let flstring = String(format:"%.2f", 100*Double(team2Cards)/Double(totalCards))
         team1Chance.text = "1-\(team2Cards) (\(flstring)%)"
       }
-      else
-      {
+      else {
         //team 2 got no cards, team 1 chance is 0
         team1Chance.text = "0 (0%)"
       }
       
-      if (team1Cards > 0)
-      {
+      if (team1Cards > 0) {
         let flstring = String(format:"%.2f", 100*Double(team1Cards)/Double(totalCards))
         team2Chance.text = "\(team2Cards+1)-\(totalCards) (\(flstring)%)"
       }
-      else
-      {
+      else {
         //team 1 got no cards, team 2 chance is 0
         team2Chance.text = "0 (0%)"
       }
@@ -84,8 +79,7 @@ class RoundRouletteViewController: UIViewController {
       
       rollButton.setTitle("Roll", for: UIControlState())
     }
-    else
-    {
+    else {
       //nobody has won any cards... just go back
       
       team1Chance.text = "0"
@@ -106,13 +100,11 @@ class RoundRouletteViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  func timerFire(_ thisTimer:Timer)
-  {
+  func timerFire(_ thisTimer:Timer) {
     //print("\(delay)")
     
     //print("timer interval: \(timer!.timeInterval)")
-    if (delay > 0.75)
-    {
+    if (delay > 0.75) {
       //done with the rolling
       let rand = Int(arc4random_uniform(UInt32(totalCards)))+1
       rolledNumber.text = "\(rand)";
@@ -128,8 +120,7 @@ class RoundRouletteViewController: UIViewController {
       game.messageTitle = "Too bad, \(team)"
       game.message = "You must finish the Bitch Cup before the game may continue"
     }
-    else
-    {
+    else {
       
       let rand = Int(arc4random_uniform(UInt32(totalCards)))+1
       rolledNumber.text = "\(rand)";
@@ -146,15 +137,12 @@ class RoundRouletteViewController: UIViewController {
     }
   }
 
-  @IBAction func rollButtonPressed(_ sender: AnyObject)
-  {
+  @IBAction func rollButtonPressed(_ sender: AnyObject) {
     
-    if (self.rolled)
-    {
+    if (self.rolled) {
       performSegue(withIdentifier: "RoundRouletteToPlayGame", sender: nil);
     }
-    else
-    {
+    else {
       self.rolled = true
       
       timer = Timer.scheduledTimer(timeInterval: delay,
@@ -176,8 +164,7 @@ class RoundRouletteViewController: UIViewController {
   }
   */
   
-  func alert(_ s : String)
-  {
+  func alert(_ s : String) {
     let popup = UIAlertController(title: "Alert",
                     message: s,
                     preferredStyle: UIAlertControllerStyle.alert)

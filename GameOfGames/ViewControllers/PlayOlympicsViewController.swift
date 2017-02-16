@@ -44,8 +44,7 @@ class PlayOlympicsViewController: UIViewController {
   }
   */
 
-  @IBAction func submitButtonPressed(_ sender: AnyObject)
-  {
+  @IBAction func submitButtonPressed(_ sender: AnyObject) {
     var team1Wins : Int = 0;
     var team2Wins : Int = 0;
     
@@ -60,13 +59,11 @@ class PlayOlympicsViewController: UIViewController {
     team2Wins += game3Segment.selectedSegmentIndex == 2 ? 1 : 0;
     
     //ties are index 1 but we don't care about them
-    if team1Wins == team2Wins
-    {
+    if team1Wins == team2Wins {
       alert("There is no clear winner (if teams did tie: \"rock, paper, scissors, shoot\" for who goes first)");
       return;
     }
-    else if (team2Wins > team1Wins)
-    {
+    else if (team2Wins > team1Wins) {
       game.setTeamGoingFirst(2);
     }
     //team 1 is automatically set to go first so we don't have to update it
@@ -75,8 +72,7 @@ class PlayOlympicsViewController: UIViewController {
     
   }
   
-  func alert(_ s : String)
-  {
+  func alert(_ s : String) {
     let popup = UIAlertController(title: "Error",
                     message: s,
                     preferredStyle: UIAlertControllerStyle.alert)

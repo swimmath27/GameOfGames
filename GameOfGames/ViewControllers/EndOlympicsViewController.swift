@@ -13,28 +13,23 @@ class EndOlympicsViewController: UIViewController {
   
   let game:Game = Game.getInstance();
   
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
     
     self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
   }
 
-  override func didReceiveMemoryWarning()
-  {
+  override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
   
-  @IBAction func nextButtonPressed(_ sender: AnyObject)
-  {
+  @IBAction func nextButtonPressed(_ sender: AnyObject) {
     //skip choosing team order if the game was quick started
-    if game.wasQuickStarted()
-    {
+    if game.wasQuickStarted() {
       performSegue(withIdentifier: "EndOlympicsToPlayGame", sender: nil)
     }
-    else
-    {
+    else {
       performSegue(withIdentifier: "EndOlympicsToChooseTeamOrder", sender: nil);
     }
   }

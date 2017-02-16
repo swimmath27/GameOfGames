@@ -8,8 +8,7 @@
 
 import UIKit
 
-class StartScreenViewController: UIViewController
-{
+class StartScreenViewController: UIViewController {
 
   //this is so it loads the deck stuff as soon as the app loads
   let game:Game = Game.getInstance();
@@ -18,8 +17,7 @@ class StartScreenViewController: UIViewController
   @IBOutlet weak var cardsButton: UIButton!
   @IBOutlet weak var playButton: UIButton!
   
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
     //maybe have an activity indicator here to let them know that its still loading
     //the problem with that is that i can't figure a way to tell the deck
@@ -38,34 +36,27 @@ class StartScreenViewController: UIViewController
     self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
   }
 
-  override func didReceiveMemoryWarning()
-  {
+  override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
   
-  @IBAction func cardsButtonPressed(_ sender: AnyObject)
-  {
-    if (game.readyToGo)
-    {
+  @IBAction func cardsButtonPressed(_ sender: AnyObject) {
+    if (game.readyToGo) {
       performSegue(withIdentifier: "StartScreenToWholeDeck", sender: nil)
     }
-    else
-    {
+    else {
       alert("Alert", msg: "The game is still loading necessary files, please wait")
     }
 
   }
 
-  @IBAction func playButtonPressed(_ sender: AnyObject)
-  {
+  @IBAction func playButtonPressed(_ sender: AnyObject) {
     // uhhhh im not sure how to do thread compliant stuff -> it could be ready and not notice yet?
-    if (game.readyToGo)
-    {
+    if (game.readyToGo) {
       performSegue(withIdentifier: "StartScreenToNumPlayers", sender: nil)
     }
-    else
-    {
+    else {
       alert("Alert", msg: "The game is still loading necessary files, please wait")
     }
   }
@@ -79,17 +70,14 @@ class StartScreenViewController: UIViewController
   }
   */
   
-  @IBAction func rulebookButtonPressed(_ sender: AnyObject)
-  {
-    if let url = URL(string: Game.RULEBOOK_URL)
-    {
+  @IBAction func rulebookButtonPressed(_ sender: AnyObject) {
+    if let url = URL(string: Game.RULEBOOK_URL) {
       UIApplication.shared.openURL(url)
     }
   }
   
   
-  func alert(_ title: String, msg : String)
-  {
+  func alert(_ title: String, msg : String) {
     let popup = UIAlertController(title: title,
                     message: msg,
                     preferredStyle: UIAlertControllerStyle.alert)

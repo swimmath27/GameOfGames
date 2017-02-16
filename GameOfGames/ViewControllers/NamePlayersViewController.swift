@@ -8,8 +8,7 @@
 
 import UIKit
 
-class NamePlayersViewController: UIViewController
-{
+class NamePlayersViewController: UIViewController {
 
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var askPlayerNameLabel: UILabel!
@@ -20,8 +19,7 @@ class NamePlayersViewController: UIViewController
   fileprivate var game : Game = Game.getInstance();
   fileprivate var currentPlayer : Int = 1;
   
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
     
     askPlayerNameLabel.text = "What is Team Captain 1's name?"
@@ -32,34 +30,26 @@ class NamePlayersViewController: UIViewController
     self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
   }
 
-  override func didReceiveMemoryWarning()
-  {
+  override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
   
 
-  @IBAction func submitButtonPressed(_ sender: AnyObject)
-  {
-    if let s : String = playerNameField.text
-    {
-      if s != ""
-      {
+  @IBAction func submitButtonPressed(_ sender: AnyObject) {
+    if let s : String = playerNameField.text {
+      if s != "" {
         game.setPlayerName(currentPlayer,name: s);
         currentPlayer += 1;
-        if currentPlayer > game.getNumPlayers()
-        {
+        if currentPlayer > game.getNumPlayers() {
           // all players have been named now
           performSegue(withIdentifier: "NamePlayerstoRandomizeTeams", sender: nil)
         }
-        else
-        {
-          if (currentPlayer == 2)
-          {
+        else {
+          if (currentPlayer == 2) {
             askPlayerNameLabel.text = "What is Team Captain 2's name?"
           }
-          else
-          {
+          else {
             askPlayerNameLabel.text = "What is Player \(currentPlayer)'s name?";
           }
           playerNameField.text = "";
@@ -79,8 +69,7 @@ class NamePlayersViewController: UIViewController
     // Pass the selected object to the new view controller.
   }
   */
-  func alert(_ s : String)
-  {
+  func alert(_ s : String) {
     let popup = UIAlertController(title: "Error",
                     message: s,
                     preferredStyle: UIAlertControllerStyle.alert)
