@@ -11,44 +11,44 @@ import UIKit
 class OlympicsInfoViewController: UIViewController
 {
 
-    @IBOutlet weak var infoTextView: UITextView!
+  @IBOutlet weak var infoTextView: UITextView!
+  
+  let game:Game = Game.getInstance()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-    let game:Game = Game.getInstance()
+    let path = Bundle.main.path(forResource: "GoGOlympicsRules", ofType: "txt");
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let path = Bundle.main.path(forResource: "GoGOlympicsRules", ofType: "txt");
-        
-        do
-        {
-            infoTextView.text = try NSString(contentsOf: URL(fileURLWithPath: path!), encoding: String.Encoding.utf8.rawValue) as String
-        }
-        catch {}
-        
-        //i'm not sure why i need to put this here, but it doesn't work if its on the storyboard
-        infoTextView.font = UIFont(name: "JosefinSans", size: 20)
-        infoTextView.textColor = UIColor.white;
-        
-        
-        self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
-        
+    do
+    {
+      infoTextView.text = try NSString(contentsOf: URL(fileURLWithPath: path!), encoding: String.Encoding.utf8.rawValue) as String
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    catch {}
     
+    //i'm not sure why i need to put this here, but it doesn't work if its on the storyboard
+    infoTextView.font = UIFont(name: "JosefinSans", size: 20)
+    infoTextView.textColor = UIColor.white;
+    
+    
+    self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
+    
+  }
 
-    /*
-    // MARK: - Navigation
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  /*
+  // MARK: - Navigation
+
+  // In a storyboard-based application, you will often want to do a little preparation before navigation
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
+  }
+  */
 
 }
