@@ -38,8 +38,8 @@ class Game {
   fileprivate var team2Name:String = ""
   
   fileprivate var playerOrder:[Int] = [Int]()
-  
-  fileprivate var playerNames:[String] = [String]()
+
+  fileprivate var players:[Player] = [Player]()
   
   fileprivate var whichTeamGoesFirst:Int = 1; // team 1 goes first by default but this is changed later
   
@@ -73,7 +73,7 @@ class Game {
   
   func setNumPlayers(_ num: Int) {
     self.numPlayers = num;
-    playerNames = [String](repeating: "", count: num);
+    players = [Player](repeating: Player(""), count: num);
     
     self.playerOrder = [Int]()
     
@@ -104,12 +104,15 @@ class Game {
   
   func setPlayerName(_ num:Int, name:String) {
     if (num <= self.numPlayers) {
-      playerNames[num-1] = name;
+      players[num-1].setName(name);
     }
   }
-  
+
+  func getPlayer(_ num:Int) -> Player {
+    return players[num-1];
+  }
   func getPlayerName(_ num:Int) -> String {
-    return playerNames[num-1];
+    return players[num-1].name;
   }
   
   func shuffleTeams() {
@@ -393,14 +396,19 @@ class Game {
     return team1CardsPerRound[round-1] + team2CardsPerRound[round-1]
   }
   
-  func quickStart(_ players:Int) {
+  func quickStart(_ playerCount:Int) {
     print("quick starting");
     quickStarted = true;
     
-    self.setNumPlayers(players);
+    self.setNumPlayers(playerCount);
     team1Name = "The Crustaceans"
     team2Name = "The Fish"
-    playerNames = ["Lobster", "Great White", "Crab", "Tuna","Shrimp", "Manta Ray", "Barnacle", "Swordfish", "Krill", "Eel", "Crayfish", "BlowFish", "Prawn", "Flounder"]
+
+    self.players = [Player]();
+    let playerNames = ["Lobster", "Great White", "Crab", "Tuna","Shrimp", "Manta Ray", "Barnacle", "Swordfish", "Krill", "Eel", "Crayfish", "BlowFish", "Prawn", "Flounder"]
+    for name in playerNames {
+      self.players.append(Player(name));
+    }
   }
   
   func wasQuickStarted() -> Bool {
