@@ -20,7 +20,7 @@ class Game {
   internal static let NUM_CARDS_TO_WIN = 20;
   
   internal static let RULEBOOK_URL = "http://nathanand.co/wp-content/uploads/2016/05/The-Game-of-Games-Rulebook.pdf";
-  
+
   ///////////////////////////////////////////////////////////
   fileprivate(set) static var instance: Game = Game();
   
@@ -42,14 +42,17 @@ class Game {
   fileprivate var players:[Player] = [Player]()
   
   fileprivate var whichTeamGoesFirst:Int = 1; // team 1 goes first by default but this is changed later
-  
+
   fileprivate var team1CardsWon:[Card] = [Card]()
   fileprivate var team2CardsWon:[Card] = [Card]()
-  
+
   fileprivate var team1CardsPerRound:[Int] = [Int]()
   fileprivate var team2CardsPerRound:[Int] = [Int]()
   
   fileprivate var quickStarted = false;
+
+  fileprivate(set) var team1Score: Int = 0
+  fileprivate(set) var team2Score: Int = 0
   
   //uh... "internal" means public?
   internal var messageTitle:String  = "";
@@ -162,27 +165,35 @@ class Game {
   }
   
   func getTeam1Score() -> Int {
-    return team1CardsWon.count;
+    return team1Score;
   }
   
   func getTeam1Cards() -> [Card] {
     return team1CardsWon;
   }
+
+  func addTeam1Score(_ score: Int) {
+    team1Score += score;
+  }
+
+  func addTeam2Score(_ score: Int) {
+    team2Score += score;
+  }
   
   func getTeam2Score() -> Int {
-    return team2CardsWon.count;
+    return team2Score;
   }
   
   func getTeam2Cards() -> [Card] {
     return team2CardsWon;
   }
-  
+
   func getTeamScore(_ which : Int) -> Int {
     if which == 1 {
-      return team1CardsWon.count
+      return team1Score
     }
     if which == 2 {
-      return team2CardsWon.count
+      return team2Score
     }
     return 0;
   }
@@ -257,7 +268,6 @@ class Game {
     if self.getCurrentTeam() == 1 && team1CardsWon.contains(currentCard) {
       team1CardsWon.remove( at: team1CardsWon.index(of: currentCard)!)
       team1CardsPerRound[self.getCurrentRound()] -= 1;
-      
     }
     else if self.getCurrentTeam() == 2 && team2CardsWon.contains(currentCard) {
       team2CardsWon.remove( at: team2CardsWon.index(of: currentCard)!)

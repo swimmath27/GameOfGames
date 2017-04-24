@@ -12,29 +12,41 @@ class RoundRouletteViewController: UIViewController {
 
   @IBOutlet weak var team1Name: UILabel!
   @IBOutlet weak var team2Name: UILabel!
-  
+
+  @IBOutlet weak var team1RoundCards: UILabel!
+  @IBOutlet weak var team2RoundCards: UILabel!
+
   @IBOutlet weak var team1Chance: UILabel!
   @IBOutlet weak var team2Chance: UILabel!
+
+  @IBOutlet weak var team1ScoreRound: UILabel!
+  @IBOutlet weak var team2ScoreRound: UILabel!
+
+  @IBOutlet weak var team1ScoreAfter: UILabel!
+  @IBOutlet weak var team2ScoreAfter: UILabel!
+  
+  @IBOutlet weak var team1Shots: UITextField!
+  @IBOutlet weak var team2Shots: UITextField!
   
   @IBOutlet weak var instructionsLabel: UILabel!
-  
-  @IBOutlet weak var rolledNumber: UILabel!
-  @IBOutlet weak var chosenTeam: UILabel!
   
   @IBOutlet weak var rollButton: UIButton!
   
   let game : Game = Game.getInstance()
   
   var rolled:Bool = false;
-  
-  var team1Cards:Int = 0;
-  var team2Cards:Int = 0;
-  var totalCards:Int = 0;
+
+  var team1CurrentCards:Int = 0;
+  var team2CurrentCards:Int = 0;
+
+  var team1NumShots:Int = 0;
+  var team2NumShots:Int = 0;
+
+  var team1TotalCards:Int = 0;
+  var team2TotalCards:Int = 0;
   
   @IBOutlet weak var buttonHeight: NSLayoutConstraint!
   @IBOutlet weak var buttonWidth: NSLayoutConstraint!
-  
-  var timer:Timer?
   
   var delay:Double = 0.01;
   
@@ -50,110 +62,99 @@ class RoundRouletteViewController: UIViewController {
     
     //chance that team 1 drinks is proportional to the number of cards team 2 got
     //need the last round version because current it is the next round
-    team1Cards = game.getTeamCardsInLastRound(1)
-    team2Cards = game.getTeamCardsInLastRound(2)
-    
-    totalCards = team1Cards+team2Cards;
-    
-    if (totalCards > 0) {
-      if (team2Cards > 0) {
-        let flstring = String(format:"%.2f", 100*Double(team2Cards)/Double(totalCards))
-        team1Chance.text = "1-\(team2Cards) (\(flstring)%)"
-      }
-      else {
-        //team 2 got no cards, team 1 chance is 0
-        team1Chance.text = "0 (0%)"
-      }
-      
-      if (team1Cards > 0) {
-        let flstring = String(format:"%.2f", 100*Double(team1Cards)/Double(totalCards))
-        team2Chance.text = "\(team2Cards+1)-\(totalCards) (\(flstring)%)"
-      }
-      else {
-        //team 1 got no cards, team 2 chance is 0
-        team2Chance.text = "0 (0%)"
-      }
-      
-      rolledNumber.text = ""
-      chosenTeam.text = ""
-      
-      rollButton.setTitle("Roll", for: UIControlState())
-    }
-    else {
-      //nobody has won any cards... just go back
-      
-      team1Chance.text = "0"
-      team2Chance.text = "0"
-      
-      rolledNumber.text = ""
-      
-      chosenTeam.text = "Nobody has won any cards this round"
-      rollButton.setTitle("Continue", for: UIControlState())
-      self.rolled = true;
-    }
-    
+    team1CurrentCards = game.getTeamCardsInLastRound(1)
+    team2CurrentCards = game.getTeamCardsInLastRound(2)
+
+    team1TotalCards = game.getTeamScore(1)
+    team2TotalCards = game.getTeamScore(2)
+
+    team1RoundCards.text = "\(team1CurrentCards)"
+    team2RoundCards.text = "\(team2CurrentCards)"
+
     self.view.layer.insertSublayer(UIHelper.getBackgroundGradient(), at: 0)
+
+    team1Shots.text = "0"
+    team2Shots.text = "0"
+    team1ShotsChanged(team1Shots)
+    team2ShotsChanged(team2Shots)
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-  
-  func timerFire(_ thisTimer:Timer) {
-    //print("\(delay)")
-    
-    //print("timer interval: \(timer!.timeInterval)")
-    if (delay > 0.75) {
-      //done with the rolling
-      let rand = Int(arc4random_uniform(UInt32(totalCards)))+1
-      rolledNumber.text = "\(rand)";
-//      rollButton.setTitle("Continue", forState: .Normal)
-      rollButton.setImage(UIImage(named:"nextButton.png"), for: UIControlState())
-      buttonWidth.constant = 64;
-      buttonHeight.constant = 40;
-      rollButton.isHidden = false;
-      
-      let team = game.getTeamName(rand <= team2Cards ? 1 : 2)
-      chosenTeam.text = team
-      
-      game.messageTitle = "Too bad, \(team)"
-      game.message = "You must finish the Bitch Cup before the game may continue"
+
+  @IBAction func team1ShotsChanged(_ sender: UITextField) {
+    if let x:String = team1Shots.text {
+      if let num: Int = Int(x) {
+        if num > game.getNumPlayers() / 2 {
+          alert("Can't take more shots than you have players");
+          team1Shots.text = "\(team1NumShots)";
+        }
+        else {
+          team1NumShots = num;
+          let roundScore = team1NumShots*team1CurrentCards
+          team1ScoreRound.text = "\(roundScore)"
+          team1ScoreAfter.text = "\(roundScore+team1TotalCards)"
+        }
+      }
     }
-    else {
-      
-      let rand = Int(arc4random_uniform(UInt32(totalCards)))+1
-      rolledNumber.text = "\(rand)";
-      
-      //update delay rule
-      delay *= (1.0+delay)
-      //delay *= 1.1
-      
-      timer = Timer.scheduledTimer(timeInterval: delay,
-                               target: self,
-                               selector: #selector(RoundRouletteViewController.timerFire(_:)),
-                               userInfo: nil,
-                               repeats: false)
+  }
+
+  @IBAction func team2ShotsChanged(_ sender: UITextField) {
+    if let x:String = team2Shots.text {
+      if let num: Int = Int(x) {
+        if num > game.getNumPlayers() / 2 {
+          alert("Can't take more shots than you have players");
+          team2Shots.text = "\(team2NumShots)";
+        }
+        else {
+          team2NumShots = num;
+          let roundScore = team2NumShots*team2CurrentCards
+          team2ScoreRound.text = "\(roundScore)"
+          team2ScoreAfter.text = "\(roundScore+team2TotalCards)"
+        }
+      }
     }
   }
 
   @IBAction func rollButtonPressed(_ sender: AnyObject) {
-    
-    if (self.rolled) {
-      performSegue(withIdentifier: "RoundRouletteToPlayGame", sender: nil);
+    var team1RoundScore = 0
+    if let x:String = team1Shots.text {
+      if let num : Int = Int(x) {
+        self.team1NumShots = num
+        team1RoundScore = num*team1CurrentCards
+      }
     }
-    else {
-      self.rolled = true
-      
-      timer = Timer.scheduledTimer(timeInterval: delay,
-                               target: self,
-                               selector: #selector(RoundRouletteViewController.timerFire(_:)),
-                               userInfo: nil,
-                               repeats: false)
-      rollButton.isHidden = true;
+    var team2RoundScore = 0
+    if let x:String = team2Shots.text {
+      if let num : Int = Int(x) {
+        self.team2NumShots = num
+        team2RoundScore = num*team2CurrentCards
+      }
     }
+    alertToConfirm("Are you sure?", msg: "Team 1 shots: \(team1NumShots)\nTeam 2 shots: \(team2NumShots)", action: { action in
+        self.game.addTeam1Score(team1RoundScore)
+        self.game.addTeam2Score(team2RoundScore)
+        self.performSegue(withIdentifier: "RoundRouletteToPlayGame", sender: nil)
+    })
   }
-  
+
+  @IBAction func team1touchdown(_ sender: Any) {
+    team1ShotsChanged(team1Shots)
+  }
+
+  @IBAction func team2touchdown(_ sender: Any) {
+    team2ShotsChanged(team2Shots)
+  }
+
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    team1Shots.resignFirstResponder()
+    team2Shots.resignFirstResponder()
+    team1ShotsChanged(team1Shots)
+    team2ShotsChanged(team2Shots)
+  }
+
   /*
   // MARK: - Navigation
 
@@ -176,6 +177,21 @@ class RoundRouletteViewController: UIViewController {
     self.present(popup, animated: true,
                    completion: nil)
     
+  }
+
+  func alertToConfirm(_ title: String, msg : String, action : @escaping (UIAlertAction) -> Void) {
+    let popup = UIAlertController(title: title,
+                                  message: msg,
+                                  preferredStyle: UIAlertControllerStyle.alert)
+
+    let okAction = UIAlertAction(title:"OK", style: .default, handler: action);
+    popup.addAction(okAction)
+
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+    popup.addAction(cancelAction);
+
+    self.present(popup, animated: true,
+                 completion: nil)
   }
 
 }
