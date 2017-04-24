@@ -62,21 +62,11 @@ class Deck {
     var randomCount:Int = 0;
     
     var ret:[Card] = [Card]()
-    
-    print("loading \"\(contentsOfFile)\"")
-    
+
     if let data = try? Data(contentsOf: URL(fileURLWithPath: contentsOfFile)) {
       if let content = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
-      
-        //its being mean when i leave out separator, but the default is "," so i put that in
-        // the header is left out of the file because it was causing problems before with the stupid parser
-        //let csv = CSwiftV(string: content.description, separator: ",", headers: ["Type","Name","Stealable","Description"]);
-        
-        //update: header is back in
         let csv = CSwiftV(string: content.description);
-        
         let headers = csv.headers;
-        
         if (!headers.contains("Type") || !headers.contains("Title") || !headers.contains("Stealable") || !headers.contains("Playable") || !headers.contains("Description")) {
           print("error, file doesn't have correct headers, using default")
           
@@ -85,25 +75,32 @@ class Deck {
           
           return self.parseCSV(fileURL.path, encoding: String.Encoding.utf8, error: nil);
         }
-        
-        //print(csv.headers);
+
         for row in csv.keyedRows! {
           var suit:Card.Suit = Card.Suit.joke;
           var rank:Int = 0;
           switch row["Type"]! {
           case "M":
+            fallthrough;
+          case "head":
             headCount+=1
             rank = headCount;
             suit = Card.Suit.head;
           case "S":
+            fallthrough;
+          case "moxie":
             moxieCount+=1
             rank = moxieCount;
             suit = Card.Suit.moxie;
           case "C":
+            fallthrough;
+          case "random":
             randomCount+=1
             rank = randomCount
             suit = Card.Suit.random;
           case "B":
+            fallthrough;
+          case "muscle":
             muscleCount+=1
             rank = muscleCount
             suit = Card.Suit.muscle;
@@ -114,13 +111,6 @@ class Deck {
           let playable:Bool = row["Playable"] == "Y";
           
           ret.append(Card(suit: suit, rank: rank, stealable: stealable, playable: playable, shortDescription: row["Title"]!, longDescription: row["Description"]!))
-          //print(row[1]);
-          
-          //type - values[0]
-          //name - values[1]
-          //stealable - values[2]
-          //description - values[3]
-          
         }
       }
     }
