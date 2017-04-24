@@ -56,10 +56,10 @@ class Deck {
   //edit: that one sucked (like a lot) so i'm using CSwiftV now
   fileprivate func parseCSV (_ contentsOfFile: String, encoding: String.Encoding, error: NSErrorPointer) -> [Card] {
     
-    var mindCount:Int = 0;
-    var bodyCount:Int = 0;
-    var soulCount:Int = 0;
-    var chanceCount:Int = 0;
+    var headCount:Int = 0;
+    var muscleCount:Int = 0;
+    var moxieCount:Int = 0;
+    var randomCount:Int = 0;
     
     var ret:[Card] = [Card]()
     
@@ -92,21 +92,21 @@ class Deck {
           var rank:Int = 0;
           switch row["Type"]! {
           case "M":
-            mindCount+=1
-            rank = mindCount;
-            suit = Card.Suit.mind;
+            headCount+=1
+            rank = headCount;
+            suit = Card.Suit.head;
           case "S":
-            soulCount+=1
-            rank = soulCount;
-            suit = Card.Suit.soul;
+            moxieCount+=1
+            rank = moxieCount;
+            suit = Card.Suit.moxie;
           case "C":
-            chanceCount+=1
-            rank = chanceCount
-            suit = Card.Suit.chance;
+            randomCount+=1
+            rank = randomCount
+            suit = Card.Suit.random;
           case "B":
-            bodyCount+=1
-            rank = bodyCount
-            suit = Card.Suit.body;
+            muscleCount+=1
+            rank = muscleCount
+            suit = Card.Suit.muscle;
           default:break
           }
           

@@ -13,25 +13,27 @@ class Card : Equatable {
   
   enum Suit: Int {
     case joke = 0 // 1 starts the actual types
-    case body, soul, mind, chance
-    
-    //mind - diamond
-    //body - spade
-    //soul - heart
-    //chance - club
+    case muscle, moxie, head, random
+
+    //current name - old name - suit type
+    //
+    //   head      -  mind    - diamond
+    //  muscle     -  body    -  spade
+    //   moxie     -  soul    -  heart
+    //  random     - chance   -  club
     
     func simpleDescription() -> String {
       switch self {
       case .joke:
-        return "Joke"
-      case .body:
-        return "Body"
-      case .soul:
-        return "Soul"
-      case .mind:
-        return "Mind"
-      case .chance:
-        return "Chance"
+        return "joke"
+      case .head:
+        return "head"
+      case .muscle:
+        return "muscle"
+      case .moxie:
+        return "moxie"
+      case .random:
+        return "random"
       }
     }
     
@@ -39,13 +41,13 @@ class Card : Equatable {
       switch self {
       case .joke:
         return "Haha"
-      case .body:
-        return "#BodyGoals"
-      case .soul:
-        return "Take a Look at You!"
-      case .mind:
+      case .head:
         return "Good Thinking"
-      case .chance:
+      case .muscle:
+        return "#muscleGoals"
+      case .moxie:
+        return "Take a Look at You!"
+      case .random:
         return "It's Your Lucky Day!"
       }
     }
@@ -53,14 +55,14 @@ class Card : Equatable {
       switch self {
       case .joke:
         return "Haha"
-      case .body:
-        return "Add some beer into the Bitch Cup and send some beer to any player on the other team"
-      case .soul:
-        return "Add a shot into the Bitch Cup and send a shot to any player on the other team"
-      case .mind:
-        return "Add some wine into the Bitch Cup and send some wine to any player on the other team"
-      case .chance:
-        return "I hope another card is good enough because you don't get to send or pour anything"
+      case .head:
+        return "Send some wine to any player on the other team"
+      case .muscle:
+        return "Send some beer to any player on the other team"
+      case .moxie:
+        return "Send a shot to any player on the other team"
+      case .random:
+        return "I hope another card is good enough because you don't get to send anything"
       }
     }
 
@@ -69,13 +71,13 @@ class Card : Equatable {
       switch self {
       case .joke:
         return "Haha"
-      case .body:
-        return "Do You Even Lift, Bro?"
-      case .soul:
-        return "Not Mad, Just Disappointed"
-      case .mind:
+      case .head:
         return "What Were You Thinking?"
-      case .chance:
+      case .muscle:
+        return "Do You Even Lift, Bro?"
+      case .moxie:
+        return "Not Mad, Just Disappointed"
+      case .random:
         return "Better Luck Next Time!"
       }
     }
@@ -83,13 +85,13 @@ class Card : Equatable {
       switch self {
       case .joke:
         return "Haha"
-      case .body:
-        return "You and a teammate must drink some beer"
-      case .soul:
-        return "You and a teammate must take a shot"
-      case .mind:
+      case .head:
         return "You and a teammate must drink some wine"
-      case .chance:
+      case .muscle:
+        return "You and a teammate must drink some beer"
+      case .moxie:
+        return "You and a teammate must take a shot"
+      case .random:
         return "At least your team doesn't have to drink anything!"
       }
     }
@@ -99,27 +101,27 @@ class Card : Equatable {
       switch self {
       case .joke:
         return "Haha"
-      case .body:
-        return "You Oughta Hit the Gym"
-      case .soul:
-        return "That Couldn't Have Felt Good"
-      case .mind:
+      case .head:
         return "Quick, But Not Quick Enough"
-      case .chance:
-        return "A Chance card was stolen?"
+      case .muscle:
+        return "You Oughta Hit the Gym"
+      case .moxie:
+        return "That Couldn't Have Felt Good"
+      case .random:
+        return "A random card was stolen?"
       }
     }
     func stolenMessage() -> String {
       switch self {
       case .joke:
         return "Haha"
-      case .body:
-        return "Add some beer to the Bitch Cup and your counterpart sends some beer to anyone on your team"
-      case .soul:
-        return "Add a shot to the Bitch Cup and your counterpart sends a shot to anyone on your team"
-      case .mind:
-        return "Add some wine to the Bitch Cup and your counterpart sends some wine to anyone on your team"
-      case .chance:
+      case .head:
+        return "Have your counterpart send some wine to anyone on your team"
+      case .muscle:
+        return "Have your counterpart send some beer to anyone on your team"
+      case .moxie:
+        return "Have your counterpart send a shot to anyone on your team"
+      case .random:
         return "This shouldn't be possible"
       }
     }
@@ -150,14 +152,14 @@ class Card : Equatable {
     switch suit {
     case .joke:
       return "nothing"
-    case .body:
-      return "a quarter can of beer"
-    case .chance:
-      return "nothing"
-    case .mind:
+    case .head:
       return "a quarter glass of wine"
-    case .soul:
+    case .muscle:
+      return "a quarter can of beer"
+    case .moxie:
       return "a shot of liquor"
+    case .random:
+      return "nothing"
     }
   }
   
