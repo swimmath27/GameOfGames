@@ -27,13 +27,13 @@ class Card : Equatable {
       case .joke:
         return "joke"
       case .head:
-        return "head"
+        return "Mind"
       case .muscle:
-        return "muscle"
+        return "Body"
       case .moxie:
-        return "moxie"
+        return "Soul"
       case .random:
-        return "random"
+        return "Chance"
       }
     }
     
