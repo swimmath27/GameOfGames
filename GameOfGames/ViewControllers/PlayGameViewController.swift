@@ -19,6 +19,9 @@ class PlayGameViewController: UIViewController {
   
   @IBOutlet weak var Team1ScoreLabel: UILabel!
   @IBOutlet weak var Team2ScoreLabel: UILabel!
+
+  @IBOutlet weak var Team1CardsLabel: UILabel!
+  @IBOutlet weak var Team2CardsLabel: UILabel!
   
   @IBOutlet weak var messageTitleLabel: UILabel!
   @IBOutlet weak var messageLabel: UILabel!
@@ -38,9 +41,12 @@ class PlayGameViewController: UIViewController {
     team1NameLabel.text = game.getTeamName(1);
     team2NameLabel.text = game.getTeamName(2);
     
-    Team1ScoreLabel.text = "\(game.getTeam1Score())";
-    Team2ScoreLabel.text = "\(game.getTeam2Score())";
-    
+    Team1ScoreLabel.text = "\(game.getTeam1Score()) Pts";
+    Team2ScoreLabel.text = "\(game.getTeam2Score()) Pts";
+
+    Team1CardsLabel.text = "\(game.getTeamCardsInCurrentRound(1)) Cards";
+    Team2CardsLabel.text = "\(game.getTeamCardsInCurrentRound(2)) Cards";
+
     roundLabel.text = "Round \(game.getCurrentRound())"
     
     nextPlayerLabel.text = game.getCurrentPlayerName() + ",";
@@ -50,11 +56,15 @@ class PlayGameViewController: UIViewController {
     
     if (game.isNewRound()) {
       if !PlayGameViewController.wasNewRound {
-        
+        // it's actually a new round so we need to display the previous round cards
+        Team1CardsLabel.text = "\(game.getTeamCardsInLastRound(1)) Cards";
+        Team2CardsLabel.text = "\(game.getTeamCardsInLastRound(2)) Cards";
+
+        // Reuse the "player 1, you're up next" labels
         nextPlayerLabel.textAlignment = .center;
         nextPlayerLabel.text = "End of Round, Click to"
         upNextLabel.text = "go to Round Roulette"
-        
+
         drawCardButton.setImage(UIImage(named:"rollButton.png"), for: UIControlState());
       }
     }
@@ -83,6 +93,7 @@ class PlayGameViewController: UIViewController {
       }
       else if !game.hasNextCard() {
         drawCardButton.isHidden = true;
+        nextPlayerLabel.textAlignment = .center;
         upNextLabel.text = "Deck is Out of Cards!"
         
         //reusing these labels...

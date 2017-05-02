@@ -56,7 +56,8 @@ class RoundRouletteViewController: UIViewController {
     alert("It is the end of round \(game.getCurrentRound()-1). It is time to roll to see who drinks the center cup");
     
     self.rolled = false;
-    
+
+
     team1Name.text = "\(game.getTeamName(1))"
     team2Name.text = "\(game.getTeamName(2))"
     
@@ -133,7 +134,7 @@ class RoundRouletteViewController: UIViewController {
         team2RoundScore = num*team2CurrentCards
       }
     }
-    alertToConfirm("Are you sure?", msg: "Team 1 shots: \(team1NumShots)\nTeam 2 shots: \(team2NumShots)", action: { action in
+    alertToConfirm("Are you sure?", msg: "\(self.game.getTeamName(1)) shots: \(team1NumShots)\n\(self.game.getTeamName(2)) shots: \(team2NumShots)", action: { action in
         self.game.addTeam1Score(team1RoundScore)
         self.game.addTeam2Score(team2RoundScore)
         self.performSegue(withIdentifier: "RoundRouletteToPlayGame", sender: nil)
