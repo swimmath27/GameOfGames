@@ -296,12 +296,19 @@ class Game {
     let numInRound = currentTurn % numPlayers;
     
     if numInRound%2 == (whichTeamGoesFirst==1 ? 0 : 1) {
+      // team 1 won the card
       team1CardsWon.append(currentCard)
-      addOneToTeamInCurrentRound(1)
+      if (currentCard.suit != .random) {
+        // random cards aren't worth points
+        addOneToTeamInCurrentRound(1)
+      }
     }
-    else  {  // team 2 
+    else  {  // team 2 won the card
       team2CardsWon.append(currentCard)
-      addOneToTeamInCurrentRound(2)
+      if (currentCard.suit != .random) {
+        // random cards aren't worth points
+        addOneToTeamInCurrentRound(2)
+      }
     }
     self.message = self.currentCard.getWonMessage()
     self.messageTitle = self.currentCard.getWonMessageTitle();
@@ -368,7 +375,6 @@ class Game {
     return self.getTeamCardsInRound(team, round: self.getCurrentRound());
   }
 
-  
   func getTeamCardsInRound(_ team:Int, round:Int) -> Int {
     if team == 1 {
       while (team1CardsPerRound.count < round) {
