@@ -16,9 +16,6 @@ class RoundRouletteViewController: UIViewController {
   @IBOutlet weak var team1RoundCards: UILabel!
   @IBOutlet weak var team2RoundCards: UILabel!
 
-  @IBOutlet weak var team1Chance: UILabel!
-  @IBOutlet weak var team2Chance: UILabel!
-
   @IBOutlet weak var team1ScoreRound: UILabel!
   @IBOutlet weak var team2ScoreRound: UILabel!
 
