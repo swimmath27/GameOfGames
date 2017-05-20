@@ -3437,6 +3437,9 @@
                                     <constraint firstAttribute="width" constant="414" id="UtP-Jo-BgN"/>
                                 </constraints>
                                 <state key="normal" title="Click to Play" image="joinButton.png"/>
+                                <connections>
+                                    <action selector="joinButtonPressed:" destination="nQ3-8M-cjk" eventType="touchUpInside" id="rrN-0b-QvR"/>
+                                </connections>
                             </button>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vV-xY-ppN">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="515.33333333333337"/>

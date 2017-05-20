@@ -56,6 +56,11 @@ class StartScreenViewController: UIViewController {
       alert("Alert", msg: "The game is still loading necessary files, please wait")
     }
   }
+
+  @IBAction func joinButtonPressed(_ sender: AnyObject) {
+      alert("Coming soon!", msg: "Multiplayer functionality coming soon...")
+  }
+  
   /*
   // MARK: - Navigation
 
