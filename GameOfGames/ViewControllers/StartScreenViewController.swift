@@ -13,10 +13,6 @@ class StartScreenViewController: UIViewController {
   //this is so it loads the deck stuff as soon as the app loads
   let game:Game = Game.getInstance();
   
-  @IBOutlet weak var rulebookButton: UIButton!
-  @IBOutlet weak var cardsButton: UIButton!
-  @IBOutlet weak var playButton: UIButton!
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     //maybe have an activity indicator here to let them know that its still loading

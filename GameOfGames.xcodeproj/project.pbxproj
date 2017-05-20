@@ -67,6 +67,9 @@
 		550800B51D0BA24E0022E984 /* Soul_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A41D0BA24E0022E984 /* Soul_14.png */; };
 		550800B61D0BA24E0022E984 /* Soul_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A51D0BA24E0022E984 /* Soul_15.png */; };
 		550800B71D0BA24E0022E984 /* Soul_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 550800A61D0BA24E0022E984 /* Soul_16.png */; };
+		554926A11ED0F62700E32AAA /* hostButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5549269F1ED0F62700E32AAA /* hostButton.png */; };
+		554926A21ED0F62700E32AAA /* joinButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 554926A01ED0F62700E32AAA /* joinButton.png */; };
+		554926A41ED0FCC600E32AAA /* logoword.png in Resources */ = {isa = PBXBuildFile; fileRef = 554926A31ED0FCC600E32AAA /* logoword.png */; };
 		556997BE1D19E27B00AE7D4E /* StartOlympicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556997BD1D19E27B00AE7D4E /* StartOlympicsViewController.swift */; };
 		556997C01D19E28700AE7D4E /* EndOlympicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556997BF1D19E28700AE7D4E /* EndOlympicsViewController.swift */; };
 		556997C41D19E36B00AE7D4E /* questionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 556997C11D19E36B00AE7D4E /* questionButton.png */; };
@@ -246,6 +249,9 @@
 		550800A41D0BA24E0022E984 /* Soul_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_14.png; path = CardImages/Soul_14.png; sourceTree = "<group>"; };
 		550800A51D0BA24E0022E984 /* Soul_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_15.png; path = CardImages/Soul_15.png; sourceTree = "<group>"; };
 		550800A61D0BA24E0022E984 /* Soul_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Soul_16.png; path = CardImages/Soul_16.png; sourceTree = "<group>"; };
+		5549269F1ED0F62700E32AAA /* hostButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hostButton.png; path = UIImages/hostButton.png; sourceTree = "<group>"; };
+		554926A01ED0F62700E32AAA /* joinButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = joinButton.png; path = UIImages/joinButton.png; sourceTree = "<group>"; };
+		554926A31ED0FCC600E32AAA /* logoword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoword.png; path = UIImages/logoword.png; sourceTree = "<group>"; };
 		556997BD1D19E27B00AE7D4E /* StartOlympicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartOlympicsViewController.swift; sourceTree = "<group>"; };
 		556997BF1D19E28700AE7D4E /* EndOlympicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndOlympicsViewController.swift; sourceTree = "<group>"; };
 		556997C11D19E36B00AE7D4E /* questionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = questionButton.png; path = UIImages/questionButton.png; sourceTree = "<group>"; };
@@ -430,6 +436,9 @@
 		550800791D08A8FA0022E984 /* UIImages */ = {
 			isa = PBXGroup;
 			children = (
+				554926A31ED0FCC600E32AAA /* logoword.png */,
+				5549269F1ED0F62700E32AAA /* hostButton.png */,
+				554926A01ED0F62700E32AAA /* joinButton.png */,
 				556997C11D19E36B00AE7D4E /* questionButton.png */,
 				556997C21D19E36B00AE7D4E /* trophy.png */,
 				556997C31D19E36B00AE7D4E /* torch.png */,
@@ -859,8 +868,10 @@
 				55B43D681D022440002CCE78 /* Chance_5.png in Resources */,
 				55B43D791D022440002CCE78 /* Body_13.png in Resources */,
 				550498081D1054010019F490 /* GoG_Icon_iphone_spotlight_3x_120px.png in Resources */,
+				554926A11ED0F62700E32AAA /* hostButton.png in Resources */,
 				550498101D1054010019F490 /* GoG_Icon_ipad_settings_1x_29px.png in Resources */,
 				55B43D8E1D022440002CCE78 /* Mind_4.png in Resources */,
+				554926A41ED0FCC600E32AAA /* logoword.png in Resources */,
 				55B43D761D022440002CCE78 /* Soul_4.png in Resources */,
 				5504980B1D1054010019F490 /* GoG_Icon_ipad_spotlight_2x_80px.png in Resources */,
 				55B43D661D022440002CCE78 /* Chance_7.png in Resources */,
@@ -911,6 +922,7 @@
 				55D3FB0D1CFE0E30006C0A8E /* Main.storyboard in Resources */,
 				55B43D6B1D022440002CCE78 /* Chance_2.png in Resources */,
 				550800921D0B81A40022E984 /* failButton.png in Resources */,
+				554926A21ED0F62700E32AAA /* joinButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

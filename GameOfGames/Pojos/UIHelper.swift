@@ -32,7 +32,7 @@ class UIHelper {
     //  #6FD8CD = rgb(111, 216, 205)
 
     //background:
-    //  #5ebceb = rgb(94, 188, 235)
+    //  #5EBCEB = rgb(94, 188, 235)
 
     
     let screenSize: CGRect = UIScreen.main.bounds
