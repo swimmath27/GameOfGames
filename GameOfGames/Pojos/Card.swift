@@ -22,7 +22,7 @@ class Card : Equatable {
     //   moxie     -  soul    -  heart
     //  random     - chance   -  club
     
-    func simpleDescription() -> String {
+    func oldDescription() -> String {
       switch self {
       case .joke:
         return "joke"
@@ -36,6 +36,22 @@ class Card : Equatable {
         return "Chance"
       }
     }
+
+    func simpleDescription() -> String {
+      switch self {
+      case .joke:
+        return "joke"
+      case .head:
+        return "Head"
+      case .muscle:
+        return "Muscle"
+      case .moxie:
+        return "Moxie"
+      case .random:
+        return "Random"
+      }
+    }
+
     
     func wonMessageTitle() -> String {
       switch self {
@@ -137,6 +153,7 @@ class Card : Equatable {
   convenience init (suit:Suit, rank:Int) {
     self.init(suit: suit, rank: rank, stealable: false, playable: false, shortDescription: "", longDescription: "");
   }
+
   
   init (suit:Suit, rank:Int, stealable:Bool, playable: Bool, shortDescription:String, longDescription:String) {
     self.suit = suit;
@@ -178,20 +195,22 @@ class Card : Equatable {
   func getWonMessageTitle() -> String {
     return self.suit.wonMessageTitle();
   }
-  
-  
+
+
   func getLostMessage() -> String {
     return self.suit.lostMessage();
   }
   func getLostMessageTitle() -> String {
     return self.suit.lostMessageTitle();
   }
-  
-  
+
+
+  //TODO(michael) update card names - return the ImageName feature
   func getFileName() ->String {
-    return "\(self.suit.simpleDescription())_\(self.rank).png"
+    return "\(self.suit.oldDescription())_\(self.rank).png"
   }
-  
+
+
   func toString() -> String {
     return "\(self.suit.simpleDescription()) card number \(self.rank)"
   }

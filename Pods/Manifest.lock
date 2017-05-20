@@ -1,34 +1,39 @@
 PODS:
-  - CSwiftV (0.0.5)
-  - Firebase/Analytics (3.2.1):
-    - FirebaseAnalytics (= 3.2.0)
-  - Firebase/Core (3.2.1):
-    - Firebase/Analytics (= 3.2.1)
-  - FirebaseAnalytics (3.2.0):
-    - FirebaseInstanceID (~> 1.0)
-    - GoogleInterchangeUtilities (~> 1.2)
-    - GoogleSymbolUtilities (~> 1.1)
-    - GoogleUtilities (~> 1.3)
-  - FirebaseInstanceID (1.0.6)
-  - GoogleInterchangeUtilities (1.2.1):
-    - GoogleSymbolUtilities (~> 1.0)
-  - GoogleSymbolUtilities (1.1.1)
-  - GoogleUtilities (1.3.1):
-    - GoogleSymbolUtilities (~> 1.0)
+  - CSwiftV (0.0.7)
+  - Firebase/Core (4.0.0):
+    - FirebaseAnalytics (= 4.0.0)
+    - FirebaseCore (= 4.0.0)
+  - Firebase/Database (4.0.0):
+    - Firebase/Core
+    - FirebaseDatabase (= 4.0.0)
+  - FirebaseAnalytics (4.0.0):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (4.0.0):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseDatabase (4.0.0):
+    - FirebaseAnalytics (~> 4.0)
+  - FirebaseInstanceID (2.0.0):
+    - FirebaseCore (~> 4.0)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
 
 DEPENDENCIES:
   - CSwiftV
   - Firebase/Core
+  - Firebase/Database
 
 SPEC CHECKSUMS:
-  CSwiftV: 2560532e2e5b04d95c36b0f49a8dc745071fa525
-  Firebase: 6c80ac28d59d06bfd9152a7b6ea17625ca93183d
-  FirebaseAnalytics: 6f75b04e6bfb8e0b6e9ef298e04c24eea3b13863
-  FirebaseInstanceID: d014d574053a2fe84478f12f7bae96979e7051bb
-  GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
-  GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
-  GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
+  CSwiftV: 602a0cb1df5f758d6005eacb6472c9bc752a7e7c
+  Firebase: 284eea779b73fdff309791817da7c68bff8dd572
+  FirebaseAnalytics: 6f08e746f7d66f5452931bc2e822b5df9c66b64a
+  FirebaseCore: 85ad466044c2f013cdb167f85d426d15b128114a
+  FirebaseDatabase: d829b3a8c3e2ac7a16773c5df226966b0805dfc2
+  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
 
-PODFILE CHECKSUM: 396974f330fcdfde308900b2400116aa68ab665d
+PODFILE CHECKSUM: 53914acbcf312909fe4d47dec0f1f35fd6aa51f7
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

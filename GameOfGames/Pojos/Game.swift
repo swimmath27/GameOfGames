@@ -22,7 +22,7 @@ class Game {
   ///////////////////////////////////////////////////////////
   fileprivate(set) static var instance: Game = Game();
   
-  fileprivate var deck: Deck = Deck();
+  fileprivate var deck: Deck = Deck.singleton;
   
   fileprivate var numPlayers = 0;
   fileprivate var currentTurn = 0;

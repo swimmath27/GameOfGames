@@ -4,21 +4,24 @@
 # use_frameworks!
 
 source 'https://github.com/CocoaPods/Specs.git'
-xcodeproj 'GameOfGames.xcodeproj'
+project 'GameOfGames.xcodeproj'
 platform :ios, '9.0'
 use_frameworks!
 
 target 'GameOfGames' do
     pod 'CSwiftV'
     pod 'Firebase/Core'
+    pod 'Firebase/Database'
 end
 
 target 'GameOfGamesTests' do
     pod 'CSwiftV'
     pod 'Firebase/Core'
+    pod 'Firebase/Database'
 end
 
 target 'GameOfGamesUITests' do
     pod 'CSwiftV'
     pod 'Firebase/Core'
+    pod 'Firebase/Database'
 end
