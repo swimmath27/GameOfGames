@@ -40,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="515.33333333333337"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoword.png" translatesAutoresizingMaskIntoConstraints="NO" id="o07-Sd-izb">
-                                        <rect key="frame" x="87" y="123.99999999999997" width="240" height="267.33333333333326"/>
+                                        <rect key="frame" x="125" y="165.99999999999997" width="164" height="183.33333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="o07-Sd-izb" secondAttribute="height" multiplier="595:663" id="Gff-Z2-Epi"/>
                                         </constraints>
@@ -51,7 +51,7 @@
                                 <constraints>
                                     <constraint firstItem="o07-Sd-izb" firstAttribute="centerX" secondItem="v06-a4-jM5" secondAttribute="centerX" id="2Ue-AH-QwF"/>
                                     <constraint firstItem="o07-Sd-izb" firstAttribute="centerY" secondItem="v06-a4-jM5" secondAttribute="centerY" id="jUV-3Z-U0r"/>
-                                    <constraint firstItem="o07-Sd-izb" firstAttribute="leading" secondItem="v06-a4-jM5" secondAttribute="leading" constant="87" id="rbp-mm-N8U"/>
+                                    <constraint firstItem="o07-Sd-izb" firstAttribute="leading" secondItem="v06-a4-jM5" secondAttribute="leading" constant="125" id="rbp-mm-N8U"/>
                                 </constraints>
                             </view>
                         </subviews>
